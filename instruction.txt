@@ -36,7 +36,7 @@ python manage.py runserver
 
 
 #Git-init
-U:\WORK\portrethit
+cd U:\WORK\portrethit
 #1st time
 git init
 git config --global user.name "JekaDeka"
@@ -45,3 +45,7 @@ git config --global user.email SpecialForWarcraft@gmail.com
 git status
 git add -A .
 git commit -m "portrethit"
+
+
+git remote add origin https://github.com/JekaDeka/portrethit.git
+git push -u origin master
