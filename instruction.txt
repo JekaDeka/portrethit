@@ -37,6 +37,7 @@ python manage.py runserver
 
 #Git-init
 cd U:\WORK\portrethit
+
 #1st time
 git init
 git config --global user.name "JekaDeka"
