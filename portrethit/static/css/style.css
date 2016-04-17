@@ -42,6 +42,10 @@ body {
     background: linear-gradient(to bottom right, #FBFCFF, #E5E7F4); /* Standard syntax (must be last) */
 }
 
+footer {
+    background: black;
+    margin-top: 15px;
+}
 .reset-left {
     padding-left: 0px;
 }
