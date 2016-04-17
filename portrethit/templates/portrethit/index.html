@@ -24,114 +24,37 @@
 
     <div class="container-fluid reset-left">
     <!-- HEADER -->
-	<div class="row">
-		<div class="col-md-12">
-			<div class="page-header">
-				<h1>
-					LayoutIt! <small>Interface Builder for Bootstrap</small>
-				</h1>
-			</div>
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button> <a class="navbar-brand" href="#">Brand</a>
-				</div>
-
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="#">Link</a>
-						</li>
-						<li>
-							<a href="#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Action</a>
-								</li>
-								<li>
-									<a href="#">Another action</a>
-								</li>
-								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">One more separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-					<form class="navbar-form navbar-left" role="search">
-						<div class="form-group">
-							<input type="text" class="form-control">
-						</div>
-						<button type="submit" class="btn btn-default">
-							Submit
-						</button>
-					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Action</a>
-								</li>
-								<li>
-									<a href="#">Another action</a>
-								</li>
-								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-
-			</nav>
-		</div>
-	</div>
-	<!-- END HEADER -->
-
-	<!-- MENU -->
-<!-- 	<div class="row">
-		<div class="col-md-12">
-			<div class="btn-group">
-
-				<button class="btn btn-default" type="button">
-					<em class="glyphicon glyphicon-align-left"></em> Left
-				</button>
-				<button class="btn btn-default" type="button">
-					<em class="glyphicon glyphicon-align-center"></em> Center
-				</button>
-				<button class="btn btn-default" type="button">
-					<em class="glyphicon glyphicon-align-right"></em> Right
-				</button>
-				<button class="btn btn-default" type="button">
-					<em class="glyphicon glyphicon-align-justify"></em> Justify
-				</button>
-			</div>
-		</div>
-	</div> -->
-	<!-- END MENU -->
+	<!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
 	<!-- MAIN PICTURE -->
 	<div class="row">
@@ -142,48 +65,99 @@
 	<!-- END MAIN PICTURE -->
 
 	<!-- LIST OF SERVICES -->
+	<div class="container-fluid padding-0">
+
+	<div class="gal_row brick">
 	<div class="row">
-		<div class="col-md-4">
-			<img class="service_item" alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-			<p>Портрет маслом по фото</p>
-		</div>
-		<div class="col-md-4">
-			<img class="service_item" alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-			<p>Портрет маслом по фото</p>
-		</div>
-		<div class="col-md-4">
-			<img class="service_item" alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-			<p>Портрет маслом по фото</p>
-		</div>
+		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work1.png' %}" alt="">
+                </a>
+                <h3>
+                	<a href='#'> Pop Art  портрет на холсте </a>
+                </h3>
+
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work2.png' %}" alt="">
+                <h3>
+                	<a href='#'> Постеры  на холсте/бумаге </a>
+                </h3>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work3.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Портрет по фото  на холсте </a>
+                </h3>
+                </a>
+            </div>
+    </div>
+    </div>
+    <div class="gal_row palette">
+    <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work4.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Репродукции  картин на холсте </a>
+                </h3>
+                </a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-8 thumb" style="margin-top: 12px;">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work8.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Модульные картины на холсте </a>
+                </h3>
+                </a>
+            </div>
+    </div>
+    </div>
+    <div class="gal_row brush">
+    <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work5.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Цифровая  обработка фото </a>
+                </h3>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work6.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Потрет  маслом по фото </a>
+                </h3>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb">
+                <a href="#">
+                    <img class="img-responsive" src="{% static 'img/prim_work7.png' %}" alt="">
+                    <div> </div>
+                    <h3>
+                	<a href='#'> Покрытие  текстурным гелем </a>
+                </h3>
+                </a>
+            </div>
 	</div>
-<!-- 	<div class="row">
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
 	</div>
-	<div class="row">
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
-		<div class="col-md-4">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/uslugi.jpg' %}">
-		</div>
-	</div> -->
+	</div>
+	</div>
 	<!-- END LIST OF SERVICES -->
 
 	<!-- BANNER LIST -->
-	<div class="row">
+	<div class="row easy_row">
 		<div class="col-md-12">
-			<img class="img-responsive" width="100%" src="{% static 'img/easy.jpg' %}">
+			<img class="img-responsive" max-width="50%" src="{% static 'img/easy.png' %}">
 		</div>
 	</div>
 	<!-- END OF BANNER LIST -->
@@ -195,9 +169,10 @@
 	</div>
 	<!-- END OF ROUND WIDGET -->
 	<!-- FORM -->
+	<div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			<img alt="Bootstrap Image Preview" src="{% static 'img/form_pic.jpg' %}">
+			<img class="img-responsive" width="100%" alt="Bootstrap Image Preview" src="{% static 'img/form_pic.jpg' %}">
 		</div>
 		<div class="col-md-6">
 			<form role="form">
