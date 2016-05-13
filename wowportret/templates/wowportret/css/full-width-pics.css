@@ -29,14 +29,16 @@ body {
     background-size: 1140px 1000px;
 }
 
-.img-center {
+.img-full-wdith {
 	margin: 0 auto;
     width: 100%;
+    /*padding: 30px 110px;*/
 }
 
-.img-full-width {
+.img-center {
     margin: 0 auto;
     width: 100%;
+    padding: 30px 110px;
 }
 
 section {
