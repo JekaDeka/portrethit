@@ -7,7 +7,6 @@
 body {
     /*margin-top: 50px;*/ /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     background-color: #333333;
-    font-family: Lucida Console, Helvetica, sans-serif;
 }
 
 .image-bg-fluid-height,
@@ -20,26 +19,41 @@ body {
 }
 
 .image-bg-fluid-height {
-	background: url('/U:/WORK/wowportret/img/bg/2bg.jpg') no-repeat center center scroll;
+    background: url('../img/bg/2bg.jpg') no-repeat center center scroll;
     padding: 400px 0;
 }
 
 .image-bg-fixed-height {
-	background: url('/U:/WORK/wowportret/img/bg/2bg.jpg') no-repeat scroll;
+    background: url('../img/bg/2bg.jpg') no-repeat scroll;
     height: 625px;
     background-size: 1140px 1000px;
-}
-
-.img-center {
-	margin: 0 auto;
-    width: 100%;
 }
 
 .img-full-width {
     margin: 0 auto;
     width: 100%;
+    /*padding: 30px 110px;*/
 }
 
+.img-center {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 110px;
+}
+.img-gal {
+    margin: 0 auto;
+    width: 100%;
+    padding: 5% 7%;
+}
+.img-min {
+    width: 80%;
+    height: auto;
+}
+
+.gal-bg {
+    background: url('../img/content/main/gal-bg.jpg') no-repeat;
+    background-position: 50% 12%;
+}
 section {
     padding: 75px 0;
 }
@@ -77,23 +91,56 @@ footer {
 }
 
 .text-back {
-    background: url('/U:/WORK/wowportret/img/content/text-back.png') no-repeat;
-    background-size: 100% 100%
+/*    background: url('../img/content/text-back.png') no-repeat;
+    background-size: 100% 100%*/
+    font-size: x-large;
 }
-/*
+
+.mt {
+    margin-top: 25px;
+}
+
+.a-glr {
+    display: block;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.btn-want {
+    margin: 15px 15px;
+    padding: 20px 100px;
+    color: black;
+    background-color: #DF5F03;
+    font-weight: bold;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    margin-left: 40%;
+    /* width and height can be anything, as long as they're equal */
+}
+
 .yellow {
     background-color: yellow;
-    background: url('/U:/WORK/wowportret/img/content/yellow.png');
-    background-size: 100% 100%;
-
 }
 
 .blue {
-    background: url('/U:/WORK/wowportret/img/content/blue.png');
-    background-size: 100% 100%;
+    background-color:  blue;
 }
 
 .red {
-    background: url('/U:/WORK/wowportret/img/content/red.png');
-    background-size: 100% 100%;
-}*/
+    background-color: red;
+}
+
+
+.how-to {
+    min-height: 400px;
+    background-color: rgba(255, 255, 0, 0.44);;
+}
+
+.price {
+    min-height: 400px;
+    background-color: rgba(255, 255, 0, 0.44);;
+}
