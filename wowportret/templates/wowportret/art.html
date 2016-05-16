@@ -33,46 +33,60 @@
 
         <div class="container white">
         <div class="row">
-            <div class="col-xs-12 col-xs-offset-6">
-                <h1><span class="yellow">Арт обработка <br /> фотографий</span> </h1>
+            <div class="header" style="background: url({% static 'img/bg/1bg.jpg' %}) no-repeat">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                <h1 class="art"><span class="yellow">Арт обработка фотографий</span> </h1>
+                </div>
+
             </div>
         <!-- set as background -->
         <!-- add title + span -->
         <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <img class="img-responsive img-full-width" src="{% static 'img/bg/2bg.jpg' %}" alt="">
+            <!-- <img class="img-responsive img-full-width" src="{% static 'img/bg/2bg.jpg' %}" alt=""> -->
         </div>
         <div class="row">
-            <div class="col-sm-12 col-md-8 col-lg-8">
-                <h3> Достаточно молодой, но уже набравший попоуляронсть, совеременный вид искусства</h3>
-                <p class="text-back">
-                Digital рисунок, на сегодняшний день,один из самых востребованных видов искусства в Европе.Ни одна кинопремьера или реклама не обходится без помощи
-                    профессиональных digital дизайнеров. Сегодня все сложнее найти фотографию или рисунок,который выходит в массы без предварительной обработки.
-                </p>
-                <p class="text-back">
-                Одним из направлений такого искусства является Двойная экспозици.  <br />
-                Достаточно необычнй вариант для создания портрета по фотографии.  <br />
-                Стоимость обработки в таком стиле за 1 персону  <br />
-                составит 850р.  <br />
-                Сроки выполнения макета,от 1 дня .  <br />
-                </p>
+            <div class="col-sm-12 col-md-8 col-lg-8 text-xs-center">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 mt">
+                        <h3> <strong> Достаточно молодой, но уже <br /> набравший попоуляронсть, <br />  совеременный вид искусства </strong></h3>
+                        <p class="text-back mt">
+                        Digital рисунок, на сегодняшний день,один из самых востребованных видов искусства в Европе.Ни одна кинопремьера или реклама не обходится без помощи
+                            профессиональных digital дизайнеров. Сегодня все сложнее найти фотографию или рисунок,который выходит в массы без предварительной обработки.
+                        </p>
+                        <p class="text-back mt">
+                        Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозици. </span> <br />
+                        Достаточно необычнй вариант для создания портрета по фотографии.  <br />
+                        Стоимость обработки в таком стиле за 1 персону  <br />
+                        <span class="blue"> составит 850р. </span> <br />
+                        <span class="red"> Сроки выполнения макета,  от 1 дня . </span>  <br />
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/guy.jpg' %}" alt="">
+            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="background: url({% static 'img/content/art/guy.jpg' %}); min-height: 682px">
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/guy.jpg' %}" alt=""> -->
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/girl_boy.jpg' %}" alt="">
+            <div class="col-xs-12 header" style="background: url({% static 'img/content/art/girl_boy.jpg' %}) no-repeat">
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/girl_boy.jpg' %}" alt=""> -->
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 text-xs-center">
+                        <button type="button" class="btn btn-want" style="margin-top: 700px;">Хочу также</button>
+                    </div>
+                </div>
+
             </div>
-            <div class="col-xs-12 col-xs-offset-3">
+            <!-- <div class="col-xs-9">
             <button type="button" class="btn btn-want">Хочу также</button>
-            </div>
+            </div> -->
         </div>
         <div class="row">
-            <div class="col-xs-12">
-                <p class="text-xs-center">Еще одно из востребованных стилей  <br />
-является - «цифровой портрет»  <br />
-Художник-дизайнер, по Вашей фотографии рисует портрет на компьютере при помощи электронного пера и специального графического планшета </p>
+            <div class="col-xs-12 text-xs-center">
+                <p class="text-back">
+                Еще одно из востребованных стилей  <br />
+                является - «цифровой портрет»  <br />
+                Художник-дизайнер, по Вашей фотографии рисует портрет на компьютере при помощи электронного пера и специального графического планшета </p>
             </div>
         </div>
         <div class="row">
@@ -81,21 +95,20 @@
             <!-- </div> -->
         </div>
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 text-xs-center">
                 <h3>Цифровой портрет</h3>
                 <p class="text-back">
                     Процесс создания цифрового портрета, достаточно долгий и трудоемкий процесс.  <br />
-Он сравним с тем,как художник рисует свои полотна кистями и красками,но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень долгие годы.  <br />
-Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на любую поверхность,холст,дерево, бумага,даже на кружку или футболку!  <br />
+Он сравним с тем,как художник рисует свои полотна <span class="red">кистями и красками</span> ,но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span> <br />
+Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на <span class="blue">любую поверхность </span>,холст,дерево, бумага,даже на кружку или футболку! <br />
                 </p>
                 <p class="text-back">
-                    Сроки исполнения 5-8 рабочих дней за 1 персону  <br />
+                    Сроки исполнения <span class="yellow"> 5-8 рабочих дней за 1 персону </span>  <br />
+Стоимость ч/б портрета <span class="blue">1 персоны  <br />
+1700р </span>  <br />
 
-Стоимость ч/б портрета 1 персоны  <br />
-1700р  <br />
-
-Стоимость цветного портрета 1 персоны  <br />
-2200р  <br />
+Стоимость цветного портрета <span class="red"> 1 персоны  <br />
+2200р </span>  <br />
 
 
                 </p>
@@ -109,73 +122,87 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-12 col-md-6 mt">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
+            <div class="col-xs-12 mt">
+                <img class="img-responsive img-center" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
             </div>
-            <div class="col-xs-12 col-md-6 mt">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-6 mt">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-12 col-md-6 mt">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
+            <div class="col-xs-12 mt">
+                <img class="img-responsive img-center" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 text-xs-center col-xs-offset-3">
+            <div class="col-xs-12 mt">
+                <img class="img-responsive img-center" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
+            </div>
+            <div class="col-xs-12 mt">
+                <img class="img-responsive img-center" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-xs-center">
                 <button type="button" class="btn btn-want">Хочу также</button>
                 <!-- <img class="img-responsive img-center" src="{% static 'img/content/art/girld_kid.jpg' %}" alt=""> -->
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 text-xs-center">
-                <h3>Стиль цифрового портрета - «Космическая геометрия»</h3>
+                <h3>Стиль цифрового портрета - <br /> «Космическая геометрия»</h3>
             </div>
-            <div class="col-sm-8 col-xs-center">
-                <p class="text-back">
-                    Стоимость портрета за 1 персону  <br />
-                    950р  <br />
-
-                    Сроки выполнения портрета  <br />
-                    в данном стиле  <br />
-                    1 рабочий день!  <br />
-
-                    После создания, портрет можно перенести на холст.  <br />
-                    Оформление в деревянный багет в данной стилистике не требуется.  <br />
-                    Картина выглядит эффетно в любом интерьере!  <br />
-
-                </p>
-            </div>
-            <div class=" col-xs-12 col-sm-4 text-xs-center">
-                <!-- Уменьшить -->
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/tima.jpg' %}" alt="">
+            <div class="mt">
+                <div class="col-xs-12 col-md-6 text-xs-center mt">
+                    <p class="text-back">
+                        <strong>
+                        Стоимость портрета за <span class="yellow"> 1 персону  <br />
+                        &nbsp&nbsp950р </span> <br />
+                        <br />
+                        Сроки выполнения портрета  <br />
+                        в данном стиле  <br />
+                        <span class="blue"> 1 рабочий день! </span>  <br />
+                        <br />
+                        После создания, портрет можно перенести  <br /> на холст.  <br />
+                        Оформление   в деревянный багет в данной  <br /> стилистике не требуется.  <br />
+                        <span class="red"> Картина выглядит эффетно в любом  <br /> интерьере! </span> <br />
+                        </strong>
+                    </p>
+                </div>
+                <div class=" col-xs-12 col-sm-6 hidden-sm-down" style="background: url({% static 'img/content/art/tima.jpg' %}) no-repeat; min-height: 577px; background-position-x: -35px;">
+                    <!-- Уменьшить -->
+                    <!-- <img class="img-responsive img-gal" src="{% static 'img/content/art/tima.jpg' %}" alt=""> -->
+                </div>
             </div>
         </div>
-        <div class="row">
+<!--         <div class="row">
             <div class=" col-xs-12 text-xs-center">
                 <img class="img-responsive" src="{% static 'img/content/art/megan.jpg' %}" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <div class=" col-xs-12 text-xs-center">
                 <button type="button" class="btn btn-want">Хочу также</button>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt" style="background: url({% static 'img/content/art/art1.jpg' %}) no-repeat 100% -20%; min-height: 900px;">
             <div class="col-xs-12 text-xs-center">
-                <h3>Стиль цифрового потрета: <br />
-                        Буйство красок!</h3>
-                <p class="text-back">
-                    Стоимость портрета в данной стилистике 1000р до 2х персон на картине<br />
-                    Сроки исполнения 1-2 рабочих дня.
-                </p>
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/art1.jpg' %}" alt="">
+                <h3><strong>Стиль цифрового потрета: <br />
+                        Буйство красок! </strong></h3>
+                <div class="row mt">
+                    <div class="col-xs-12 col-sm-6">
+                        <p class="text-back">
+                            Стоимость портрета в данной стилистике <br /> <span class="blue"> 1000р до 2х персон </span> на картине<br />
+                            <br />
+                            Сроки исполнения <span class="yellow">1-2 рабочих дня.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 text-xs-center col-md-offset-6 col-lg-offset-7 col-xl-offset-8">
+                        <button type="button" class="btn btn-want" style="margin-top: 550px">Хочу также</button>
+                    </div>
+                </div>
 
-                <button type="button" class="btn btn-want">Хочу также</button>
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/art1.jpg' %}" alt=""> -->
+
+
             </div>
         </div>
 
