@@ -1,26 +1,6 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Document</title>
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-        <!-- Custom CSS -->
-        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body>
+{% block content %}
         <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
 <!--     <header class="image-bg-fluid-height">
@@ -33,47 +13,70 @@
 
         <div class="container white">
         <div class="row">
+
+            <div class="header" style="background: url({% static 'img/content/holst/3bg.jpg' %}) no-repeat; min-height: 703px">
+                <div class="col-xs-12 col-sm-6 text-xs-center">
+                <h1 class="art"><span class="blue">Яркие моменты жизни</span> <br /> в <br /> <span class="red">Фото </span> <br /> на <br />  <span class="yellow"> Холсте </span> </h1>
+                </div>
+
+            </div>
         <!-- set as background -->
         <!-- add title + span -->
         <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <div class="col-xs-12 col-xs-offset-1">
+<!--             <div class="col-xs-12 col-xs-offset-1">
                 <h1>Якрие моменты жизни <br /> в Фото на Холсте</h1>
             </div>
-            <img class="img-responsive img-full-width" src="{% static 'img/content/holst/1bg.jpg' %}" alt="">
+            <img class="img-responsive img-full-width" src="{% static 'img/content/holst/2bg.jpg' %}" alt=""> -->
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 text-xs-center">
-                <p class="text-back">
-                <strong>Любые изображения </strong> <br />
+        <div class="row hidden-lg-up text-xs-center mt">
+            <div class="col-xs-12">
+                <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
+                <p class="text-back text-holst">
                 которое хранится на Ваших компьютерах или телефонах, могут стать  <br />
-                настоящим Арт обьектом и украсить любой интерьер! <br />
-            </p>
+                настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер! <br />
+                </p>
             </div>
-            <div class="col-md-6 col-lg-6 hidden-sm-down">
-                <img class="img-responsive img-center" src="{% static 'img/content/holst/art1.jpg' %}" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down">
-                <img class="img-responsive img-center" src="{% static 'img/content/holst/art2.jpg' %}" alt="">
-            </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 text-xs-center">
-                <p class="text-back">
+            <div class="col-xs-12">
+                <p class="text-back text-holst">
                     Наша мастерская,при помощи цифровой печати,переносит любое изображение на холст, <br />
+                    после чего натягиваем изображение на <span class="blue">деревянный подрамник</span> и оформляем в багетную раму,по Вашему желанию. <br />
+                </p>
+            </div>
+
+        </div>
+        <div class="row hidden-md-down" style="background: url({% static 'img/content/holst/art_bg.jpg' %}) 0% 0% no-repeat; min-height: 878px" >
+            <div class="col-xs-12 col-lg-7 text-xs-center mt">
+                <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
+                <p class="text-back text-holst">
+                которое хранится на Ваших компьютерах или телефонах, могут стать  <br />
+                настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер! <br />
+                </p>
+            </div>
+            <!-- <div class="col-md-6 col-lg-6 hidden-sm-down" style="background: url({% static 'img/content/holst/art1.jpg' %}) no-repeat; min-height: 370px"> -->
+                <!-- <img class="img-responsive img-center" src="{% static 'img/content/holst/art1.jpg' %}" alt=""> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="row mt"> -->
+            <!-- <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="background: url({% static 'img/content/holst/art2.jpg' %}) no-repeat; min-height: 370px"> -->
+                <!-- <img class="img-responsive img-center" src="{% static 'img/content/holst/art2.jpg' %}" alt=""> -->
+            <!-- </div> -->
+            <div class="col-xs-12 col-lg-5 text-xs-center" style="margin-top: 600px">
+                <p class="text-back text-holst">
+                    Наша мастерская,при помощи цифровой печати,переносит <span class="blue">любое изображение</span> на холст, <br />
                     после чего натягиваем изображение на деревянный подрамник и оформляем в багетную раму,по Вашему желанию. <br />
                 </p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back">
-                    На холсте,можно напечатать не тольфото, но илюбую картину. <br />
-                    Так же ,можете воспользоваться нашими услугми,такими,как портрет в образе и портрет в стиле Pop Art для переноса изображения на холст. <br />
+                <p class="text-back text-holst">
+                    На холсте,можно напечатать не только фото, но и любую <br /> картину. <br />
+                    Так же ,можете воспользоваться нашими <br /> услугми,такими,как <span class="yellow">портрет в образе</span>и портрет в стиле <br /> <span class="blue">Pop Art</span> для переноса изображения на холст. <br />
                 </p>
-                <p class="text-back">
+                <p class="text-back text-holst">
                     Сроки выполнения, от 1 дня <br />
-                    Возможно срочное изготовление за 2 часа!
+                    Возможно срочное <span class="red">изготовление за 2 часа!</span>
                 </p>
             </div>
         </div>
@@ -97,8 +100,4 @@
 
         </div>
 
-
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-</html>
+{% endblock content %}

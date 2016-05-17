@@ -1,36 +1,6 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-        <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Document</title>
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-        <!-- Custom CSS -->
-        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="{% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="{% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body>
-        <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-<!--     <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="{% static 'img/bg/1bg.jpg' %}" alt="">
-    </header> -->
-
-    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <!-- <aside class="image-bg-fixed-height"></aside> -->
-
+{% block content %}
         <div class="container white">
         <div class="row">
             <div class="header" style="background: url({% static 'img/bg/1bg.jpg' %}) no-repeat">
@@ -54,8 +24,9 @@
                             профессиональных digital дизайнеров. Сегодня все сложнее найти фотографию или рисунок,который выходит в массы без предварительной обработки.
                         </p>
                         <p class="text-back mt">
-                        Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозици. </span> <br />
+                        Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозиция. </span> <br />
                         Достаточно необычнй вариант для создания портрета по фотографии.  <br />
+                        <!-- <br /> -->
                         Стоимость обработки в таком стиле за 1 персону  <br />
                         <span class="blue"> составит 850р. </span> <br />
                         <span class="red"> Сроки выполнения макета,  от 1 дня . </span>  <br />
@@ -71,8 +42,8 @@
             <div class="col-xs-12 header" style="background: url({% static 'img/content/art/girl_boy.jpg' %}) no-repeat; background-position: 46%;">
                 <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/girl_boy.jpg' %}" alt=""> -->
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 text-xs-center col-md-offset-1">
-                        <button type="button" class="btn btn-want" style="margin-top: 700px;">Хочу также</button>
+                    <div class="col-xs-12 col-sm-6 text-xs-center col-md-offset-1 col-lg-offset-0">
+                        <button type="button" class="btn btn-want" style="margin-top: 731px;">Хочу также</button>
                     </div>
                 </div>
 
@@ -81,8 +52,8 @@
             <button type="button" class="btn btn-want">Хочу также</button>
             </div> -->
         </div>
-        <div class="row">
-            <div class="col-xs-12 text-xs-center">
+        <div class="row mt">
+            <div class="col-xs-12 text-xs-center mt">
                 <p class="text-back">
                 Еще одно из востребованных стилей  <br />
                 является - «цифровой портрет»  <br />
@@ -95,14 +66,15 @@
             <!-- </div> -->
         </div>
         <div class="row mt">
-            <div class="col-xs-12 col-sm-12 col-md-6 text-xs-center">
+            <div class="col-xs-12 col-sm-12 col-md-5 text-xs-center">
                 <h3>Цифровой портрет</h3>
                 <p class="text-back">
                     Процесс создания цифрового портрета, достаточно долгий и трудоемкий процесс.  <br />
 Он сравним с тем,как художник рисует свои полотна <span class="red">кистями и красками</span> ,но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span> <br />
+<br />
 Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на <span class="blue">любую поверхность </span>,холст,дерево, бумага,даже на кружку или футболку! <br />
                 </p>
-                <p class="text-back">
+                <p class="text-back mt">
                     Сроки исполнения <span class="yellow"> 5-8 рабочих дней за 1 персону </span>  <br />
 Стоимость ч/б портрета <span class="blue">1 персоны  <br />
 1700р </span>  <br />
@@ -114,27 +86,27 @@
                 </p>
 
             </div>
-            <div class="col-xs-12 col-md-6 hidden-sm-down">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/little_kid.jpg' %}" alt="">
+            <div class="col-xs-12 col-md-7 hidden-sm-down" style="background: url({% static 'img/content/art/little_kid.jpg' %}) no-repeat; background-position-x: 50px; min-height: 820px">
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/little_kid.jpg' %}" alt=""> -->
                 <!-- Уменьшить девушку -->
                 <!-- <img class="img-responsive img-center" src="{% static 'img/content/art/adult_girl.jpg' %}" alt=""> -->
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-12 mt">
-                <img class="img-responsive img-center" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
+            <div class="col-xs-12">
+                <img class="img-responsive img-gal" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
             </div>
-            <div class="col-xs-12 mt">
-                <img class="img-responsive img-center" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
+            <div class="col-xs-12">
+                <img class="img-responsive img-gal" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 mt">
-                <img class="img-responsive img-center" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
+            <div class="col-xs-12">
+                <img class="img-responsive img-gal" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
             </div>
-            <div class="col-xs-12 mt">
-                <img class="img-responsive img-center" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
+            <div class="col-xs-12">
+                <img class="img-responsive img-gal" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
             </div>
         </div>
         <div class="row">
@@ -209,8 +181,4 @@
 
         </div>
 
-
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-</html>
+{% endblock content %}

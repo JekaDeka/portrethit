@@ -1,26 +1,6 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Document</title>
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-        <!-- Custom CSS -->
-        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body>
+{% block content %}
         <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
 <!--     <header class="image-bg-fluid-height">
@@ -33,17 +13,23 @@
 
         <div class="container white">
         <div class="row">
+            <div class="header" style="background: url({% static 'img/content/main/2bg.jpg' %}) no-repeat; min-height: 600px">
+                    <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                        <h1 class="main"><span class="blue">Лучший подарок, на любой <br /> праздник - Картина!</span> </h1>
+                    </div>
+
+            </div>
         <!-- set as background -->
         <!-- add title + span -->
         <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <div class="col-xs-12 text-xs-right">
+            <!-- <div class="col-xs-12 text-xs-right">
                 <h1><span class="blue">Лучший подарок, на любой <br /> праздник - Картина!</span> </h1>
-            </div>
-            <img class="img-responsive img-full-width" src="{% static 'img/content/main/1bg.jpg' %}" alt="">
+            </div> -->
+            <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/main/1bg.jpg' %}" alt=""> -->
         </div>
-        <div class="row">
+        <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <h2> <strong> В каких случая стоит дарить <br /> портрет на холсте: </strong> </h2>
+                <h2 class="h-holst"> <strong> В каких случая стоит дарить <br /> портрет на холсте: </strong> </h2>
             </div>
         </div>
         <div class="row text-xs-center">
@@ -135,9 +121,4 @@
             </div>
         </div>
         </div>
-
-
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-</html>
+{% endblock content %}

@@ -1,56 +1,32 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Document</title>
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-        <!-- Custom CSS -->
-        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body>
-        <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-<!--     <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="{% static 'img/bg/1bg.jpg' %}" alt="">
-    </header> -->
-
-    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <!-- <aside class="image-bg-fixed-height"></aside> -->
+{% block content %}
 
         <div class="container white">
         <div class="row">
-        <!-- set as background -->
-        <!-- add title + span -->
-        <!-- <aside class="image-bg-fixed-height"></aside> -->
+        <div class="header" style="background: url({% static 'img/content/classic/1bg.jpg' %}) no-repeat; min-height: 1000px">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+                <h1 class="art"><span class="blue">Классический портрет с заменой фона</span> </h1>
+                </div>
+
+        </div>
+        </div>
+<!--         <div class="row">
             <div class="col-xs-12 col-xs-offset-6">
                 <h1><span class="blue">Классический портрет <br /> с заменой фона</span> </h1>
             </div>
             <img class="img-responsive img-full-width" src="{% static 'img/content/classic/1bg.jpg' %}" alt="">
-        </div>
-        <div class="row">
+        </div> -->
+        <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <h3> Даже самые непримечательные фотографии могут превратиться в настоящую картину.</h3>
+                <h3> <strong> Даже самые непримечательные фотографии могут превратиться в настоящую картину. </strong></h3>
                 <p class="text-back">
-Для изготовления классического портрет нам понадобится всего 1 фотография,которую Вы вырете для создания картины. Мы заменим фон и стилизуем фото, под живопись.Получившийся макет направим Вам на утверждение.После чего, изображение будет перенесено на холст и натянуто на деревянный подрамник.Так же готовую картину,можно оформить в деревянную багетную раму.
+Для изготовления классического портрет нам понадобится всего <span class="yellow">1 &nbspфотография,которую Вы вырежите</span> <br />  для создания картины. Мы заменим фон и стилизуем фото, под живопись. <br />  Получившийся макет направим Вам на утверждение.После чего, изображение будет перенесено на холст и натянуто на деревянный подрамник. <br />  Так же готовую картину,можно оформить в <span class="red">деревянную багетную раму.</span>
                 </p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 text-xs-center">
+        <div class="row mt">
+            <div class="col-xs-12 text-xs-center mt">
                 <h3> <strong> Вот некоторые варианты: </strong> </h3>
                 <img class="img-responsive img-center" src="{% static 'img/content/classic/art1.jpg' %}" alt="">
             </div>
@@ -85,9 +61,4 @@
         </div>
 
         </div>
-
-
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-</html>
+{% endblock content %}

@@ -1,26 +1,6 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Document</title>
-
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-
-        <!-- Custom CSS -->
-        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-    </head>
-    <body>
+{% block content %}
         <!-- Full Width Image Header with Logo -->
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
 <!--     <header class="image-bg-fluid-height">
@@ -33,49 +13,57 @@
 
         <div class="container white">
         <div class="row">
+            <div class="header" style="background: url({% static 'img/content/maslo/2bg.jpg' %}) no-repeat; min-height: 1000px; ">
+                    <div class="col-xs-12 col-md-8 col-lg-6 col-lg-offset-6 col-md-offset-4">
+                        <h1 class="art"><span class="red">Пропись маслом <br /> на холсте</span> </h1>
+                    </div>
+                    <div class="col-xs-12 col-md-7 col-lg-6">
+                        <h2 style="margin-top: 650px; text-align: center;"> <strong> Пропись маслом,техника <br /> «Жекле» </strong> </h2>
+                    </div>
+            </div>
         <!-- set as background -->
         <!-- add title + span -->
         <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <div class="col-xs-12 col-xs-offset-6">
-                <h1><span class="orange">Пропись маслом <br /> на холсте</span> </h1>
-            </div>
-            <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/1bg.jpg' %}" alt="">
+            <!-- <div class="col-xs-12 col-xs-offset-6"> -->
+                <!-- <h1><span class="orange">Пропись маслом <br /> на холсте</span> </h1> -->
+            <!-- </div> -->
+            <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/1bg.jpg' %}" alt=""> -->
         </div>
-        <div class="row">
+<!--         <div class="row">
             <div class="col-xs-6">
-                <h2> Пропись маслом,техника <br /> «Жекле» </h2>
+                <h2> <strong> Пропись маслом,техника <br /> «Жекле» </strong> </h2>
             </div>
-        </div>
+        </div> -->
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6 text-xs-center">
+            <div class="col-sm-12 col-md-12 col-lg-6 text-xs-center">
                 <p class="text-back">
-            При помощи современных технологий,добиться портретного сходства, стало гораздо легче. <br />
-Теперь Вы не будет разочарованы,получая готовый портрет по фотографии на заказ. <br />
-Техника «Жекле»- пропись маслянной карской, выполняется по предварительно согласованному с Вам макету. <br />
-После чего переносится на холст в виде эскиза,который в дальнейшем художник в ручную прописывает маслянными красками. <br />
-Такой процесс не требует долгого позирования и мучительных ожиданий получения готовой картины. <br />
+            При помощи современных <br /> технологий,добиться портретного сходства, <br /> стало гораздо легче. <br />
+<span class="yellow">Теперь Вы не будет разочарованы</span>, получая <br /> готовый портрет по фотографии на заказ. <br />
+Техника «Жекле»- пропись маслянной  <br /> карской, выполняется по предварительно <br /> согласованному <span class="blue">с Вам макету.  </span><br />
+После чего переносится на холст в виде <br /> эскиза,который в дальнейшем художник в <br /> ручную прописывает маслянными красками. <br />
+Такой процесс <span class="red">не требует долгого</span> <br /> позирования и мучительных ожиданий <br /> получения готовой картины. <br />
 
             </p>
             </div>
-            <div class="col-xs-6 col-md-6 col-lg-6 hidden-sm-down">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/grandpa.jpg' %}" alt="">
+            <div class="col-xs-6 col-lg-6 hidden-md-down" style="background: url({% static 'img/content/maslo/grandpa.jpg' %}) no-repeat; min-height: 547px">
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/grandpa.jpg' %}" alt=""> -->
             </div>
         </div>
-        <div class="row">
-            <div class="col-xs-6 col-md-6 col-lg-6 hidden-sm-down">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/grandpa1.jpg' %}" alt="">
+        <div class="row mt">
+            <div class="col-xs-6 col-md-6 col-lg-6 hidden-md-down" style="background: url({% static 'img/content/maslo/grandpa1.jpg' %}) no-repeat; min-height: 825px">
+                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/grandpa1.jpg' %}" alt=""> -->
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 text-xs-center">
-                <p class="text-back">
-                Стандартные сроки выполнения портрета в технике «Жекле» от 2 до 4 дней, в зависимоти от сложности фона и колличества деталей на картине. <br />
-
-Если праздник совсем скоро, Вы можете воспользоваться услугой экспресс заказа и получить готовый портрет всего за 24 часа! <br />
-
-Портрет в технике «Жекле» может быть исполнен по фотографии предоставляемой заказчиком, в первозданном виде,без применения цифровых преобразований. Так же в таких стилях как: классический портрет или портрет в образе. <br />
-
-Стоимость макета в цифровом виде, оплачивается отдельно, за одну персону, составляет 800р <br />
-
-Такой портрет,может стать идеальным подарком на юбилей. <br />
+            <div class="col-sm-12 col-md-12 col-lg-6 text-xs-center">
+                <p class="text-back mt">
+                Стандартные сроки выполнения портрета в <br /> технике <span class="yellow"> «Жекле» от 2 до 4 дней </span>, в <br /> зависимоти от сложности фона и <br /> колличества деталей на картине. <br />
+                <br />
+Если праздник совсем скоро, Вы можете <br /> воспользоваться услугой <span class="blue">экспресс заказа</span>и <br /> получить готовый портрет всего за 24 часа! <br />
+<br />
+Портрет в технике «Жекле» может быть <br /> <span class="red">исполнен по фотографии</span> предоставляемой <br /> заказчиком, в первозданном виде,без <br /> применения цифровых преобразований. Так <br /> же в таких стилях как: классический портрет <br /> или портрет в образе. <br />
+<br />
+Стоимость макета в цифровом виде, <br /> оплачивается отдельно, за одну персону, <br /> <span class="blue">составляет 800р</span><br />
+<br />
+Такой портрет,может стать идеальным <br /> <span class="yellow">подарком на юбилей. </span><br />
 
             </p>
             </div>
@@ -90,9 +78,9 @@
             </div>
         </div> -->
         <div class="row mt">
-            <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример подарка на годовщину свадьбы. <br />
-Парный портрет в технике «Жекле» </p>
+            <div class="col-xs-12 text-xs-center mt">
+                <p class="text-back"> <strong>Пример подарка на годовщину свадьбы.  <br />
+                Парный портрет в технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art1.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом выбранного образа на 2 персоны  размером 40х60 + багетная рама категории А, состпвит - 7 830р. </p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -101,8 +89,8 @@
 
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример подарка на Юбилей мужчине.
-Мужской образ в технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример подарка на Юбилей мужчине.
+Мужской образ в технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art2.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом выбранного образа на 1 персону размером 50х70 + багетная рама категории А, составит - 11 670р.</p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -110,8 +98,8 @@
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример подарка на Свадьбу.
-Парный образ в технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример подарка на Свадьбу.
+Парный образ в технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art3.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом выбранного образа на 2 персоны размером 40х60 + багетная рама категории Б, составит - 8 690р.</p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -119,8 +107,8 @@
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример подарка Маме на День Рождения.
-В технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример подарка Маме на День Рождения.
+В технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art4.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом оцветнения чб фотографии 1 персоны размером 40х60 + багетная рама категории Б, составит - 8 390р.</p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -128,8 +116,8 @@
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример подарка Женщине на Юбилей.
-В технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример подарка Женщине на Юбилей.
+В технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art5.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом замены фона на фотографии 1 персоны размером 50х70 + багетная рама категории А, составит - 11 310р.</p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -137,16 +125,16 @@
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример коллективного подарка.
-В технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример коллективного подарка.
+В технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art6.jpg' %}" alt="">
                 <button type="button" class="btn btn-want">Хочу также</button>
             </div>
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Пример коллективного подарка Начальнику.
-В технике «Жекле» </p>
+                <p class="text-back"> <strong> Пример коллективного подарка Начальнику.
+В технике «Жекле» </strong></p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art7.jpg' %}" alt="">
                 <p style="font-size: small;"> *стоимость готовой картины в технике пропись маслом с учетом образа 1 персоны размером 75х105 + багетная рама категории С, составит - 27 390р.</p>
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -154,7 +142,7 @@
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
-                <p class="text-back"> Еще примеры: </p>
+                <p class="text-back"> <strong> <span class="yellow"> Еще примеры: </span> </strong>  </p>
                 <img class="img-responsive img-center" src="{% static 'img/content/maslo/art8.jpg' %}" alt="">
                 <button type="button" class="btn btn-want">Хочу также</button>
             </div>
@@ -167,7 +155,7 @@
 
             </div>
         </div>
-        <div class="row mt">
+<!--         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
                                 <p class="text-back"> Пропись маслом,
 Эффект картины музейного качества. </p>
@@ -189,11 +177,7 @@
 
             </p>
             </div>
-        </div>
+        </div> -->
         </div>
 
-
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    </body>
-</html>
+{% endblock content %}
