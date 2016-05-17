@@ -151,11 +151,19 @@ footer {
 }
 
 .blue {
-    background-color:  blue;
+    background: url(../img/blue-text.png) 0% 100% no-repeat;
+    background-size: 100% 100%;
+    /*background-color: rgba(253, 248, 10, 0.58);*/
+    line-height: 1.6em;
+    padding: 11px 10px;
 }
 
 .red {
-    background-color: red;
+    background: url(../img/red-text.png) 0% 100% no-repeat;
+    background-size: 100% 100%;
+    /*background-color: rgba(253, 248, 10, 0.58);*/
+    line-height: 1.6em;
+    padding: 11px 10px;
 }
 
 
