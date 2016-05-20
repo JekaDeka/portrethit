@@ -269,5 +269,7 @@ footer {
 }
 
 @media(max-width:544px) {
-
+    .btn-want {
+        padding: 23px 15px;
+    }
 }
