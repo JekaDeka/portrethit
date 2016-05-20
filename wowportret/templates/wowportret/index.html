@@ -11,13 +11,21 @@
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <!-- <aside class="image-bg-fixed-height"></aside> -->
 
-        <div class="container white">
+        <div class="container-fluid white">
         <div class="row">
-            <div class="header" style="background: url({% static 'img/content/main/2bg.jpg' %}) no-repeat; min-height: 600px">
-                    <div class="col-xs-12 col-sm-6 col-sm-offset-6">
-                        <h1 class="main"><span class="blue">Лучший подарок, на любой <br /> праздник - Картина!</span> </h1>
+            <div class="header" style="background: url({% static 'img/content/main/wall.jpg' %}) repeat; min-height: 600px; ">
+
+                    <div class="col-md-6 hidden-sm-down">
+                        <img class="" src="{% static 'img/content/main/test.png' %}" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="main">
+                        <h1 style="margin-top: 125px">Лучший подарок, на любой праздник - Картина</h1>
+                        </div>
                     </div>
 
+            </div>
+            <div style="background: url({% static 'img/content/main/floor.jpg' %}) repeat; min-height: 182px">
             </div>
         <!-- set as background -->
         <!-- add title + span -->
@@ -27,6 +35,8 @@
             </div> -->
             <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/main/1bg.jpg' %}" alt=""> -->
         </div>
+        </div>
+        <div class="container white">
         <div class="row mt">
             <div class="col-xs-12 text-xs-center">
                 <h2 class="h-holst"> <strong> В каких случая стоит дарить <br /> портрет на холсте: </strong> </h2>
