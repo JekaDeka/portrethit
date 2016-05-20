@@ -1,12 +1,4 @@
-/* Webfont: ../BloggerSansMedium/BloggerSans-Medium */@font-face {
-    font-family: 'BloggerSansMedium';
-    src: url('../BloggerSansMedium/BloggerSans-Medium.eot'); /* IE9 Compat Modes */
-    src: url('../BloggerSansMedium/BloggerSans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('../BloggerSansMedium/BloggerSans-Medium.woff') format('woff'), /* Modern Browsers */
-         url('../BloggerSansMedium/BloggerSans-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-         url('../BloggerSansMedium/BloggerSans-Medium.svg#BloggerSans-Medium') format('svg'); /* Legacy iOS */
-    font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
-
+@font-face{font-family:'BloggerSansMedium';src:url('../BloggerSansMedium/BloggerSans-Medium.eot');src:url('../BloggerSansMedium/BloggerSans-Medium.eot?#iefix') format('embedded-opentype'),
+url('../BloggerSansMedium/BloggerSans-Medium.woff') format('woff'),
+url('../BloggerSansMedium/BloggerSans-Medium.ttf') format('truetype'),
+url('../BloggerSansMedium/BloggerSans-Medium.svg#BloggerSans-Medium') format('svg');font-style:normal;font-weight:normal;text-rendering:optimizeLegibility;}
