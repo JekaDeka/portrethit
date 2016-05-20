@@ -171,7 +171,7 @@ footer {
 }
 
 .header {
-    min-height: 854px;
+    min-height: 812px;
 }
 
 .art {
@@ -242,12 +242,34 @@ footer {
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
+.art-girl {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.art-claks {
+    position: absolute;
+    left: 0px;
+    top: 110px;
+}
 @media(max-width:992px) {
     .port {
         position: relative;
         top: 0px;
         width: 480px;
         margin-top: 32px;
+    }
+
+    .art-girl {
+        position: absolute;
+        top: -22px;
+        left: 8%;
+    }
+    .art-claks {
+    position: absolute;
+    left: -200px;
+    top: 100px;
     }
 }
 
@@ -265,6 +287,9 @@ footer {
         min-height: 298px;
     }
 
+    .art-girl {
+        /*display: none;*/
+    }
 
 }
 

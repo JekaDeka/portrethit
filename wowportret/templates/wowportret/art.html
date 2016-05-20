@@ -3,17 +3,26 @@
 {% block content %}
         <div class="container-fluid white">
         <div class="row">
-            <div class="header" style="background: url({% static 'img/bg/1bg.jpg' %}) no-repeat">
+            <div class="header" style="background: url({% static 'img/content/art/new_back.jpg' %}) repeat-x">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-6">
                 <h1 class="art"><span class="yellow">Арт обработка фотографий</span> </h1>
                 </div>
-
+                <div class="hidden-sm-down">
+                <img class="art-claks img-full-width " src="{% static 'img/content/art/claks.png' %}" alt="">
+                <div class="col-lg-3 hidden-md-down mt">
+                    <img class="img-responsive img-full-width" src="{% static 'img/content/art/cam.png' %}" alt="">
+                </div>
+                <div class="col-md-12 col-lg-6 text-xs-center hidden-sm-down">
+                    <img class="img-responsive img-full-width  art-girl" src="{% static 'img/content/art/main.png' %}" alt="">
+                </div>
+                <div class="col-lg-3 hidden-md-down">
+                    <img class="img-responsive img-full-width" src="{% static 'img/content/art/tablet.png' %}" alt="">
+                </div>
+                </div>
             </div>
-        <!-- set as background -->
-        <!-- add title + span -->
-        <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <!-- <img class="img-responsive img-full-width" src="{% static 'img/bg/2bg.jpg' %}" alt=""> -->
         </div>
+        </div>
+
         <div class="container white">
         <div class="row">
             <div class="col-sm-12 col-md-8 col-lg-8 text-xs-center">
@@ -27,7 +36,6 @@
                         <p class="text-back mt">
                         Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозиция. </span> <br />
                         Достаточно необычнй вариант для создания портрета по фотографии.  <br />
-                        <!-- <br /> -->
                         Стоимость обработки в таком стиле за 1 персону  <br />
                         <span class="blue"> составит 850р. </span> <br />
                         <span class="red"> Сроки выполнения макета,  от 1 дня . </span>  <br />
@@ -35,13 +43,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="background: url({% static 'img/content/art/guy.jpg' %}); min-height: 682px">
-                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/guy.jpg' %}" alt=""> -->
+            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="position: inherit; background: url({% static 'img/content/art/guy.jpg' %}); min-height: 682px">
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 header" style="background: url({% static 'img/content/art/girl_boy.jpg' %}) no-repeat; background-position: 46%;">
-                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/girl_boy.jpg' %}" alt=""> -->
+
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 text-xs-center col-md-offset-1 col-lg-offset-0">
                         <button type="button" class="btn btn-want" style="margin-top: 731px;">Хочу также</button>
@@ -49,9 +56,6 @@
                 </div>
 
             </div>
-            <!-- <div class="col-xs-9">
-            <button type="button" class="btn btn-want">Хочу также</button>
-            </div> -->
         </div>
         <div class="row mt">
             <div class="col-xs-12 text-xs-center mt">
@@ -62,18 +66,16 @@
             </div>
         </div>
         <div class="row">
-            <!-- <div class="col-xs-12"> -->
                 <img class="img-responsive img-full-width" src="{% static 'img/content/art/girld_kid.jpg' %}" alt="">
-            <!-- </div> -->
         </div>
         <div class="row mt">
             <div class="col-xs-12 col-sm-12 col-md-5 text-xs-center">
                 <h3>Цифровой портрет</h3>
                 <p class="text-back">
                     Процесс создания цифрового портрета, достаточно долгий и трудоемкий процесс.  <br />
-Он сравним с тем,как художник рисует свои полотна <!-- <span class="red"> -->кистями и красками<!-- </span> --> ,но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span> <br />
+Он сравним с тем,как художник рисует свои полотна кистями и красками, но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span> <br />
 <br />
-Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на <!-- <span class="blue"> -->любую поверхность <!-- </span> -->,холст,дерево, бумага,даже на кружку или футболку! <br />
+Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на любую поверхность, холст, дерево, бумага, даже на кружку или футболку! <br />
                 </p>
                 <p class="text-back mt">
                     Сроки исполнения <span class="yellow"> 5-8 рабочих дней за 1 персону </span>  <br />
@@ -87,33 +89,39 @@
                 </p>
 
             </div>
-            <div class="col-xs-12 col-md-7 hidden-sm-down" style="background: url({% static 'img/content/art/little_kid.jpg' %}) no-repeat; background-position-x: 50px; min-height: 820px">
-                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/little_kid.jpg' %}" alt=""> -->
-                <!-- Уменьшить девушку -->
-                <!-- <img class="img-responsive img-center" src="{% static 'img/content/art/adult_girl.jpg' %}" alt=""> -->
+            <div class="col-xs-12 col-md-7 hidden-sm-down">
+                <img class="img-full-width" style="position: absolute; top: -100px; left: 51px;" src="{% static 'img/content/art/kid4.jpg' %}" alt="">
+                <img class="img-full-width" style="position: relative; top: 150px; left: -17px;" src="{% static 'img/content/art/kid5.jpg' %}" alt="">
+                <img class="img-full-width" style="position: relative; top: 94px; left: 34px;" src="{% static 'img/content/art/kid6.jpg' %}" alt="">
             </div>
         </div>
 
+
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <img class="img-responsive img-gal" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
             </div>
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <img class="img-responsive img-gal" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <img class="img-responsive img-gal" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
             </div>
-            <div class="col-xs-12">
+            <div class="col-xs-6">
                 <img class="img-responsive img-gal" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <img class="img-responsive img-gal" src="{% static 'img/content/art/prev5.jpg' %}" alt="">
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 text-xs-center">
                 <button type="button" class="btn btn-want">Хочу также</button>
-                <!-- <img class="img-responsive img-center" src="{% static 'img/content/art/girld_kid.jpg' %}" alt=""> -->
+
             </div>
         </div>
         <div class="row">
@@ -138,16 +146,10 @@
                     </p>
                 </div>
                 <div class=" col-xs-12 col-sm-6 hidden-sm-down" style="background: url({% static 'img/content/art/tima.jpg' %}) no-repeat; min-height: 577px; background-position-x: -35px;">
-                    <!-- Уменьшить -->
-                    <!-- <img class="img-responsive img-gal" src="{% static 'img/content/art/tima.jpg' %}" alt=""> -->
+
                 </div>
             </div>
         </div>
-<!--         <div class="row">
-            <div class=" col-xs-12 text-xs-center">
-                <img class="img-responsive" src="{% static 'img/content/art/megan.jpg' %}" alt="">
-            </div>
-        </div> -->
         <div class="row">
             <div class=" col-xs-12 text-xs-center">
                 <button type="button" class="btn btn-want">Хочу также</button>
@@ -173,7 +175,7 @@
                     </div>
                 </div>
 
-                <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/art/art1.jpg' %}" alt=""> -->
+
 
 
             </div>
