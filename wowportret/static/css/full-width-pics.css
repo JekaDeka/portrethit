@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .img-full-width {
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
     /*padding: 30px 110px;*/
 }
 
@@ -106,6 +106,10 @@ footer {
 
 .mt {
     margin-top: 40px;
+}
+
+.mb {
+    margin-bottom: 40px;
 }
 
 .a-glr {
@@ -210,6 +214,12 @@ footer {
     position: absolute;
     top: -360px;
     width: 527px;
+}
+
+.h-port {
+    background: url(../img/content/portret/red-ram.jpg) no-repeat;
+    background-size: 100% 100%;
+    padding: 27px 50px;
 }
 
 .rt-right {
