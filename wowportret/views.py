@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def main_page(request):
-    return render(request, 'wowportret/nav.html', {})
+    return render(request, 'wowportret/index.html', {})
 
 
 def art_page(request):
