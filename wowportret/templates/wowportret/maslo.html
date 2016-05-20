@@ -1,39 +1,31 @@
 {% extends 'wowportret/base.html' %}
 {% load staticfiles %}
 {% block content %}
-        <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-<!--     <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="{% static 'img/bg/1bg.jpg' %}" alt="">
-    </header> -->
 
-    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <!-- <aside class="image-bg-fixed-height"></aside> -->
 
-        <div class="container white">
+        <div class="container-fluid white">
         <div class="row">
-            <div class="header" style="background: url({% static 'img/content/maslo/2bg.jpg' %}) no-repeat; min-height: 1000px; ">
-                    <div class="col-xs-12 col-md-8 col-lg-6 col-lg-offset-6 col-md-offset-4">
+            <div class="header" style="background: url({% static 'img/content/maslo/bg.jpg' %}) repeat">
+                <div class="col-md-6 hidden-sm-down">
+                    <img class="sakura" src="{% static 'img/content/maslo/sakura.png' %}" alt="">
+                    <img class="pen" src="{% static 'img/content/maslo/pen.png' %}" alt="">
+                    <img class="foto-maslo" src="{% static 'img/content/maslo/photo.png' %}" alt="">
+                </div>
+                <div class="col-sm-12 col-md-6 text-xs-center">
+                    <!-- <div class="col-xs-12 col-md-8 col-lg-6 col-lg-offset-6 col-md-offset-4"> -->
                         <h1 class="art"><span class="red">Пропись маслом <br /> на холсте</span> </h1>
-                    </div>
-                    <div class="col-xs-12 col-md-7 col-lg-6">
-                        <h2 style="margin-top: 650px; text-align: center;"> <strong> Пропись маслом,техника <br /> «Жекле» </strong> </h2>
-                    </div>
+                    <!-- </div> -->
+                    <!-- <div class="col-xs-12 col-md-7 col-lg-6"> -->
+                        <!-- <h2 style="margin-top: 650px; text-align: center;"> <strong> Пропись маслом,техника <br /> «Жекле» </strong> </h2> -->
+                    <!-- </div> -->
+                </div>
+                <div class="col-md-offset-4 col-md-6 hidden-sm-down">
+                    <img class="maslo-port rt-left" src="{% static 'img/content/maslo/port.jpg' %}" alt="">
+                </div>
+
             </div>
-        <!-- set as background -->
-        <!-- add title + span -->
-        <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <!-- <div class="col-xs-12 col-xs-offset-6"> -->
-                <!-- <h1><span class="orange">Пропись маслом <br /> на холсте</span> </h1> -->
-            <!-- </div> -->
-            <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/1bg.jpg' %}" alt=""> -->
         </div>
-<!--         <div class="row">
-            <div class="col-xs-6">
-                <h2> <strong> Пропись маслом,техника <br /> «Жекле» </strong> </h2>
-            </div>
-        </div> -->
+        <div class="container white">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-6 text-xs-center">
                 <p class="text-back">
@@ -45,7 +37,7 @@
 
             </p>
             </div>
-            <div class="col-xs-6 col-lg-6 hidden-md-down" style="background: url({% static 'img/content/maslo/grandpa.jpg' %}) no-repeat; min-height: 547px">
+            <div class="col-xs-6 col-lg-6 hidden-md-down" style="background: url({% static 'img/content/maslo/grandpa.jpg' %}) no-repeat; min-height: 547px; position: inherit;">
                 <!-- <img class="img-responsive img-full-width" src="{% static 'img/content/maslo/grandpa.jpg' %}" alt=""> -->
             </div>
         </div>
@@ -69,14 +61,7 @@
             </div>
 
         </div>
-<!--         <div class="row mt">
-            <div class="col-xs-12">
-                <p class="text-xs-center">Еще одно из востребованных стилей </br>
-                                                                    является - "цифровой портрет"   </br>
-                                                                    Художник-дизайнер, по Вашей фотографии рисует портерт на компьюетере при </br>
-                                                                    <button>Заказать</button> </p>
-            </div>
-        </div> -->
+
         <div class="row mt">
             <div class="col-xs-12 text-xs-center mt">
                 <p class="text-back"> <strong>Пример подарка на годовщину свадьбы.  <br />

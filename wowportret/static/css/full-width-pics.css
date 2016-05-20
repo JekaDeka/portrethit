@@ -254,12 +254,58 @@ footer {
     left: 0px;
     top: 110px;
 }
+
+.classic {
+    min-height: 995px;
+    background: url('../img/content/classic/left_bg.jpg'), url('../img/content/classic/bg.jpg');
+    background-position: left top, left top;
+    background-repeat: no-repeat, repeat-x;
+}
+
+.classic-port {
+    max-width: 100%;
+    position: absolute;
+    left: 68%;
+    top: 90px;
+}
+
+.sakura {
+    position: absolute;
+}
+.pen {
+    position: absolute;
+    top: 311px;
+}
+
+.maslo-port {
+    position: relative;
+    top:;
+}
+.foto-maslo {
+    position: absolute;
+    top: 497px;
+    left: 0px;
+
+}
 @media(max-width:992px) {
     .port {
         position: relative;
         top: 0px;
         width: 480px;
         margin-top: 32px;
+    }
+
+    .classic-port {
+        max-width: 100%;
+        position: absolute;
+        left: 278px;
+        top: 95px;
+    }
+
+    .maslo-port {
+        max-width: 100%;
+        top: 60px;
+        left: 50px;
     }
 
     .art-girl {
@@ -280,6 +326,11 @@ footer {
         padding-bottom: 25px;
     }
 
+    .classic {
+        background: url('../img/content/classic/bg.jpg');
+        background-position: left top;
+        background-repeat: repeat-x;
+    }
     .section-heading {
         font-size: 2em;
     }
