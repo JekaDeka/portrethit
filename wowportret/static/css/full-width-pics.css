@@ -65,8 +65,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 
 .gal-bg {
-    background: url('../img/content/main/gal-bg.jpg') no-repeat;
-    background-position: 50% 12%;
+    /*background: url('../img/content/main/gal-bg.jpg') no-repeat;
+    background-position: 50% 12%;*/
 }
 section {
     padding: 75px 0;
