@@ -12,8 +12,10 @@ body {
     font-family: 'BloggerSansLight';
     /*font-family: 'BloggerSansMedium';*/
     margin-top: 50px;
+    /*background: url(../img/bg/body.jpg);*/
 
 }
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'BloggerSans';
 }
@@ -42,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 auto;
     max-width: 100%;
     /*padding: 30px 110px;*/
+}
+
+.img-full-width:hover {
+
 }
 
 .img-center {
@@ -193,7 +199,8 @@ footer {
 .background-classic {
     height: 500px;
     background-color: #CDBEA9;
-    background: url('../img/content/classic/bg.jpg');
+    /*background: url('../img/content/classic/text.jpg');*/
+    background: url('../img/bg/texture.jpg');
     background-position: top left;
     background-repeat: repeat-x;
 }
@@ -271,6 +278,8 @@ footer {
 
 .background-imit {
     background-color: #5B3623;
+    background: url('../img/content/pmaslo/back_test1.jpg') repeat;
+    height: 515px;
 }
 
 .img-imit {
@@ -359,8 +368,15 @@ footer {
     top: 110px;
 }
 
-
-
+@media(max-width: 1200px) {
+    .header-classic {
+        height: 452px;
+    }
+    .background-classic {
+        height: 452px;
+        background-repeat: repeat;
+    }
+}
 
 @media(max-width:992px) {
 
@@ -407,6 +423,9 @@ footer {
     .art-girl {
         /*display: none;*/
     }
+    .header-maslo {
+        min-height: 200px;
+    }
 
 }
 
@@ -422,4 +441,16 @@ footer {
     .background-holst {
         min-height: 200px;
     }
+}
+
+
+
+.img-center-test {
+    width: 100%;
+}
+
+.tmp {
+   -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
 }
