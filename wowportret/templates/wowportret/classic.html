@@ -2,16 +2,27 @@
 {% load staticfiles %}
 {% block content %}
 
-        <div class="container-fluid white mb">
-        <div class="row">
-        <div class="header classic">
-            <div class="col-xs-12 col-md-6 col-md-offset-6">
-                <h1 class="art"><span class="blue">Классический портрет с заменой фона</span> </h1>
-            </div>
-            <div class="col-md-7 col-lg-6 hidden-sm-down">
-                <img class="mt rt-right classic-port" src="{% static 'img/content/classic/port.jpg' %}" alt="">
-            </div>
+        <div class="container-fluid background-classic mb">
+        <div class="container mb">
+            <div class="row">
+                <div class="header-classic">
+                    <div class="col-xs-12 col-md-8 col-md-offset-4 text-xs-center">
+                        <h1 class="art"><span class="blue">Классический портрет с заменой фона</span> </h1>
+                    </div>
+                    <div class="col-md-offset-2 col-md-1 hidden-md-down">
+                        <!-- <img class="clock" src="{% static 'img/content/classic/clock.png' %}" alt=""> -->
 
+                        <img class="cup" src="{% static 'img/content/classic/cup.png' %}" alt="">
+                    </div>
+                    <div class="col-md-1 hidden-md-down">
+                        <img class="hand" src="{% static 'img/content/classic/hand.png' %}" alt="">
+                    </div>
+                    <div class="col-md-offset-1 col-md-10 col-lg-offset-3 col-lg-8 hidden-sm-down">
+                        <img class="img-classic" src="{% static 'img/content/classic/port.jpg' %}" alt="">
+                    </div>
+
+                </div>
+            </div>
         </div>
         </div>
         <div class="container white mt">
@@ -42,29 +53,29 @@
                 </div>
             </div>
         </div>
-        <div class="row mt">
+        <div class="row mt text-xs-center">
             <div class="col-xs-12">
                 <img class="img-responsive img-full-width" src="{% static 'img/content/classic/art2.jpg' %}" alt="">
             </div>
         </div>
-        <div class="row mt">
+        <div class="row mt text-xs-center">
             <div class="col-xs-12">
                 <img class="img-responsive img-full-width" src="{% static 'img/content/classic/art3.jpg' %}" alt="">
             </div>
         </div>
-        <div class="row mt">
+        <div class="row mt text-xs-center">
             <div class="col-xs-12">
                 <img class="img-responsive img-full-width" src="{% static 'img/content/classic/art4.jpg' %}" alt="">
             </div>
         </div>
-        <div class="row mt">
+        <div class="row mt text-xs-center">
             <div class="col-xs-12">
                 <!-- Сделать цены -->
                 <img class="img-responsive img-full-width" src="{% static 'img/content/classic/art5.jpg' %}" alt="">
             </div>
         </div>
 
-        <div class="row">
+        <div class="row text-xs-center">
             <div class="col-xs-12">
                 <!-- Сделать цены -->
                 <img class="img-responsive img-center" src="{% static 'img/content/classic/art6.jpg' %}" alt="">

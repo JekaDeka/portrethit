@@ -175,19 +175,61 @@ footer {
     min-height: 812px;
 }
 
-.art {
-    margin-top: 52px;
-    margin-right: 15px;
+/*--- classic portert --*/
+.header-classic {
+    min-height: 450px;
+    /*background: url('../img/content/classic/left_bg.jpg'), url('../img/content/classic/bg.jpg');*/
+    /*background-position: left top, left top;*/
+    /*background-repeat: no-repeat, repeat-x;*/
 }
 
-.main {
-    display: table-cell;
-    margin-top: 100px;
-    background: url(../img/content/main/text.png) no-repeat;
-    height: 300px;
-    width: 600px;
-    text-align: center;
+.img-classic {
+    max-width: 100%;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 90px;*/
 }
+
+.background-classic {
+    height: 500px;
+    background-color: #CDBEA9;
+    background: url('../img/content/classic/bg.jpg');
+    background-position: top left;
+    background-repeat: repeat-x;
+}
+
+.hand {
+    position: absolute;
+    top: 116px;
+    left: -259px;
+}
+
+.clock {
+    /*position: absolute;*/
+}
+
+.cup {
+    /*position: absolute;*/
+    position: absolute;
+    top: -87px;
+    left: -153px;
+}
+
+/*--- holst photo --- */
+.header-holst {
+
+}
+
+.background-holst {
+    background-color: #AAE3F6;
+    min-height: 632px;
+}
+
+.img-holst {
+    background: url('../img/content/holst/test.jpg') no-repeat;
+    background-position: 50% 100%;
+}
+
 .h-holst{
     font-size: 50px;
 }
@@ -195,9 +237,52 @@ footer {
     font-size: 32px;
 }
 
+/*--- maslo na holste -- */
+.header-maslo {
+    min-height: 656px;
+}
+
+.background-maslo {
+    background-color: #EDE8E5;
+}
+
+.sakura {
+    position: absolute;
+}
+.pen {
+    position: absolute;
+    top: 194px;
+}
+
+.img-maslo {
+    max-width: 100%;
+
+}
+.foto-maslo {
+    position: absolute;
+    top: 340px;
+    left: 0px;
+}
+
+/*----- maslo2 imitacia ---- */
+.header-imit {
+
+}
+
+.background-imit {
+    background-color: #5B3623;
+}
+
+.img-imit {
+    /*position: absolute;*/
+    /*top: -360px;*/
+    /*width: 527px;*/
+    max-width: 100%;
+}
+
 .book-box {
-    width: 200px;
-    height: 230px;
+    /*width: 200px;*/
+    height: 184px;
     position: relative;
 }
 
@@ -211,17 +296,36 @@ footer {
     left: 10px;
 }
 
-.port {
-    position: absolute;
-    top: -360px;
-    width: 527px;
+/*.port {
+
+}
+/*---- portret v obraze ------*/
+.header-portret {
+
 }
 
-.h-port {
+.h-portret {
     background: url(../img/content/portret/red-ram.jpg) no-repeat;
     background-size: 100% 100%;
     padding: 27px 50px;
 }
+
+.art {
+    margin-top: 52px;
+    margin-right: 15px;
+}
+
+.main {
+    display: table-cell;
+    margin-top: 100px;
+    background: url(../img/content/main/text.png) no-repeat;
+    height: 300px;
+    width: 600px;
+    text-align: center;
+}
+
+
+
 
 .rt-right {
     -ms-transform: rotate(20deg); /* IE 9 */
@@ -255,68 +359,27 @@ footer {
     top: 110px;
 }
 
-.classic {
-    min-height: 995px;
-    background: url('../img/content/classic/left_bg.jpg'), url('../img/content/classic/bg.jpg');
-    background-position: left top, left top;
-    background-repeat: no-repeat, repeat-x;
-}
 
-.classic-port {
-    max-width: 100%;
-    position: absolute;
-    left: 68%;
-    top: 90px;
-}
 
-.sakura {
-    position: absolute;
-}
-.pen {
-    position: absolute;
-    top: 311px;
-}
 
-.maslo-port {
-    position: relative;
-    top:;
-}
-.foto-maslo {
-    position: absolute;
-    top: 497px;
-    left: 0px;
-
-}
 @media(max-width:992px) {
-    .port {
-        position: relative;
-        top: 0px;
-        width: 480px;
-        margin-top: 32px;
+
+    .header-classic {
+        min-height: 616px;
     }
 
-    .classic-port {
-        max-width: 100%;
-        position: absolute;
-        left: 278px;
-        top: 95px;
+    .background-classic {
+        min-height: 259px;
     }
-
-    .maslo-port {
-        max-width: 100%;
-        top: 60px;
-        left: 50px;
-    }
-
     .art-girl {
         position: absolute;
         top: -22px;
         left: 8%;
     }
     .art-claks {
-    position: absolute;
-    left: -200px;
-    top: 100px;
+        position: absolute;
+        left: -200px;
+        top: 100px;
     }
 }
 
@@ -326,11 +389,13 @@ footer {
         padding-bottom: 25px;
     }
 
-    .classic {
-        background: url('../img/content/classic/bg.jpg');
-        background-position: left top;
-        background-repeat: repeat-x;
+    .header-classic {
+        min-height: 223px;
     }
+    .background-classic {
+        height: auto;
+    }
+
     .section-heading {
         font-size: 2em;
     }
@@ -348,5 +413,13 @@ footer {
 @media(max-width:544px) {
     .btn-want {
         padding: 23px 15px;
+    }
+
+    /*-- foto na holste --*/
+    .img-holst {
+        background: none;
+    }
+    .background-holst {
+        min-height: 200px;
     }
 }
