@@ -11,79 +11,86 @@
     <!-- Image backgrounds are set within the full-width-pics.css file. -->
     <!-- <aside class="image-bg-fixed-height"></aside> -->
 
-        <div class="container white">
-        <div class="row">
-        <!-- set as background -->
-        <!-- add title + span -->
-        <!-- <aside class="image-bg-fixed-height"></aside> -->
-            <img class="img-responsive img-full-width" src="{% static 'img/content/popart/1bg.jpg' %}" alt="">
+        <div class="container-fluid white background-popart">
+            <div class="container mt-popart header-popart">
+                <div class="row">
+                    <div class="col-md-12">
+                        <img class="img-under-girl hidden-sm-down" src="{% static 'img/content/popart/img_under_girl.jpg' %}" alt="">
+
+                        <div class="row mt-girl-popart">
+                            <div class="col-sm-8 col-md-offset-1 col-md-6 hidden-xs-down">
+                                <img class="sm-img-fix img-responsive img-full-width" src="{% static 'img/content/popart/port.jpg' %}" alt="">
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5 text-xs-left cloud">
+                                <h1> Портрет в <br /> Pop Art стиле</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="container white add-shdw">
         <div class="row">
             <div class="col-xs-12 text-xs-center mt">
                 <p class="text-back" style="font-size: 31px; ">
                 <strong>
                 Яркий и динамичный портрет в стиле Pop Art не оставят <br /> равнодушным, как настоящего ценителя <br />
-искусства, так и человека не относящего себя к числу <br /> знатоков современного самовыражения
-
+                    искусства, так и человека не относящего себя к числу <br /> знатоков современного самовыражения
                 </strong>
                 </p>
             </div>
         </div>
-        <!-- add custom css resize -->
-        <div class="row" style="background: url({% static 'img/content/popart/bg1_.jpg' %}) round; min-height: 541px;">
-        <div class="row mt">
-            <div class="col-xs-11 col-md-6 col-md-offset-4 col-xs-offset-1">
-                <h3 class="h-holst"><strong>Примеры исполнения: </strong></h3>
-            </div>
-        </div>
-        <div class="row mt">
-        <!-- add BG1.jpg -->
-            <div class="col-xs-12 col-md-6 col-lg-6 mt">
-                <img class="img-responsive img-gal" src="{% static 'img/content/popart/art1.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-6 mt">
-                <img class="img-responsive img-gal img-min mt" src="{% static 'img/content/popart/art2.jpg' %}" alt="" style="float: right">
-            </div>
-        </div>
-
-        </div>
-
-        <div class="row" style="background: url({% static 'img/content/popart/bg2_.jpg' %}) round; ">
-        <!-- add BG2.jpg -->
-            <div class="col-xs-12 col-md-6 col-lg-6 mt">
-                <img class="img-responsive img-gal img-min" src="{% static 'img/content/popart/art3.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-12 col-md-6 col-lg-6 mt">
-                <img class="img-responsive img-gal" src="{% static 'img/content/popart/art4.jpg' %}" style="margin-top:50px;" alt="">
-            </div>
-        </div>
-
-        <div class="row" style="background: url({% static 'img/content/popart/bg3_.jpg' %}) round;">
-        <!-- add BG3.jpg -->
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal" src="{% static 'img/content/popart/art5.jpg' %}" alt="" style="margin-left: 15px;">
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal img-min" src="{% static 'img/content/popart/art6.jpg' %}" alt="" style="float: right">
-            </div>
-        </div>
-
-        <div class="row" style="background: url({% static 'img/content/popart/bg4_.jpg' %}) round;">
-        <!-- add BG4.jpg -->
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal img-min" src="{% static 'img/content/popart/art7.jpg' %}" alt="" style="margin-top: 85px;">
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal" src="{% static 'img/content/popart/art8.jpg' %}" alt="" style="margin-left: -15px;">
-            </div>
-        </div>
 
         <div class="row">
-            <div class="col-xs-12 col-md-6 col-md-offset-3 text-xs-center">
+            <div class="col-xs-12 col-md-12 col-lg-6 col-lg-offset-4">
+                <h3 class="h-holst h-popart"><strong>Примеры исполнения: </strong></h3>
+            </div>
+        </div>
+        <div class="row fst-popart">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
+                <img class="fst-lft-guy" src="{% static 'img/content/popart/art1.jpg' %}" alt="">
+            </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-5">
+                <img class="fst-rgt-guy" src="{% static 'img/content/popart/art2.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="row snd-popart">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
+                <img class="snd-lft-girl" src="{% static 'img/content/popart/art3.jpg' %}" alt="">
+                <img class="what" src="{% static 'img/content/popart/what.png' %}" alt="">
+            </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-5">
+                <img class="snd-rgt-girl" src="{% static 'img/content/popart/art4.jpg' %}" alt="">
+            </div>
+        </div>
+        <div class="row trd-popart">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-5">
+                <img class="trd-lft-guy" src="{% static 'img/content/popart/art5.jpg' %}" alt="">
+            </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-5">
+                <img class="trd-rgt-guy" src="{% static 'img/content/popart/art6.jpg' %}" alt="">
+                <img class="star" src="{% static 'img/content/popart/star.png' %}" alt="">
+            </div>
+        </div>
+        <div class="row fth-popart">
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-5 col-md-offset-2 col-md-4">
+                <img class="fth-lft-girl" src="{% static 'img/content/popart/art7.jpg' %}" alt="">
+                <img class="heart" src="{% static 'img/content/popart/heart.jpg' %}" alt="">
+            </div>
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-5 col-md-5">
+                <img class="fth-rgt-girl" src="{% static 'img/content/popart/art8.jpg' %}" alt="">
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-xs-12 col-lg-offset-6 col-lg-6 col-xl-6 col-xl-offset-5 text-xs-center">
                 <p class="text-back">
                     <strong>
                     Для заказа достаточно, <span class="red">всего 1 фото</span> <br />
-                    <br />
+
                     Зказ выполняется <br />
                     <span class="yellow">от 2 до 4х дней</span><br />
                     <br />
@@ -95,18 +102,24 @@
                 </p>
             </div>
         </div>
-
+        </div>
+        <div class="container-fluid white" style="background-color: rgb(80, 150, 255);
+                                                    height: 400px;
+                                                    border-bottom: 10px solid black;
+                                                    border-top: 10px solid #000000;">
         <div class="row">
             <div class="col-xs-12">
-                <img class="img-responsive img-gal" src="{% static 'img/content/popart/art9.jpg' %}" alt="">
+                <div style="height: 400px"></div>
+                <!-- <img class="img-responsive img-gal" src="{% static 'img/content/popart/art9.jpg' %}" alt=""> -->
             </div>
         </div>
+        </div>
+        <div class="container white">
         <div class="row">
             <div class="col-xs-12">
                 <img class="img-responsive img-gal" src="{% static 'img/content/popart/art10.jpg' %}" alt="">
             </div>
         </div>
-
         </div>
 
 {% endblock content %}
