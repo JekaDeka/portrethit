@@ -223,11 +223,11 @@ footer {
     /*background: url('../img/bg/texture.jpg');*/
     /*background-position: top left;
     background-repeat: repeat-x;*/
-    background: #EDC893;
-    background: -webkit-linear-gradient(#EDC893, rgba(41, 149, 193, 0));
-    background: -o-linear-gradient(#EDC893, rgba(41, 149, 193, 0));
-    background: -moz-linear-gradient(#EDC893, rgba(41, 149, 193, 0));
-    background: linear-gradient(#EDC893, rgba(41, 149, 193, 0));
+    background: #b3b593;
+    background: -webkit-linear-gradient(#b3b593, rgba(41, 149, 193, 0));
+    background: -o-linear-gradient(#b3b593, rgba(41, 149, 193, 0));
+    background: -moz-linear-gradient(#b3b593, rgba(41, 149, 193, 0));
+    background: linear-gradient(#b3b593, rgba(41, 149, 193, 0));
 }
 
 .hand {
@@ -280,11 +280,11 @@ footer {
 }
 
 .background-maslo {
-    background-color: #FFD1CF;
-    background: -webkit-linear-gradient(#FFD1CF, rgba(41, 149, 193, 0));
-    background: -o-linear-gradient(#FFD1CF, rgba(41, 149, 193, 0));
-    background: -moz-linear-gradient(#F6B4B1, rgba(41, 149, 193, 0));
-    background: linear-gradient(#FFD1CF, rgba(41, 149, 193, 0));
+    background-color: #c9e0ff;
+    background: -webkit-linear-gradient(#c9e0ff, rgba(41, 149, 193, 0));
+    background: -o-linear-gradient(#c9e0ff, rgba(41, 149, 193, 0));
+    background: -moz-linear-gradient(#c9e0ff, rgba(41, 149, 193, 0));
+    background: linear-gradient(#c9e0ff, rgba(41, 149, 193, 0));
 }
 
 .sakura {
@@ -315,9 +315,14 @@ footer {
 }
 
 .background-imit {
-    background-color: #5B3623;
-    background: url('../img/content/pmaslo/back_test1.jpg') repeat;
+    /*background-color: #5B3623;*/
+    /*background: url('../img/content/pmaslo/back_test1.jpg') repeat;*/
     height: 575px;
+    background: #294512; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#294512, rgba(255, 255, 0, 0)); /* Standard syntax */
 }
 
 .img-imit {
@@ -348,7 +353,11 @@ footer {
 }
 /*---- portret v obraze ------*/
 .background-portret {
-    background-color:brown;
+    background: #141c2a; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* Standard syntax */
     height: 537px;
 }
 
