@@ -217,7 +217,7 @@ footer {
 }
 
 .background-classic {
-    height: 430px;
+    height: 708px;
     /*background-color: #CDBEA9;*/
     /*background: url('../img/content/classic/text.jpg');*/
     /*background: url('../img/bg/texture.jpg');*/
@@ -276,7 +276,7 @@ footer {
 
 /*--- maslo na holste -- */
 .header-maslo {
-    min-height: 656px;
+    min-height: 603px;
 }
 
 .background-maslo {
@@ -311,18 +311,18 @@ footer {
 }
 
 .mt-imit {
-    margin-top: 210px;
+    /*margin-top: 210px;*/
 }
 
 .background-imit {
     /*background-color: #5B3623;*/
     /*background: url('../img/content/pmaslo/back_test1.jpg') repeat;*/
-    height: 575px;
-    background: #294512; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#294512, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#294512, rgba(255, 255, 0, 0)); /* Standard syntax */
+    height: 566px;
+    background: #C0C0C0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* Standard syntax */
 }
 
 .img-imit {
@@ -591,14 +591,14 @@ footer {
         height: 452px;
     }
     .background-classic {
-        height: 452px;
+        height: 595px;
         background-repeat: repeat;
     }
     .background-imit {
-        height: 491px;
+        height: 479px;
     }
     .mt-imit {
-        margin-top: 175px;
+        /*margin-top: 175px;*/
     }
     .mt-popart {
         margin-top: 91px;
@@ -638,19 +638,20 @@ footer {
 @media(max-width:992px) {
 
     .header-classic {
-        min-height: 616px;
+        min-height: 511px;
     }
 
     .background-classic {
         min-height: 259px;
+        height: 472px;
     }
 
     .background-imit {
-        height: 403px;
+        height: 383px;
     }
 
     .mt-imit {
-        margin-top: 133px;
+        /*margin-top: 133px;*/
     }
 
     .background-popart {
