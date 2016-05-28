@@ -16,8 +16,11 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+admin.autodiscover()
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     #url(r'', include('portrethit.urls')),
     url(r'', include('wowportret.urls')),
+    url(r'^photologue/', include('photologue.urls', namespace='photologue')),
 ]
