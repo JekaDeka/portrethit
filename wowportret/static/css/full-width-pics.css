@@ -905,7 +905,18 @@ footer {
     }
 }
 
+.phone-icon {
+    display: inline-block;
+    width: 18px;
+    height: 8px;
+    position: relative;
+    background: url(../img/phone.png) no-repeat;
+}
 
+.phone-blue {
+    color: #28d5ff;
+    font-size: larger;
+}
 
 .img-center-test {
     width: 100%;

@@ -15,7 +15,7 @@
         <link href="{% static 'fonts/BloggerSansLight/BloggerSans-Light.css' %}" rel="stylesheet">
         <link href="{% static 'fonts/BloggerSansMedium/BloggerSans-Medium.css' %}" rel="stylesheet">
 
-        <!-- Custom CSS -->
+        <!-- Custom CSS add minify-->
         <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
 
         <!-- hover css effect -->
@@ -33,12 +33,12 @@
     </head>
     <body>
         <nav class="navbar navbar-fixed-top navbar-light bg-faded">
-            <div class="alert alert-success hvr-wobble-horizontal" role="alert" style="float: right;
+            <div class="alert hvr-wobble-horizontal" role="alert" style="float: right;
                                                                 padding: 7px;
                                                                 margin-bottom: 0px;
                                                                 border: 1px solid rgb(208, 223, 202);
                                                                 border-radius: .25rem;">
-                8(495)792 66 07, (925)803-00-04, <strong>wowportret24@gmail.com</strong>
+                <span class="phone-icon"></span> +7(495) <span class="phone-blue"> 908-72-74 </span>, +7-915- <span class="phone-blue">463-0964 </span>, <strong>wowportret24@gmail.com</strong>
             </div>
           <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
             &#9776;
@@ -47,30 +47,34 @@
           <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
             <a class="navbar-brand" href="/">Wowportret.ru</a>
             <ul class="nav navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="/"> Главная <span class="sr-only">(current)</span></a>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/holst/'%} active {% endifequal%}" href="/holst/">Фото на холсте</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/art/">Арт обработка</a>
+                <a class="nav-link {% ifequal request.path '/portret/'%} active {% endifequal%}" href="/portret/">Портрет в образе</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/classic/">Классический портрет</a>
+                <a class="nav-link {% ifequal request.path '/maslo2/'%} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/holst/">Фото на холсте</a>
+                <a class="nav-link {% ifequal request.path '/maslo/'%} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/maslo/">Пропись маслом</a>
+                <a class="nav-link {% ifequal request.path '/popart/'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/maslo2/">Имитация маслом</a>
+                <a class="nav-link {% ifequal request.path '/classic/'%} active {% endifequal%}" href="/classic/">Классический портрет</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/popart/">Поп Арт</a>
+                <a class="nav-link {% ifequal request.path '/art/'%} active {% endifequal%}" href="/art/">Арт обработка</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/portret/">Портрет на холсте</a>
+                <a class="nav-link {% ifequal request.path '/baget/'%} active {% endifequal%}" href="/baget/">Багетные рамы</a>
               </li>
+
+
+
+
 <!--                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown"
                    href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -377,6 +381,15 @@
                 </div>
             </div>
             </div>
+        </div>
+        <div class="row mt mb text-xs-center">
+          <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-lg-offset-3 col-lg-6 ">
+          <form method="post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button class="btn btn-want hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+          </form>
+          </div>
         </div>
         </div>
 
