@@ -91,9 +91,6 @@ def get_form(request):
             form_content = form.cleaned_data['content']
             image = request.FILES['docfile']
 
-            newdoc = Document(docfile=image)
-            newdoc.save()
-
             # template of mail
             content = "name: " + contact_name + "\n"
             content = "phone " + contact_phone + "\n"
@@ -107,8 +104,11 @@ def get_form(request):
                 ['ZharkovEvgeniy94@gmail.com'],
                 headers={'Reply-To': contact_email}
             )
-            email.attach(image.name,
-                         image.read(), image.content_type)
+            if image:
+                newdoc = Document(docfile=image)
+                newdoc.save()
+                email.attach(image.name,
+                             image.read(), image.content_type)
             email.send()
             sended = True
     return form_class, sended
