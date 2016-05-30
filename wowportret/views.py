@@ -95,10 +95,10 @@ def get_form(request):
             newdoc.save()
 
             # template of mail
-            content = "Меня зовут: " + contact_name + "\n"
-            content = "Мой телефон " + contact_phone + "\n"
-            content += "Моя почта: " + contact_email + "\n"
-            content += "Сообщение: " + form_content + "\n"
+            content = "name: " + contact_name + "\n"
+            content = "phone " + contact_phone + "\n"
+            content += "email " + contact_email + "\n"
+            content += "text " + form_content + "\n"
 
             email = EmailMessage(
                 "wowportret.ru",
