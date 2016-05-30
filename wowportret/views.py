@@ -88,8 +88,9 @@ def get_form(request):
             contact_phone = form.cleaned_data['contact_phone']
             contact_email = form.cleaned_data['contact_email']
             form_content = form.cleaned_data['content']
+            image = request.FILES['docfile']
 
-            newdoc = Document(docfile=request.FILES['docfile'])
+            newdoc = Document(docfile=image)
             newdoc.save()
 
             # template of mail
@@ -99,14 +100,13 @@ def get_form(request):
             content += "Сообщение: " + form_content + "\n"
 
             email = EmailMessage(
-                "Заявка с сайта wowportret.ru",
+                "wowportret.ru",
                 content,
                 "wowportret.ru" + '',
-                ['kateart22@gmail.com'],
+                ['ZharkovEvgeniy94@gmail.com'],
                 headers={'Reply-To': contact_email}
             )
-            email.attach(request.FILES['docfile'].name, request.FILES[
-                         'docfile'].read(), request.FILES['docfile'].content_type)
+            email.attach(image.name, image.read(), image.content_type)
             email.send()
             sended = True
     return form_class, sended
