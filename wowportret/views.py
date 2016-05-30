@@ -107,7 +107,8 @@ def get_form(request):
                 ['ZharkovEvgeniy94@gmail.com'],
                 headers={'Reply-To': contact_email}
             )
-            email.attach(image.name, image.read(), image.content_type)
+            email.attach(image.name,
+                         image.read(), image.content_type)
             email.send()
             sended = True
     return form_class, sended
