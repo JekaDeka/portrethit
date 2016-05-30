@@ -75,6 +75,10 @@
             <p class="text-back mt">
                 <span class="yellow">Возможен экспрресс заказ за 24 часа</span>
             </p>
+            <p class="text-back mt">
+            Наши дизайнеры подберут до 9 <br /> образов индивидуально для Вас
+            <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Выслать фото</button>
+            </p>
             </div>
             <div class="col-md-6 col-lg-6 hidden-sm-down">
                 <img class="img-responsive img-full-width" src="{% static 'img/content/portret/art1.jpg' %}" alt="">
@@ -129,6 +133,19 @@
                 <div style="background-color: orange; min-height: 450px; width: 70%; margin-left: 15%;"></div>
             </div>
         </div> -->
-
+        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel3" aria-hidden="true">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                  <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
         </div>
 {% endblock content %}
