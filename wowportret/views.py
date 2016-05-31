@@ -100,14 +100,14 @@ def get_form(request):
                 "wowportret.ru",
                 content,
                 "wowportret.ru" + '',
-                ['ZharkovEvgeniy94@gmail.com'],
+                ['kateart@wowportret.ru'],
                 headers={'Reply-To': contact_email}
             )
             if request.FILES:
                 image = request.FILES['docfile']
                 newdoc = Document(docfile=image)
                 newdoc.save()
-                email.attach(image.name,
+                email.attach('attached_file',
                              image.read(), image.content_type)
             email.send()
             sended = True
