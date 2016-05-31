@@ -178,10 +178,53 @@ footer {
 
 
 .how-to {
-    min-height: 400px;
-    background-color: rgba(255, 255, 0, 0.44);;
+    height: 775px;
+    background: url(../img/content/main/how_to.jpg) no-repeat;
+    background-size: 100%;
+    background-position: 50% 100%;
 }
+.how-to-text {
+    color: black;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: "Blogger Sans";
+}
+#how-top {
+    width: 430px;
+    height: 83px;
+    margin-left: 35%;
 
+}
+#how-left {
+    width: 468px;
+    height: 83px;
+    float: left;
+    /* margin-left: 7%; */
+    margin-left: 60px;
+    margin-top: 17px;
+}
+#how-right {
+    width: 442px;
+    height: 83px;
+    float: right;
+
+}
+#how-btm-right {
+    width: 419px;
+    height: 82px;
+    float: right;
+    margin-top: 322px;
+    margin-right: 45px;
+
+}
+#how-btm-left {
+    width: 451px;
+    height: 74px;
+    float: left;
+    margin-top: 406px;
+    margin-left: 76px;
+
+}
 .price {
     min-height: 400px;
     background-color: rgba(255, 255, 0, 0.44);;
@@ -358,7 +401,11 @@ footer {
     background: -o-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* Standard syntax */
-    height: 537px;
+    height: 816px;
+}
+
+.header-portret {
+    /*height: 700px;*/
 }
 
 .h-portret {
@@ -379,6 +426,50 @@ footer {
     height: 300px;
     width: 600px;
     text-align: center;
+}
+
+.ram-shdw {
+    box-shadow: 0 0 1.625em .08em rgba(0,0,0,.05);
+    -moz-box-shadow: 0 0 1.625em .08em rgba(0,0,0,.05);
+    -webkit-box-shadow: 0 0 1.625em 0.08em rgba(0,0,0,5.05);
+}
+
+.ram21 {
+    position: absolute;
+    width: 98%;
+}
+
+.ram22 {
+    position: absolute;
+    width: 117%;
+    left: 28px;
+}
+
+.ram23 {
+    position: absolute;
+    width: 98%;
+    left: 40px;
+    top: -11px;
+}
+.ram31 {
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: -13px;
+}
+.ram32 {
+    width: 100%;
+    position: absolute;
+    top: 21px;
+}
+.ram33 {
+    width: 85%;
+    position: absolute;
+    left: 48px;
+}
+.ram34 {
+    width: 100%;
+    position: absolute;
 }
 
 /*---- popart ---- */
@@ -704,6 +795,7 @@ footer {
         left: -200px;
         top: 100px;
     }
+
 }
 
 @media(max-width:768px) {
