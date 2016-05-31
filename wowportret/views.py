@@ -97,9 +97,9 @@ def get_form(request):
             content += "text " + form_content + "\n"
 
             email = EmailMessage(
-                "wowportret.ru",
+                "kateart@wowportret.ru",
                 content,
-                "wowportret.ru" + '',
+                "kateart@wowportret.ru" + '',
                 ['kateart222@gmail.com'],
                 headers={'Reply-To': contact_email}
             )
