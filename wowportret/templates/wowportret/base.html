@@ -47,44 +47,46 @@
           <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
             <a class="navbar-brand" href="/">Wowportret.ru</a>
             <ul class="nav navbar-nav">
-              <li class="nav-item">
+
+<!--               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/holst/'%} active {% endifequal%}" href="/holst/">Фото на холсте</a>
-              </li>
-              <li class="nav-item">
+              </li> -->
+<!--               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/portret/'%} active {% endifequal%}" href="/portret/">Портрет в образе</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/maslo2/'%} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/maslo/'%} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
               </li>
-              <li class="nav-item">
+<!--               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/popart/'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/classic/'%} active {% endifequal%}" href="/classic/">Классический портрет</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/art/'%} active {% endifequal%}" href="/art/">Арт обработка</a>
               </li>
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                   Портреты на холсте</a>
+                <div class="dropdown-menu shdw">
+                    <a class="dropdown-item" href="/holst/">Фото на холсте</a>
+                    <a class="dropdown-item" href="/popart/">Pop Art</a>
+                    <a class="dropdown-item" href="/portret/">Портрет в образе</a>
+                </div>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/baget/'%} active {% endifequal%}" href="/baget/">Багетные рамы</a>
               </li>
 
 
 
-
-<!--                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
-                   href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                   Dropdown</a>
-                <div class="dropdown-menu shdw">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-
-                </div>
-              </li> -->
               <!-- <li class="nav-item">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Выпадающее меню</a>
               <ul class="dropdown-menu multi-column columns-2 shdw">

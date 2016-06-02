@@ -6,18 +6,18 @@
     <h1>{{ gallery_name }}</h1>
     </div>
     <div>
-        {% for slide in items %}
-        <!-- <div title="{{ slide.title }} - {{ slide.credit }}"> -->
+        {% for item in items %}
+        <!-- <div title="{{ item.title }} - {{ item.credit }}"> -->
             <div>
-            {{ slide.title }}
-            {% if slide.url %}<a href="{{ slide.url }}">{% endif %}
-                {% if slide.image %}<img src="../{{ slide.image.url }}" alt="{{ slide.alt }}" />{% endif %}
-            {% if slide.url %}</a>{% endif %}
+            {{ item.title }}
+            {% if item.url %}<a href="{{ item.url }}">{% endif %}
+                {% if item.image %}<img src="../{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
+            {% if item.url %}</a>{% endif %}
 
-            <!-- {% if slide.video_url %}<a href="{{ slide.video_url }}">{{ slide.title }}</a>{% endif %} -->
+            <!-- {% if item.video_url %}<a href="{{ item.video_url }}">{{ item.title }}</a>{% endif %} -->
 
-            <!-- {{ slide.title }} - {{ slide.credit }}<br /> -->
-            {{ slide.content|safe }}
+            <!-- {{ item.title }} - {{ item.credit }}<br /> -->
+            {{ item.content|safe }}
             </div>
         {% endfor %}
     </div>
