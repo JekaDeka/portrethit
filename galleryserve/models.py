@@ -5,9 +5,10 @@ from PIL import ImageOps
 
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
-    height = models.IntegerField(blank=True, default=600,
+    content = models.CharField(max_length=200)
+    height = models.IntegerField(blank=True, default=300,
                                  help_text="Height images should be resized to in pixels")
-    width = models.IntegerField(blank=True, default=800,
+    width = models.IntegerField(blank=True, default=400,
                                 help_text="Width images should be resized to in pixels")
     random = models.BooleanField(default=False,
                                  help_text="If selected, the sort numbers will be ignored and your "

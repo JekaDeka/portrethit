@@ -2,24 +2,42 @@
 {% load staticfiles %}
 {% block content %}
 <div class="container white mb">
-    <div class="row">
-    <h1>{{ gallery_name }}</h1>
+    <div class="row" style="margin-top: 100px">
+    {% for gal in galleries %}
+    <a href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
+    {% endfor %}
     </div>
-    <div>
+<!--     <div>
         {% for item in items %}
-        <!-- <div title="{{ item.title }} - {{ item.credit }}"> -->
+        <div title="{{ item.title }} - {{ item.credit }}">
             <div>
             {{ item.title }}
             {% if item.url %}<a href="{{ item.url }}">{% endif %}
                 {% if item.image %}<img src="../{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
             {% if item.url %}</a>{% endif %}
 
-            <!-- {% if item.video_url %}<a href="{{ item.video_url }}">{{ item.title }}</a>{% endif %} -->
+            {% if item.video_url %}<a href="{{ item.video_url }}">{{ item.title }}</a>{% endif %}
 
-            <!-- {{ item.title }} - {{ item.credit }}<br /> -->
+            {{ item.title }} - {{ item.credit }}<br />
             {{ item.content|safe }}
             </div>
         {% endfor %}
-    </div>
+    </div> -->
+
+    <div class="pagination">
+    <span class="step-links">
+        {% if galleries.has_previous %}
+            <a href="?page={{ galleries.previous_page_number }}">Назад</a>
+        {% endif %}
+
+        <span class="current">
+            Страница {{ galleries.number }} из {{ galleries.paginator.num_pages }}.
+        </span>
+
+        {% if galleries.has_next %}
+            <a href="?page={{ galleries.next_page_number }}">Вперед</a>
+        {% endif %}
+    </span>
+</div>
 </div>
 {% endblock content %}

@@ -23,7 +23,7 @@ class GalleryAdmin(admin.ModelAdmin):
     list_display = ('title',)
     search_fields = ['title', ]
     fieldsets = (
-        (None, {'fields': (('title'), 'height', 'width', 'random', 'resize',
+        (None, {'fields': (('title'), 'content', 'height', 'width', 'random', 'resize',
                            'quality')}),
     )
 

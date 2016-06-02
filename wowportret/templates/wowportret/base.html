@@ -52,10 +52,10 @@
                    href="#" role="button" aria-haspopup="true" aria-expanded="false">
                    Портреты на холсте</a>
                 <div class="dropdown-menu shdw">
-                    <a class="dropdown-item" href="/holst/">Фото на холсте</a>
-                    <a class="dropdown-item" href="/portret/">Портрет в образе</a>
-                    <a class="dropdown-item" href="/art/">Art обработка</a>
-                    <a class="dropdown-item" href="/classic/">Классический портрет</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.holst_page' %}">Фото на холсте</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.portret_page' %}">Портрет в образе</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.art_page' %}">Art обработка</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.classic_page' %}">Классический портрет</a>
                 </div>
               </li>
 
@@ -66,13 +66,13 @@
                 <a class="nav-link {% ifequal request.path '/portret/'%} active {% endifequal%}" href="/portret/">Портрет в образе</a>
               </li> -->
               <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/maslo2/'%} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
+                <a class="nav-link {% ifequal request.path 'wowportret.views.maslo2_page'%} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/maslo/'%} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
+                <a class="nav-link {% ifequal request.path 'wowportret.views.maslo_page'%} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/popart/'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
+                <a class="nav-link {% ifequal request.path 'wowportret.views.popart_page'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/classic/'%} active {% endifequal%}" href="/classic/">Классический портрет</a>
@@ -82,7 +82,7 @@
               </li> -->
 
               <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/baget/'%} active {% endifequal%}" href="/baget/">Багетные рамы</a>
+                <a class="nav-link {% ifequal request.path 'wowportret.views.baget_page'%} active {% endifequal%}" href="/baget/">Багетные рамы</a>
               </li>
 
 

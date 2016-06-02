@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render,  get_object_or_404
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils import timezone
 from django.http import HttpResponse, HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail, EmailMessage
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.template import loader, Context
 
 
@@ -87,13 +88,27 @@ def thank_page(request):
 
 
 def gallery_page(request):
+    gal_list = Gallery.objects.all()
+    paginator = Paginator(gal_list, 5)  # Show 5 contacts per page
+    page = request.GET.get('page')
     try:
-        gallery_name = 'Моя первая галерея'
-        gal = Gallery.objects.get(title=gallery_name)
-        items = Item.objects.filter(gallery__title=gal.title)
-    except:
-        raise Http404('Requested gallery not found.')
-    return render(request, 'wowportret/gallery.html', {'gallery_name': gal.title, 'items': items})
+        galleries = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        galleries = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        galleries = paginator.page(paginator.num_pages)
+    return render(request, 'wowportret/gallery.html', {'galleries': galleries})
+    # return render(request, 'wowportret/gallery.html', {'gallery_name':
+    # gal.title, 'items': items})
+
+
+def gallery_detail(request, pk):
+    gal = get_object_or_404(Gallery, pk=pk)
+    items = Item.objects.filter(gallery__title=gal.title)
+
+    return render(request, 'wowportret/gallery_detail.html', {'gallery': gal, 'items': items})
 
 
 def get_form(request):
