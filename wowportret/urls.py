@@ -12,4 +12,5 @@ urlpatterns = [
     url(r'^portret/$', views.portret_page, name='portret_page'),
     url(r'^baget/$', views.baget_page, name='baget_page'),
     url(r'^thankyou/$', views.thank_page, name='thank_page'),
+    url(r'^gallery/$', views.gallery_page, name='gallery_page'),
 ]

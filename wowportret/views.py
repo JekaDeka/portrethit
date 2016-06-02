@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render,  get_object_or_404
 from django.utils import timezone
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponse, HttpResponseRedirect
 from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import redirect
+from django.template import loader, Context
 
 
 from wowportret.forms import ContactForm
 from wowportret.models import Document
+
+from galleryserve.models import Gallery, Item
 
 
 def main_page(request):
@@ -76,6 +79,21 @@ def baget_page(request):
 
 def thank_page(request):
     return render(request, 'wowportret/thank.html', {})
+
+
+# def gallery_page(request):
+#     gal = Gallery
+#     return render(request, 'wowportret/gallery.html', {'gallery': gal})
+
+
+def gallery_page(request):
+    try:
+        gallery_name = 'Моя первая галерея'
+        gal = Gallery.objects.get(title=gallery_name)
+        items = Item.objects.filter(gallery__title=gal.title)
+    except:
+        raise Http404('Requested gallery not found.')
+    return render(request, 'wowportret/gallery.html', {'gallery_name': gal.title, 'items': items})
 
 
 def get_form(request):
