@@ -9,7 +9,7 @@
         {% for item in items %}
         <div class="col-xs-12 col-sm-4 col-md-3"
             <div class="card">
-            {% if item.image %}<img class="card-img-top" src="../{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
+            {% if item.image %}<img class="card-img-top" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
             <div class="card-block">
                 <h4 class="card-title">{{ item.title }}</h4>
                 <p class="card-text">{{ item.content|safe }}</p>
