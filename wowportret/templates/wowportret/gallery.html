@@ -7,14 +7,18 @@
     </div>
     <div>
         {% for slide in items %}
-        <div title="{{ slide.title }} - {{ slide.credit }}">
-        {% if slide.url %}<a href="{{ slide.url }}">{% endif %}
-        {% if slide.image %}<img src="../{{ slide.image.url }}" alt="{{ slide.alt }}" />{% endif %}
-        {% if slide.url %}</a>{% endif %}
-        {% if slide.video_url %}<a href="{{ slide.video_url }}">{{ slide.title }}</a>{% endif %}
-        {{ slide.title }} - {{ slide.credit }}<br />
-        {{ slide.content|safe }}
-        </div>
+        <!-- <div title="{{ slide.title }} - {{ slide.credit }}"> -->
+            <div>
+            {{ slide.title }}
+            {% if slide.url %}<a href="{{ slide.url }}">{% endif %}
+                {% if slide.image %}<img src="../{{ slide.image.url }}" alt="{{ slide.alt }}" />{% endif %}
+            {% if slide.url %}</a>{% endif %}
+
+            <!-- {% if slide.video_url %}<a href="{{ slide.video_url }}">{{ slide.title }}</a>{% endif %} -->
+
+            <!-- {{ slide.title }} - {{ slide.credit }}<br /> -->
+            {{ slide.content|safe }}
+            </div>
         {% endfor %}
     </div>
 </div>
