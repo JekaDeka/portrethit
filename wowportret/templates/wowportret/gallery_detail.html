@@ -1,13 +1,74 @@
 {% extends 'wowportret/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div class="container mt white">
+<!-- Page Content -->
+    <div class="container white mt" style="margin-top: 70px;">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Галерея</p>
+                <div class="list-group">
+                    {% for gal in galleries %}
+                        <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper}}</a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-md-9 mt">
+
+                <div class="row">
+                    {% for item in items %}
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="card">
+                        {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
+                        <div class="card-block">
+                            <h4 class="card-title">{{ item.title }}</h4>
+                            <p class="card-text">{{ item.content|safe }}</p>
+                            {% if item.url %}<a href="{{ item.url }}" class="btn btn-primary">Купить</a>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
+            <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                {% if items.has_previous %}
+                    <a class="page-link" href="?page={{ items.previous_page_number }}" aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+                                                                                                                    <span class="sr-only">Назад</span>
+                    </a>
+                {% endif %}
+                 </li>
+                {% for pg in items.paginator.page_range %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ pg }}">{{ pg }}</a>
+                </li>
+                {% endfor %}
+                <li class="page-item">
+                {% if items.has_next %}
+                    <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+                                                                       <span class="sr-only">Вперед</span>
+                    </a>
+                {% endif %}
+                </li>
+            </ul>
+            </nav>
+            </div>
+        </div>
+    </div>
+<!-- /.container -->
+<!-- <div class="container mt white">
 <div class="row">
     <h1>{{ gallery.title }}</h1>
     <p>{{ gallery.content|safe }}</p>
         <div>
         {% for item in items %}
-        <div class="col-xs-12 col-sm-4 col-md-3"
+        <div class="col-xs-12 col-sm-4 col-md-3">
             <div class="card">
             {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
             <div class="card-block">
@@ -20,6 +81,6 @@
         {% endfor %}
         </div>
 </div>
-</div>
+</div> -->
 
 {% endblock content %}

@@ -89,7 +89,7 @@ def thank_page(request):
 
 def gallery_page(request):
     gal_list = Gallery.objects.all()
-    paginator = Paginator(gal_list, 5)  # Show 5 contacts per page
+    paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
         galleries = paginator.page(page)
@@ -105,10 +105,23 @@ def gallery_page(request):
 
 
 def gallery_detail(request, pk):
+    gal_list = Gallery.objects.all()
     gal = get_object_or_404(Gallery, pk=pk)
     items = Item.objects.filter(gallery__title=gal.title)
+    paginator = Paginator(items, 12)
+    page = request.GET.get('page')
+    try:
+        gal_items = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        gal_items = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        gal_items = paginator.page(paginator.num_pages)
+    # return render(request, 'wowportret/gallery.html', {'galleries':
+    # galleries})
 
-    return render(request, 'wowportret/gallery_detail.html', {'gallery': gal, 'items': items})
+    return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items})
 
 
 def get_form(request):

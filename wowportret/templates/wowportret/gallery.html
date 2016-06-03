@@ -1,43 +1,100 @@
 {% extends 'wowportret/base.html' %}
 {% load staticfiles %}
 {% block content %}
-<div class="container white mb">
-    <div class="row" style="margin-top: 100px">
-    {% for gal in galleries %}
-    <a href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
-    {% endfor %}
-    </div>
-<!--     <div>
-        {% for item in items %}
-        <div title="{{ item.title }} - {{ item.credit }}">
-            <div>
-            {{ item.title }}
-            {% if item.url %}<a href="{{ item.url }}">{% endif %}
-                {% if item.image %}<img src="../{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
-            {% if item.url %}</a>{% endif %}
+<!-- Page Content -->
+    <div class="container white" style="margin-top: 70px">
 
-            {% if item.video_url %}<a href="{{ item.video_url }}">{{ item.title }}</a>{% endif %}
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header"> Галерея
+                    <small>образов и сюжетов</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
 
-            {{ item.title }} - {{ item.credit }}<br />
-            {{ item.content|safe }}
+        <!-- Projects Row -->
+        <div class="row">
+        {% for gal in galleries %}
+            <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item text-xs-center hvr-reveal">
+                <a href="{% url 'gallery_detail' pk=gal.pk %}">
+                    <img class="portfolio-img" src="http://placehold.it/400x300" alt="">
+                </a>
+                <h3 style="margin-top: 20px;">
+                    <a href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
+                </h3>
+                <p>{{ gal.content | safe }}</p>
             </div>
         {% endfor %}
+        </div>
+        <!-- /.row -->
+
+        <hr>
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
+            <nav>
+            <ul class="pagination">
+                <li class="page-item">
+                {% if galleries.has_previous %}
+                    <a class="page-link" href="?page={{ galleries.previous_page_number }}" aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+                                                                                                                    <span class="sr-only">Назад</span>
+                    </a>
+                {% endif %}
+                 </li>
+                {% for pg in galleries.paginator.page_range %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ pg }}">{{ pg }}</a>
+                </li>
+                {% endfor %}
+                <li class="page-item">
+                {% if galleries.has_next %}
+                    <a class="page-link" href="?page={{ galleries.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+                                                                       <span class="sr-only">Вперед</span>
+                    </a>
+                {% endif %}
+                </li>
+            </ul>
+            </nav>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+<!-- Page Content -->
+<!--     <div class="container white mt" style="margin-top: 70px;">
+
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Галерея</p>
+                <div class="list-group">
+                    {% for gal in galleries %}
+                        <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="col-md-9 mt">
+
+                <div class="row">
+                    {% for item in items %}
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+                        <div class="card">
+                        {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
+                        <div class="card-block">
+                            <h4 class="card-title">{{ item.title }}</h4>
+                            <p class="card-text">{{ item.content|safe }}</p>
+                            {% if item.url %}<a href="{{ item.url }}" class="btn btn-primary">Купить</a>{% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
     </div> -->
+<!-- /.container -->
 
-    <div class="pagination">
-    <span class="step-links">
-        {% if galleries.has_previous %}
-            <a href="?page={{ galleries.previous_page_number }}">Назад</a>
-        {% endif %}
-
-        <span class="current">
-            Страница {{ galleries.number }} из {{ galleries.paginator.num_pages }}.
-        </span>
-
-        {% if galleries.has_next %}
-            <a href="?page={{ galleries.next_page_number }}">Вперед</a>
-        {% endif %}
-    </span>
-</div>
-</div>
 {% endblock content %}
