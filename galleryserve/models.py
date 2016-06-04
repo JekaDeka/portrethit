@@ -6,6 +6,7 @@ from PIL import ImageOps
 
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
+    image = models.ImageField(blank=True, upload_to='galleryserve/images')
     content = models.CharField(blank=True, max_length=200)
     height = models.IntegerField(blank=True, default=300,
                                  help_text="Height images should be resized to in pixels")
@@ -67,6 +68,21 @@ class Gallery(models.Model):
             raise ValidationError(
                 'You must not save a category in itself')
         super(Gallery, self).save()
+        if self.image:
+            filename = self.image.path
+            image = PIL.Image.open(filename)
+            if self.resize:
+                try:
+                    width = self.width
+                except:
+                    width = 800
+                try:
+                    height = self.height
+                except:
+                    height = 600
+                size = (width, height)
+                image = ImageOps.fit(image, size, PIL.Image.ANTIALIAS)
+            image.save(filename, quality=self.quality)
 
     # @models.permalink
     # def get_absolute_url(self):

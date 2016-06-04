@@ -29,7 +29,7 @@ class GalleryAdmin(admin.ModelAdmin):
     # Set child -> parent
     fieldsets = (
         (None, {'fields': (('title'), 'has_child', 'parent', 'content', 'height', 'width', 'random', 'resize',
-                           'quality')}),
+                           'quality', 'image')}),
     )
 
 
