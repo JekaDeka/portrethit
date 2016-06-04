@@ -14,6 +14,9 @@
                             <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}"><strong>{{ gal.title|upper}}</strong> </a>
                             {% for clc in gal.children.all %}
                                 <a class="list-group-item sub-item" href="{% url 'gallery_detail' pk=clc.pk %}">{{ clc.title|upper}}</a>
+                                    {% for lc in clc.children.all %}
+                                        <a class="list-group-item sub-sub-item" href="{% url 'gallery_detail' pk=lc.pk %}">{{ lc.title|upper}}</a>
+                                    {% endfor %}
                             {% endfor %}
                         {% endif %}
                     {% endfor %}
