@@ -19,7 +19,7 @@
         {% for gal in galleries %}
             <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item text-xs-center hvr-reveal">
                 <a href="{% url 'gallery_detail' pk=gal.pk %}">
-                    <img class="portfolio-img" src="http://placehold.it/400x300" alt="">
+                    <!-- <img class="portfolio-img" src="http://placehold.it/400x300" alt=""> -->
                 </a>
                 <h3 style="margin-top: 20px;">
                     <a href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
