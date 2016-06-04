@@ -6,7 +6,7 @@ from PIL import ImageOps
 
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
-    content = models.CharField(max_length=200)
+    content = models.CharField(blank=True, max_length=200)
     height = models.IntegerField(blank=True, default=300,
                                  help_text="Height images should be resized to in pixels")
     width = models.IntegerField(blank=True, default=400,
