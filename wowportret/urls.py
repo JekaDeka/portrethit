@@ -10,7 +10,7 @@ urlpatterns = [
     url(r'^maslo2/$', views.maslo2_page, name='maslo2_page'),
     url(r'^popart/$', views.popart_page, name='popart_page'),
     url(r'^portret/$', views.portret_page, name='portret_page'),
-    url(r'^baget/(?P<pk>[0-9]+)/$', views.baget_page, name='baget_page'),
+    url(r'^baget/$', views.baget_page, name='baget_page'),
     url(r'^thankyou/$', views.thank_page, name='thank_page'),
 
     url(r'^gallery/$', views.gallery_page, name='gallery_page'),

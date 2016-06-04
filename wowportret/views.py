@@ -71,7 +71,7 @@ def portret_page(request):
     return render(request, 'wowportret/portret.html', {'form': form_class})
 
 
-def baget_page(request, pk):
+def baget_page(request):
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
