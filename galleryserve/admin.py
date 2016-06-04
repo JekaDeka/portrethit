@@ -20,11 +20,17 @@ class GalleryAdmin(admin.ModelAdmin):
     inlines = [
         ItemInline,
     ]
-    list_display = ('title',)
+    list_display = ('title', 'parent_name')
     search_fields = ['title', ]
+
+    def parent_name(self, obj):
+        return obj.parent
+
+    # Set child -> parent
     fieldsets = (
-        (None, {'fields': (('title'), 'content', 'height', 'width', 'random', 'resize',
+        (None, {'fields': (('title'), 'has_child', 'parent', 'content', 'height', 'width', 'random', 'resize',
                            'quality')}),
     )
+
 
 admin.site.register(models.Gallery, GalleryAdmin)
