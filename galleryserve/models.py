@@ -21,7 +21,8 @@ class Gallery(models.Model):
                                   help_text="An integer between 0-100. 100 will result in the largest "
                                   "file size.")
 
-    parent = models.ForeignKey('self', blank=True, null=True)
+    parent = models.ForeignKey(
+        'self', blank=True, null=True, related_name='children')
 
     has_child = models.BooleanField(default=False)
 

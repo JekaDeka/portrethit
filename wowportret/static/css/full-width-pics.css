@@ -1010,6 +1010,10 @@ footer {
     font-size: larger;
 }
 
+.sub-item {
+    padding: 0.2rem 2.5rem;
+}
+
 .img-center-test {
     width: 100%;
 }

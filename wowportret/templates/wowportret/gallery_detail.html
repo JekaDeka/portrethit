@@ -10,7 +10,12 @@
                 <p class="lead"><a href="/gallery/">Галерея</a></p>
                 <div class="list-group">
                     {% for gal in galleries %}
-                        <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper}}</a>
+                        {% if gal.parent == None %}
+                            <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper}}</a>
+                            {% for clc in gal.children.all %}
+                                <a class="list-group-item sub-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ clc.title|upper}}</a>
+                            {% endfor %}
+                        {% endif %}
                     {% endfor %}
                 </div>
             </div>
