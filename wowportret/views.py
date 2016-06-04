@@ -71,11 +71,34 @@ def portret_page(request):
     return render(request, 'wowportret/portret.html', {'form': form_class})
 
 
-def baget_page(request):
+def baget_page(request, pk):
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
-    return render(request, 'wowportret/baget.html', {'form': form_class})
+
+    gal = get_object_or_404(Gallery, pk=37)
+    if gal.has_child != True:
+        gal_list = Gallery.objects.all()
+        items = Item.objects.filter(gallery__title=gal.title)
+        paginator = Paginator(items, 10)
+        page = request.GET.get('page')
+        try:
+            gal_items = paginator.page(page)
+        except PageNotAnInteger:
+            # If page is not an integer, deliver first page.
+            gal_items = paginator.page(1)
+        except EmptyPage:
+            # If page is out of range (e.g. 9999), deliver last page of
+            # results.
+            gal_items = paginator.page(paginator.num_pages)
+        # return render(request, 'wowportret/gallery.html', {'galleries':
+        # galleries})
+
+        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items})
+    else:
+        gal_list = Gallery.objects.filter(parent=gal.id)
+        return render(request, 'wowportret/gallery.html', {'galleries':
+                                                           gal_list})
 
 
 def thank_page(request):
@@ -85,6 +108,11 @@ def thank_page(request):
 # def gallery_page(request):
 #     gal = Gallery
 #     return render(request, 'wowportret/gallery.html', {'gallery': gal})
+
+
+# add image_page
+def image_page(reuqest):
+    pass
 
 
 def gallery_page(request):
@@ -109,7 +137,7 @@ def gallery_detail(request, pk):
     if gal.has_child != True:
         gal_list = Gallery.objects.all()
         items = Item.objects.filter(gallery__title=gal.title)
-        paginator = Paginator(items, 12)
+        paginator = Paginator(items, 10)
         page = request.GET.get('page')
         try:
             gal_items = paginator.page(page)
