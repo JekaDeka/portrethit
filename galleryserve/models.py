@@ -8,7 +8,7 @@ from galleryserve.thumbs import ImageWithThumbsField
 class Gallery(models.Model):
     title = models.CharField(max_length=200)
     image = ImageWithThumbsField(
-        blank=True, upload_to='galleryserve/images', sizes=((125, 125), (390, 315)))
+        blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
     content = models.CharField(blank=True, max_length=200)
     height = models.IntegerField(blank=True, default=600,
                                  help_text="Height images should be resized to in pixels")
