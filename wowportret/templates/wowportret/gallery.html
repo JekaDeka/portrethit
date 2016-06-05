@@ -63,40 +63,6 @@
 
     </div>
     <!-- /.container -->
-<!-- Page Content -->
-<!--     <div class="container white mt" style="margin-top: 70px;">
 
-        <div class="row">
-
-            <div class="col-md-3">
-                <p class="lead">Галерея</p>
-                <div class="list-group">
-                    {% for gal in galleries %}
-                        <a class="list-group-item" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
-                    {% endfor %}
-                </div>
-            </div>
-
-            <div class="col-md-9 mt">
-
-                <div class="row">
-                    {% for item in items %}
-                    <div class="col-xs-12 col-sm-4 col-md-3">
-                        <div class="card">
-                        {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
-                        <div class="card-block">
-                            <h4 class="card-title">{{ item.title }}</h4>
-                            <p class="card-text">{{ item.content|safe }}</p>
-                            {% if item.url %}<a href="{{ item.url }}" class="btn btn-primary">Купить</a>{% endif %}
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-    </div> -->
-<!-- /.container -->
 
 {% endblock content %}
