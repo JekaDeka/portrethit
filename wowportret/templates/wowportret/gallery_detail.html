@@ -29,7 +29,7 @@
                     {% for item in items %}
                     <div class="col-xs-12 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-6 text-xs-center">
                         <div class="card">
-                        {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url }}" alt="{{ item.alt }}" />{% endif %}
+                        {% if item.image %}<img class="card-img-top img-full-width" src="{{ item.image.url_390x315 }}" alt="{{ item.alt }}" />{% endif %}
                         <div class="card-block">
                             <h4 class="card-title">{{ item.title }}</h4>
                             <p class="card-text">{{ item.content|safe }}</p>
