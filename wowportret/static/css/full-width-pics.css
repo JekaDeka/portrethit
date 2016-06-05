@@ -1018,9 +1018,14 @@ footer {
     font-size: 15px;
 }
 
+.card-img-top {
+    height: 266px;
+    overflow: hidden;
+}
 .img-center-test {
     width: 100%;
 }
+
 
 .tmp {
    -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
