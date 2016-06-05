@@ -94,28 +94,26 @@ def baget_page(request):
         # return render(request, 'wowportret/gallery.html', {'galleries':
         # galleries})
 
-        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items})
+        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items, 'form': form_class})
     else:
         gal_list = Gallery.objects.filter(parent=gal.id)
-        return render(request, 'wowportret/gallery.html', {'galleries':
-                                                           gal_list})
+        return render(request, 'wowportret/gallery.html', {'galleries': gal_list, 'form': form_class})
 
 
 def thank_page(request):
     return render(request, 'wowportret/thank.html', {})
 
 
-# def gallery_page(request):
-#     gal = Gallery
-#     return render(request, 'wowportret/gallery.html', {'gallery': gal})
-
-
-# add image_page
+# add image page
 def image_page(reuqest):
     pass
 
 
 def gallery_page(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+
     gal_list = Gallery.objects.filter(parent=None)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
@@ -127,12 +125,16 @@ def gallery_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery.html', {'galleries': galleries})
+    return render(request, 'wowportret/gallery.html', {'galleries': galleries, 'form': form_class})
     # return render(request, 'wowportret/gallery.html', {'gallery_name':
     # gal.title, 'items': items})
 
 
 def gallery_detail(request, pk):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+
     gal = get_object_or_404(Gallery, pk=pk)
     if gal.has_child != True:
         gal_list = Gallery.objects.all()
@@ -151,11 +153,10 @@ def gallery_detail(request, pk):
         # return render(request, 'wowportret/gallery.html', {'galleries':
         # galleries})
 
-        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items})
+        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items, 'form': form_class})
     else:
         gal_list = Gallery.objects.filter(parent=gal.id)
-        return render(request, 'wowportret/gallery.html', {'galleries':
-                                                           gal_list})
+        return render(request, 'wowportret/gallery.html', {'galleries': gal_list, 'form': form_class})
 
 
 def get_form(request):
