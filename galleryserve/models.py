@@ -2,6 +2,8 @@ from django.db import models
 from django.core.exceptions import ValidationError
 import PIL
 from PIL import ImageOps
+#from thumbs import ImageWithThumbsField
+from galleryserve.thumbs import ImageWithThumbsField
 
 
 class Gallery(models.Model):
@@ -90,7 +92,8 @@ class Gallery(models.Model):
 
 
 class Item(models.Model):
-    image = models.ImageField(blank=True, upload_to='galleryserve/images')
+    image = ImageWithThumbsField(
+        blank=True, upload_to='galleryserve/images', sizes=((125, 125), (390, 315)))
     gallery = models.ForeignKey(Gallery, related_name='items')
     alt = models.CharField(max_length=100, blank=True,
                            help_text="This will be used for the image alt attribute")
