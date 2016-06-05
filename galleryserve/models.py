@@ -93,7 +93,7 @@ class Gallery(models.Model):
 
 class Item(models.Model):
     image = ImageWithThumbsField(
-        blank=True, upload_to='galleryserve/images', sizes=((125, 125), (390, 315)))
+        blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
     gallery = models.ForeignKey(Gallery, related_name='items')
     alt = models.CharField(max_length=100, blank=True,
                            help_text="This will be used for the image alt attribute")
