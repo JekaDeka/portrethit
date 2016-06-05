@@ -137,7 +137,7 @@ def gallery_detail(request, pk):
     if gal.has_child != True:
         gal_list = Gallery.objects.all()
         items = Item.objects.filter(gallery__title=gal.title)
-        paginator = Paginator(items, 10)
+        paginator = Paginator(items, 12)
         page = request.GET.get('page')
         try:
             gal_items = paginator.page(page)
