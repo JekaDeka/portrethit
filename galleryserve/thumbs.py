@@ -4,7 +4,7 @@ from django.db.models.fields.files import ImageFieldFile
 from PIL import Image
 from django.core.files.base import ContentFile
 import sys
-req_version = (2, 7)
+req_version = (2, 7, 3)
 cur_version = sys.version_info
 if cur_version <= req_version:
     import cStringIO
