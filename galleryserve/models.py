@@ -2,7 +2,6 @@ from django.db import models
 from django.core.exceptions import ValidationError
 import PIL
 from PIL import ImageOps
-#from thumbs import ImageWithThumbsField
 from galleryserve.thumbs import ImageWithThumbsField
 
 
@@ -10,9 +9,9 @@ class Gallery(models.Model):
     title = models.CharField(max_length=200)
     image = models.ImageField(blank=True, upload_to='galleryserve/images')
     content = models.CharField(blank=True, max_length=200)
-    height = models.IntegerField(blank=True, default=300,
+    height = models.IntegerField(blank=True, default=600,
                                  help_text="Height images should be resized to in pixels")
-    width = models.IntegerField(blank=True, default=400,
+    width = models.IntegerField(blank=True, default=800,
                                 help_text="Width images should be resized to in pixels")
     random = models.BooleanField(default=False,
                                  help_text="If selected, the sort numbers will be ignored and your "
@@ -30,7 +29,7 @@ class Gallery(models.Model):
     has_child = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ('title',)
+        ordering = ('id',)
         verbose_name_plural = 'galleries'
 
     # def __unicode__(self):

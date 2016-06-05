@@ -3,7 +3,13 @@ from django.db.models import ImageField
 from django.db.models.fields.files import ImageFieldFile
 from PIL import Image
 from django.core.files.base import ContentFile
-import cStringIO
+import sys
+req_version = (2, 7)
+cur_version = sys.version_info
+if cur_version <= req_version:
+    import cStringIO
+else:
+    pass
 
 
 def generate_thumb(img, thumb_size, format):
