@@ -1036,9 +1036,10 @@ box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
 
 .portfolio-item {
     margin-bottom: 25px;
+    min-height: 363px;
 }
 
 .portfolio-img {
     margin-top: 15px;
-    /*width: 100%;*/
+    width: 100%;
 }
