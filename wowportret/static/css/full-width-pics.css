@@ -1025,6 +1025,9 @@ footer {
 .card-img-top {
     margin-top: 3px;
 }
+.hvr-overline-from-left {
+    display: block;
+}
 .img-center-test {
     width: 100%;
 }
