@@ -76,7 +76,7 @@ def baget_page(request):
     if sended:
         return redirect('thank_page')
 
-    gal = get_object_or_404(Gallery, pk=37)
+    gal = get_object_or_404(Gallery, pk=65)
     if gal.has_child != True:
         gal_list = Gallery.objects.all()
         items = Item.objects.filter(gallery__title=gal.title)
