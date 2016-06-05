@@ -20,7 +20,7 @@
             <div class="col-xs-12 col-sm-6 col-md-4 portfolio-item text-xs-center hvr-reveal">
                 <a href="{% url 'gallery_detail' pk=gal.pk %}">
                 {% if gal.image %}
-                    <img class="portfolio-img img-full-width" src="{{ gal.image.url }}" alt="{{ gal.alt }}">
+                    <img class="portfolio-img img-full-width" src="{{ gal.image.url_390x315 }}" alt="{{ gal.alt }}">
                 {% endif %}
                 </a>
                 <h3 style="margin-top: 20px;">
