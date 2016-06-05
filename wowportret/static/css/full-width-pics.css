@@ -1018,6 +1018,10 @@ footer {
     font-size: 15px;
 }
 
+.card {
+    min-height: 400px;
+}
+
 .card-img-top {
     margin-top: 10px;
 }
