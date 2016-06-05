@@ -27,14 +27,22 @@
 
                 <div class="row">
                     {% for item in items %}
-                    <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 text-xs-center">
+                    <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                         <div class="card">
                         {% if item.image %}
                             <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top img-full-width" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a>
                         {% endif %}
                         <div class="card-block">
+                            {% if item.title %}
                             <h4 class="card-title">{{ item.title }}</h4>
+                            {% else %}
+                            <h4 class="card-title">Работа # {{item.id}}</h4>
+                            {% endif %}
+
+                            {% if item.content %}
                             <p class="card-text">{{ item.content|safe }}</p>
+                            {% endif %}
+
                             {% if item.url %}<a href="{{ item.url }}" class="btn btn-primary">Купить</a>{% endif %}
                             </div>
                         </div>
