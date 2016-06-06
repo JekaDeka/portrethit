@@ -43,7 +43,7 @@
                           <label>
                             <input type="radio" name="optionsRadios" id="optionsRadios{{baget.id}}" value="{{baget.id}}" checked>
                             {% if baget.image %}
-                                <img class="portfolio-img img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ baget.alt }}">
+                                <img class="portfolio-img img-full-width" id="img{{baget.id}}" src="{{ baget.image.url_125x125 }}" alt="{{ baget.alt }}" onmouseover="document.getElementById('img{{baget.id}}').src='{{baget.img.url}}';" onmouseout="document.getElementById('img{{baget.id}}').src='{{ baget.image.url_125x125 }}';">
                             {% endif %}
                           </label>
                         </div>
