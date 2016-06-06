@@ -402,9 +402,7 @@
           });
           //Ultra-smelly-fix, add price per width/height in gallery_item
           $(':radio').click(function(event){
-            $('#calx').calx();
           });
-
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
           $(':radio[baget-type="68"]').attr('value','2800'); //cat C
@@ -420,7 +418,7 @@
               $(':radio[baget-type="68"]').attr('value','3000'); //cat C
             }
             if (this.value == 3490) { //50x70
-              $(':radio[baget-type="66"]').attr('value','1320'); //cat A
+              $(':radio[baget-type="66"]').attr('value','1400'); //cat A
               $(':radio[baget-type="67"]').attr('value','2200'); //cat B
               $(':radio[baget-type="68"]').attr('value','3500'); //cat C
             }
@@ -430,7 +428,7 @@
               $(':radio[baget-type="68"]').attr('value','4300'); //cat C
             }
             if (this.value == 6990) { //75x105
-              $(':radio[baget-type="66"]').attr('value','1200'); //cat A
+              $(':radio[baget-type="66"]').attr('value','1700'); //cat A
               $(':radio[baget-type="67"]').attr('value','2400'); //cat B
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
             }
@@ -439,14 +437,12 @@
               $(':radio[baget-type="67"]').attr('value','2600'); //cat B
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
             }
-            //$(':radio[baget-type="0"]').prop( "checked", true );
-            $('#calx').calx();
+            $(':radio[baget-type="0"]').prop( "checked", true );
           });
         });
         </script>
         <script>
           $(document).ready(function() {
-            var $= jQuery.noConflict();
             $(".fancybox-thumb").fancybox({
               prevEffect  : 'none',
               nextEffect  : 'none',
@@ -468,24 +464,7 @@
         </script>
         <script>
           function addDataToForm() {
-            var name = $('h2').text();
-            var size = $( "option:selected" ).text();
-            var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
-            var price = $("#total_price").text();
-            var opts = "\n";
-            if ($("#lac_check").prop( "checked" )) {
-              opts += "Прописать масляной краской, \n";
-            }
-            if ($("#gel_check").prop( "checked" )) {
-              opts += "Покрыть текстурным гелем, \n";
-            }
-            if ($("#mod_check").prop( "checked" )) {
-                opts += "Сделать модульную картину, \n";
-            }
-
-            $("#id_contact_item").val(name + ",\nРазмеры: \n" + size +",\n" + baget +" "+ opts +"Цена: " + price);
-            $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + size + "</p>" +
-              "<p class='price'>" + baget +"</p><p class='price'>"+ opts +"</p><p class='price'> Цена: " + price + "</p>");
+            $('#calx').calx('calculate')
           };
         </script>
     </body>
