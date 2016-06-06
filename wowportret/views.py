@@ -6,6 +6,7 @@ from django.http import HttpResponse, HttpResponse, HttpResponseRedirect, Http40
 from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import redirect, render
 from django.template import loader, Context
+from django.db.models import Q
 
 
 from wowportret.forms import ContactForm
@@ -107,13 +108,18 @@ def thank_page(request):
 def item_page(request, pk):
     try:
         item = Item.objects.get(id=pk)
+        # Smelly fix for gallery wich parent is Baget_border
+        baget_items = Item.objects.filter(Q(pk=66) | Q(pk=67) | Q(pk=68))
     except:
-        raise Http404
+        #raise Http404
+        item = Item
+        baget_items = Item.objects.all()[:10]
+
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
 
-    return render(request, 'wowportret/gallery_item.html', {'item': item, 'form': form_class})
+    return render(request, 'wowportret/gallery_item.html', {'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
 def gallery_page(request):

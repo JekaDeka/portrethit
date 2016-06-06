@@ -367,15 +367,22 @@
         </script>
         <script>
         $(document).ready(function(){
-          $( ".checkbox" ).click(function() {
+          $( ".checkbox" ).click(function(event) {
+            var hidden_block = $(this).find('.collapse');
             if ($(this).prop( "checked", true )) {
-              $(this).find('.collapse').collapse('show');
+              hidden_block.collapse('show');
             }
-            if ($(this).prop( "checked", false )) {
-              $(this).find('.collapse').collapse('hide');
+            if (event.target.nodeName == "U") { //if clicked on MORE
+              if (hidden_block.css('display') == 'none')  {
+                hidden_block.collapse('show');
+              }
+              else {
+                hidden_block.collapse('hide');
+              }
+
             }
           });
-          });
+        });
         </script>
         <script>
           $(document).ready(function() {
