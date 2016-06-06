@@ -195,7 +195,7 @@ def get_form(request):
                 "kateart@wowportret.ru",
                 content,
                 "kateart@wowportret.ru" + '',
-                ['kateart222@gmail.com'],
+                ['kateart@wowportret.ru'],
                 headers={'Reply-To': contact_email}
             )
             if request.FILES:
