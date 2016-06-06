@@ -365,6 +365,7 @@
         </script>
         <script>
         $(document).ready(function(){
+
           $( ".checkbox" ).click(function(event) {
             var hidden_block = $(this).find('.collapse');
             if ($(this).prop( "checked", true )) {
@@ -377,6 +378,27 @@
               else {
                 hidden_block.collapse('hide');
               }
+
+            }
+          });
+
+          $('select').on('change', function() {
+            if (this.value == 1490) { //30x40
+
+            }
+            if (this.value == 2490) { //40x60
+
+            }
+            if (this.value == 3490) { //50x70
+
+            }
+            if (this.value == 4390) { //60x80
+
+            }
+            if (this.value == 6990) { //75x105
+
+            }
+            if (this.value == 7990) { //90x110
 
             }
           });

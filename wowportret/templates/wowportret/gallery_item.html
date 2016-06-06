@@ -42,7 +42,7 @@
                     {% for baget in baget_items %}
                         <div class="radio baget-line">
                           <label>
-                            <input type="radio" name="optionsRadios{{baget.gallery_id}}" id="optionsRadios{{baget.id}}" value="{{baget.price}}" checked>
+                            <input type="radio" name="optionsRadios" id="optionsRadios{{baget.id}}" value="{{baget.price}}" checked>
                             {% if baget.title %}
                                 {{ baget.title }}
                             {% else %}
