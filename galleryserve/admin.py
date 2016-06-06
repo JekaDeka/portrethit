@@ -12,7 +12,7 @@ class ItemInline(admin.StackedInline):
     except:
         fieldsets = (
             (None, {'fields': (('image', 'alt', 'sort'),
-                               ('url', 'video_url'), ('title', 'credit'), 'content')}),
+                               ('url', 'video_url'), ('title', 'credit'), 'content', 'price')}),
         )
 
 
