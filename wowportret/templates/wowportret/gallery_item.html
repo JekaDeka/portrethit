@@ -16,39 +16,17 @@
           {% endif %}
           </div>
           <div class="col-xs-12 col-sm-6 col-md-5">
-          <!-- <form id="calx1">
-            <table>
-                <tbody>
-                <tr>
-                    <td><strong>Выберите размер</strong> </td>
-                    <td>
-                    <select name="proc" id="proc">
-                        <option value="15">1 Core</option>
-                        <option value="22">2 Core</option>
-                        <option value="30">4 Core</option>
-                    </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" id="item1" value="150" /></td>
-                    <td>Оформить в багет</td>
-                    <td>$ 150</td>
-                </tr>
-                <tr>
-                    <td>Total Price :</td>
-                    <td id="total_price" data-format="$ 0,0[.]00" data-formula="$proc+$ram+$hdd+$item1"></td>
-                </tr>
-                </tbody>
-            </table>
-            </form> -->
+
             <form id="calx">
             <p>
             <strong> 1. Выберите размер: </strong> <br />
             <select class="c-select" id="size">
-              <option value="1000" selected>45 х 30</option>
-              <option value="2000">A x B</option>
-              <option value="3000">A x B</option>
-              <option value="4000">A x B</option>
+              <option value="1490" selected>30x40</option>
+              <option value="2490">40x60</option>
+              <option value="3490">50x70</option>
+              <option value="4390">60x80</option>
+              <option value="6990">75x105</option>
+              <option value="7990">90x110</option>
             </select>
             </p>
             <p>
@@ -66,10 +44,10 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="lac_check" value="1000"> Покрыть лаком
+                    <input type="checkbox" id="lac_check" value="1000"> Прописать масляной краской
                 </label>
                 <label> <u> подробнее </u> </label>
-                <div class="collapse" id="baget_list">
+                <div class="collapse" id="lac_info">
                     <div class="card-block">
                         Рекомендуется для увеличения износостойкости холста.
                         При покрытии лаком матового холста лак в данном случае несет только защитную функцию, но не придаёт работе блеск.
@@ -79,10 +57,21 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="gel_check" value="1000"> Обработать факутрным гелем
+                    <input type="checkbox" id="gel_check" value="1000"> Покрыть текстурным гелем
                 </label>
                 <label> <u> подробнее </u> </label>
-                <div class="collapse" id="baget_list">
+                <div class="collapse" id="gel_info">
+                    <div class="card-block">
+                        Фактурный гель прозрачный и наносится мазками в мазки художника, что придает эффект объема картине, а также создает эффект масляных красок.
+                    </div>
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="mod_check" value="1000"> Сделать модульную картину
+                </label>
+                <label> <u> подробнее </u> </label>
+                <div class="collapse" id="mod_info">
                     <div class="card-block">
                         Фактурный гель прозрачный и наносится мазками в мазки художника, что придает эффект объема картине, а также создает эффект масляных красок.
                     </div>
