@@ -40,7 +40,6 @@
                     <div class="row">
                     <div class=col-xs-12>
                     {% for baget in baget_items %}
-                        {% if baget.gallery_id == '66' %}
                         <div class="radio baget-line">
                           <label>
                             <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}" checked>
@@ -54,7 +53,6 @@
                             {% endif %}
                           </label>
                         </div>
-                        {% endif %}
                     {% endfor %}
                         </div>
                     </div>
