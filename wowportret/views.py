@@ -104,9 +104,13 @@ def thank_page(request):
     return render(request, 'wowportret/thank.html', {})
 
 
-# add image page
-def image_page(reuqest):
-    pass
+def item_page(request, pk):
+    item = Item.objects.filter(id=pk)
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+
+    return render(request, 'wowportret/gallery_item.html', {'item': item, 'form': form_class})
 
 
 def gallery_page(request):

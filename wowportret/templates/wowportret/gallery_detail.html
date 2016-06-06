@@ -43,7 +43,7 @@
                             <p class="card-text">{{ item.content|safe }}</p>
                             {% endif %}
 
-                            {% if item.url %}<a href="{{ item.url }}" class="btn btn-primary">Купить</a>{% endif %}
+                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Подробнее</a>
                             </div>
                         </div>
                     </div>

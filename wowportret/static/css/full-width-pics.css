@@ -144,6 +144,15 @@ footer {
     font-size: 1.8rem;
 }
 
+.btn-order {
+    margin: 15px 15px;
+    padding: 5px 50px;
+    color: black;
+    background-color: #00FFFF;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
 .circle {
     border-radius: 50%;
     width: 75px;
@@ -226,8 +235,8 @@ footer {
 
 }
 .price {
-    min-height: 400px;
-    background-color: rgba(255, 255, 0, 0.44);;
+    /*min-height: 400px;*/
+    /*background-color: rgba(255, 255, 0, 0.44);;*/
 }
 
 .header {
@@ -1046,4 +1055,12 @@ box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
 .portfolio-img {
     margin-top: 15px;
     /*width: 100%;*/
+}
+
+
+select {
+    font-size: 22px;
+}
+option {
+    font-size: 21px;
 }

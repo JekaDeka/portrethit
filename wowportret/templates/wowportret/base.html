@@ -359,6 +359,24 @@
         <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
         <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
         <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+        <script src="{% static 'js/jquery-calx-1.1.9.min.js' %}"></script>
+        <script type="text/javascript">
+          $(document).ready(function(){
+              $('#calx').calx({});
+          });
+        </script>
+        <script>
+        $(document).ready(function(){
+          $( ".checkbox" ).click(function() {
+            if ($(this).prop( "checked", true )) {
+              $(this).find('.collapse').collapse('show');
+            }
+            if ($(this).prop( "checked", false )) {
+              $(this).find('.collapse').collapse('hide');
+            }
+          });
+          });
+        </script>
         <script>
           $(document).ready(function() {
             $(".fancybox-thumb").fancybox({
