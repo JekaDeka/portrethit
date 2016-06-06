@@ -389,25 +389,19 @@
 
           $(':checkbox[id="baget-invoker"]').click(function(event){
             if ($(this).is(':checked')) {
-
-                $(':radio[baget-type="66"]').attr('value','890'); //cat A
-                $(':radio[baget-type="67"]').attr('value','1700'); //cat B
-                $(':radio[baget-type="68"]').attr('value','2800'); //cat C
+                //$(':radio[baget-type="66"]').attr('checked', true );
             }
             else {
-                $(':radio[baget-type="66"]').attr('value','0'); //cat A
-                $(':radio[baget-type="67"]').attr('value','0'); //cat B
-                $(':radio[baget-type="68"]').attr('value','0'); //cat C
-
+                $(':radio').attr('checked',false); //cat A
 
             }
             $('#calx').calx('calculate');
           });
 
 
-          // $(':radio[baget-type="66"]').attr('value','890'); //cat A
-          // $(':radio[baget-type="67"]').attr('value','1700'); //cat B
-          // $(':radio[baget-type="68"]').attr('value','2800'); //cat C
+          $(':radio[baget-type="66"]').attr('value','890'); //cat A
+          $(':radio[baget-type="67"]').attr('value','1700'); //cat B
+          $(':radio[baget-type="68"]').attr('value','2800'); //cat C
 
           $('select').on('change', function() {
             if (this.value == 1490) { //30x40
