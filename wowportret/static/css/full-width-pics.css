@@ -746,6 +746,10 @@ footer {
     .fth-popart {
         height: 495px;
     }
+    #how-btm-left {
+        margin-top: 0px;
+        margin-left: 432px;
+    }
 }
 
 @media(max-width:992px) {
