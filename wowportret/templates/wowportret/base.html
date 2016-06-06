@@ -360,7 +360,7 @@
         <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
         <script type="text/javascript">
           $(document).ready(function(){
-              $('#calx').calx({'autoCalculate': false});
+              $('#calx').calx({'autoCalculate': true});
           });
         </script>
         <script>
@@ -369,7 +369,6 @@
           var snd_block_shown = false;
           var trd_block_shown = false;
           var fth_block_shown = false;
-
           $( ".checkbox" ).click(function(event) {
             var hidden_block = $(this).find('.collapse');
             if ($(this).attr('id') == 'fst_block') {
@@ -399,19 +398,15 @@
               else {
                 hidden_block.collapse('hide');
               }
-
             }
           });
           //Ultra-smelly-fix, add price per width/height in gallery_item
           $(':radio').click(function(event){
-            $('#calx').calx('update');
+
           });
-
-
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
           $(':radio[baget-type="68"]').attr('value','2800'); //cat C
-
           $('select').on('change', function() {
             if (this.value == 1490) { //30x40
               $(':radio[baget-type="66"]').attr('value','890'); //cat A
@@ -422,40 +417,34 @@
               $(':radio[baget-type="66"]').attr('value','1040'); //cat A
               $(':radio[baget-type="67"]').attr('value','1900'); //cat B
               $(':radio[baget-type="68"]').attr('value','3000'); //cat C
-
             }
             if (this.value == 3490) { //50x70
               $(':radio[baget-type="66"]').attr('value','1400'); //cat A
               $(':radio[baget-type="67"]').attr('value','2200'); //cat B
               $(':radio[baget-type="68"]').attr('value','3500'); //cat C
-
             }
             if (this.value == 4390) { //60x80
               $(':radio[baget-type="66"]').attr('value','1630'); //cat A
               $(':radio[baget-type="67"]').attr('value','2600'); //cat B
               $(':radio[baget-type="68"]').attr('value','4300'); //cat C
-
             }
             if (this.value == 6990) { //75x105
               $(':radio[baget-type="66"]').attr('value','1700'); //cat A
               $(':radio[baget-type="67"]').attr('value','2400'); //cat B
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
-
             }
             if (this.value == 7990) { //90x110
               $(':radio[baget-type="66"]').attr('value','1300'); //cat A
               $(':radio[baget-type="67"]').attr('value','2600'); //cat B
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
-
             }
             $(':radio[baget-type="0"]').prop( "checked", true );
-            $('#calx').calx('update');
+
           });
         });
         </script>
         <script>
           $(document).ready(function() {
-
             $(".fancybox-thumb").fancybox({
               prevEffect  : 'none',
               nextEffect  : 'none',
