@@ -402,6 +402,7 @@
           });
           //Ultra-smelly-fix, add price per width/height in gallery_item
           $(':radio').click(function(event){
+            $('#calx').calx();
           });
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
@@ -437,7 +438,8 @@
               $(':radio[baget-type="67"]').attr('value','2600'); //cat B
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
             }
-            $(':radio[baget-type="0"]').prop( "checked", true );
+            //$(':radio[baget-type="0"]').prop( "checked", true );
+            $('#calx').calx();
           });
         });
         </script>
@@ -464,7 +466,7 @@
         </script>
         <script>
           function addDataToForm() {
-            $('#calx').calx('calculate')
+            $('#calx').calx();
           };
         </script>
     </body>
