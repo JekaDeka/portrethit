@@ -4,10 +4,16 @@
 <div class="container white mt" style="margin-top: 100px;">
     <div class="row">
       <div class="col-xs-12">
-        <h2>{{ item.title }}</h2>
+        {% if item.title %}
+            <h2>{{ item.title }}</h2>
+        {% else %}
+            <h2>Работа {{ item.id }}</h2>
+        {% endif %}
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-7">
+          {% if item.image %}
                 <img class="img-full-width" src="{{  item.image.url }}" alt="{{ item.alt }}" />
+          {% endif %}
           </div>
           <div class="col-xs-12 col-sm-6 col-md-5">
           <!-- <form id="calx1">
