@@ -407,9 +407,6 @@
             $('#calx').calx('calculate');
           });
 
-          $('select').click(function(argument) {
-            $('#calx').calx('calculate');
-          });
 
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
@@ -451,7 +448,7 @@
               $(':radio[baget-type="68"]').attr('value','4600'); //cat C
 
             }
-            $('#calx').calx('calculate');
+            $(':radio[baget-type="0"]').attr('checked',true);
           });
         });
         </script>
