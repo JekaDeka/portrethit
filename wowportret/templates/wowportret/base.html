@@ -357,10 +357,10 @@
         <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
         <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
         <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
-        <script src="{% static 'js/jquery-calx-1.1.9.min.js' %}"></script>
+        <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
         <script type="text/javascript">
           $(document).ready(function(){
-              $('#calx').calx({});
+              $('#calx').calx({'autoCalculate': true});
           });
         </script>
         <script>
@@ -382,10 +382,9 @@
             }
           });
           //Ultra-smelly-fix, add price per width/height in gallery_item
-          // $(':radio').click(function(event){
-          //   $(':radio').prop('checked', false);
-          //   $(this).prop('checked', true);
-          // });
+          $(':radio').click(function(event){
+            $('#calx').calx('calculate');
+          });
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
           $(':radio[baget-type="68"]').attr('value','2800'); //cat C

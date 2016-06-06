@@ -20,7 +20,7 @@
             <form id="calx">
             <p>
             <strong> 1. Выберите размер: </strong> <br />
-            <select class="c-select" id="size">
+            <select class="c-select" data-cell="A1">
               <option value="1490" selected>30x40</option>
               <option value="2490">40x60</option>
               <option value="3490">50x70</option>
@@ -33,7 +33,7 @@
             <strong> 2. Дополнительные возможности: </strong> <br />
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="baget_check"> Оформить в багет
+                    <input type="checkbox" data-cell="A2"> Оформить в багет
                 </label>
                 <label class="more"> <u> подробнее </u> </label>
                 <div class="collapse" id="baget_list">
@@ -42,7 +42,7 @@
                     {% for baget in baget_items %}
                         <div class="radio baget-line">
                           <label>
-                            <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" id="optionsRadios{{baget.id}}" value="0" checked>
+                            <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A1{{baget.id}}" checked>
                             {% if baget.title %}
                                 {{ baget.title }}
                             {% else %}
@@ -60,7 +60,7 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="lac_check" value="1000"> Прописать масляной краской
+                    <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
                 </label>
                 <label class="more"> <u> подробнее </u> </label>
                 <div class="collapse" id="lac_info">
@@ -73,7 +73,7 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="gel_check" value="1000"> Покрыть текстурным гелем
+                    <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
                 </label>
                 <label class="more"> <u> подробнее </u> </label>
                 <div class="collapse" id="gel_info">
@@ -84,7 +84,7 @@
             </div>
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" id="mod_check" value="1000"> Сделать модульную картину
+                    <input type="checkbox" id="mod_check" data-cell="A5" value="1000"> Сделать модульную картину
                 </label>
                 <label class="more"> <u> подробнее </u> </label>
                 <div class="collapse" id="mod_info">
@@ -96,11 +96,7 @@
             </p>
             <div class="price">
             <strong>Цена: </strong>
-            <label id="total_price" data-format="0,0[.]00"
-            data-formula="$size+$baget_check+$lac_check+$gel_check
-                                                {% for baget in baget_items %}
-                                                    +$optionsRadios{{baget.id}}
-                                                {% endfor %}"></label> руб.
+            <label id="total_price" data-format="0,0[.]00" data-formula="SUM(A1:A1000)"></label> руб.
             </div>
             <p>
                 <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
