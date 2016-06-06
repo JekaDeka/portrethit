@@ -131,10 +131,11 @@
           <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                  <form method="post" enctype="multipart/form-data">
+                  <form method="post" enctype="multipart/form-data" id="myForm">
                   {% csrf_token %}
                   {{ form.as_p }}
-                  <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+                  <span id="info" style="text-align: center"></span>
+                  <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Подтвердить</button>
                 </form>
               </div>
             </div>

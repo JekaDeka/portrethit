@@ -72,7 +72,7 @@
                 <a class="nav-link {% ifequal request.path '/baget/' %} active {% endifequal%}" href="/baget/">Багетные рамы</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Примеры работ</a>
+                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Картины и сюжеты</a>
               </li>
 
             </ul>
@@ -467,8 +467,6 @@
         </script>
         <script>
           function addDataToForm() {
-            //$("#id_contact_item").prop('disabled', true);
-            $("#id_contact_item").width('96%');
             var name = $('h2').text();
             var size = $( "option:selected" ).text();
             var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
@@ -485,6 +483,8 @@
             }
 
             $("#id_contact_item").val(name + ",\nРазмеры: \n" + size +",\n" + baget +" "+ opts +"Цена: " + price);
+            $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + size + "</p>" +
+              "<p class='price'>" + baget +"</p><p class='price'>"+ opts +"</p><p class='price'> Цена: " + price + "</p>");
           };
         </script>
     </body>
