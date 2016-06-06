@@ -85,4 +85,4 @@ class ContactForm(forms.Form):
 
 class ItemForm(ContactForm):
     contact_item = forms.CharField(
-        label='Ваш заказ', required=True, max_length=70)
+        label='Ваш заказ', required=True, widget=forms.Textarea)

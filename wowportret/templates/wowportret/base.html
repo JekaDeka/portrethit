@@ -467,7 +467,24 @@
         </script>
         <script>
           function addDataToForm() {
-            $('#calx').calx();
+            $("#id_contact_item").prop('disabled', true);
+            $("#id_contact_item").width('96%');
+            var name = $('h2').text();
+            var size = $( "option:selected" ).text();
+            var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+            var price = $("#total_price").text();
+            var opts = "\n";
+            if ($("#lac_check").prop( "checked" )) {
+              opts += "Прописать масляной краской, \n";
+            }
+            if ($("#gel_check").prop( "checked" )) {
+              opts += "Покрыть текстурным гелем, \n";
+            }
+            if ($("#mod_check").prop( "checked" )) {
+                opts += "Сделать модульную картину, \n";
+            }
+
+            $("#id_contact_item").val(name + ",\nРазмеры: \n" + size +",\n" + baget +" "+ opts +"Цена: " + price);
           };
         </script>
     </body>

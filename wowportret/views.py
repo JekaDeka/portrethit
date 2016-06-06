@@ -9,7 +9,7 @@ from django.template import loader, Context
 from django.db.models import Q
 
 
-from wowportret.forms import ContactForm
+from wowportret.forms import ContactForm, ItemForm
 from wowportret.models import Document
 
 from galleryserve.models import Gallery, Item
@@ -116,7 +116,7 @@ def item_page(request, pk):
         item = Item
         baget_items = Item.objects.all()[:10]
 
-    form_class, sended = get_form(request)
+    form_class, sended = get_item_form(request)
     if sended:
         return redirect('thank_page')
 
@@ -196,6 +196,44 @@ def get_form(request):
                 content,
                 "kateart@wowportret.ru" + '',
                 ['kateart222@gmail.com'],
+                headers={'Reply-To': contact_email}
+            )
+            if request.FILES:
+                image = request.FILES['docfile']
+                newdoc = Document(docfile=image)
+                newdoc.save()
+                email.attach_file(newdoc.docfile.path)
+
+            email.send()
+            sended = True
+    return form_class, sended
+
+
+def get_item_form(request):
+    form_class = ItemForm
+    sended = False
+    if request.method == 'POST':
+        form = form_class(request.POST, request.FILES)
+
+        if form.is_valid():
+            contact_name = form.cleaned_data['contact_name']
+            contact_phone = form.cleaned_data['contact_phone']
+            contact_email = form.cleaned_data['contact_email']
+            form_content = form.cleaned_data['content']
+            contact_item = form.cleaned_data['contact_item']
+
+            # template of mail
+            content = "name: " + contact_name + "\n"
+            content = "phone " + contact_phone + "\n"
+            content += "email " + contact_email + "\n"
+            content += "text " + form_content + "\n"
+            content += "extra:  " + contact_item + "\n"
+
+            email = EmailMessage(
+                "kateart@wowportret.ru",
+                content,
+                "kateart@wowportret.ru" + '',
+                ['kateart@wowportret.ru'],
                 headers={'Reply-To': contact_email}
             )
             if request.FILES:
