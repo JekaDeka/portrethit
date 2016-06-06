@@ -936,12 +936,18 @@ footer {
     }
     .background-portret {
         min-height: 250px;
+        margin-top: 107px;
     }
+    .bacground-art, .header-classic, .header-imit, .background-maslo, .background-popart {
+        margin-top: 115px;
+    }
+
     /*-- foto na holste --*/
     .img-holst {
         background: none;
     }
     .background-holst {
+            margin-top: 107px;
         min-height: 200px;
     }
     .dropdown-menu {

@@ -42,7 +42,7 @@
                     {% for baget in baget_items %}
                         <div class="radio baget-line">
                           <label>
-                            <input type="radio" name="optionsRadios" id="optionsRadios{{baget.id}}" value="{{baget.price}}" checked>
+                            <input type="radio" name="optionsRadios{{baget.gallery_id}}" id="optionsRadios{{baget.id}}" value="{{baget.price}}" checked>
                             {% if baget.title %}
                                 {{ baget.title }}
                             {% else %}
@@ -103,7 +103,7 @@
                                                 {% endfor %}"></label> руб.
             </div>
             <p>
-                <button type="button" class="btn btn-order hvr-bounce-to-right">Заказать</button>
+                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
             </p>
             <p>
               <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
@@ -130,6 +130,20 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog"
+             aria-labelledby="myModalLabel3" aria-hidden="true">
+          <div class="modal-dialog " role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                  <form method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
 </div>
 
 

@@ -32,3 +32,8 @@ class ContactForm(forms.Form):
 
         self.fields['docfile'].widget.attrs.update(
             {'class': 'form-control-file'})
+
+
+class ItemForm(ContactForm):
+    contact_item = forms.CharField(
+        label='Ваш заказ', required=True, max_length=70)
