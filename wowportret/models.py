@@ -21,4 +21,4 @@ class Document(models.Model):
                                   str(megabyte_limit))
 
     docfile = models.FileField(
-        upload_to=content_file_name, validators=[validate_image])
+        upload_to=content_file_name, validators=validate_image)
