@@ -235,8 +235,7 @@ footer {
 
 }
 .price {
-    /*min-height: 400px;*/
-    /*background-color: rgba(255, 255, 0, 0.44);;*/
+    font-size: 32px;
 }
 
 .header {
