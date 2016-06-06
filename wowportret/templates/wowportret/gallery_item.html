@@ -43,9 +43,8 @@
                           <label>
                             <input type="radio" name="optionsRadios" id="optionsRadios{{baget.id}}" value="{{baget.id}}" checked>
                             {% if baget.image %}
-                                <img class="portfolio-img img-full-width" id="img{{baget.id}}" data-container="body"
-        data-toggle="popover" data-placement="right"
-        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." src="{{ baget.image.url_125x125 }}" alt="{{ baget.alt }}">
+                            <a id="single_{{baget.id}}" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
+                                <!-- <img class="portfolio-img img-full-width" id="img{{baget.id}}" src="{{ baget.image.url_125x125 }}" alt="{{ baget.alt }}"> -->
                             {% endif %}
                           </label>
                         </div>
