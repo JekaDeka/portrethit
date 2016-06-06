@@ -109,7 +109,8 @@ def item_page(request, pk):
     try:
         item = Item.objects.get(id=pk)
         # Smelly fix for gallery wich parent is Baget_border
-        baget_items = Item.objects.filter(Q(pk=66) | Q(pk=67) | Q(pk=68))
+        baget_items = Item.objects.filter(
+            Q(gallery_id=66) | Q(pk=67) | Q(pk=68))
     except:
         raise Http404
         # item = Item
