@@ -1063,3 +1063,9 @@ select {
 option {
     font-size: 21px;
 }
+
+.baget-line {
+    max-width: 115px;
+    padding: 5px 5px;
+    margin-left: none;
+}
