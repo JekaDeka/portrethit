@@ -360,7 +360,7 @@
         <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
         <script type="text/javascript">
           $(document).ready(function(){
-              $('#calx').calx({'autoCalculate': true});
+              $('#calx').calx();
           });
         </script>
         <script>
@@ -404,7 +404,7 @@
           });
           //Ultra-smelly-fix, add price per width/height in gallery_item
           $(':radio').click(function(event){
-            $('#calx').calx('refresh');
+            $('#calx').calx('update');
           });
 
 
@@ -449,7 +449,7 @@
 
             }
             $(':radio[baget-type="0"]').prop( "checked", true );
-            $('#calx').calx('refresh');
+            $('#calx').calx('update');
           });
         });
         </script>
