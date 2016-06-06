@@ -110,11 +110,11 @@ def item_page(request, pk):
         item = Item.objects.get(id=pk)
         # Smelly fix for gallery wich parent is Baget_border
         baget_items = Item.objects.filter(
-            Q(gallery_id=66) | Q(pk=67) | Q(pk=68))
+            Q(gallery_id=66) | Q(gallery_id=67) | Q(gallery_id=68))
     except:
-        raise Http404
-        # item = Item
-        # baget_items = Item.objects.all()[:10]
+        # raise Http404
+        item = Item
+        baget_items = Item.objects.all()[:10]
 
     form_class, sended = get_form(request)
     if sended:
