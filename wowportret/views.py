@@ -105,7 +105,7 @@ def thank_page(request):
 
 
 def item_page(request, pk):
-    item = Item.objects.filter(id=pk)
+    item = Item.objects.get(id=pk)
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
