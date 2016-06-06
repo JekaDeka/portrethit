@@ -367,6 +367,16 @@
         $(document).ready(function(){
 
           $( ".checkbox" ).click(function(event) {
+            if ($(this).attr('id') == 'baget-invoker') {
+              if ($(this).prop('checked', true)) {
+
+              }
+              else {
+                $(':radio[baget-type="66"]').attr('value','0'); //cat A
+                $(':radio[baget-type="67"]').attr('value','0'); //cat B
+                $(':radio[baget-type="68"]').attr('value','0'); //cat C
+              }
+            }
             var hidden_block = $(this).find('.collapse');
             if ($(this).prop( "checked", true )) {
               hidden_block.collapse('show');
@@ -385,9 +395,12 @@
           $(':radio').click(function(event){
             $('#calx').calx('calculate');
           });
+
+
           $(':radio[baget-type="66"]').attr('value','890'); //cat A
           $(':radio[baget-type="67"]').attr('value','1700'); //cat B
           $(':radio[baget-type="68"]').attr('value','2800'); //cat C
+
           $('select').on('change', function() {
             if (this.value == 1490) { //30x40
               $(':radio[baget-type="66"]').attr('value','890'); //cat A
