@@ -1,7 +1,6 @@
 from django.db import models
 from django.forms import ModelForm
 from django.utils.crypto import get_random_string
-from django.core.exceptions import ValidationError
 import re
 
 
@@ -12,13 +11,4 @@ def content_file_name(instance, filename):
 
 
 class Document(models.Model):
-
-    def validate_image(fieldfile_obj):
-        filesize = fieldfile_obj.file.size
-        megabyte_limit = 5.0
-        if filesize > megabyte_limit:
-            raise ValidationError("Max file size is %sMB" %
-                                  str(megabyte_limit))
-
-    docfile = models.FileField(
-        upload_to=content_file_name, validators=validate_image)
+    docfile = models.FileField(upload_to=content_file_name)
