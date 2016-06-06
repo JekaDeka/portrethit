@@ -2,7 +2,7 @@
 from django.shortcuts import render,  get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils import timezone
-from django.http import HttpResponse, HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponse, HttpResponseRedirect, Http404
 from django.core.mail import send_mail, EmailMessage
 from django.shortcuts import redirect, render
 from django.template import loader, Context
@@ -105,7 +105,10 @@ def thank_page(request):
 
 
 def item_page(request, pk):
-    item = Item.objects.get(id=pk)
+    try:
+        item = Item.objects.get(id=pk)
+    except:
+        raise Http404
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
