@@ -684,8 +684,19 @@ footer {
     background-color: #f5f5f5;
 }
 
+.baget-line {
+    max-width: 137px;
+    padding: 5px 5px;
+    margin-left: 0px;
+    display: inline-block;
+}
 
 @media(max-width: 1200px) {
+    .baget-line {
+        max-width: 117px;
+        padding: 0px 0px;
+    }
+
     .header-classic {
         height: 452px;
     }
@@ -1070,9 +1081,3 @@ option {
     font-size: 21px;
 }
 
-.baget-line {
-    max-width: 115px;
-    padding: 5px 5px;
-    margin-left: 0px;
-    display: inline-block;
-}
