@@ -110,6 +110,8 @@ class Item(models.Model):
     sort = models.IntegerField(default=0,
                                help_text="Items will be displayed in their sort order")
 
+    price = models.IntegerField(default=0, help_text="Цена")
+
     class Meta:
         ordering = ('sort',)
 
