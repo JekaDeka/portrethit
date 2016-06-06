@@ -372,7 +372,7 @@
               if ($(this).prop('checked', true)) {
 
               }
-              else {
+              if ($(this).prop('checked', false)) {
                 $(':radio[baget-type="66"]').attr('value','0'); //cat A
                 $(':radio[baget-type="67"]').attr('value','0'); //cat B
                 $(':radio[baget-type="68"]').attr('value','0'); //cat C
