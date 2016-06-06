@@ -42,7 +42,7 @@
                             {% if item.content %}
                             <p class="card-text">{{ item.content|safe }}</p>
                             {% endif %}
-                            {% if item.pk != 66 or item.pk != 67 item.pk != 68  %} <!-- SMELLY FIX -->
+                            {% if item.gallery_id != 66 or item.gallery_id != 67 item.gallery_id != 68  %} <!-- SMELLY FIX -->
                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Подробнее</a>
                             {% endif %}
                             </div>
