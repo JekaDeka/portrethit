@@ -46,7 +46,7 @@
                             {% if baget.title %}
                                 {{ baget.title }}
                             {% else %}
-                                Рамка #{{ baget.id }}
+                                Рамка {% if baget.gallery_id == 66 %}A {% elif baget.gallery_id == 67 %}Б {% elif baget.gallery_id == 68 %} C{% endif %} #{{ baget.id }}
                             {% endif %}
                             {% if baget.image %}
                             <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
