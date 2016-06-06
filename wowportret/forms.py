@@ -64,7 +64,7 @@ class ContactForm(forms.Form):
         widget=forms.Textarea
     )
 
-    docfile = RestrictedImageField()
+    docfile = RestrictedImageField(required=False)
     # docfile = forms.FileField(label='Ваше фото',
     #                           widget=forms.FileInput, required=False)
 
