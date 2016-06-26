@@ -134,4 +134,4 @@ class Item(models.Model):
                     height = 600
                 size = (width, height)
                 image = ImageOps.fit(image, size, PIL.Image.ANTIALIAS)
-            image.save(filename, quality=self.gallery.quality)
+            image.save(filename, quality=85)
