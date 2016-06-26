@@ -1051,7 +1051,8 @@ footer {
 }
 
 .card {
-    min-height: 400px;
+    max-height: 528px;
+    overflow: hidden;
 }
 
 .card-img-top {
