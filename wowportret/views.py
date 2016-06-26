@@ -153,7 +153,7 @@ def gallery_detail(request, pk):
     gal = get_object_or_404(Gallery, pk=pk)
     if gal.has_child != True:
         gal_list = Gallery.objects.all()
-        items = Item.objects.filter(gallery__title=gal.title)
+        items = Item.objects.filter(gallery=gal)
         paginator = Paginator(items, 12)
         page = request.GET.get('page')
         try:
