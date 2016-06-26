@@ -64,7 +64,7 @@ class Gallery(models.Model):
         return self.get_separator().join(p_list)
     _parents_repr.short_description = 'Gallery parents'
 
-    def save(self):
+    def save(self, **kwargs):
         p_list = self._recurse_for_parents(self)
         if self.title in p_list:
             raise ValidationError(
@@ -118,7 +118,7 @@ class Item(models.Model):
     def __unicode__(self):
         return u'%s' % (self.alt)
 
-    def save(self):
+    def save(self, **kwargs):
         super(Item, self).save()
         if self.image:
             filename = self.image.path
