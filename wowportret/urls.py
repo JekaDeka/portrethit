@@ -2,7 +2,7 @@ from django.conf.urls import url
 from wowportret import views
 
 urlpatterns = [
-    url(r'^$', views.main_page, name='main_page'),
+    url(r'^$', views.gallery_page, name='gallery_page'),
     url(r'^art/$', views.art_page, name='art_page'),
     url(r'^classic/$', views.classic_page, name='classic_page'),
     url(r'^holst/$', views.holst_page, name='holst_page'),
