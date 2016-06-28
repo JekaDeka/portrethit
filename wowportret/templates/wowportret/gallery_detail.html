@@ -1,6 +1,85 @@
-{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="ru">
+        <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>wowportret.ru</title>
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="shortcut icon" type="image/png" href="http://realfavicongenerator.net/demo_favicon_sample.png"/>
+
+        <!-- Custom fonts -->
+        <link href="{% static 'fonts/BloggerSans/BloggerSans.css' %}" rel="stylesheet">
+        <link href="{% static 'fonts/BloggerSansLight/BloggerSans-Light.css' %}" rel="stylesheet">
+        <link href="{% static 'fonts/BloggerSansMedium/BloggerSans-Medium.css' %}" rel="stylesheet">
+
+        <!-- Custom CSS add minify-->
+        <link href="{% static 'css/full-width-pics.css' %}" rel="stylesheet">
+
+        <!-- hover css effect -->
+        <link href="{% static 'css/hover-min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox-buttons.css' %}" type="text/css" media="screen" />
+        <link rel="stylesheet" href="{% static 'css/jquery.fancybox-thumbs.css' %}" type="text/css" media="screen" />
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="{% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="{% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+    <body>
+        <nav class="navbar navbar-fixed-top navbar-light bg-faded-cstm">
+            <div class="alert hvr-wobble-horizontal" role="alert" style="float: right;
+                                                                padding: 7px;
+                                                                margin-bottom: 0px;
+                                                                border: 1px solid rgb(208, 223, 202);
+                                                                border-radius: .25rem;">
+                <span class="phone-icon"></span> +7(495) <span class="phone-blue"> 908-72-74 </span>, +7-915- <span class="phone-blue">463-0964 </span>, <strong>wowportret24@gmail.com</strong>
+            </div>
+          <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+            &#9776;
+          </button>
+
+          <div class="collapse navbar-toggleable-sm" id="exCollapsingNavbar2">
+            <a class="navbar-brand" href="/">Wowportret.ru</a>
+            <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+                   href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                   Портреты на холсте</a>
+                <div class="dropdown-menu shdw">
+                    <a class="dropdown-item" href="{% url 'wowportret.views.holst_page' %}">Фото на холсте</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.portret_page' %}">Портрет в образе</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.art_page' %}">Art обработка</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.classic_page' %}">Классический портрет</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/maslo2/' %} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/maslo/' %} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/popart/'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/baget/' %} active {% endifequal%}" href="/baget/">Багетные рамы</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Картины и сюжеты</a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </nav>
 <!-- Page Content -->
     <div class="container-fluid white mt" style="margin-top: 70px;">
 
@@ -80,4 +159,175 @@
     </div>
 
 
-{% endblock content %}
+<div class="container-fluid" style="background-color: #F7F7F9;">
+        <div class="container">
+          <div class="row">
+            <p>&copy; 2016 wowportret.ru<p>
+          </div>
+        </div>
+        </div>
+
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+        <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+<!--         <script type="text/javascript">
+          $(document).ready(function(){
+              $('#calx').calx({'autoCalculate': true});
+          });
+        </script> -->
+        <!--
+        <script>
+         $(document).ready(function(){
+
+          //Ultra-smelly-fix, add price per width/height in gallery_item
+          $(':radio').click(function(event){
+            $('#calx').calx();
+          });
+
+          $(':radio[baget-type="66"]').attr('value','890'); //cat A
+          $(':radio[baget-type="67"]').attr('value','1700'); //cat B
+          $(':radio[baget-type="68"]').attr('value','2800'); //cat C
+          $(':input[id="lac_check"]').attr('value','1500'); //maslo
+          $(':input[id="gel_check"]').attr('value','500'); //propis
+          $(':input[id="mod_check"]').attr('value','0'); //mod
+          $('select').on('change', function() {
+            if (this.value == 1490) { //30x40
+              $(':radio[baget-type="66"]').attr('value','890'); //cat A
+              $(':radio[baget-type="67"]').attr('value','1700'); //cat B
+              $(':radio[baget-type="68"]').attr('value','2800'); //cat C
+              $(':input[id="lac_check"]').attr('value','1500'); //maslo
+              $(':input[id="gel_check"]').attr('value','500'); //propis
+              $(':input[id="mod_check"]').attr('value','0'); //mod
+            }
+            if (this.value == 2490) { //40x60
+              $(':radio[baget-type="66"]').attr('value','1040'); //cat A
+              $(':radio[baget-type="67"]').attr('value','1900'); //cat B
+              $(':radio[baget-type="68"]').attr('value','3000'); //cat C
+              $(':input[id="lac_check"]').attr('value','3000'); //maslo
+              $(':input[id="gel_check"]').attr('value','1000'); //propis
+              $(':input[id="mod_check"]').attr('value','0'); //mod
+            }
+            if (this.value == 3490) { //50x70
+              $(':radio[baget-type="66"]').attr('value','1320'); //cat A
+              $(':radio[baget-type="67"]').attr('value','2200'); //cat B
+              $(':radio[baget-type="68"]').attr('value','3500'); //cat C
+              $(':input[id="lac_check"]').attr('value','6000'); //maslo
+              $(':input[id="gel_check"]').attr('value','2000'); //propis
+              $(':input[id="mod_check"]').attr('value','0'); //mod
+            }
+            if (this.value == 4390) { //60x80
+              $(':radio[baget-type="66"]').attr('value','1630'); //cat A
+              $(':radio[baget-type="67"]').attr('value','2600'); //cat B
+              $(':radio[baget-type="68"]').attr('value','4300'); //cat C
+              $(':input[id="lac_check"]').attr('value','9000'); //maslo
+              $(':input[id="gel_check"]').attr('value','4000'); //propis
+              $(':input[id="mod_check"]').attr('value','0'); //mod
+            }
+            if (this.value == 6990) { //75x105
+              $(':radio[baget-type="66"]').attr('value','1200'); //cat A
+              $(':radio[baget-type="67"]').attr('value','2400'); //cat B
+              $(':radio[baget-type="68"]').attr('value','4600'); //cat C
+              $(':input[id="lac_check"]').attr('value','15000'); //maslo
+              $(':input[id="gel_check"]').attr('value','6000'); //propis
+              $(':input[id="mod_check"]').attr('value','0'); //mod
+            }
+            if (this.value == 7990) { //90x110
+              $(':radio[baget-type="66"]').attr('value','1300'); //cat A
+              $(':radio[baget-type="67"]').attr('value','2600'); //cat B
+              $(':radio[baget-type="68"]').attr('value','4600'); //cat C
+              $(':input[id="lac_check"]').attr('value','18000'); //maslo
+              $(':input[id="gel_check"]').attr('value','7000'); //propis
+              $(':input[id="mod_check"]').attr('value','7990'); //mod
+            }
+            //$(':radio[baget-type="0"]').prop( "checked", true );
+            $('#calx').calx();
+          });
+        });
+        </script>
+-->
+        <script>
+          $(document).ready(function(){
+            $(".fancybox-thumb").fancybox({
+              prevEffect  : 'none',
+              nextEffect  : 'none',
+              helpers : {
+                title : {
+                  type: 'outside'
+                },
+                thumbs  : {
+                  width : 50,
+                  height  : 50
+                }
+              }
+            });
+            $(".fancybox").fancybox({
+              openEffect  : 'elastic',
+              closeEffect : 'elastic'
+            });
+
+          var fst_block_shown = false;
+          var snd_block_shown = false;
+          var trd_block_shown = false;
+          var fth_block_shown = false;
+
+            $( ".checkbox" ).click(function(event) {
+            var hidden_block = $(this).find('.collapse');
+            if ($(this).attr('id') == 'fst_block') {
+              if (!fst_block_shown)
+                hidden_block.show('500');
+              fst_block_shown = true;
+            }
+            if ($(this).attr('id') == 'snd_block') {
+              if (!snd_block_shown)
+                hidden_block.show('500');
+              snd_block_shown = true;
+            }
+            if ($(this).attr('id') == 'trd_block') {
+              if (!trd_block_shown)
+                hidden_block.show('500');
+              trd_block_shown = true;
+            }
+            if ($(this).attr('id') == 'fth_block') {
+              if (!fth_block_shown)
+                hidden_block.show('500');
+              fth_block_shown = true;
+            }
+            if (event.target.nodeName == "U") { //if clicked on MORE
+              if (hidden_block.css('display') == 'none')  {
+                hidden_block.show('500');
+              }
+              else {
+                hidden_block.hide('500');
+              }
+            }
+          });
+          });
+        </script> <!--
+        <script>
+          function addDataToForm() {
+            var name = $('h2').text();
+            var size = $( "option:selected" ).text();
+            var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+            var price = $("#total_price").text();
+            var opts = "\n";
+            if ($("#lac_check").prop( "checked" )) {
+              opts += "Прописать масляной краской, \n";
+            }
+            if ($("#gel_check").prop( "checked" )) {
+              opts += "Покрыть текстурным гелем, \n";
+            }
+            if ($("#mod_check").prop( "checked" )) {
+                opts += "Сделать модульную картину, \n";
+            }
+
+            $("#id_contact_item").val(name + ",\nРазмеры: \n" + size +",\n" + baget +" "+ opts +"Цена: " + price);
+            $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + size + "</p>" +
+              "<p class='price'>" + baget +"</p><p class='price'>"+ opts +"</p><p class='price'> Цена: " + price + "</p>");
+          };
+        </script> -->
+    </body>
+</html>
