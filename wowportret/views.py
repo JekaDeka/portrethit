@@ -150,28 +150,21 @@ def gallery_detail(request, pk):
     if sended:
         return redirect('thank_page')
 
-    gal = get_object_or_404(Gallery, pk=pk)
-    if gal.has_child != True:
-        gal_list = Gallery.objects.all()
-        items = Item.objects.filter(gallery=gal)
-        paginator = Paginator(items, 12)
-        page = request.GET.get('page')
-        try:
-            gal_items = paginator.page(page)
-        except PageNotAnInteger:
-            # If page is not an integer, deliver first page.
-            gal_items = paginator.page(1)
-        except EmptyPage:
-            # If page is out of range (e.g. 9999), deliver last page of
-            # results.
-            gal_items = paginator.page(paginator.num_pages)
-        # return render(request, 'wowportret/gallery.html', {'galleries':
-        # galleries})
+    # gal = get_object_or_404(Gallery, pk=pk)
+    gal_list = Gallery.objects.filter(parent=pk)
+    items = Item.objects.filter(gallery_id=pk)
 
-        return render(request, 'wowportret/gallery_detail.html', {'galleries': gal_list, 'gallery': gal, 'items': gal_items, 'form': form_class})
-    else:
-        gal_list = Gallery.objects.filter(parent=gal.id)
-        return render(request, 'wowportret/gallery.html', {'galleries': gal_list, 'form': form_class})
+    paginator = Paginator(items, 12)
+    page = request.GET.get('page')
+
+    try:
+        gal_items = paginator.page(page)
+    except PageNotAnInteger:
+        gal_items = paginator.page(1)
+    except EmptyPage:
+        gal_items = paginator.page(paginator.num_pages)
+
+    return render(request, 'wowportret/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
 
 
 def get_form(request):
