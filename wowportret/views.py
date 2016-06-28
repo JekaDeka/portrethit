@@ -77,7 +77,7 @@ def baget_page(request):
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
-    gal_list = Gallery.objects.filter(Q(id=65))
+    gal_list = Gallery.objects.filter(parent=65)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
