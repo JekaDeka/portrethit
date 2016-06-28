@@ -16,12 +16,12 @@ from galleryserve.models import Gallery, Item
 
 
 def main_page(request):
-    # form_class, sended = get_form(request)
-    # if sended:
-    #     return redirect('thank_page')
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
 
-    # return render(request, 'wowportret/index.html', {'form': form_class})
-    return redirect('http://wowportret24.ru/')
+    return render(request, 'wowportret/index.html', {'form': form_class})
+    # return redirect('http://wowportret24.ru/')
 
 
 def art_page(request):
