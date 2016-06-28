@@ -129,7 +129,7 @@ def gallery_page(request):
     if sended:
         return redirect('thank_page')
 
-    gal_list = Gallery.objects.filter(parent=None)
+    gal_list = Gallery.objects.filter(Q(parent=None)).exclude(id=65)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
