@@ -80,9 +80,50 @@
           </div>
 
         </nav>
-<div class="container white mt" style="margin-top: 100px;">
-    <div class="row">
-      <div class="col-xs-12">
+
+<div class="container white add-shdw" style="margin-top: 75px">
+    <div class="p-y-3 section" draggable="true">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">
+                <!-- <p class="lead"><a href="/gallery/">Галерея</a></p> -->
+                <div class="list-group">
+                    <a class="list-group-item" href="/gallery/50/"><strong>ДЕТСКИЕ ФОТОКОЛЛАЖИ</strong> </a>
+                    <a class="list-group-item" href="/gallery/51/"><strong>ЖЕНСКИЕ</strong> </a>
+                        <a class="list-group-item sub-item" href="/gallery/52/">PIN UP</a>
+                        <a class="list-group-item sub-item" href="/gallery/53/">ИСТОРИЧЕСКИЕ</a>
+                        <a class="list-group-item sub-item" href="/gallery/54/">СОВРЕМЕННЫЕ</a>
+                    <a class="list-group-item" href="/gallery/60/"><strong>МУЖСКИЕ</strong> </a>
+                        <a class="list-group-item sub-item" href="/gallery/61/">ВОЕННЫЕ</a>
+                        <a class="list-group-item sub-item" href="/gallery/62/">ИСТОРИЧЕСКИЕ</a>
+                        <a class="list-group-item sub-item" href="/gallery/63/">НА ЛОШАДЯХ</a>
+                        <a class="list-group-item sub-item" href="/gallery/64/">СОВРЕМЕННЫЕ</a>
+                    <a class="list-group-item" href="/gallery/71/"><strong>ГРУППОВЫЕ ОБРАЗЫ</strong> </a>
+                        <a class="list-group-item sub-item" href="/gallery/78/">2 ЧЕЛОВЕКА</a>
+                        <a class="list-group-item sub-item" href="/gallery/74/">3 ЧЕЛОВЕКА</a>
+                        <a class="list-group-item sub-item" href="/gallery/75/">4 ЧЕЛОВЕКА</a>
+                        <a class="list-group-item sub-item" href="/gallery/76/">ПАРЫ</a>
+                        <a class="list-group-item sub-item" href="/gallery/77/">СЕМЕЙНЫЕ ОБРАЗЫ</a>
+                    <a class="list-group-item" href="/gallery/79/"><strong>МОДУЛЬНЫЕ КАРТИНЫ</strong> </a>
+                    <a class="list-group-item" href="/gallery/80/"><strong>РЕПРОДУКЦИЯ КАРТИН</strong> </a>
+<!--                     <a class="list-group-item" href="/gallery/65/"><strong>БАГЕТНЫЕ РАМЫ</strong> </a>
+                        <a class="list-group-item sub-item" href="/gallery/66/">РАМКИ КАТЕГОРИИ А</a>
+                        <a class="list-group-item sub-item" href="/gallery/67/">РАМКИ КАТЕГОРИИ Б</a>
+                        <a class="list-group-item sub-item" href="/gallery/68/">РАМКИ КАТЕГОРИИ C</a> -->
+                </div>
+        </div>
+        <div class="col-lg-9">
+                <div class="container">
+                    <div class="row">
+                        <p style="font-size: 18px;"> Нужен определённый размер или картина? <br />
+                            <strong>Доверьтесь профессионалам!</strong>
+                            Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
+                            <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
+                            <button type="button" style="margin-left: 15px; padding: 3px 25px;"class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
+                        </p>
+                    </div>
+                    <div class="row">
+                      <div class="col-xs-12">
         {% if item.title %}
             <h2>{{ item.title }}</h2>
         {% else %}
@@ -176,32 +217,19 @@
             <label id="total_price" data-format="0,0[.]00" data-formula="SUM(A1:A2000)"></label> руб.
             </div>
             <p>
-                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Заказать</button>
+                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Оформить</button>
             </p>
-            <!-- <p>
-              <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                Информация #1
-              </a>
-            </p>
-            <div class="collapse" id="collapseExample">
-              <div class="card-block">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div>
-            <p>
-              <a class="btn btn-info" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
-                Информация #2
-              </a>
-            </p>
-            <div class="collapse" id="collapseExample1">
-              <div class="card-block">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-              </div>
-            </div> -->
+
             </form>
           </div>
         </div>
       </div>
+                    </div>
+                </div>
+
+        </div>
+      </div>
+    </div>
     </div>
     <div class="modal fade" id="myModal7" tabindex="-1" role="dialog"
              aria-labelledby="myModalLabel3" aria-hidden="true">
@@ -218,7 +246,8 @@
             </div>
           </div>
         </div>
-</div>
+    </div>
+
 
 
 <div class="container white add-shdw mt mb">
