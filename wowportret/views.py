@@ -8,10 +8,8 @@ from django.shortcuts import redirect, render
 from django.template import loader, Context
 from django.db.models import Q
 
-
 from wowportret.forms import ContactForm, ItemForm
-from wowportret.models import Document
-
+from wowportret.models import Document, Post
 from galleryserve.models import Gallery, Item
 
 
@@ -228,3 +226,14 @@ def get_item_form(request):
             email.send()
             sended = True
     return form_class, sended
+
+
+def post_list(request):
+    posts = Post.objects.filter(
+        published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'wowportret/post_list.html', {'posts': posts})
+
+
+def post_detail(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    return render(request, 'wowportret/post_detail.html', {'post': post})

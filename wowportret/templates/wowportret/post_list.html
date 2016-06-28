@@ -1,0 +1,28 @@
+{% extends 'wowportret/base.html' %}
+{% load staticfiles %}
+    {% block content %}
+    <div class="container white add-shdw" style="margin-top: 75px">
+    <div class="p-y-3 section" draggable="true">
+    <div class="container">
+      <div class="row">
+        {% for post in posts %}
+        {% if post.image %}
+        <div class="col-md-6">
+          <img src="{{ gal.image.url_415x415 }}" class="img-fluid img-thumbnail">
+        </div>
+        {% endif %}
+        <div class="col-md-6">
+          <h1 class="text-primary"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+          <!-- <h3>A subtitle</h3> -->
+          <p class="lead">
+            {{post.mini_text | safe}}
+          </p>
+          <p>Опубликовано: {{post.published_date }}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+</div>
+</div>
+
+    {% endblock content %}
