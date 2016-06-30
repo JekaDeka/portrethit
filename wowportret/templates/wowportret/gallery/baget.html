@@ -228,7 +228,7 @@
             var height = parseFloat($('.height').val());
             var item_price = parseFloat($('.item_price').val());
             total = (width + height) / 0.8 * item_price;
-            $('#total').val(total);
+            $('.total').val(total);
         });
         $('.modal').on('hide.bs.modal', function (e) {
          $(this).find('form').trigger('reset');
