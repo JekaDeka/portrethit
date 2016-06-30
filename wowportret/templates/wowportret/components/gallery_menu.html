@@ -1,7 +1,7 @@
 <div class="list-group">
     {% for gal in all_gals %}
     <a class="list-group-item
-                {% ifequal request.path gal.url %}
+                {% ifequal request.path /gallery/{{gal.id}} %}
                     active
                 {% endifequal%}
                 {% if gal.parent != None %}
