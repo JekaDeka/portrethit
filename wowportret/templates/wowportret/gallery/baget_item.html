@@ -35,87 +35,31 @@
                                             <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a>
                                             {% endif %}
                                         </div>
-                                        <!-- <div class="col-xs-12 col-sm-6 col-md-5">
-                                            <form id="calx">
-                                                <p>
-                                                    <strong> 1. Выберите размер: </strong>
-                                                    <br />
-                                                    <select class="c-select" data-cell="A1">
-                                                        <option value="1490" selected>30x40</option>
-                                                        <option value="2490">40x60</option>
-                                                        <option value="3490">50x70</option>
-                                                        <option value="4390">60x80</option>
-                                                        <option value="6990">75x105</option>
-                                                        <option value="7990">90x110</option>
-                                                    </select>
-                                                </p>
-                                                <p>
-                                                    <strong> 2. Дополнительные возможности: </strong>
-                                                    <br />
-                                                    <div class="checkbox" id="fst_block">
-                                                        <label style="padding-left: 0px;">
-                                                            <input type="radio" baget-type="0" name="optionsRadios" data-cell="A2" value="0" checked> Не оформлять багет
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="baget_list">
-                                                            <div class="row">
-                                                                <div class=col-xs-12>
-                                                                    {% for baget in baget_items %}
-                                                                    <div class="radio baget-line">
-                                                                        <label>
-                                                                            <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}" checked> {% if baget.title %} {{ baget.title }} {% else %} Рамка {% if baget.gallery_id == 66 %}A {% elif baget.gallery_id == 67 %}Б {% elif baget.gallery_id == 68 %}C {% endif %} #{{ baget.id }} {% endif %} {% if baget.image %}
-                                                                            <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
-                                                                            {% endif %}
-                                                                        </label>
-                                                                    </div>
-                                                                    {% endfor %}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="checkbox" id="snd_block">
-                                                        <label>
-                                                            <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="lac_info">
-                                                            <div class="card-block">
-                                                                Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="checkbox" id="trd_block">
-                                                        <label>
-                                                            <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="gel_info">
-                                                            <div class="card-block">
-                                                                Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="checkbox" id="fth_block">
-                                                        <label>
-                                                            <input type="checkbox" id="mod_check" data-cell="A5" value="1000"> Сделать модульную картину
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="mod_info">
-                                                            <div class="card-block">
-                                                                Любое изображение может стать модульной картиной.Для этого,Вам достаточно выбрать подходящее фото из нашей галереи или предложить свое.Наши дизайнеры составят модульную картину и пришлют Вариант Вам на утверждение.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </p>
-                                                <div class="price">
-                                                    <strong>Цена: </strong>
-                                                    <label id="total_price" data-format="0,0[.]00" data-formula="SUM(A1:A2000)"></label> руб.
+                                        <div class="col-xs-12 col-sm-6 col-md-5">
+                                            <form class="calx_form" id="form{{item.id}}">
+                                                <div class="form-group">
+                                                    <label>Предварительный расчет стоимости: </label>
                                                 </div>
-                                                <p>
-                                                    <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Оформить</button>
-                                                </p>
+                                                <div class="form-group">
+                                                    <label for="height">Высота багета, см</label>
+                                                    <input type="text" class="form-control mycal height" value="0">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="width">Ширина багета, см</label>
+                                                    <input type="text" class="form-control mycal width" value="0">
+                                                </div>
+                                                <div class="form-group" style="display: none;">
+                                                    <label for="width">Стоимость за 1 кв.м.: </label>
+                                                    <input type="text" class="form-control mycal item_price" value="{{ item.price }}">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="total">Итого, руб</label>
+                                                    <fieldset disabled>
+                                                        <input type="text" class="form-control mycal total" value="0">
+                                                    </fieldset>
+                                                </div>
                                             </form>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
