@@ -1,6 +1,6 @@
 <div class="list-group">
-    <a class="list-group-item" href="/gallery/65/"><strong>БАГЕТНЫЕ РАМЫ</strong> </a>
-        <a class="list-group-item sub-item" href="/gallery/66/">РАМКИ КАТЕГОРИИ А</a>
-        <a class="list-group-item sub-item" href="/gallery/67/">РАМКИ КАТЕГОРИИ Б</a>
-        <a class="list-group-item sub-item" href="/gallery/68/">РАМКИ КАТЕГОРИИ C</a>
+    <a class="list-group-item {% ifequal request.path '/gallery/65/' %} active {% endifequal%}" href="/gallery/65/"><strong>БАГЕТНЫЕ РАМЫ</strong> </a>
+        <a class="list-group-item sub-item {% ifequal request.path '/gallery/66/' %} active {% endifequal%}" href="/gallery/66/">РАМКИ КАТЕГОРИИ А</a>
+        <a class="list-group-item sub-item {% ifequal request.path '/gallery/67/' %} active {% endifequal%}" href="/gallery/67/">РАМКИ КАТЕГОРИИ Б</a>
+        <a class="list-group-item sub-item {% ifequal request.path '/gallery/68/' %} active {% endifequal%}" href="/gallery/68/">РАМКИ КАТЕГОРИИ C</a>
 </div>
