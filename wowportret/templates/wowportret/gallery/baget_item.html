@@ -58,6 +58,7 @@
                                                         <input type="text" class="form-control mycal total" value="0">
                                                     </fieldset>
                                                 </div>
+                                                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Оформить</button>
                                             </form>
                                         </div>
                                     </div>
@@ -89,7 +90,32 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    {% include "wowportret/components/scipts_init.html" %}
+    <script>
+    $('.mycal').on('input', function() {
+        var total = 0
+        var form = $(this).closest("form");
+        var values = $(form).find(':input')
+        var height = parseFloat($(values[0]).val() / 100);
+        var width = parseFloat($(values[1]).val() / 100);
+        var item_price = parseFloat($(values[2]).val());
+        total = ((width + height) / 0.8 * item_price).toFixed(2);
+        $(values[3]).val(total);
+    });
+    </script>
+    <script>
+    function addDataToForm() {
+        var name = $('h2').text();
+        var values = $('.calx_form').find(':input');
+        var height = $(values[0]).val();
+        var width = $(values[1]).val();
+        var total = $(values[3]).val();
+        var size = 0
+            // $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
+        $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Высота: " + height + "см, Ширина: " + width + "см</p>" +
+        "<p class='price'>Цена: " + total + " руб.</p>");
+    };
+    </script>
+    <!-- {% include "wowportret/components/scipts_init.html" %} -->
 </body>
 
 </html>
