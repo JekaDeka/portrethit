@@ -1,19 +1,22 @@
 <div class="list-group">
     {% for gal in all_gals %}
+    {% with id=gal.id|stringformat:"s/" %}
     <a class="list-group-item
-                {% ifequal request.path /gallery/{{gal.id}} %}
+                {% if request.path == '/gallery/'|add:id %}
                     active
-                {% endifequal%}
+                {% endif %}
                 {% if gal.parent != None %}
                     sub-item
-                {% endif %}
-                " href="/gallery/{{gal.id}}">
+                {% endif %} "
+                 href="/gallery/{{gal.id}}">
 
                 {% if gal.parent == None %}
                     <strong>{{gal.title}}</strong>
                 {% else %}
                     {{gal.title}}
                 {% endif %}
+
     </a>
+    {% endwith %}
     {% endfor %}
 </div>
