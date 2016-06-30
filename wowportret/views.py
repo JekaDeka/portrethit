@@ -101,15 +101,14 @@ def item_page(request, pk):
 
     try:
         item = Item.objects.get(id=pk)
-        gallery = Gallery.objects.get(id=item.gallery.id)
         baget_items = Item.objects.filter(
-            Q(gallery_is_baget=True)).order_by('id')
+            gallery__is_baget=True).order_by('id')
     except:
         #raise Http404
         item = Item
         baget_items = Item.objects.all()[:10]
 
-    if (gallery.is_baget == True):
+    if (item.gallery.is_baget == True):
         return render(request, 'wowportret/gallery/baget_item.html', {'item': item, 'form': form_class})
     else:
         return render(request, 'wowportret/gallery/gallery_item.html', {'item': item, 'form': form_class, 'baget_items': baget_items})
