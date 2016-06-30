@@ -1,0 +1,189 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="ru">
+{% include "wowportret/components/head.html" %}
+
+<body>
+    {% include "wowportret/components/header.html" %}
+    <!-- Page Content -->
+    <div class="container white add-shdw" style="margin-top: 75px">
+        <div class="p-y-3 section" draggable="true">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <!-- <p class="lead"><a href="/gallery/">Галерея</a></p> -->
+                        {% include "wowportret/components/baget_menu.html" %}
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="container">
+                            <div class="row">
+                                <p style="font-size: 18px;"> Нужен определённый размер или картина?
+                                    <br />
+                                    <strong>Доверьтесь профессионалам!</strong> Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
+                                    <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
+                                    <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
+                                </p>
+                            </div>
+                            <div class="row">
+                                {% for gal in galleries %}
+                                <div class="col-md-6 text-xs-center">
+                                    <a href="{% url 'gallery_detail' pk=gal.pk %}">
+                                {% if gal.image %}
+                                    <img class="img-fluid img-full-width" src="{{ gal.image.url_415x415 }}" alt="{{ gal.alt }}">
+                                {% endif %}
+                                </a>
+                                    <p>
+                                        <a class="a-glr" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
+                                    </p>
+                                    <p class="m-y-1">{{ gal.content | safe }}</p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="section" draggable="true">
+                                {% for item in items %}
+                                <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
+                                    <div class="card">
+                                        {% if item.image %}
+                                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a>
+                                        {% endif %}
+                                        <div class="card-block">
+                                            {% if item.title %}
+                                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">{{ item.title }}</h4></a> {% else %}
+                                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">Работа # {{item.id}}</h4></a> {% endif %} {% if item.content %}
+                                            <p class="card-text">{{ item.content|safe }}</p>
+                                            {% endif %} {% if item.price %}
+                                            <p class="card-text">Цена: {{ item.price|safe }}</p>
+                                            {% endif %}
+                                            <p class="card-text">
+                                                <!-- <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn">Предварительный расчет</a> -->
+                                                <a href="#" class="btn">Предварительный расчет</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        {% if items.has_previous %}
+                                        <a class="page-link" href="?page={{ items.previous_page_number }}" aria-label="Previous"> <span aria-hidden="true">&laquo;</span>
+                                            <span class="sr-only">Назад</span>
+                                        </a>
+                                        {% endif %}
+                                    </li>
+                                    {% for pg in items.paginator.page_range %}
+                                    <li class="page-item">
+                                        <a class="page-link" href="?page={{ pg }}">{{ pg }}</a>
+                                    </li>
+                                    {% endfor %}
+                                    <li class="page-item">
+                                        {% if items.has_next %}
+                                        <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+                                            <span class="sr-only">Вперед</span>
+                                        </a>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="container white mt mb add-shdw">
+        <div class="p-y-3 section" draggable="true">
+            <div class="container">
+                <div class="row text-xs-center">
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/art1.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/popart/">Поп Арт</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/art2.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/portret/">Портрет в образе</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/art3.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/classic/">Классический портрет</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/boy.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/art/">Арт обработка</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/art5.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/holst/">Фото на холсте</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-4">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/main/art6.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/maslo2/">Имитация масла</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                    <div class="col-md-8">
+                        <img class="img-fluid img-full-width" src="{% static 'img/content/maslo/art5.jpg' %}" alt="">
+                        <a class="a-glr hvr-underline-from-left" href="/maslo/">Пропись маслом</a>
+                        <!-- <p class="m-y-1"> Описание. </p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form method="post" enctype="multipart/form-data">
+                            {% csrf_token %} {{ form.as_p }}
+                            <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    {% include "wowportret/components/footer.html" %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        $(".fancybox-thumb").fancybox({
+            prevEffect: 'none',
+            nextEffect: 'none',
+            helpers: {
+                title: {
+                    type: 'outside'
+                },
+                thumbs: {
+                    width: 50,
+                    height: 50
+                }
+            }
+        });
+        $(".fancybox").fancybox({
+            openEffect: 'elastic',
+            closeEffect: 'elastic'
+        });
+    });
+    </script>
+</body>
+
+</html>

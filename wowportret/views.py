@@ -87,7 +87,7 @@ def baget_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery/gallery.html', {'galleries': galleries, 'form': form_class})
+    return render(request, 'wowportret/gallery/baget.html', {'galleries': galleries, 'form': form_class})
 
 
 def thank_page(request):
