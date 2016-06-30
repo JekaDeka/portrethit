@@ -66,13 +66,13 @@
                                                                         <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" />
                                                                     </div>
                                                                     <div class="col-md-6 text-xs-left">
-                                                                        <form class="calx_form">
+                                                                        <form class="calx_form" id="form{{item.id}}">
                                                                             <div class="form-group">
                                                                                 <label>Предварительный расчет стоимости: </label>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="height">Высота багета, см</label>
-                                                                                <input type="text" class="form-control mycal height"  value="0">
+                                                                                <input type="text" class="form-control mycal height" value="0">
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="width">Ширина багета, см</label>
@@ -223,16 +223,19 @@
         });
 
         $('.mycal').on('input', function() {
-            var total = 0;
-            var width = parseFloat($('.width').val());
-            var height = parseFloat($('.height').val());
-            var item_price = parseFloat($('.item_price').val());
+            var total = 0
+            var form = $(this).closest("form");
+            var values = $(form).find(':input')
+            var height = parseFloat($(values[0]).val());
+            var width = parseFloat($(values[1]).val());
+            var item_price = parseFloat($(values[2]).val());
             total = (width + height) / 0.8 * item_price;
-            $('.total').val(total);
+            $(values[3]).val(total);
         });
-        $('.modal').on('hide.bs.modal', function (e) {
-         $(this).find('form').trigger('reset');
-     });
+
+        // $('.modal').on('hide.bs.modal', function(e) {
+        //     $(this).find('form').trigger('reset');
+        // });
 
 
     });
