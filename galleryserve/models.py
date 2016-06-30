@@ -29,6 +29,9 @@ class Gallery(models.Model):
 
     has_child = models.BooleanField(default=False)
 
+    is_baget = models.BooleanField(
+        default=False, help_text="Is it baguette gallery")
+
     class Meta:
         ordering = ('id',)
         verbose_name_plural = 'galleries'
