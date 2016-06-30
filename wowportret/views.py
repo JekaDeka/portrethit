@@ -155,7 +155,10 @@ def gallery_detail(request, pk):
     except EmptyPage:
         gal_items = paginator.page(paginator.num_pages)
 
-    return render(request, 'wowportret/gallery/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
+    if pk == 65:  # if parent of gallery is baget page
+        return render(request, 'wowportret/gallery/baget.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
+    else:
+        return render(request, 'wowportret/gallery/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
 
 
 def get_form(request):
