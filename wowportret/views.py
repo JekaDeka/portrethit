@@ -120,7 +120,8 @@ def gallery_page(request):
     if sended:
         return redirect('thank_page')
 
-    gal_list = Gallery.objects.filter(Q(parent=None)).exclude(id=65)
+    gal_list = Gallery.objects.filter(
+        Q(parent=None)).exclude(id=65)  # exclude baget page
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
@@ -155,7 +156,7 @@ def gallery_detail(request, pk):
     except EmptyPage:
         gal_items = paginator.page(paginator.num_pages)
 
-    if pk == 65:  # if parent of gallery is baget page
+    if (pk == '65') or (pk == '66') or (pk == '67') or (pk == '68'):  # if parent of gallery is baget page
         return render(request, 'wowportret/gallery/baget.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
     else:
         return render(request, 'wowportret/gallery/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
