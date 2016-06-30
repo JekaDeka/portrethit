@@ -76,7 +76,8 @@ def baget_page(request):
     if sended:
         return redirect('thank_page')
     # parent is gallery with bagets
-    gal_list = Gallery.objects.filter(Q(parent=None) & Q(is_baget=True))
+    all_gals = Gallery.objects.filter(is_baget=True)
+    gal_list = all_gals.filter(parent=None)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
@@ -87,7 +88,7 @@ def baget_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery/baget.html', {'galleries': galleries, 'form': form_class})
+    return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': galleries, 'form': form_class})
 
 
 def thank_page(request):
@@ -109,9 +110,11 @@ def item_page(request, pk):
         baget_items = Item.objects.all()[:10]
 
     if (item.gallery.is_baget == True):
-        return render(request, 'wowportret/gallery/baget_item.html', {'item': item, 'form': form_class})
+        all_gals = Gallery.objects.filter(is_baget=True)
+        return render(request, 'wowportret/gallery/baget_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class})
     else:
-        return render(request, 'wowportret/gallery/gallery_item.html', {'item': item, 'form': form_class, 'baget_items': baget_items})
+        all_gals = Gallery.objects.filter(is_baget=False)
+        return render(request, 'wowportret/gallery/gallery_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
 def gallery_page(request):
@@ -119,8 +122,8 @@ def gallery_page(request):
     if sended:
         return redirect('thank_page')
 
-    gal_list = Gallery.objects.filter(
-        Q(parent=None)).exclude(is_baget=True)  # exclude baget page
+    all_gals = Gallery.objects.filter(is_baget=False)
+    gal_list = all_gals.filter(parent=None)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
@@ -131,7 +134,7 @@ def gallery_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery/gallery.html', {'galleries': galleries, 'form': form_class})
+    return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': galleries, 'form': form_class})
 
 
 def gallery_detail(request, pk):
@@ -154,9 +157,11 @@ def gallery_detail(request, pk):
         gal_items = paginator.page(paginator.num_pages)
 
     if gal.is_baget == True:  # if parent of gallery is baget page
-        return render(request, 'wowportret/gallery/baget.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
+        all_gals = Gallery.objects.filter(is_baget=True)
+        return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form_class})
     else:
-        return render(request, 'wowportret/gallery/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
+        all_gals = Gallery.objects.filter(is_baget=False)
+        return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form_class})
 
 
 def get_form(request):
