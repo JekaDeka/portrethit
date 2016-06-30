@@ -56,7 +56,7 @@
                                             {% endif %}
                                             <p class="card-text">
                                                 <!-- <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn">Предварительный расчет</a> -->
-                                                <a href="#" class="btn">Предварительный расчет</a>
+                                                <button class="btn" data-toggle="modal" data-target="#myModal8" >Предварительный расчет</button>
                                             </p>
                                         </div>
                                     </div>
@@ -149,6 +149,17 @@
                             {% csrf_token %} {{ form.as_p }}
                             <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
                         </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="myModal8" tabindex="-2" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            Калькулятор для рамки
+                        </div>
                     </div>
                 </div>
             </div>
