@@ -7,7 +7,7 @@
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
     <div class="container white add-shdw" style="margin-top: 75px">
-        <div class="p-y-3 section" draggable="true">
+        <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
@@ -39,7 +39,7 @@
                                 </div>
                                 {% endfor %}
                             </div>
-                            <div class="section" draggable="true">
+                            <div class="section" draggable="false">
                                 {% for item in items %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
@@ -99,7 +99,7 @@
     </div>
     </div>
     <div class="container white mt mb add-shdw">
-        <div class="p-y-3 section" draggable="true">
+        <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row text-xs-center">
                     <div class="col-md-4">
@@ -157,7 +157,7 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script> -->
+    <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
     <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
