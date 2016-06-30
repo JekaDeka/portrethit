@@ -7,7 +7,7 @@
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
     <div class="container white add-shdw" style="margin-top: 75px">
-        <div class="p-y-3 section" draggable="true">
+        <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3">
@@ -56,7 +56,45 @@
                                             {% endif %}
                                             <p class="card-text">
                                                 <!-- <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn">Предварительный расчет</a> -->
-                                                <button class="btn btn-link" data-toggle="modal" data-target="#myModal8" >Предварительный расчет</button>
+                                                <button class="btn btn-link" data-toggle="modal" data-target="#modal{{item.id}}">Предварительный расчет</button>
+                                                <div class="modal fade" id="modal{{item.id}}" tabindex="-2" role="dialog" aria-labelledby="myModalLabel{{item.id}}" aria-hidden="true">
+                                                    <div class="modal-dialog " role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" />
+                                                                    </div>
+                                                                    <div class="col-md-6 text-xs-left">
+                                                                        <form id="calx_form">
+                                                                            <div class="form-group">
+                                                                                <label>Предварительный расчет стоимости: </label>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="height">Высота багета, см</label>
+                                                                                <input type="text" class="form-control mycal" id="height" value="0">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="width">Ширина багета, см</label>
+                                                                                <input type="text" class="form-control mycal" id="width" value="0">
+                                                                            </div>
+                                                                            <div class="form-group" style="display: none;">
+                                                                                <label for="width">Стоимость за 1 кв.м.: </label>
+                                                                                <input type="text" class="form-control mycal" id="item_price" value="{{ item.price }}">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="total">Итого, руб</label>
+                                                                                <fieldset disabled>
+                                                                                    <input type="text" class="form-control mycal" id="total" value="0">
+                                                                                </fieldset>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </p>
                                         </div>
                                     </div>
@@ -153,17 +191,6 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="myModal8" tabindex="-2" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <div>
-                            Калькулятор для рамки
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     <!-- /.container -->
     {% include "wowportret/components/footer.html" %}
@@ -189,10 +216,22 @@
                 }
             }
         });
+
         $(".fancybox").fancybox({
             openEffect: 'elastic',
             closeEffect: 'elastic'
         });
+
+        $('.mycal').on('input', function() {
+            var total = 0;
+            var width = parseFloat($('#width').val());
+            var height = parseFloat($('#height').val());
+            var item_price = parseFloat($('#item_price').val());
+            total = (width + height) / 0.8 * item_price;
+            $('#total').val(total);
+        });
+
+
     });
     </script>
 </body>
