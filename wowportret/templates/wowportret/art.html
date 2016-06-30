@@ -1,13 +1,11 @@
-{% extends 'wowportret/base.html' %}
-{% load staticfiles %}
-{% block content %}
-        <div class="container-fluid white">
-        <div class="row">
-            <div class="header bacground-art" style="background: url({% static 'img/content/art/new_back.jpg' %}) repeat-x">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-6">
+{% extends 'wowportret/base.html' %} {% load staticfiles %} {% block content %}
+<div class="container-fluid white">
+    <div class="row">
+        <div class="header bacground-art" style="background: url({% static 'img/content/art/new_back.jpg' %}) repeat-x">
+            <div class="col-xs-12 col-sm-6 col-sm-offset-6">
                 <h1 class="art"><span class="yellow">Арт обработка фотографий</span> </h1>
-                </div>
-                <div class="hidden-sm-down">
+            </div>
+            <div class="hidden-sm-down">
                 <img class="art-claks img-full-width " src="{% static 'img/content/art/claks.png' %}" alt="">
                 <div class="col-lg-3 hidden-md-down mt">
                     <img class="img-responsive img-full-width" src="{% static 'img/content/art/cam.png' %}" alt="">
@@ -18,120 +16,116 @@
                 <div class="col-lg-3 hidden-md-down">
                     <img class="img-responsive img-full-width" src="{% static 'img/content/art/tablet.png' %}" alt="">
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container white add-shdw">
+    <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-8 text-xs-center">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 mt">
+                    <h3> <strong> Достаточно молодой, но уже <br /> набравший попоуляронсть, <br />  совеременный вид искусства </strong></h3>
+                    <p class="text-back mt">
+                        Digital рисунок, на сегодняшний день,один из самых востребованных видов искусства в Европе.Ни одна кинопремьера или реклама не обходится без помощи профессиональных digital дизайнеров. Сегодня все сложнее найти фотографию или рисунок,который выходит в массы без предварительной обработки.
+                    </p>
+                    <p class="text-back mt">
+                        Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозиция. </span>
+                        <br /> Достаточно необычнй вариант для создания портрета по фотографии.
+                        <br /> Стоимость обработки в таком стиле за 1 персону
+                        <br />
+                        <span class="blue"> составит 850р. </span>
+                        <br />
+                        <span class="red"> Сроки выполнения макета,  от 1 дня . </span>
+                        <br />
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="position: inherit; background: url({% static 'img/content/art/guy.jpg' %}); min-height: 682px">
         </div>
-
-        <div class="container white add-shdw">
-        <div class="row">
-            <div class="col-sm-12 col-md-8 col-lg-8 text-xs-center">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 mt">
-                        <h3> <strong> Достаточно молодой, но уже <br /> набравший попоуляронсть, <br />  совеременный вид искусства </strong></h3>
-                        <p class="text-back mt">
-                        Digital рисунок, на сегодняшний день,один из самых востребованных видов искусства в Европе.Ни одна кинопремьера или реклама не обходится без помощи
-                            профессиональных digital дизайнеров. Сегодня все сложнее найти фотографию или рисунок,который выходит в массы без предварительной обработки.
-                        </p>
-                        <p class="text-back mt">
-                        Одним из направлений <span class="yellow">такого искусства является Двойная <br /> &nbsp экспозиция. </span> <br />
-                        Достаточно необычнй вариант для создания портрета по фотографии.  <br />
-                        Стоимость обработки в таком стиле за 1 персону  <br />
-                        <span class="blue"> составит 850р. </span> <br />
-                        <span class="red"> Сроки выполнения макета,  от 1 дня . </span>  <br />
-                        </p>
-                    </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 header" style="background: url({% static 'img/content/art/girl_boy.jpg' %}) no-repeat; background-position: 46%;">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 text-xs-center col-md-offset-1 col-lg-offset-0">
+                    <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" style="margin-top: 731px;">Хочу также</button>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="position: inherit; background: url({% static 'img/content/art/guy.jpg' %}); min-height: 682px">
-            </div>
         </div>
-        <div class="row">
-            <div class="col-xs-12 header" style="background: url({% static 'img/content/art/girl_boy.jpg' %}) no-repeat; background-position: 46%;">
-
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 text-xs-center col-md-offset-1 col-lg-offset-0">
-                        <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" style="margin-top: 731px;">Хочу также</button>
-                    </div>
-                </div>
-
-            </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-12 text-xs-center mt">
+            <p class="text-back">
+                Еще одно из востребованных стилей
+                <br /> является - «цифровой портрет»
+                <br /> Художник-дизайнер, по Вашей фотографии рисует портрет на компьютере при помощи электронного пера и специального графического планшета </p>
         </div>
-        <div class="row mt">
-            <div class="col-xs-12 text-xs-center mt">
+    </div>
+    <div class="row">
+        <img class="img-responsive img-full-width" src="{% static 'img/content/art/girld_kid.jpg' %}" alt="">
+    </div>
+    <div class="row mt">
+        <div class="col-xs-12 col-sm-12 col-md-5 text-xs-center">
+            <h3>Цифровой портрет</h3>
+            <p class="text-back">
+                Процесс создания цифрового портрета, достаточно долгий и трудоемкий процесс.
+                <br /> Он сравним с тем,как художник рисует свои полотна кистями и красками, но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span>
+                <br />
+                <br /> Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на любую поверхность, холст, дерево, бумага, даже на кружку или футболку!
+                <br />
+            </p>
+            <p class="text-back mt">
+                Сроки исполнения <span class="yellow"> 5-8 рабочих дней за 1 персону </span>
+                <br /> Стоимость ч/б портрета 1 персоны
+                <br />
+                <span class="blue"> 1700р </span>
+                <br /> Стоимость цветного портрета 1 персоны
+                <br />
+                <span class="red"> 2200р </span>
+                <br />
+            </p>
+        </div>
+        <div class="col-xs-12 col-md-7 hidden-sm-down">
+            <img class="img-full-width" style="position: absolute; top: -100px; left: 51px;" src="{% static 'img/content/art/kid4.jpg' %}" alt="">
+            <img class="img-full-width" style="position: relative; top: 150px; left: -17px;" src="{% static 'img/content/art/kid5.jpg' %}" alt="">
+            <img class="img-full-width" style="position: relative; top: 94px; left: 34px;" src="{% static 'img/content/art/kid6.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-6 mt">
+            <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
+        </div>
+        <div class="col-xs-6 mt">
+            <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-6 mt">
+            <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
+        </div>
+        <div class="col-xs-6 mt">
+            <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-12 text-xs-center">
+            <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev5.jpg' %}" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-xs-center">
+            <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Хочу также</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-xs-center">
+            <h3>Стиль цифрового портрета - <br /> «Космическая геометрия»</h3>
+        </div>
+        <div class="mt">
+            <div class="col-xs-12 col-md-6 text-xs-center mt">
                 <p class="text-back">
-                Еще одно из востребованных стилей  <br />
-                является - «цифровой портрет»  <br />
-                Художник-дизайнер, по Вашей фотографии рисует портрет на компьютере при помощи электронного пера и специального графического планшета </p>
-            </div>
-        </div>
-        <div class="row">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/art/girld_kid.jpg' %}" alt="">
-        </div>
-        <div class="row mt">
-            <div class="col-xs-12 col-sm-12 col-md-5 text-xs-center">
-                <h3>Цифровой портрет</h3>
-                <p class="text-back">
-                    Процесс создания цифрового портрета, достаточно долгий и трудоемкий процесс.  <br />
-Он сравним с тем,как художник рисует свои полотна кистями и красками, но в данной технике используются эллектронные кисти и краски. Такой портрет останется действительно на очень <span class="yellow"> долгие годы. </span> <br />
-<br />
-Ведь он не болится воздействия окружающей среды.Нарисовав один раз, цифровой портрет можно в дальнейшем перенести на любую поверхность, холст, дерево, бумага, даже на кружку или футболку! <br />
-                </p>
-                <p class="text-back mt">
-                    Сроки исполнения <span class="yellow"> 5-8 рабочих дней за 1 персону </span>  <br />
-Стоимость ч/б портрета 1 персоны  <br />
-<span class="blue"> 1700р </span>  <br />
-
-Стоимость цветного портрета 1 персоны  <br />
-<span class="red"> 2200р </span>  <br />
-
-
-                </p>
-
-            </div>
-            <div class="col-xs-12 col-md-7 hidden-sm-down">
-                <img class="img-full-width" style="position: absolute; top: -100px; left: 51px;" src="{% static 'img/content/art/kid4.jpg' %}" alt="">
-                <img class="img-full-width" style="position: relative; top: 150px; left: -17px;" src="{% static 'img/content/art/kid5.jpg' %}" alt="">
-                <img class="img-full-width" style="position: relative; top: 94px; left: 34px;" src="{% static 'img/content/art/kid6.jpg' %}" alt="">
-            </div>
-        </div>
-
-
-        <div class="row mt">
-            <div class="col-xs-6 mt">
-                <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev1.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-6 mt">
-                <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev2.jpg' %}" alt="">
-            </div>
-        </div>
-        <div class="row mt">
-            <div class="col-xs-6 mt">
-                <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev3.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-6 mt">
-                <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev4.jpg' %}" alt="">
-            </div>
-        </div>
-        <div class="row mt">
-            <div class="col-xs-12 text-xs-center">
-                <img class="img-responsive img-full-width hvr-glow" src="{% static 'img/content/art/prev5.jpg' %}" alt="">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-xs-center">
-                <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Хочу также</button>
-
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 text-xs-center">
-                <h3>Стиль цифрового портрета - <br /> «Космическая геометрия»</h3>
-            </div>
-            <div class="mt">
-                <div class="col-xs-12 col-md-6 text-xs-center mt">
-                    <p class="text-back">
-                        <strong>
+                    <strong>
                         Стоимость портрета за  1 персону  <br />
                         <span class="yellow"> &nbsp&nbsp950р </span> <br />
                         <br />
@@ -143,58 +137,46 @@
                         Оформление   в деревянный багет в данной  <br /> стилистике не требуется.  <br />
                         <span class="red"> Картина выглядит эффетно в любом  <br /> интерьере! </span> <br />
                         </strong>
+                </p>
+            </div>
+            <div class=" col-xs-12 col-sm-6 hidden-sm-down" style="background: url({% static 'img/content/art/tima.jpg' %}) no-repeat; min-height: 577px; background-position-x: -35px;">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-xs-12 text-xs-center">
+            <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Хочу также</button>
+        </div>
+    </div>
+    <div class="row mt mb" style="background: url({% static 'img/content/art/art1.jpg' %}) no-repeat 100% -20%; min-height: 900px;">
+        <div class="col-xs-12 text-xs-center">
+            <h3><strong>Стиль цифрового потрета: <br />
+                        Буйство красок! </strong></h3>
+            <div class="row mt">
+                <div class="col-xs-12 col-sm-6">
+                    <p class="text-back">
+                        Стоимость портрета в данной стилистике
+                        <br /> <span class="blue"> 1000р до 2х персон </span> на картине
+                        <br />
+                        <br /> Сроки исполнения <span class="yellow">1-2 рабочих дня.</span>
                     </p>
                 </div>
-                <div class=" col-xs-12 col-sm-6 hidden-sm-down" style="background: url({% static 'img/content/art/tima.jpg' %}) no-repeat; min-height: 577px; background-position-x: -35px;">
-
-                </div>
+            </div>
+            <div class="row ">
             </div>
         </div>
-        <div class="row">
-            <div class=" col-xs-12 text-xs-center">
-                <button type="button" class="btn btn-want hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Хочу также</button>
-            </div>
-        </div>
-
-        <div class="row mt mb" style="background: url({% static 'img/content/art/art1.jpg' %}) no-repeat 100% -20%; min-height: 900px;">
-            <div class="col-xs-12 text-xs-center">
-                <h3><strong>Стиль цифрового потрета: <br />
-                        Буйство красок! </strong></h3>
-                <div class="row mt">
-                    <div class="col-xs-12 col-sm-6">
-                        <p class="text-back">
-                            Стоимость портрета в данной стилистике <br /> <span class="blue"> 1000р до 2х персон </span> на картине<br />
-                            <br />
-                            Сроки исполнения <span class="yellow">1-2 рабочих дня.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="row ">
-<!--                     <div class="col-xs-12 col-md-3 text-xs-center col-md-offset-6 col-lg-offset-7 col-xl-offset-8">
-                        <button type="button" class="btn btn-want" style="margin-top: 550px">Хочу также</button>
-                    </div> -->
-                </div>
-
-
-
-
-            </div>
-        </div>
-        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog"
-             aria-labelledby="myModalLabel3" aria-hidden="true">
-          <div class="modal-dialog " role="document">
+    </div>
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal-dialog " role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                  <form method="post" enctype="multipart/form-data">
-                  {% csrf_token %}
-                  {{ form.as_p }}
-                  <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
-                </form>
-              </div>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %} {{ form.as_p }}
+                        <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Отправить заявку</button>
+                    </form>
+                </div>
             </div>
-          </div>
         </div>
-
-        </div>
-
+    </div>
+</div>
 {% endblock content %}

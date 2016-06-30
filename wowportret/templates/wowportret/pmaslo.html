@@ -1,75 +1,59 @@
-{% extends 'wowportret/base.html' %}
-{% load staticfiles %}
-{% block content %}
-
-
-        <div class="container-fluid background-imit">
-        <div class="container">
+{% extends 'wowportret/base.html' %} {% load staticfiles %} {% block content %}
+<div class="container-fluid background-imit">
+    <div class="container">
         <div class="row">
             <div class="header-imit" style="background: url({% static 'img/content/pmaslo/bg.jpg' %});">
-                <!-- <div class="row"> -->
                 <div class="col-xs-12 text-xs-center">
                     <h1 class="art"><span class="red">Имитация маслянной живописи</span> </h1>
                 </div>
-                <!-- <div class="col-md-3 hidden-md-down">
-                        <div class="book-box">
-                           <img class="shdw book2" src="{% static 'img/content/pmaslo/parts/book2.jpg' %}" alt="">
-                           <img class="shdw rt-right book1" src="{% static 'img/content/pmaslo/parts/book1.jpg' %}" alt="" />
-                        </div>
-                        <img class="rt-right book1" src="{% static 'img/content/pmaslo/parts/glass.png' %}" alt="">
-                </div> -->
                 <div class="col-md-offset-0 col-md-12 hidden-sm-down">
                     <img class="img-classic" src="{% static 'img/content/pmaslo/parts/new_port.png' %}" alt="">
                 </div>
-
-<!--                 <div class="col-md-3 hidden-md-down">
-                    <img src="{% static 'img/content/pmaslo/parts/cup.png' %}" alt="">
-                </div> -->
             </div>
         </div>
+    </div>
+</div>
+<div class="container white mt-imit add-shdw">
+    <div class="row mt">
+        <div class="col-xs-6 col-md-6 col-lg-6 hidden-sm-down text-xs-center">
+            <img class="img-responsive img-full-width" style="margin-top: 100px" src="{% static 'img/content/pmaslo/guy1.jpg' %}" alt="">
+            <p class="text-back text-holst mt" style="margin-top: 80px">
+                <span class="blue">Арт гелем, можно покрывать </span> любые
+                <br /> изображения.
+                <br /> Как обычные фотографии, без
+                <br /> цифровых преобразований,так и
+                <br /> портреты в классическом стиле или
+                <br />
+                <span class="yellow">в образе.</span>
+            </p>
         </div>
-        </div>
-
-        <div class="container white mt-imit add-shdw">
-        <div class="row mt">
-            <div class="col-xs-6 col-md-6 col-lg-6 hidden-sm-down text-xs-center">
-                <img class="img-responsive img-full-width" style="margin-top: 100px" src="{% static 'img/content/pmaslo/guy1.jpg' %}" alt="">
-                <p class="text-back text-holst mt" style="margin-top: 80px">
-                    <span class="blue">Арт гелем, можно покрывать </span> любые <br /> изображения. <br />
-                    Как обычные фотографии, без <br /> цифровых преобразований,так и <br /> портреты в классическом стиле или <br />
-                    <span class="yellow">в образе.</span>
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6 text-xs-center">
-                <p class="text-back text-holst">
+        <div class="col-sm-12 col-md-6 col-lg-6 text-xs-center">
+            <p class="text-back text-holst">
                 <strong> Для придания картине <br />
                 дополнительного обьема <br /> </strong>
-                </p>
-                <p class="text-back text-holst">
-                мы используем текстурный гель, которым  <br />
-                художник покрывает полотно,что позволяет <br /> визуально приблизить ее к натурально <br />
-                нарисованной. <br /> <br />
-                Заказ выполняется <span class="yellow"> от 2х рабочих дней. </span> <br />
-                Возможно экспресс <br /> изготовление <span class="red"> за 24 часа! </span>
             </p>
-                <img class="img-responsive img-full-width hidden-md-down" style="max-height: 600px; width: auto;" src="{% static 'img/content/pmaslo/guy2.jpg' %}" alt="">
-            </div>
+            <p class="text-back text-holst">
+                мы используем текстурный гель, которым
+                <br /> художник покрывает полотно,что позволяет
+                <br /> визуально приблизить ее к натурально
+                <br /> нарисованной.
+                <br />
+                <br /> Заказ выполняется <span class="yellow"> от 2х рабочих дней. </span>
+                <br /> Возможно экспресс
+                <br /> изготовление <span class="red"> за 24 часа! </span>
+            </p>
+            <img class="img-responsive img-full-width hidden-md-down" style="max-height: 600px; width: auto;" src="{% static 'img/content/pmaslo/guy2.jpg' %}" alt="">
         </div>
-        <div class="row">
-
+    </div>
+    <div class="row">
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <img class="img-responsive img-gal" src="{% static 'img/content/pmaslo/woman1.jpg' %}" alt="">
         </div>
-        <div class="row">
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal" src="{% static 'img/content/pmaslo/woman1.jpg' %}" alt="">
-            </div>
-            <div class="col-xs-12 col-md-6">
-                <img class="img-responsive img-gal" src="{% static 'img/content/pmaslo/woman2.jpg' %}" alt="">
-            </div>
+        <div class="col-xs-12 col-md-6">
+            <img class="img-responsive img-gal" src="{% static 'img/content/pmaslo/woman2.jpg' %}" alt="">
         </div>
-<!--         <div class="row">
-            <div class="col-xs-12">
-                <img class="img-responsive img-gal" src="{% static 'img/content/pmaslo/art3.jpg' %}" alt="">
-            </div>
-        </div> -->
-        </div>
+    </div>
+</div>
 {% endblock content %}

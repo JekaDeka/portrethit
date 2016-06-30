@@ -75,6 +75,7 @@ def baget_page(request):
     form_class, sended = get_form(request)
     if sended:
         return redirect('thank_page')
+    # parent is gallery with bagets
     gal_list = Gallery.objects.filter(parent=65)
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
@@ -86,14 +87,18 @@ def baget_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery.html', {'galleries': galleries, 'form': form_class})
+    return render(request, 'wowportret/gallery/gallery.html', {'galleries': galleries, 'form': form_class})
 
 
 def thank_page(request):
-    return render(request, 'wowportret/thank.html', {})
+    return render(request, 'wowportret/components/thank.html', {})
 
 
 def item_page(request, pk):
+    form_class, sended = get_item_form(request)
+    if sended:
+        return redirect('thank_page')
+
     try:
         item = Item.objects.get(id=pk)
         # Smelly fix for gallery wich parent is Baget_border
@@ -104,11 +109,10 @@ def item_page(request, pk):
         item = Item
         baget_items = Item.objects.all()[:10]
 
-    form_class, sended = get_item_form(request)
-    if sended:
-        return redirect('thank_page')
-
-    return render(request, 'wowportret/gallery_item.html', {'item': item, 'form': form_class, 'baget_items': baget_items})
+    if (item.gallery_id == 66) or (item.gallery_id == 67) or (item.gallery_id == 68):
+        return render(request, 'wowportret/gallery/baget_item.html', {'item': item, 'form': form_class})
+    else:
+        return render(request, 'wowportret/gallery/gallery_item.html', {'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
 def gallery_page(request):
@@ -127,7 +131,7 @@ def gallery_page(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery.html', {'galleries': galleries, 'form': form_class})
+    return render(request, 'wowportret/gallery/gallery.html', {'galleries': galleries, 'form': form_class})
     # return render(request, 'wowportret/gallery.html', {'gallery_name':
     # gal.title, 'items': items})
 
@@ -151,7 +155,7 @@ def gallery_detail(request, pk):
     except EmptyPage:
         gal_items = paginator.page(paginator.num_pages)
 
-    return render(request, 'wowportret/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
+    return render(request, 'wowportret/gallery/gallery.html', {'galleries': gal_list, 'items': gal_items, 'form': form_class})
 
 
 def get_form(request):
@@ -229,11 +233,18 @@ def get_item_form(request):
 
 
 def post_list(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+
     posts = Post.objects.filter(
         published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'wowportret/post_list.html', {'posts': posts})
+    return render(request, 'wowportret/blog/post_list.html', {'posts': posts, 'form': form_class})
 
 
 def post_detail(request, pk):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
     post = get_object_or_404(Post, pk=pk)
-    return render(request, 'wowportret/post_detail.html', {'post': post})
+    return render(request, 'wowportret/blog/post_detail.html', {'post': post, 'form': form_class})

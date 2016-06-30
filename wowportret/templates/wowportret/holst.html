@@ -1,123 +1,94 @@
 {% extends 'wowportret/base.html' %}
 {% load staticfiles %}
 {% block content %}
-        <!-- Full Width Image Header with Logo -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-<!--     <header class="image-bg-fluid-height">
-        <img class="img-responsive img-center" src="{% static 'img/bg/1bg.jpg' %}" alt="">
-    </header> -->
 
-    <!-- Fixed Height Image Aside -->
-    <!-- Image backgrounds are set within the full-width-pics.css file. -->
-    <!-- <aside class="image-bg-fixed-height"></aside> -->
-
-        <div class="container-fluid background-holst">
-        <div class="container background-holst img-holst">
+<div class="container-fluid background-holst">
+    <div class="container background-holst img-holst">
         <div class="row">
             <div class="header-holst">
                 <div class="col-xs-12 col-sm-6 mt text-xs-center">
-                <h1><span class="blue">Яркие моменты жизни</span> <br /> в <br /> <span class="red">Фото </span> <br /> на <br />  <span class="yellow"> Холсте </span> </h1>
+                    <h1><span class="blue">Яркие моменты жизни</span> <br /> в <br /> <span class="red">Фото </span> <br /> на <br />  <span class="yellow"> Холсте </span> </h1>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+<div class="container white add-shdw">
+    <div class="row hidden-lg-up text-xs-center mt">
+        <div class="col-xs-12">
+            <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
+            <p class="text-back text-holst">
+                которое хранится на Ваших компьютерах или телефонах, могут стать
+                <br /> настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер!
+                <br />
+            </p>
         </div>
+        <div class="col-xs-12">
+            <p class="text-back text-holst">
+                Наша мастерская,при помощи цифровой печати,переносит любое изображение на холст,
+                <br /> после чего натягиваем изображение на <span class="blue">деревянный подрамник</span> и оформляем в багетную раму,по Вашему желанию.
+                <br />
+            </p>
         </div>
-        <div class="container white add-shdw">
-        <div class="row hidden-lg-up text-xs-center mt">
-            <div class="col-xs-12">
-                <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
-                <p class="text-back text-holst">
-                которое хранится на Ваших компьютерах или телефонах, могут стать  <br />
-                настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер! <br />
-                </p>
-            </div>
-            <div class="col-xs-12">
-                <p class="text-back text-holst">
-                    Наша мастерская,при помощи цифровой печати,переносит любое изображение на холст, <br />
-                    после чего натягиваем изображение на <span class="blue">деревянный подрамник</span> и оформляем в багетную раму,по Вашему желанию. <br />
-                </p>
-            </div>
-
+    </div>
+    <div class="row hidden-md-down" style="background: url({% static 'img/content/holst/art_bg.jpg' %}) 0% 0% no-repeat; min-height: 878px">
+        <div class="col-xs-12 col-lg-7 text-xs-center mt">
+            <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
+            <p class="text-back text-holst">
+                которое хранится на Ваших компьютерах или телефонах, могут стать
+                <br /> настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер!
+                <br />
+            </p>
         </div>
-        <div class="row hidden-md-down" style="background: url({% static 'img/content/holst/art_bg.jpg' %}) 0% 0% no-repeat; min-height: 878px" >
-            <div class="col-xs-12 col-lg-7 text-xs-center mt">
-                <h3 class="h-holst"><strong>Любые изображения </strong>  </h3>
-                <p class="text-back text-holst">
-                которое хранится на Ваших компьютерах или телефонах, могут стать  <br />
-                настоящим <span class="red">Арт обьектом</span> и украсить любой интерьер! <br />
-                </p>
-            </div>
-            <!-- <div class="col-md-6 col-lg-6 hidden-sm-down" style="background: url({% static 'img/content/holst/art1.jpg' %}) no-repeat; min-height: 370px"> -->
-                <!-- <img class="img-responsive img-center" src="{% static 'img/content/holst/art1.jpg' %}" alt=""> -->
-            <!-- </div> -->
-        <!-- </div> -->
-        <!-- <div class="row mt"> -->
-            <!-- <div class="col-xs-6 col-md-4 col-lg-4 hidden-sm-down" style="background: url({% static 'img/content/holst/art2.jpg' %}) no-repeat; min-height: 370px"> -->
-                <!-- <img class="img-responsive img-center" src="{% static 'img/content/holst/art2.jpg' %}" alt=""> -->
-            <!-- </div> -->
-            <div class="col-xs-12 col-lg-5 text-xs-center" style="margin-top: 600px">
-                <p class="text-back text-holst">
-                    Наша мастерская,при помощи цифровой печати,переносит <span class="blue">любое изображение</span> на холст, <br />
-                    после чего натягиваем изображение на деревянный подрамник и оформляем в багетную раму,по Вашему желанию. <br />
-                </p>
-            </div>
+        <div class="col-xs-12 col-lg-5 text-xs-center" style="margin-top: 600px">
+            <p class="text-back text-holst">
+                Наша мастерская,при помощи цифровой печати,переносит <span class="blue">любое изображение</span> на холст,
+                <br /> после чего натягиваем изображение на деревянный подрамник и оформляем в багетную раму,по Вашему желанию.
+                <br />
+            </p>
         </div>
-
-        <div class="row mt">
-            <div class="col-xs-12 text-xs-center">
-                <p class="text-back text-holst">
-                    На холсте,можно напечатать не только фото, но и любую <br /> картину. <br />
-                    Так же ,можете воспользоваться нашими <br /> услугми,такими,как <span class="yellow">портрет в образе</span>и портрет в стиле <br /> <span class="blue">Pop Art</span> для переноса изображения на холст. <br />
-                </p>
-                <p class="text-back text-holst">
-                    Сроки выполнения, от 1 дня <br />
-                    Возможно срочное <span class="red">изготовление за 2 часа!</span>
-                </p>
-            </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-12 text-xs-center">
+            <p class="text-back text-holst">
+                На холсте,можно напечатать не только фото, но и любую
+                <br /> картину.
+                <br /> Так же ,можете воспользоваться нашими
+                <br /> услугми,такими,как <span class="yellow">портрет в образе</span>и портрет в стиле
+                <br /> <span class="blue">Pop Art</span> для переноса изображения на холст.
+                <br />
+            </p>
+            <p class="text-back text-holst">
+                Сроки выполнения, от 1 дня
+                <br /> Возможно срочное <span class="red">изготовление за 2 часа!</span>
+            </p>
         </div>
-
-        <div class="row mt">
-            <div class="col-xs-12 text-xs-center">
-                <h3 class="h-holst"><strong>Модульные картины</strong>  </h3>
-                <img class="img-responsive img-center-test hvr-glow mt" src="/static/img/content/holst/blocks.jpg" alt="">
-            </div>
-            <div class="col-xs-12 text-xs-center">
-                <p class="text-back text-holst mt">
-                    Любая фотография из Вашего архива,может стать интересным и <br />
-                    стильным украшением интерьера. <br />
-                    Популярная на сегодняшний день <span class="blue"> «сегментация» </span> <br />
-                    представляет собой одно целое изображение поделенное  <br /> на несколько частей.  <br />
-                    Такой вариант картин, обычно висят в интерьере без рам.
-                </p>
-                <p class="text-back text-holst">
-                    <span class="yellow">Сроки изготовления </span> модульных картин, зависят от <br /> количества и размера сигментов.
-                </p>
-                <p class="text-back text-holst">
-                    Стандартные сроки – <span class="red">1-3 рабочих дня!</span>
-                </p>
-            </div>
-            <div class="col-xs-12 text-xs-center">
-                <img class="img-responsive hvr-glow mb" src="/static/img/content/holst/add_blocks.jpg" alt="">
-            </div>
+    </div>
+    <div class="row mt">
+        <div class="col-xs-12 text-xs-center">
+            <h3 class="h-holst"><strong>Модульные картины</strong>  </h3>
+            <img class="img-responsive img-center-test hvr-glow mt" src="/static/img/content/holst/blocks.jpg" alt="">
         </div>
-<!--         <div class="row">
-            <div class="col-xs-12">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/holst/art3.jpg' %}" alt="">
-            </div>
-        </div> -->
-        <!-- <div class="row">
-            <div class="col-xs-12">
-                <p class="text-back">
-                    -Сюда мелкие квадратики поп арт в образе и арт обработка
-                </p>
-            </div>
+        <div class="col-xs-12 text-xs-center">
+            <p class="text-back text-holst mt">
+                Любая фотография из Вашего архива,может стать интересным и
+                <br /> стильным украшением интерьера.
+                <br /> Популярная на сегодняшний день <span class="blue"> «сегментация» </span>
+                <br /> представляет собой одно целое изображение поделенное
+                <br /> на несколько частей.
+                <br /> Такой вариант картин, обычно висят в интерьере без рам.
+            </p>
+            <p class="text-back text-holst">
+                <span class="yellow">Сроки изготовления </span> модульных картин, зависят от
+                <br /> количества и размера сигментов.
+            </p>
+            <p class="text-back text-holst">
+                Стандартные сроки – <span class="red">1-3 рабочих дня!</span>
+            </p>
         </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <img class="img-responsive img-full-width" src="{% static 'img/content/holst/art4.jpg' %}" alt="">
-            </div>
-        </div> -->
-
+        <div class="col-xs-12 text-xs-center">
+            <img class="img-responsive hvr-glow mb" src="/static/img/content/holst/add_blocks.jpg" alt="">
         </div>
-
+    </div>
+</div>
 {% endblock content %}
