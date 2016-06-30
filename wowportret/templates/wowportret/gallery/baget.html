@@ -66,26 +66,26 @@
                                                                         <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" />
                                                                     </div>
                                                                     <div class="col-md-6 text-xs-left">
-                                                                        <form id="calx_form">
+                                                                        <form class="calx_form">
                                                                             <div class="form-group">
                                                                                 <label>Предварительный расчет стоимости: </label>
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="height">Высота багета, см</label>
-                                                                                <input type="text" class="form-control mycal" id="height" value="0">
+                                                                                <input type="text" class="form-control mycal height"  value="0">
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="width">Ширина багета, см</label>
-                                                                                <input type="text" class="form-control mycal" id="width" value="0">
+                                                                                <input type="text" class="form-control mycal width" value="0">
                                                                             </div>
                                                                             <div class="form-group" style="display: none;">
                                                                                 <label for="width">Стоимость за 1 кв.м.: </label>
-                                                                                <input type="text" class="form-control mycal" id="item_price" value="{{ item.price }}">
+                                                                                <input type="text" class="form-control mycal item_price" value="{{ item.price }}">
                                                                             </div>
                                                                             <div class="form-group">
                                                                                 <label for="total">Итого, руб</label>
                                                                                 <fieldset disabled>
-                                                                                    <input type="text" class="form-control mycal" id="total" value="0">
+                                                                                    <input type="text" class="form-control mycal total" value="0">
                                                                                 </fieldset>
                                                                             </div>
                                                                         </form>
@@ -224,12 +224,15 @@
 
         $('.mycal').on('input', function() {
             var total = 0;
-            var width = parseFloat($('#width').val());
-            var height = parseFloat($('#height').val());
-            var item_price = parseFloat($('#item_price').val());
+            var width = parseFloat($('.width').val());
+            var height = parseFloat($('.height').val());
+            var item_price = parseFloat($('.item_price').val());
             total = (width + height) / 0.8 * item_price;
             $('#total').val(total);
         });
+        $('.modal').on('hide.bs.modal', function (e) {
+         $(this).find('form').trigger('reset');
+     });
 
 
     });
