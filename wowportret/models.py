@@ -8,6 +8,7 @@ import PIL
 from PIL import ImageOps
 from galleryserve.thumbs import ImageWithThumbsField
 import re
+from django.contrib import admin
 
 
 def content_file_name(instance, filename):
