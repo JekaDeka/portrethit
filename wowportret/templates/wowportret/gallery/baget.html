@@ -229,7 +229,7 @@
             var height = parseFloat($(values[0]).val() / 100);
             var width = parseFloat($(values[1]).val() / 100);
             var item_price = parseFloat($(values[2]).val());
-            total = ((width + height) / 0.8 * item_price).toFixed(2);
+            total = ((2*width + 2*height) / 0.8 * item_price).toFixed(2);
             $(values[3]).val(total);
         });
 
