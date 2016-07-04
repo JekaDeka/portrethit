@@ -139,7 +139,7 @@ $(document).ready(function() {
 <script>
 function addDataToForm() {
     var name = $('h2').text();
-    var size = $("option:selected").text();
+    var size = $("option:selected");
     var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
     var price = $("#total_price").text();
     var opts = "\n";
@@ -150,11 +150,11 @@ function addDataToForm() {
         opts += "Покрыть текстурным гелем, \n";
     }
     if ($("#mod_check").prop("checked")) {
-        opts += "Сделать модульную картину, \n";
+        opts += "Сделать модульную картину: "+ $(size[1]).text() + "\n";
     }
 
     $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
-    $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + size + "</p>" +
+    $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + $(size[0]).text() + "</p>" +
         "<p class='price'>" + baget + "</p><p class='price'>" + opts + "</p><p class='price'> Цена: " + price + "</p>");
 };
 </script>
