@@ -115,7 +115,7 @@ def item_page(request, pk):
         # baget_items = Item.objects.filter(
         #     gallery__is_baget=True).order_by('id')
         baget_items = Item.objects.filter(
-            Q(id=66) & Q(id=67) & Q(id=68)).order_by('id')
+            Q(gallery_id=66) | Q(gallery_id=67) | Q(gallery_id=68)).order_by('id')
         return render(request, 'wowportret/gallery/gallery_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
