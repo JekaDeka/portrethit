@@ -32,7 +32,8 @@
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-7">
                                             {% if item.image %}
-                                            <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a>
+                                            <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
+                                            <img class="card-img-top" src="{{ item.image.url  }}" alt="{{ item.alt }}" />
                                             {% endif %}
                                         </div>
                                         <div class="col-xs-12 col-sm-6 col-md-5">
