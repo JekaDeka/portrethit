@@ -78,17 +78,18 @@ def baget_page(request):
     # parent is gallery with bagets
     all_gals = Gallery.objects.filter(is_baget=True)
     gal_list = all_gals.filter(parent=None)
-    paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
-    page = request.GET.get('page')
-    try:
-        galleries = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        galleries = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': galleries, 'form': form_class})
+    # item_list = Item.objects.all()
+    # paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
+    # page = request.GET.get('page')
+    # try:
+    #     galleries = paginator.page(page)
+    # except PageNotAnInteger:
+    #     # If page is not an integer, deliver first page.
+    #     galleries = paginator.page(1)
+    # except EmptyPage:
+    #     # If page is out of range (e.g. 9999), deliver last page of results.
+    #     galleries = paginator.page(paginator.num_pages)
+    return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'form': form_class})
 
 
 def thank_page(request):
