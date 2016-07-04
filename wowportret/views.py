@@ -160,6 +160,8 @@ def gallery_detail(request, pk):
         gal_items = paginator.page(paginator.num_pages)
 
     if gal.is_baget == True:  # if parent of gallery is baget page
+        if not gal_list:
+            gal_list = gal_list = Gallery.objects.filter(id=pk)
         all_gals = Gallery.objects.filter(is_baget=True)
         return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form_class})
     else:
