@@ -102,8 +102,6 @@ def item_page(request, pk):
 
     try:
         item = Item.objects.get(id=pk)
-        baget_items = Item.objects.filter(
-            gallery__is_baget=True).order_by('id')
     except:
         #raise Http404
         item = Item
@@ -114,6 +112,9 @@ def item_page(request, pk):
         return render(request, 'wowportret/gallery/baget_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class})
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
+        baget_items = Item.objects.filter(
+            gallery__is_baget=True).order_by('id')
+        baget_items = baget_items.filter(Q(id=66) & Q(id=67) & Q(id=68))
         return render(request, 'wowportret/gallery/gallery_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
