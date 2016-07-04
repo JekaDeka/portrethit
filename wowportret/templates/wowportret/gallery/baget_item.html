@@ -90,6 +90,31 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        $(".fancybox-thumb").fancybox({
+            prevEffect: 'none',
+            nextEffect: 'none',
+            helpers: {
+                title: {
+                    type: 'outside'
+                },
+                thumbs: {
+                    width: 50,
+                    height: 50
+                }
+            }
+        });
+        $(".fancybox").fancybox({
+            openEffect: 'elastic',
+            closeEffect: 'elastic'
+        });
+    });
+    </script>
     <script>
     $('.mycal').on('input', function() {
         var total = 0
@@ -98,7 +123,7 @@
         var height = parseFloat($(values[0]).val() / 100);
         var width = parseFloat($(values[1]).val() / 100);
         var item_price = parseFloat($(values[2]).val());
-        total = ((2*width + 2*height) / 0.8 * item_price).toFixed(2);
+        total = ((2 * width + 2 * height) / 0.8 * item_price).toFixed(2);
         $(values[3]).val(total);
     });
     </script>
@@ -112,7 +137,7 @@
         var size = 0
             // $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
         $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Высота: " + height + "см, Ширина: " + width + "см</p>" +
-        "<p class='price'>Цена: " + total + " руб.</p>");
+            "<p class='price'>Цена: " + total + " руб.</p>");
     };
     </script>
     <!-- {% include "wowportret/components/scipts_init.html" %} -->
