@@ -54,9 +54,9 @@
                                             {% endif %} {% if item.price %}
                                             <p class="card-text">Цена: {{ item.price|safe }}</p>
                                             {% endif %}
-                                            <!--                             <p class="card-text">
-                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn">Подробнее</a>
-                            </p> -->
+                                            <p class="card-text">
+                                                <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Заказать</a>
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
