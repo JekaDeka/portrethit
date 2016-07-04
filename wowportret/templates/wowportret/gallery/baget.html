@@ -10,11 +10,10 @@
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <!-- <p class="lead"><a href="/gallery/">Галерея</a></p> -->
+<!--                     <div class="col-lg-3">
                         {% include "wowportret/components/gallery_menu.html" with all_gals=all_gals %}
-                    </div>
-                    <div class="col-lg-9">
+                    </div> -->
+                    <div class="col-lg-12">
                         <div class="container">
                             <div class="row">
                                 <p style="font-size: 18px;"> Нужен определённый размер или картина?
@@ -26,20 +25,73 @@
                             </div>
                             <div class="row">
                                 {% for gal in galleries %}
-                                <div class="col-md-6 text-xs-center">
-                                    <a href="{% url 'gallery_detail' pk=gal.pk %}">
-                                {% if gal.image %}
-                                    <img class="img-fluid img-full-width" src="{{ gal.image.url_415x415 }}" alt="{{ gal.alt }}">
-                                {% endif %}
-                                </a>
+                                <div class="col-md-12 text-xs-center">
                                     <p>
-                                        <a class="a-glr" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
+                                        <h3>{{ gal.title|upper }}</h3>
                                     </p>
                                     <p class="m-y-1">{{ gal.content | safe }}</p>
                                 </div>
-                                {% endfor %}
+                                {% for item in gal.items.all %}
+                                <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
+                                    <div class="card">
+                                        {% if item.image %}
+                                        <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a>
+                                        {% endif %}
+                                        <div class="card-block">
+                                            {% if item.title %}
+                                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">{{ item.title }}</h4></a> {% else %}
+                                            <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">Работа # {{item.id}}</h4></a> {% endif %} {% if item.content %}
+                                            <p class="card-text">{{ item.content|safe }}</p>
+                                            {% endif %} {% if item.price %}
+                                            <p class="card-text">Цена: {{ item.price|safe }}</p>
+                                            {% endif %}
+                                            <p class="card-text">
+                                                <button class="btn btn-link" data-toggle="modal" data-target="#modal{{item.id}}">Предварительный расчет</button>
+                                                <div class="modal fade" id="modal{{item.id}}" tabindex="-2" role="dialog" aria-labelledby="myModalLabel{{item.id}}" aria-hidden="true">
+                                                    <div class="modal-dialog " role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col-md-6">
+                                                                        <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" />
+                                                                    </div>
+                                                                    <div class="col-md-6 text-xs-left">
+                                                                        <form class="calx_form" id="form{{item.id}}">
+                                                                            <div class="form-group">
+                                                                                <label>Предварительный расчет стоимости: </label>
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="height">Высота багета, см</label>
+                                                                                <input type="text" class="form-control mycal height" value="0">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="width">Ширина багета, см</label>
+                                                                                <input type="text" class="form-control mycal width" value="0">
+                                                                            </div>
+                                                                            <div class="form-group" style="display: none;">
+                                                                                <label for="width">Стоимость за 1 кв.м.: </label>
+                                                                                <input type="text" class="form-control mycal item_price" value="{{ item.price }}">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="total">Итого, руб</label>
+                                                                                <fieldset disabled>
+                                                                                    <input type="text" class="form-control mycal total" value="0">
+                                                                                </fieldset>
+                                                                            </div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %} {% endfor %}
                             </div>
-                            <div class="section" draggable="false">
+                            <!-- <div class="section" draggable="false">
                                 {% for item in items %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
@@ -55,7 +107,6 @@
                                             <p class="card-text">Цена: {{ item.price|safe }}</p>
                                             {% endif %}
                                             <p class="card-text">
-                                                <!-- <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn">Предварительный расчет</a> -->
                                                 <button class="btn btn-link" data-toggle="modal" data-target="#modal{{item.id}}">Предварительный расчет</button>
                                                 <div class="modal fade" id="modal{{item.id}}" tabindex="-2" role="dialog" aria-labelledby="myModalLabel{{item.id}}" aria-hidden="true">
                                                     <div class="modal-dialog " role="document">
@@ -100,7 +151,7 @@
                                     </div>
                                 </div>
                                 {% endfor %}
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <div class="row">
@@ -229,7 +280,7 @@
             var height = parseFloat($(values[0]).val() / 100);
             var width = parseFloat($(values[1]).val() / 100);
             var item_price = parseFloat($(values[2]).val());
-            total = ((2*width + 2*height) / 0.8 * item_price).toFixed(2);
+            total = ((2 * width + 2 * height) / 0.8 * item_price).toFixed(2);
             $(values[3]).val(total);
         });
 

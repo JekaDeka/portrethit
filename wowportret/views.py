@@ -78,17 +78,18 @@ def baget_page(request):
     # parent is gallery with bagets
     all_gals = Gallery.objects.filter(is_baget=True)
     gal_list = all_gals.filter(parent=None)
-    paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
-    page = request.GET.get('page')
-    try:
-        galleries = paginator.page(page)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        galleries = paginator.page(1)
-    except EmptyPage:
-        # If page is out of range (e.g. 9999), deliver last page of results.
-        galleries = paginator.page(paginator.num_pages)
-    return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': galleries, 'form': form_class})
+    # item_list = Item.objects.all()
+    # paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
+    # page = request.GET.get('page')
+    # try:
+    #     galleries = paginator.page(page)
+    # except PageNotAnInteger:
+    #     # If page is not an integer, deliver first page.
+    #     galleries = paginator.page(1)
+    # except EmptyPage:
+    #     # If page is out of range (e.g. 9999), deliver last page of results.
+    #     galleries = paginator.page(paginator.num_pages)
+    return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'form': form_class})
 
 
 def thank_page(request):
@@ -102,8 +103,6 @@ def item_page(request, pk):
 
     try:
         item = Item.objects.get(id=pk)
-        baget_items = Item.objects.filter(
-            gallery__is_baget=True).order_by('id')
     except:
         #raise Http404
         item = Item
@@ -114,6 +113,10 @@ def item_page(request, pk):
         return render(request, 'wowportret/gallery/baget_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class})
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
+        # baget_items = Item.objects.filter(
+        #     gallery__is_baget=True).order_by('id')
+        baget_items = Item.objects.filter(
+            Q(gallery_id=66) | Q(gallery_id=67) | Q(gallery_id=68)).order_by('id')
         return render(request, 'wowportret/gallery/gallery_item.html', {'all_gals': all_gals, 'item': item, 'form': form_class, 'baget_items': baget_items})
 
 
