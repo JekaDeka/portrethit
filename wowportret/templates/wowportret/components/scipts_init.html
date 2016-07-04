@@ -19,6 +19,12 @@ $(document).ready(function() {
         $('#calx').calx();
     });
 
+    $(':input[id="mod_check"]').click(function(event) {
+        if (!$(this).is(":checked")) {
+            $('#mod_size').val('0');
+            $('#calx').calx();
+        }
+    });
 
     $(':radio[baget-type="66"]').attr('value', '890'); //cat A
     $(':radio[baget-type="67"]').attr('value', '1700'); //cat B
@@ -111,8 +117,7 @@ $(document).ready(function() {
         if (event.target.nodeName == "U") { //if clicked on MORE
             if (hidden_block.css('display') == 'none') {
                 hidden_block.show('500');
-            }
-            else {
+            } else {
                 hidden_block.hide('500');
             }
         }
@@ -155,7 +160,7 @@ function addDataToForm() {
         opts += "Покрыть текстурным гелем, \n";
     }
     if ($("#mod_check").prop("checked")) {
-        opts += "Сделать модульную картину: "+ $(size[1]).text() + "\n";
+        opts += "Сделать модульную картину: " + $(size[1]).text() + "\n";
     }
 
     $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
