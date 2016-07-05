@@ -15,12 +15,12 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="container">
-                            <div class="row">
-                                <p style="font-size: 18px;"> Нужен определённый размер или картина?
-                                    <br />
-                                    <strong>Доверьтесь профессионалам!</strong> Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
+                            <div class="row text-xs-center">
+                                <p style="font-size: 18px;">
+                                    <strong><i>Багетные рамы из мягких пород дерева на любой вкус и интерьера.<br />
+                                    Оформление зеркал, вышивки, дипломов, фотографий, икон.</i></strong>
                                     <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
-                                    <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
+                                    <!-- <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button> -->
                                 </p>
                             </div>
                             <div class="row">
@@ -43,7 +43,7 @@
                                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">Работа # {{item.id}}</h4></a> {% endif %} {% if item.content %}
                                             <p class="card-text">{{ item.content|safe }}</p>
                                             {% endif %} {% if item.price %}
-                                            <p class="card-text">Цена: {{ item.price|safe }}</p>
+                                            <p class="card-text">Цена за метр: {{ item.price|safe }}</p>
                                             {% endif %}
                                             <p class="card-text">
                                                 <button class="btn btn-link" data-toggle="modal" data-target="#modal{{item.id}}">Предварительный расчет</button>
