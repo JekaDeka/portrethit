@@ -1,11 +1,8 @@
+<div class="container">
 <nav class="navbar navbar-fixed-top navbar-light bg-faded-cstm">
-    <div class="alert hvr-wobble-horizontal" role="alert" style="float: right;
-                                                                padding: 7px;
-                                                                margin-bottom: 0px;
-                                                                border: 1px solid rgb(208, 223, 202);
-                                                                border-radius: .25rem;">
-        <span class="phone-icon"></span> +7(495) <span class="phone-blue"> 908-72-74 </span>, +7-915- <span class="phone-blue">463-0964 </span>, <strong>wowportret24@gmail.com</strong>
-    </div>
+    <a class="navbar-toggle ramka mob_tel hidden-md-up" href="tel:12345678">
+        <i class="fa fa-phone fa-2x">Здесь должна быть иконка телефоны</i>
+    </a>
     <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
         &#9776;
     </button>
@@ -14,32 +11,36 @@
         <ul class="nav navbar-nav">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                   Портреты на холсте</a>
+                   Услуги</a>
                 <div class="dropdown-menu shdw">
                     <a class="dropdown-item" href="{% url 'wowportret.views.holst_page' %}">Фото на холсте</a>
-                    <a class="dropdown-item" href="{% url 'wowportret.views.portret_page' %}">Портрет в образе</a>
-                    <a class="dropdown-item" href="{% url 'wowportret.views.art_page' %}">Art обработка</a>
-                    <a class="dropdown-item" href="{% url 'wowportret.views.classic_page' %}">Классический портрет</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.portret_page' %}">Имитация масла</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.art_page' %}">Пропись маслом</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.classic_page' %}">Pop Art портрет</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.classic_page' %}">Галерея картин</a>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/maslo2/' %} active {% endifequal%}" href="/maslo2/">Имитация маслом</a>
+                <a class="nav-link {% ifequal request.path '/maslo2/' %} active {% endifequal%}" href="/maslo2/">Новости</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/maslo/' %} active {% endifequal%}" href="/maslo/">Пропись маслом</a>
+                <a class="nav-link {% ifequal request.path '/maslo/' %} active {% endifequal%}" href="/maslo/">Цены</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/popart/'%} active {% endifequal%}" href="/popart/">Поп Арт</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    Доставка/Оплата</a>
+                <div class="dropdown-menu shdw">
+                    <a class="dropdown-item" href="{% url 'wowportret.views.holst_page' %}">Доставка</a>
+                    <a class="dropdown-item" href="{% url 'wowportret.views.portret_page' %}">Оплата</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/baget/' %} active {% endifequal%}" href="/gallery/65/">Багетные рамы</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Картины и сюжеты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% ifequal request.path '/post/' %} active {% endifequal%}" href="/post/">Блог новостей</a>
+                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Контакты</a>
             </li>
         </ul>
     </div>
 </nav>
+</div>
