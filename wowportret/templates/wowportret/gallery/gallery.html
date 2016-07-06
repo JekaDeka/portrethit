@@ -51,9 +51,9 @@
                                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">{{ item.title }}</h4></a> {% else %}
                                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">Работа # {{item.id}}</h4></a> {% endif %} {% if item.content %}
                                             <p class="card-text">{{ item.content|safe }}</p>
-                                            {% endif %} {% if item.price %}
+                                            {% endif %} <!-- {% if item.price %}
                                             <p class="card-text">Цена: {{ item.price|safe }}</p>
-                                            {% endif %}
+                                            {% endif %} -->
                                             <p class="card-text">
                                                 <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Заказать</a>
                                             </p>
