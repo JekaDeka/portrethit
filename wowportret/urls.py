@@ -18,4 +18,9 @@ urlpatterns = [
         views.gallery_detail, name='gallery_detail'),
     url(r'^post/$', views.post_list, name='post_list'),
     url(r'^post/(?P<pk>[0-9]+)/$', views.post_detail, name='post_detail'),
+    
+    url(r'^price/$', views.price_page, name='price_page'),
+    url(r'^delivery/$', views.delivery_page, name='delivery_page'),
+    url(r'^payment/$', views.payment_page, name='payment_page'),
+    url(r'^contacts/$', views.contacts_page, name='contacts_page'),
 ]
