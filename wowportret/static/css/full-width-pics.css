@@ -1060,6 +1060,10 @@ footer {
     overflow: hidden;
 }
 
+.card-title {
+    min-height: 78px;
+}
+
 .card-img-top {
     margin: 0 auto;
     max-width: 100%;
