@@ -96,7 +96,7 @@ class Gallery(models.Model):
     #     return ('category_index', (), {'category': self.slug})
 
 
-@python_2_unicode_compatible
+#@python_2_unicode_compatible
 class Item(models.Model):
     image = ImageWithThumbsField(
         blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
