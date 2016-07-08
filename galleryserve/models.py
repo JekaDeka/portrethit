@@ -125,7 +125,7 @@ class Item(models.Model):
     def save(self, **kwargs):
         super(Item, self).save()
         if self.image:
-            filename = self.image.path
+            filename = (self.image.path).encode('utf-8')
             image = PIL.Image.open(filename)
             if self.gallery.resize:
                 try:
