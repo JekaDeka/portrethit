@@ -23,6 +23,7 @@ def new_page(request, redirect_to):
 
 def main_page(request):
     # return new_page(request, 'wowportret/index.html')
+    #
     return redirect('http://wowportret24.ru/')
 
 
