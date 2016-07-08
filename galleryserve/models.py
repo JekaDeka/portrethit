@@ -119,11 +119,8 @@ class Item(models.Model):
     class Meta:
         ordering = ('sort',)
 
-    def __str__(self):
+    def __unicode__(self):
         return u'%s' % (self.alt)
-
-    # def __unicode__(self):
-    #     return u'%s' % (self.alt)
 
     def save(self, **kwargs):
         super(Item, self).save()
