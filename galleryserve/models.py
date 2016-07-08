@@ -119,6 +119,9 @@ class Item(models.Model):
     class Meta:
         ordering = ('sort',)
 
+    def __str__(self):
+        return u'%s' % (self.alt)
+
     def __unicode__(self):
         return u'%s' % (self.alt)
 
