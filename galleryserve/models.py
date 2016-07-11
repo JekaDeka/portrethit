@@ -124,7 +124,7 @@ class Item(models.Model):
     price = models.IntegerField(default=0, help_text="Price for item")
 
     class Meta:
-        ordering = ('sort', 'title')
+        ordering = ('sort', '-title')
 
     def __unicode__(self):
         return u'%s' % (self.alt)
