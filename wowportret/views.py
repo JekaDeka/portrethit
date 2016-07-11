@@ -61,7 +61,7 @@ def baget_page(request):
         return redirect('thank_page')
     # parent is gallery with bagets
     all_gals = Gallery.objects.filter(is_baget=True)
-    gal_list = all_gals.filter(parent=None)
+    gal_list = all_gals.filter(parent=None).order_by('title')
     # item_list = Item.objects.all()
     # paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     # page = request.GET.get('page')
@@ -94,11 +94,11 @@ def item_page(request, pk):
 
     if (item.gallery.is_baget == True):
         all_gals = Gallery.objects.filter(is_baget=True)
+        all_gals = all_gals.filter(parent=None).order_by('title')
         return render(request, 'wowportret/gallery/baget_item.html', {'all_gals': all_gals, 'item': item, 'form': form})
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
-        # baget_items = Item.objects.filter(
-        #     gallery__is_baget=True).order_by('id')
+        all_gals = all_gals.filter(parent=None).order_by('title')
         baget_items = Item.objects.filter(
             Q(gallery_id=66) | Q(gallery_id=67) | Q(gallery_id=68)).order_by('id')
         return render(request, 'wowportret/gallery/gallery_item.html', {'all_gals': all_gals, 'item': item, 'form': form, 'baget_items': baget_items})
@@ -110,7 +110,7 @@ def gallery_page(request):
         return redirect('thank_page')
 
     all_gals = Gallery.objects.filter(is_baget=False)
-    gal_list = all_gals.filter(parent=None)
+    gal_list = all_gals.filter(parent=None).order_by('title')
     paginator = Paginator(gal_list, 9)  # Show 9 galleries per page
     page = request.GET.get('page')
     try:
@@ -131,7 +131,7 @@ def gallery_detail(request, pk):
 
     gal = get_object_or_404(Gallery, pk=pk)
     gal_list = Gallery.objects.filter(parent=pk)
-    items = Item.objects.filter(gallery_id=pk)
+    items = Item.objects.filter(gallery_id=pk).order_by('title')
 
     paginator = Paginator(items, 12)
     page = request.GET.get('page')
@@ -147,11 +147,11 @@ def gallery_detail(request, pk):
         if not gal_list:
             gal_list = gal_list = Gallery.objects.filter(id=pk)
         all_gals = Gallery.objects.filter(is_baget=True)
-        all_gals = all_gals.filter(parent=None)
+        all_gals = all_gals.filter(parent=None).order_by('title')
         return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form})
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
-        all_gals = all_gals.filter(parent=None)
+        all_gals = all_gals.filter(parent=None).order_by('title')
         return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form})
 
 
