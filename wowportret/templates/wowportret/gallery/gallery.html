@@ -40,7 +40,7 @@
                                 {% endfor %}
                             </div>
                             <div class="section" draggable="false">
-                                {% for item in items %}
+                                {% for item in items|dictsort:"title" %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
                                         {% if item.image %}
