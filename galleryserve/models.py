@@ -35,7 +35,7 @@ class Gallery(models.Model):
         default=False, help_text="Is it baguette gallery")
 
     class Meta:
-        ordering = ('id',)
+        ordering = ('title',)
         verbose_name_plural = 'galleries'
 
     def get_url(self):
