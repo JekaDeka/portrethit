@@ -148,11 +148,11 @@ def gallery_detail(request, pk):
             gal_list = gal_list = Gallery.objects.filter(id=pk)
         all_gals = Gallery.objects.filter(is_baget=True)
         all_gals = all_gals.filter(parent=None).order_by('title')
-        return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form})
+        return render(request, 'wowportret/gallery/baget.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'crnt_gal': gal, 'form': form})
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
         all_gals = all_gals.filter(parent=None).order_by('title')
-        return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'form': form})
+        return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'crnt_gal': gal, 'form': form})
 
 
 def get_form(request):

@@ -23,6 +23,9 @@
                                     <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
                                     <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
                                 </p>
+                                <p>
+                                    {{ crnt_gal.content | safe }}
+                                </p>
                             </div>
                             <div class="row">
                                 {% for gal in galleries %}
@@ -35,7 +38,7 @@
                                     <p>
                                         <a class="a-glr" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
                                     </p>
-                                    <p class="m-y-1">{{ gal.content | safe }}</p>
+                                    <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 </div>
                                 {% endfor %}
                             </div>

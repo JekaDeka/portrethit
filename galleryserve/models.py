@@ -2,6 +2,7 @@ from django.db import models
 from django.core.exceptions import ValidationError
 import PIL
 from PIL import ImageOps
+from ckeditor.fields import RichTextField
 from galleryserve.thumbs import ImageWithThumbsField
 from django.utils.encoding import python_2_unicode_compatible
 
@@ -10,8 +11,8 @@ class Gallery(models.Model):
     title = models.CharField(max_length=200, help_text="Title of gallery")
     image = ImageWithThumbsField(
         blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
-    content = models.CharField(
-        blank=True, max_length=200, help_text="Mini description of gallery")
+    content = RichTextField(
+        blank=True, help_text="Mini description of gallery")
     height = models.IntegerField(blank=True, default=600,
                                  help_text="Height images should be resized to in pixels")
     width = models.IntegerField(blank=True, default=800,
