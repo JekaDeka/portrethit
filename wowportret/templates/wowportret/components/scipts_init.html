@@ -22,13 +22,84 @@ $(document).ready(function() {
     $(':input[id="mod_check"]').click(function(event) {
         if (!$(this).is(":checked")) {
             $('#mod_size').val('0');
+            change_price_by_module_option();
             $('#calx').calx();
-        }
-        else {
+        } else {
             $('#mod_size').val('3800');
+            change_price_by_module_option();
             $('#calx').calx();
         }
     });
+
+    function change_price_by_main_size() {
+        var main_size = $('#main_size').val();
+
+        if (main_size == 1490) {
+            $(':input[id="lac_check"]').attr('value', '1500'); //maslo
+            $(':input[id="gel_check"]').attr('value', '500'); //propis
+        }
+        if (main_size == 2490) {
+            $(':input[id="lac_check"]').attr('value', '3000'); //maslo
+            $(':input[id="gel_check"]').attr('value', '1000'); //propis
+        }
+        if (main_size == 3490) {
+            $(':input[id="lac_check"]').attr('value', '6000'); //maslo
+            $(':input[id="gel_check"]').attr('value', '2000'); //propis
+
+        }
+        if (main_size == 4390) {
+            $(':input[id="lac_check"]').attr('value', '9000'); //maslo
+            $(':input[id="gel_check"]').attr('value', '4000'); //propis
+
+        }
+        if (main_size == 6990) {
+            $(':input[id="lac_check"]').attr('value', '15000'); //maslo
+            $(':input[id="gel_check"]').attr('value', '6000'); //propis
+
+        }
+        if (main_size == 7990) {
+            $(':input[id="lac_check"]').attr('value', '18000'); //maslo
+            $(':input[id="gel_check"]').attr('value', '7000'); //propis
+
+        }
+    };
+
+    function change_price_by_module_option() {
+        var mod_val = $('#mod_size').val();
+        if (mod_val == 0) {
+            change_price_by_main_size();
+        }
+
+        if (mod_val == 3800) {
+            $(':input[id="lac_check"]').attr('value', '5820'); //maslo
+            $(':input[id="gel_check"]').attr('value', '12070'); //propis
+        }
+        if (mod_val == 5900) {
+            $(':input[id="lac_check"]').attr('value', '8450'); //maslo
+            $(':input[id="gel_check"]').attr('value', '18390'); //propis
+
+        }
+        if (mod_val == 8590) {
+            $(':input[id="lac_check"]').attr('value', '14990'); //maslo
+            $(':input[id="gel_check"]').attr('value', '30990'); //propis
+
+        }
+        if (mod_val == 11990) {
+            $(':input[id="lac_check"]').attr('value', '19490'); //maslo
+            $(':input[id="gel_check"]').attr('value', '38490'); //propis
+
+        }
+        if (mod_val == 12900) {
+            $(':input[id="lac_check"]').attr('value', '22900'); //maslo
+            $(':input[id="gel_check"]').attr('value', '44500'); //propis
+
+        }
+        if (mod_val == 13990) {
+            $(':input[id="lac_check"]').attr('value', '25870'); //maslo
+            $(':input[id="gel_check"]').attr('value', '54870'); //propis
+
+        }
+    };
 
     $(':radio[baget-type="66"]').attr('value', '890'); //cat A
     $(':radio[baget-type="67"]').attr('value', '1700'); //cat B
@@ -36,56 +107,80 @@ $(document).ready(function() {
     $(':input[id="lac_check"]').attr('value', '1500'); //maslo
     $(':input[id="gel_check"]').attr('value', '500'); //propis
     $(':input[id="mod_check"]').attr('value', '0'); //mod
-    $('select').on('change', function() {
+
+    $('#mod_size').on('change', function() {
+        change_price_by_module_option();
+    });
+
+    $('#main_size').on('change', function() {
         if (this.value == 1490) { //30x40
             $(':radio[baget-type="66"]').attr('value', '890'); //cat A
             $(':radio[baget-type="67"]').attr('value', '1700'); //cat B
             $(':radio[baget-type="68"]').attr('value', '2800'); //cat C
-            $(':input[id="lac_check"]').attr('value', '1500'); //maslo
-            $(':input[id="gel_check"]').attr('value', '500'); //propis
-            $(':input[id="mod_check"]').attr('value', '0'); //mod
+
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+
+                change_price_by_main_size();
+            }
+
         }
         if (this.value == 2490) { //40x60
             $(':radio[baget-type="66"]').attr('value', '1040'); //cat A
             $(':radio[baget-type="67"]').attr('value', '1900'); //cat B
             $(':radio[baget-type="68"]').attr('value', '3000'); //cat C
-            $(':input[id="lac_check"]').attr('value', '3000'); //maslo
-            $(':input[id="gel_check"]').attr('value', '1000'); //propis
-            $(':input[id="mod_check"]').attr('value', '0'); //mod
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+                change_price_by_main_size();
+            }
+
         }
         if (this.value == 3490) { //50x70
             $(':radio[baget-type="66"]').attr('value', '1320'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2200'); //cat B
             $(':radio[baget-type="68"]').attr('value', '3500'); //cat C
-            $(':input[id="lac_check"]').attr('value', '6000'); //maslo
-            $(':input[id="gel_check"]').attr('value', '2000'); //propis
-            $(':input[id="mod_check"]').attr('value', '0'); //mod
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+                change_price_by_main_size();
+            }
+
         }
         if (this.value == 4390) { //60x80
             $(':radio[baget-type="66"]').attr('value', '1630'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2600'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4300'); //cat C
-            $(':input[id="lac_check"]').attr('value', '9000'); //maslo
-            $(':input[id="gel_check"]').attr('value', '4000'); //propis
-            $(':input[id="mod_check"]').attr('value', '0'); //mod
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+                change_price_by_main_size();
+            }
+
         }
         if (this.value == 6990) { //75x105
             $(':radio[baget-type="66"]').attr('value', '1200'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2400'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4600'); //cat C
-            $(':input[id="lac_check"]').attr('value', '15000'); //maslo
-            $(':input[id="gel_check"]').attr('value', '6000'); //propis
-            $(':input[id="mod_check"]').attr('value', '0'); //mod
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+                change_price_by_main_size();
+            }
+
         }
         if (this.value == 7990) { //90x110
             $(':radio[baget-type="66"]').attr('value', '1300'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2600'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4600'); //cat C
-            $(':input[id="lac_check"]').attr('value', '18000'); //maslo
-            $(':input[id="gel_check"]').attr('value', '7000'); //propis
-            $(':input[id="mod_check"]').attr('value', '7990'); //mod
+            if ($(':input[id="mod_check"]').is(":checked")) {
+                change_price_by_module_option();
+            } else {
+                change_price_by_main_size();
+            }
+
         }
-        //$(':radio[baget-type="0"]').prop( "checked", true );
         $('#calx').calx();
     });
 });
