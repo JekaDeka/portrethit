@@ -1,22 +1,24 @@
 <div class="list-group">
     {% for gal in all_gals %}
-    {% with id=gal.id|stringformat:"s/" %}
-    <a class="list-group-item
-                {% if request.path == '/gallery/'|add:id %}
+        <a class="list-group-item
+                {% if request.path == gal.get_url %}
                     active
-                {% endif %}
-                {% if gal.parent != None %}
-                    sub-item
-                {% endif %} "
-                 href="/gallery/{{gal.id}}">
-
-                {% if gal.parent == None %}
+                {% endif %}" href="/gallery/{{gal.id}}">
                     <strong>{{gal.title}}</strong>
-                {% else %}
-                    {{gal.title}}
-                {% endif %}
-
-    </a>
-    {% endwith %}
+        </a>
+        {% for sub_gal in gal.children.all %}
+        <a class="list-group-item sub-item {% if request.path == sub_gal.get_url %}
+                    active
+                {% endif %}" href="/gallery/{{sub_gal.id}}">
+                    {{sub_gal.title}}
+        </a>
+            {% for sub_sub_gal in sub_gal.children.all %}
+            <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
+                    active
+                {% endif %}" href="/gallery/{{sub_gal.id}}">
+                    {{sub_sub_gal.title}}
+            </a>
+            {% endfor %}
+        {% endfor %}
     {% endfor %}
 </div>

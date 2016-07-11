@@ -38,6 +38,10 @@ class Gallery(models.Model):
         ordering = ('id',)
         verbose_name_plural = 'galleries'
 
+    def get_url(self):
+        url = '/gallery/' + str(self.id) + '/'
+        return url
+
     # def __unicode__(self):
     #     return u'%s' % (self.title)
     def __str__(self):
