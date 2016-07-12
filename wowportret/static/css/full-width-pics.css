@@ -5,33 +5,38 @@
  */
 
 body {
-
-    /*margin-top: 50px;*/ /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    /*margin-top: 50px;*/
+    /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     background-color: white;
     /*font-family: 'BloggerSans';*/
     font-family: 'BloggerSansLight';
     /*font-family: 'BloggerSansMedium';*/
     margin-top: 50px;
     background: url(../img/bg/smbg.png);
-
 }
 
 .bg-faded-cstm {
     background-color: white;
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.65);
 }
 
 .add-shdw {
-    box-shadow: 0 0 .625em .08em rgba(0,0,0,.05);
-    -moz-box-shadow: 0 0 .625em .08em rgba(0,0,0,.05);
-    -webkit-box-shadow: 0 0 .625em .08em rgba(0,0,0,.05);
+    box-shadow: 0 0 .625em .08em rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 0 .625em .08em rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 0 .625em .08em rgba(0, 0, 0, .05);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'BloggerSans';
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -62,13 +67,12 @@ a:hover {
     margin-top: 2px;
 }
 
-
-
 .img-center {
     margin: 0 auto;
     width: 100%;
     padding: 30px 110px;
 }
+
 .img-gal {
     margin: 0 auto;
     width: 100%;
@@ -80,16 +84,18 @@ a:hover {
     width: 85%;
     height: auto;
 }
+
 @media(max-width:992px) {
     .img-min {
         width: 100%;
     }
-    }
+}
 
 .gal-bg {
     /*background: url('../img/content/main/gal-bg.jpg') no-repeat;
     background-position: 50% 12%;*/
 }
+
 section {
     padding: 75px 0;
 }
@@ -113,13 +119,13 @@ footer {
 
 .white {
     background-color: white;
-/*    -webkit-box-shadow: 0px 0px 12px 0px rgba(51, 50, 50, 0.7);
+    /*    -webkit-box-shadow: 0px 0px 12px 0px rgba(51, 50, 50, 0.7);
     -moz-box-shadow:    0px 0px 12px 0px rgba(51, 50, 50, 0.7);
     box-shadow:         0px 0px 12px 0px rgba(51, 50, 50, 0.7);*/
 }
 
 .text-back {
-/*    background: url('../img/content/text-back.png') no-repeat;
+    /*    background: url('../img/content/text-back.png') no-repeat;
     background-size: 100% 100%*/
     /*background: url(../img/back-text.png) 0% 100% no-repeat;*/
     font-size: x-large;
@@ -190,25 +196,26 @@ footer {
     padding: 11px 10px;
 }
 
-
 .how-to {
     height: 775px;
     background: url(../img/content/main/how_to.jpg) no-repeat;
     background-size: 100%;
     background-position: 50% 100%;
 }
+
 .how-to-text {
     color: black;
     font-size: 42px;
     font-weight: 400;
     font-family: "Blogger Sans";
 }
+
 #how-top {
     width: 430px;
     height: 83px;
     margin-left: 35%;
-
 }
+
 #how-left {
     width: 468px;
     height: 83px;
@@ -217,40 +224,40 @@ footer {
     margin-left: 60px;
     margin-top: 17px;
 }
+
 #how-right {
     width: 442px;
     height: 83px;
     float: right;
-
 }
+
 #how-btm-right {
     width: 419px;
     height: 82px;
     float: right;
     margin-top: 322px;
     margin-right: 45px;
-
 }
+
 #how-btm-left {
     width: 451px;
     height: 74px;
     float: left;
     margin-top: 406px;
     margin-left: 76px;
-
 }
-
 
 .price {
     font-size: 32px;
 }
 
-
 .header {
     min-height: 812px;
 }
 
+
 /*--- main page --- */
+
 .header-main {
     background: url('../img/content/main/wall.jpg') repeat;
     min-height: 652px;
@@ -260,7 +267,9 @@ footer {
     margin-top: 8px;
 }
 
+
 /*--- classic portert --*/
+
 .header-classic {
     min-height: 450px;
     /*background: url('../img/content/classic/left_bg.jpg'), url('../img/content/classic/bg.jpg');*/
@@ -306,13 +315,13 @@ footer {
     left: -153px;
 }
 
-/*--- holst photo --- */
-.header-holst {
 
-}
+/*--- holst photo --- */
+
+.header-holst {}
 
 .background-holst {
-/*    background-color: #91E4FF;*/
+    /*    background-color: #91E4FF;*/
     min-height: 632px;
     background: #91E4FF;
     background: -webkit-linear-gradient(#91E4FF, rgba(41, 149, 193, 0));
@@ -326,14 +335,17 @@ footer {
     background-position: 50% 100%;
 }
 
-.h-holst{
+.h-holst {
     font-size: 50px;
 }
+
 .text-holst {
     font-size: 32px;
 }
 
+
 /*--- maslo na holste -- */
+
 .header-maslo {
     min-height: 603px;
 }
@@ -349,6 +361,7 @@ footer {
 .sakura {
     position: absolute;
 }
+
 .pen {
     position: absolute;
     top: 194px;
@@ -356,18 +369,18 @@ footer {
 
 .img-maslo {
     max-width: 100%;
-
 }
+
 .foto-maslo {
     position: absolute;
     top: 340px;
     left: 0px;
 }
 
-/*----- maslo2 imitacia ---- */
-.header-imit {
 
-}
+/*----- maslo2 imitacia ---- */
+
+.header-imit {}
 
 .mt-imit {
     /*margin-top: 210px;*/
@@ -377,11 +390,16 @@ footer {
     /*background-color: #5B3623;*/
     /*background: url('../img/content/pmaslo/back_test1.jpg') repeat;*/
     height: 566px;
-    background: #C0C0C0; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#C0C0C0, rgba(255, 255, 0, 0)); /* Standard syntax */
+    background: #C0C0C0;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#C0C0C0, rgba(255, 255, 0, 0));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#C0C0C0, rgba(255, 255, 0, 0));
+    /* Standard syntax */
 }
 
 .img-imit {
@@ -407,16 +425,23 @@ footer {
     left: 10px;
 }
 
+
 /*.port {
 
 }
 /*---- portret v obraze ------*/
+
 .background-portret {
-    background: #141c2a; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#141c2a, rgba(255, 255, 0, 0)); /* Standard syntax */
+    background: #141c2a;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#141c2a, rgba(255, 255, 0, 0));
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#141c2a, rgba(255, 255, 0, 0));
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#141c2a, rgba(255, 255, 0, 0));
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#141c2a, rgba(255, 255, 0, 0));
+    /* Standard syntax */
     height: 816px;
 }
 
@@ -445,9 +470,9 @@ footer {
 }
 
 .ram-shdw {
-    box-shadow: 0 0 1.625em .08em rgba(0,0,0,.05);
-    -moz-box-shadow: 0 0 1.625em .08em rgba(0,0,0,.05);
-    -webkit-box-shadow: 0 0 1.625em 0.08em rgba(0,0,0,5.05);
+    box-shadow: 0 0 1.625em .08em rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 0 1.625em .08em rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 0 1.625em 0.08em rgba(0, 0, 0, 5.05);
 }
 
 .ram21 {
@@ -467,28 +492,34 @@ footer {
     left: 40px;
     top: -11px;
 }
+
 .ram31 {
     width: 100%;
     position: absolute;
     top: 50px;
     left: -13px;
 }
+
 .ram32 {
     width: 100%;
     position: absolute;
     top: 21px;
 }
+
 .ram33 {
     width: 85%;
     position: absolute;
     left: 48px;
 }
+
 .ram34 {
     width: 100%;
     position: absolute;
 }
 
+
 /*---- popart ---- */
+
 .background-popart {
     background: url(../img/content/popart/bg.jpg) repeat-x;
     background-size: 100% 100%;
@@ -499,8 +530,7 @@ footer {
     min-height: 550px;
 }
 
-.img-under-girl
-{
+.img-under-girl {
     position: absolute;
 }
 
@@ -534,7 +564,6 @@ footer {
     position: absolute;
     left: -28px;
     width: 90%;
-
 }
 
 .what {
@@ -561,7 +590,8 @@ footer {
     z-index: 3;
     width: 100%;
     top: 40px;
-    left: 28px;}
+    left: 28px;
+}
 
 .trd-rgt-guy {
     position: absolute;
@@ -570,6 +600,7 @@ footer {
     top: -6px;
     left: 44px;
 }
+
 .star {
     position: absolute;
     width: 100%;
@@ -591,6 +622,7 @@ footer {
     left: 13px;
     width: 95%;
 }
+
 .heart {
     position: absolute;
     top: 34px;
@@ -608,15 +640,20 @@ footer {
     width: 90%;
     top: 72px;
 }
+
 .rt-right {
-    -ms-transform: rotate(20deg); /* IE 9 */
-    -webkit-transform: rotate(20deg); /* Safari */
+    -ms-transform: rotate(20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(20deg);
+    /* Safari */
     transform: rotate(20deg);
 }
 
 .rt-left {
-    -ms-transform: rotate(-20deg); /* IE 9 */
-    -webkit-transform: rotate(-20deg); /* Safari */
+    -ms-transform: rotate(-20deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-20deg);
+    /* Safari */
     transform: rotate(-20deg);
 }
 
@@ -629,6 +666,7 @@ footer {
 .mt-popart {
     margin-top: 54px;
 }
+
 .mt-girl-popart {
     margin-top: 275px;
 }
@@ -641,9 +679,9 @@ footer {
 }
 
 .shdw {
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .art-girl {
@@ -658,6 +696,7 @@ footer {
     top: 110px;
 }
 
+
 /*--- menu --- */
 
 .dropdown-menu {
@@ -666,19 +705,24 @@ footer {
     top: 125%;
     /*left: 50%;*/
 }
+
 .dropdown-menu.columns-2 {
     min-width: 400px;
 }
+
 .dropdown-menu.columns-3 {
     min-width: 600px;
 }
+
 .dropdown-menu li a {
     padding: 5px 15px;
     font-weight: 300;
 }
+
 .multi-column-dropdown {
     list-style: none;
 }
+
 .multi-column-dropdown li a {
     display: block;
     clear: both;
@@ -686,6 +730,7 @@ footer {
     color: #333;
     white-space: normal;
 }
+
 .multi-column-dropdown li a:hover {
     text-decoration: none;
     color: #262626;
@@ -704,7 +749,6 @@ footer {
         max-width: 117px;
         padding: 0px 0px;
     }
-
     .header-classic {
         height: 452px;
     }
@@ -721,7 +765,6 @@ footer {
     .mt-popart {
         margin-top: 91px;
     }
-
     .img-under-girl {
         width: 100%;
     }
@@ -747,7 +790,6 @@ footer {
         top: 67px;
         left: 24px;
     }
-
     .fth-popart {
         height: 495px;
     }
@@ -758,32 +800,25 @@ footer {
 }
 
 @media(max-width:992px) {
-
     .header-classic {
         min-height: 511px;
     }
-
     .background-classic {
         min-height: 259px;
         height: 472px;
     }
-
     .background-imit {
         height: 383px;
     }
-
     .mt-imit {
         /*margin-top: 133px;*/
     }
-
     .background-popart {
         height: 398px;
     }
-
     .img-under-girl {
         width: 100%;
     }
-
     .fst-popart {
         height: 447px;
     }
@@ -811,11 +846,9 @@ footer {
         top: 67px;
         left: 24px;
     }
-
     .fth-popart {
         height: 398px;
     }
-
     .art-girl {
         position: absolute;
         top: -22px;
@@ -826,7 +859,6 @@ footer {
         left: -200px;
         top: 100px;
     }
-
 }
 
 @media(max-width:768px) {
@@ -843,11 +875,9 @@ footer {
     .background-classic {
         height: 260px;
     }
-
     .background-imit {
         height: 260px;
     }
-
     .mt-imit {
         margin-top: 35px;
     }
@@ -857,7 +887,6 @@ footer {
     .mt-girl-popart {
         margin-top: 54px;
     }
-
     .sm-img-fix {
         margin-top: 13px;
     }
@@ -872,14 +901,11 @@ footer {
         -webkit-border-radius: 0px 0px 0px 0px;
         border: 10px solid #000000;
     }
-
     .fst-popart {
         background: none;
         height: 382px;
     }
-    .fst-lft-guy {
-
-    }
+    .fst-lft-guy {}
     .fst-rgt-guy {
         top: 142px;
         left: 22px;
@@ -921,7 +947,6 @@ footer {
         top: 89px;
         left: 69px;
     }
-
     .heart {
         top: 237px;
         left: 112px;
@@ -930,27 +955,22 @@ footer {
     .section-heading {
         font-size: 2em;
     }
-
     .header {
         min-height: 298px;
     }
-
     .mt-popart {
         margin-top: 54px;
     }
-
     .art-girl {
         /*display: none;*/
     }
     .header-maslo {
         min-height: 200px;
     }
-
     .dropdown-menu.multi-column {
         min-width: 240px !important;
         overflow-x: hidden;
     }
-
 }
 
 @media(max-width:544px) {
@@ -961,16 +981,19 @@ footer {
         min-height: 250px;
         margin-top: 107px;
     }
-    .bacground-art, .header-classic, .header-imit, .background-maslo, .background-popart {
+    .bacground-art,
+    .header-classic,
+    .header-imit,
+    .background-maslo,
+    .background-popart {
         margin-top: 115px;
     }
-
     /*-- foto na holste --*/
     .img-holst {
         background: none;
     }
     .background-holst {
-            margin-top: 107px;
+        margin-top: 107px;
         min-height: 200px;
     }
     .dropdown-menu {
@@ -980,7 +1003,6 @@ footer {
     .background-popart {
         height: 250px;
     }
-
     .h-popart {
         position: initial;
     }
@@ -1050,6 +1072,7 @@ footer {
 .sub-item {
     padding: 0.2rem 2.5rem;
 }
+
 .sub-sub-item {
     padding: 0.2rem 4.2rem;
     font-size: 15px;
@@ -1074,13 +1097,11 @@ footer {
     width: 100%;
 }
 
-
 .tmp {
-   -webkit-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 1px 15px 0px rgba(0, 0, 0, 0.75);
 }
-
 
 .portfolio-item {
     margin-bottom: 25px;
@@ -1092,10 +1113,10 @@ box-shadow: 0px 1px 15px 0px rgba(0,0,0,0.75);
     /*width: 100%;*/
 }
 
-
 select {
     font-size: 22px;
 }
+
 option {
     font-size: 21px;
 }
