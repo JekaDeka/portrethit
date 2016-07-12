@@ -152,7 +152,7 @@ def gallery_detail(request, pk):
     else:
         all_gals = Gallery.objects.filter(is_baget=False)
         all_gals = all_gals.filter(parent=None).order_by('title')
-        return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'items': gal_items, 'crnt_gal': gal, 'form': form})
+        return render(request, 'wowportret/gallery/gallery.html', {'all_gals': all_gals, 'galleries': gal_list, 'crnt_gal': gal, 'form': form})
 
 
 def get_form(request):
