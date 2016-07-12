@@ -1,5 +1,5 @@
 {% load staticfiles %}
-{% load paginator %}
+{% load bootstrap_pagination %}
 <!DOCTYPE html>
 <html lang="ru">
 {% include "wowportret/components/head.html" %}
@@ -68,7 +68,7 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
-                        <div>{% if is_paginated %}{% paginator 3 %}{% endif %}</div>
+                        {% bootstrap_paginate items %}
 <!--                             <nav>
                                 <ul class="pagination">
                                     <li class="page-item">
