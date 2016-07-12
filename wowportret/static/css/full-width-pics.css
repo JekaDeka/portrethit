@@ -150,7 +150,7 @@ footer {
 }
 
 .btn-order {
-    margin: 15px 15px;
+    /*margin: 15px 15px;*/
     padding: 5px 50px;
     color: black;
     background-color: #00FFFF;
@@ -1099,3 +1099,6 @@ option {
     font-size: 21px;
 }
 
+.nav-tabs li.tab50 {
+    width: 49%;
+}
