@@ -76,15 +76,18 @@
                                         </a>
                                         {% endif %}
                                     </li>
-                                    {% if items.paginator.num_pages < 11 %}
+                                    <li class="page-item">
+                                        Старница  <a class="" href="?page={{ items.number }}">{{ items.number }}</a> из {{ items.paginator.num_pages }}.
+                                    </li>
+                                    <!--                                     {% if items.paginator.num_pages < 11 %}
                                         {% for pg in items.paginator.page_range %}
                                         <li class="page-item {% ifequal pg items.number %} active {% endifequal %}">
                                             <a class="page-link" href="?page={{ pg }}">{{ pg }}</a>
                                         </li>
                                         {% endfor %}
                                     {% else %}
-                                    <!-- test -->
-                                    {% endif %}
+
+                                    {% endif %} -->
                                     <li class="page-item">
                                         {% if items.has_next %}
                                         <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
