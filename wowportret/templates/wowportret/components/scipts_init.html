@@ -1,37 +1,62 @@
 {% load staticfiles %}
-<script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
+<!-- <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script> -->
 <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 $(document).ready(function() {
     $('#calx').calx({
         'autoCalculate': true
     });
 });
-</script>
+</script> -->
 <script>
 $(document).ready(function() {
 
-    //Ultra-smelly-fix, add price per width/height in gallery_item
-    $(':radio').click(function(event) {
-        $('#calx').calx();
-    });
-
-    $(':input[id="mod_check"]').click(function(event) {
-        if (!$(this).is(":checked")) {
-            $('#mod_size').val('0');
-            change_price_by_module_option();
-            $('#calx').calx();
-        } else {
-            $('#mod_size').val('3800');
-            change_price_by_module_option();
-            $('#calx').calx();
+    $('input[name=material_type]').change(function() {
+        val = $(this).val();
+        if (val == 'paper') {
+            $('#canvas-box').hide();
+            $('#fst_block').hide();
+            $('#paper-box').show();
+        }
+        if (val == 'canvas') {
+            $('#paper-box').hide();
+            $('#fst_block').show();
+            $('#canvas-box').show();
         }
     });
 
+    function calculate_total_price() {
+        if ($("#canvas_radio").prop("checked")) {
+            //1. Get input size
+            var main_size = parseInt($('#main_size').val());
+            //2. get all checkboxes
+            var lac_price = parseInt(0);
+            if ($("#lac_check").prop("checked")) {
+                lac_price = parseInt($("#lac_check").val());
+            }
+            var gel_price = parseInt(0);
+            if ($("#gel_check").prop("checked")) {
+                gel_price = parseInt($("#gel_check").val());
+            }
+            //3. get selected radio
+            var baget_price = parseInt($('input[name=optionsRadios]:checked').val());
+
+            //4. Total_price
+            var total_price = parseInt(main_size + lac_price + gel_price + baget_price);
+        }
+
+        if ($("#paper_radio").prop("checked")) {
+            var paper_size = parseInt($('#paper_size').val());
+            var total_price = parseInt(paper_size);
+        }
+        $("#total_price").text(total_price);
+    }
+
     function change_price_by_main_size() {
+
         var main_size = $('#main_size').val();
 
         if (main_size == 1490) {
@@ -106,83 +131,55 @@ $(document).ready(function() {
     $(':radio[baget-type="68"]').attr('value', '2800'); //cat C
     $(':input[id="lac_check"]').attr('value', '1500'); //maslo
     $(':input[id="gel_check"]').attr('value', '500'); //propis
-    $(':input[id="mod_check"]').attr('value', '0'); //mod
+    // $(':input[id="mod_check"]').attr('value', '0'); //mod
 
-    $('#mod_size').on('change', function() {
-        change_price_by_module_option();
-    });
+    // $('#mod_size').on('change', function() {
+    //     change_price_by_module_option();
+    // });
 
     $('#main_size').on('change', function() {
         if (this.value == 1490) { //30x40
             $(':radio[baget-type="66"]').attr('value', '890'); //cat A
             $(':radio[baget-type="67"]').attr('value', '1700'); //cat B
             $(':radio[baget-type="68"]').attr('value', '2800'); //cat C
-
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
         if (this.value == 2490) { //40x60
             $(':radio[baget-type="66"]').attr('value', '1040'); //cat A
             $(':radio[baget-type="67"]').attr('value', '1900'); //cat B
             $(':radio[baget-type="68"]').attr('value', '3000'); //cat C
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
         if (this.value == 3490) { //50x70
             $(':radio[baget-type="66"]').attr('value', '1320'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2200'); //cat B
             $(':radio[baget-type="68"]').attr('value', '3500'); //cat C
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
         if (this.value == 4390) { //60x80
             $(':radio[baget-type="66"]').attr('value', '1630'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2600'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4300'); //cat C
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
         if (this.value == 6990) { //75x105
             $(':radio[baget-type="66"]').attr('value', '1200'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2400'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4600'); //cat C
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
         if (this.value == 7990) { //90x110
             $(':radio[baget-type="66"]').attr('value', '1300'); //cat A
             $(':radio[baget-type="67"]').attr('value', '2600'); //cat B
             $(':radio[baget-type="68"]').attr('value', '4600'); //cat C
-            if ($(':input[id="mod_check"]').is(":checked")) {
-                change_price_by_module_option();
-            } else {
-                change_price_by_main_size();
-            }
-
+            change_price_by_main_size();
         }
-        $('#calx').calx();
+        calculate_total_price();
     });
+    $(':input').on('change', function() {
+        calculate_total_price();
+    });
+
 });
 </script>
 <script>
@@ -205,10 +202,10 @@ $(document).ready(function() {
         closeEffect: 'elastic'
     });
 
-    var fst_block_shown = false;
-    var snd_block_shown = false;
-    var trd_block_shown = false;
-    var fth_block_shown = false;
+    // var fst_block_shown = false;
+    // var snd_block_shown = false;
+    // var trd_block_shown = false;
+    // var fth_block_shown = false;
 
     $(".checkbox").click(function(event) {
         var hidden_block = $(this).find('.collapse');
@@ -247,22 +244,34 @@ $(document).ready(function() {
 <script>
 function addDataToForm() {
     var name = $('h2').text();
-    var size = $("option:selected");
-    var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
-    var price = $("#total_price").text();
-    var opts = "\n";
-    if ($("#lac_check").prop("checked")) {
-        opts += "Прописать масляной краской, \n";
+    var mat_type = "";
+    if ( $('#main_size').is(':visible') ) {
+        mat_type = "Холст";
+        var size =  $("#main_size option:selected");
     }
-    if ($("#gel_check").prop("checked")) {
-        opts += "Покрыть текстурным гелем, \n";
-    }
-    if ($("#mod_check").prop("checked")) {
-        opts += "Сделать модульную картину: " + $(size[1]).text() + "\n";
+    if ( $('#paper_size').is(':visible') ) {
+        mat_type = "Бумага";
+        var size = $("#paper_size option:selected");
     }
 
-    $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
-    $("#info").html("<p class='price'>" + name + "</p>" + "<p class='price'>Размеры: " + $(size[0]).text() + "</p>" +
-        "<p class='price'>" + baget + "</p><p class='price'>" + opts + "</p><p class='price'> Цена: " + price + "</p>");
+
+    var baget = $('input[name=optionsRadios]:checked:visible').parent().text().trim();
+    var price = $("#total_price").text();
+    var opts = "";
+
+    if ($("#lac_check:visible").prop("checked")) {
+        opts += "Прописать масляной краской. <br>";
+    }
+    if ($("#gel_check:visible").prop("checked")) {
+        opts += "Покрыть текстурным гелем. <br>";
+    }
+
+    // $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
+    $("#info").html("<p class='price'>" + name + "</p>" +
+                    "<p class='price'>Тип материала: " + mat_type + "</p>" +
+                    "<p class='price'>Размер " + $(size[0]).text() + "</p>" +
+                    "<p class='price'>" + baget + "</p>" +
+                    "<p class='price'>" + opts + "</p>" +
+                    "<p class='price'> Цена: " + price + "руб.</p>");
 };
 </script>

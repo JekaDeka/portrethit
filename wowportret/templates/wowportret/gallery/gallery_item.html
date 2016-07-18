@@ -18,7 +18,7 @@
                         <div class="container">
                             <div class="row">
                                 <p style="font-size: 18px;"> Нужен определённый размер или картина?
-                                    <br />
+                                    <br>
                                     <strong>Доверьтесь профессионалам!</strong> Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
                                     <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
                                     <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
@@ -28,19 +28,21 @@
                                 <div class="col-xs-12">
                                     <ul class="nav nav-tabs text-xs-center" role="tablist">
                                         <li class="nav-item tab50">
-                                            <a class="nav-link active" href="#standart_tab" role="tab" data-toggle="tab">Стандартная печать</a>
+                                            <a class="nav-link active" data-toggle="tab" href="#standart_tab" role="tab">Стандартная печать</a>
                                         </li>
                                         <li class="nav-item tab50">
-                                            <a class="nav-link" href="#module_tab" role="tab" data-toggle="tab">Модульная печать</a>
+                                            <a class="nav-link" data-toggle="tab" href="#module_tab" role="tab">Модульная печать</a>
                                         </li>
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content">
                                         <div role="tabpanel" class="tab-pane fade in active" id="standart_tab">
                                             <div class="row p-y-2 p-x-2">
-                                                {% if item.title %}
-                                                <h2>{{ item.title }}</h2> {% else %}
-                                                <h2>Работа #{{ item.id }}</h2> {% endif %}
+                                                <div class="col-xs-12">
+                                                    {% if item.title %}
+                                                    <h2>{{ item.title }}</h2> {% else %}
+                                                    <h2>Работа #{{ item.id }}</h2> {% endif %}
+                                                </div>
                                                 <div class="row p-y-2">
                                                     <div class="col-xs-7">
                                                         {% if item.image %}
@@ -48,9 +50,23 @@
                                                         <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /> {% endif %}
                                                     </div>
                                                     <div class="col-xs-5">
-                                                        <form id="calx">
-                                                                <div class="col-xs-12">
-                                                                    <strong> 1. Выберите размер: </strong>
+                                                        <!-- <form id="calx"> -->
+                                                        <div class="col-xs-12">
+                                                            <div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="material_type" id="canvas_radio" value="canvas" checked> Холст
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="material_type" id="paper_radio" value="paper"> Бумага
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div id="canvas-box" class="card-footer">
+                                                                <p>
+                                                                    <strong> 1. Выберите размер холста: </strong>
                                                                     <select class="c-select" id="main_size" data-cell="A1">
                                                                         <option value="1490">30x40</option>
                                                                         <option value="2490">40x60</option>
@@ -59,84 +75,95 @@
                                                                         <option value="6990">75x105</option>
                                                                         <option value="7990">90x110</option>
                                                                     </select>
-                                                                </div>
-                                                                <div class="col-xs-12">
-                                                                    <div class="checkbox" id="snd_block">
-                                                                        <label>
-                                                                            <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
-                                                                        </label>
-                                                                        <label class="more"> <u> подробнее </u> </label>
-                                                                        <div class="collapse" id="lac_info">
-                                                                            <div class="card-block">
-                                                                                Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="checkbox" id="trd_block">
-                                                                        <label>
-                                                                            <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
-                                                                        </label>
-                                                                        <label class="more"> <u> подробнее </u> </label>
-                                                                        <div class="collapse" id="gel_info">
-                                                                            <div class="card-block">
-                                                                                Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
-                                                                            </div>
+                                                                </p>
+                                                                <div class="checkbox" id="snd_block">
+                                                                    <label>
+                                                                        <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
+                                                                    </label>
+                                                                    <label class="more"> <u> подробнее </u> </label>
+                                                                    <div class="collapse" id="lac_info">
+                                                                        <div class="card-block">
+                                                                            Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                </div>
-                                                            <div class="row p-y-2">
-                                                                <div class="col-xs-12">
-                                                                    <!-- <strong> 2. Дополнительные возможности: </strong> -->
-                                                                    <!-- <br /> -->
-                                                                    <div class="checkbox" id="fst_block">
-                                                                        <strong> 2. Выберите багетную рамку: </strong>
-                                                                        <br>
-                                                                        <label style="padding-left: 0px;">
-                                                                            <input type="radio" baget-type="0" name="optionsRadios" data-cell="A2" value="0" checked> Не оформлять багет
-                                                                        </label>
-                                                                        <label class="more"> <u> подробнее </u> </label>
-                                                                        <div class="collapse" id="baget_list">
-                                                                            <div class="row">
-                                                                                <div class=col-xs-12>
-                                                                                    {% for baget in baget_items %}
-                                                                                    <div class="radio baget-line">
-                                                                                        <label>
-                                                                                            <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка {% if baget.gallery_id == 66 %}A {% elif baget.gallery_id == 67 %}Б {% elif baget.gallery_id == 68 %}C {% endif %} #{{ baget.id }} {% endif %} {% if baget.image %}
-                                                                                            <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
-                                                                                            {% endif %}
-                                                                                        </label>
-                                                                                    </div>
-                                                                                    {% endfor %}
-                                                                                </div>
-                                                                            </div>
+                                                                <div class="checkbox" id="trd_block">
+                                                                    <label>
+                                                                        <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
+                                                                    </label>
+                                                                    <label class="more"> <u> подробнее </u> </label>
+                                                                    <div class="collapse" id="gel_info">
+                                                                        <div class="card-block">
+                                                                            Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="row p-y-2">
-                                                                <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
-                                                                    <div class="price">
-                                                                        <strong>Цена: </strong>
-                                                                        <label id="total_price" data-format="0,0[.]00" data-formula="SUM(A1:A2000)"></label> руб.
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
-                                                                    <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Заказать</button>
-                                                                </div>
+                                                            <div id="paper-box" class="card-footer" style="display: none;">
+                                                                <p>
+                                                                    <strong> 1. Выберите размер бумаги: </strong>
+                                                                    <select class="c-select" id="paper_size" data-cell="A1">
+                                                                        <option value="390">20x30</option>
+                                                                        <option value="500">30x40</option>
+                                                                        <option value="850">40x60</option>
+                                                                        <option value="1070">50x70</option>
+                                                                        <option value="1560">60x80</option>
+                                                                    </select>
+                                                                </p>
                                                             </div>
-                                                        </form>
+                                                        </div>
                                                     </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 p-y-2">
+                                                            <!-- <strong> 2. Дополнительные возможности: </strong> -->
+                                                            <!-- <br /> -->
+                                                            <div class="checkbox" id="fst_block">
+                                                                <strong> 2. Выберите багетную рамку: </strong>
+                                                                <br>
+                                                                <label style="padding-left: 0px;">
+                                                                    <input type="radio" baget-type="0" name="optionsRadios" data-cell="A2" value="0" checked> Не оформлять багет
+                                                                </label>
+                                                                <label class="more"> <u> подробнее </u> </label>
+                                                                <div class="collapse" id="baget_list">
+                                                                    <div class="row">
+                                                                        <div class=col-xs-12>
+                                                                            {% for baget in baget_items %}
+                                                                            <div class="radio baget-line">
+                                                                                <label>
+                                                                                    <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка {% if baget.gallery_id == 66 %}A {% elif baget.gallery_id == 67 %}Б {% elif baget.gallery_id == 68 %}C {% endif %} #{{ baget.id }} {% endif %} {% if baget.image %}
+                                                                                    <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
+                                                                                    {% endif %}
+                                                                                </label>
+                                                                            </div>
+                                                                            {% endfor %}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row p-y-2">
+                                                        <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                            <div class="price">
+                                                                <strong>Цена: </strong>
+                                                                <label id="total_price" data-format="0,0[.]00">1490</label> руб.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                            <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Заказать</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- </form> -->
                                                 </div>
                                             </div>
                                         </div>
                                         <div role="tabpanel" class="tab-pane fade" id="module_tab">
                                             <div class="checkbox" id="fth_block">
-                                                <label>
+<!--                                                 <label>
                                                     <input type="checkbox" id="mod_check" data-cell="A5" value="0"> Сделать модульную картину
-                                                </label>
-                                                <label class="more"> <u> подробнее </u> </label>
-                                                <div class="collapse" id="mod_info">
+                                                </label> -->
+                                                <!-- <label class="more"> <u> подробнее </u> </label> -->
+                                                <div id="mod_info" class="col-xs-12 p-y-1">
                                                     <p>
                                                         <strong> Размер модульной картины: </strong>
                                                         <br>
@@ -163,28 +190,29 @@
                     </div>
                 </div>
             </div>
-            <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
-                <div class="modal-dialog " role="document">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <form method="post" enctype="multipart/form-data" id="myForm">
-                                {% csrf_token %} {{ form.as_p }}
-                                <span id="info" style="text-align: center"></span>
-                                <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Подтвердить</button>
-                            </form>
-                        </div>
+        </div>
+        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+            <div class="modal-dialog " role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form method="post" enctype="multipart/form-data" id="myForm">
+                            {% csrf_token %} {{ form.as_p }}
+                            <span id="info" style="text-align: center"></span>
+                            <button class="btn btn-primary btn-lg btn-block hvr-bounce-to-right {% ifequal request.path '/thankyou/'%} hidden-xl-down {% endifequal%}" type="submit">Подтвердить</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container white add-shdw mt mb">
-            {% include "wowportret/components/price_table.html" %}
-            <!-- {% include "wowportret/components/form.html" %} -->
-        </div>
-        {% include "wowportret/components/footer.html" %}
-        <script src="{% static 'js/jquery.min.js' %}"></script>
-        <script src="{% static 'js/bootstrap.min.js' %}"></script>
-        {% include "wowportret/components/scipts_init.html" %}
+    </div>
+    <div class="container white add-shdw mt mb">
+        {% include "wowportret/components/price_table.html" %}
+        <!-- {% include "wowportret/components/form.html" %} -->
+    </div>
+    {% include "wowportret/components/footer.html" %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    {% include "wowportret/components/scipts_init.html" %}
 </body>
 
 </html>
