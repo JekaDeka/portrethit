@@ -755,12 +755,12 @@ footer {
 }
 
 .baget-img {
-    max-width: 94%;
+    max-width: 87.4%;
     height: auto;
     position: absolute;
     z-index: 99;
-    top: 11px;
-    left: 12px;
+    top: 27px;
+    left: 27px;
 }
 
 .border-mini-img {
