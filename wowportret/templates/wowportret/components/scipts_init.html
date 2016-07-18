@@ -194,8 +194,14 @@ $(document).ready(function() {
     });
 
 
+    var lastClicked = 0;
     $(".border-mini-img").click(function(event) {
-        console.log($(this).attr('id'));
+        var img_id = $(this).attr('id');
+        if (lastClicked != 0) { //hide last clicked element
+            $('#border' + lastClicked).hide();
+        }
+        $('#border' + img_id).show();
+        lastClicked = img_id;
     });
 
 
