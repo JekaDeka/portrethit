@@ -755,12 +755,12 @@ footer {
 }
 
 .baget-img {
-    max-width: 100%;
+    max-width: 94%;
     height: auto;
     position: absolute;
     z-index: 99;
-    top: 0;
-    left: 0;
+    top: 11px;
+    left: 12px;
 }
 
 @media(max-width: 1200px) {
@@ -909,8 +909,8 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 7%;
-        left: 2%;
+        top: 8%;
+        left: 3%;
     }
     .header-main {
         min-height: 223px;
@@ -1029,8 +1029,12 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 7%;
-        left: 2%;
+        top: 9%;
+        left: 3%;
+    }
+    .baget-title {
+        max-height: 31px;
+        overflow: hidden;
     }
     .btn-want {
         padding: 23px 15px;
