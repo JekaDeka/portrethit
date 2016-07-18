@@ -184,7 +184,7 @@ $(document).ready(function() {
         $('.tmp').hide();
         var selected_radio = $('input[name=optionsRadios]:checked');
         var id = $(selected_radio).data('border');
-        $(id).toggle();
+        $('#' + id).toggle();
     });
 
 
