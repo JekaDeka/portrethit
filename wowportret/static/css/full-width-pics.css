@@ -745,21 +745,20 @@ footer {
 }
 
 .baget-bundel {
+    width: 100%;
     position: relative;
-    max-width: 500px;
 }
 
-.baget-border {}
+.baget-border {
+    max-width: 100%;
+    height: auto;
+}
 
 .baget-img {
-    position: absolute;
-    top: 2%;
-    left: 3%;
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    /*background-color: rgba(41, 128, 185, 0.9);
-    color: #fff;*/
-    padding: 50%;
+    position: absolute;
+    z-index: 99;
 }
 
 @media(max-width: 1200px) {
