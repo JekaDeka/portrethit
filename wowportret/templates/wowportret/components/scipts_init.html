@@ -196,6 +196,7 @@ $(document).ready(function() {
 
     var lastClicked = 0;
     $(".border-mini-img").click(function(event) {
+        $('.tmp').hide();
         var img_id = $(this).attr('id');
         if (lastClicked != 0) { //hide last clicked element
             $('#border' + lastClicked).hide();
