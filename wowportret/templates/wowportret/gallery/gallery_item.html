@@ -44,12 +44,18 @@
                                                     <h2>Работа #{{ item.id }}</h2> {% endif %}
                                                 </div>
                                                 <div class="row p-y-2">
-                                                    <div class="col-xs-7">
+                                                    <div class="col-xl-7 text-xs-center">
+                                                        <div class="baget-bundel">
+                                                        <img src="http://placehold.it/450x450" class="img-responsive baget-border"/>
+                                                        <div class="baget-img">
                                                         {% if item.image %}
                                                         <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
-                                                        <img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /> {% endif %}
+                                                        <img src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" />
+                                                        {% endif %}
+                                                        </div>
+                                                        </div>
                                                     </div>
-                                                    <div class="col-xs-5">
+                                                    <div class="col-xl-5">
                                                         <!-- <form id="calx"> -->
                                                         <div class="col-xs-12">
                                                             <div>

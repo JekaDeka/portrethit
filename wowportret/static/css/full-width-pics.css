@@ -744,7 +744,33 @@ footer {
     display: inline-block;
 }
 
+.baget-bundel {
+    position: relative;
+    max-width: 500px;
+}
+
+.baget-border {}
+
+.baget-img {
+    position: absolute;
+    top: 2%;
+    left: 3%;
+    width: 100%;
+    height: auto;
+    /*background-color: rgba(41, 128, 185, 0.9);
+    color: #fff;*/
+    padding: 50%;
+}
+
 @media(max-width: 1200px) {
+    .baget-bundel {
+        left: 15%;
+        max-width: 427px;
+    }
+    .baget-img {
+        top: 6%;
+        left: 3%;
+    }
     .baget-line {
         max-width: 117px;
         padding: 0px 0px;
@@ -800,6 +826,14 @@ footer {
 }
 
 @media(max-width:992px) {
+    .baget-bundel {
+        left: 15%;
+        max-width: 427px;
+    }
+    .baget-img {
+        top: 6%;
+        left: 3%;
+    }
     .header-classic {
         min-height: 511px;
     }
@@ -865,6 +899,17 @@ footer {
     section {
         padding-top: 25px;
         padding-bottom: 25px;
+    }
+    .baget-bundel {
+        max-width: 319px;
+    }
+    .baget-border {
+        width: 104%;
+        height: auto;
+    }
+    .baget-img {
+        top: 7%;
+        left: 2%;
     }
     .header-main {
         min-height: 223px;
@@ -974,6 +1019,18 @@ footer {
 }
 
 @media(max-width:544px) {
+    .baget-bundel {
+        max-width: 86%;
+        left: 7%;
+    }
+    .baget-border {
+        width: 103%;
+        height: auto;
+    }
+    .baget-img {
+        top: 7%;
+        left: 2%;
+    }
     .btn-want {
         padding: 23px 15px;
     }
