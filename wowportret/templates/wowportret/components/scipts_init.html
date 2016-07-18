@@ -185,7 +185,7 @@ $(document).ready(function() {
     $('#fst_block :input').on('change', function() {
         // $('.tmp').hide();
         if (lastClicked != 0) { //hide last clicked element
-            $('#' + lastClicked).hide();
+            $('#' + lastClicked).hide('500');
         }
         var selected_radio = $('input[name=optionsRadios]:checked');
         var id = $(selected_radio).data('border');
