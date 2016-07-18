@@ -180,7 +180,7 @@ $(document).ready(function() {
         calculate_total_price();
     });
 
-    $('.checkbox :input').on('change', function() {
+    $('#fst_block :input').on('change', function() {
         $('.tmp').hide();
         var selected_radio = $('input[name=optionsRadios]:checked');
         var id = $(selected_radio).data('border');
