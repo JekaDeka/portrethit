@@ -46,8 +46,9 @@
                                                 <div class="row p-y-2">
                                                     <div class="col-xl-7">
                                                         <div class="baget-bundel">
+                                                        <img src="http://placehold.it/450x450" class="baget-border">
                                                         {% for baget in baget_items %}
-                                                            <img src="http://placehold.it/450x450" class="baget-border collapse" id="border-{{baget.id}}">
+                                                            <img src="http://placehold.it/450x450" class="baget-border collapse" id="{{baget.id}}">
                                                         {% endfor %}
                                                         {% if item.image %}
                                                         <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
@@ -137,7 +138,7 @@
                                                                             {% for baget in baget_items %}
                                                                             <div class="radio baget-line">
                                                                                 <label>
-                                                                                    <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка #{{ baget.id }} {% endif %}
+                                                                                    <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка #{{ baget.id }} {% endif %}
                                                                                     {% if baget.image %}
                                                                                     <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
                                                                                     {% endif %}
