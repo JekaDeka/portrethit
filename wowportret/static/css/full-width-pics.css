@@ -768,6 +768,10 @@ footer {
     cursor: pointer;
 }
 
+.baget-active {
+    border: 2px solid;
+}
+
 @media(max-width: 1200px) {
     .baget-bundel {
         left: 15%;
