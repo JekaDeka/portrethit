@@ -759,6 +759,8 @@ footer {
     height: auto;
     position: absolute;
     z-index: 99;
+    top: 0;
+    left: 0;
 }
 
 @media(max-width: 1200px) {
