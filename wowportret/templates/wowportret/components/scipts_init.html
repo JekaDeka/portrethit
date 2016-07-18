@@ -273,6 +273,7 @@ $(document).ready(function() {
 function addDataToForm() {
     var name = $('h2').text();
     var mat_type = "";
+    var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
     if ($('#main_size').is(':visible')) {
         mat_type = "Холст";
         var size = $("#main_size option:selected");
@@ -280,10 +281,11 @@ function addDataToForm() {
     if ($('#paper_size').is(':visible')) {
         mat_type = "Бумага";
         var size = $("#paper_size option:selected");
+        baget = "";
     }
 
 
-    var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+
     var price = $("#total_price").text();
     var opts = "";
 
