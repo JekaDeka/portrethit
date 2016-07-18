@@ -180,11 +180,17 @@ $(document).ready(function() {
         calculate_total_price();
     });
 
+
+    var lastClicked = 0;
     $('#fst_block :input').on('change', function() {
         $('.tmp').hide();
+        if (lastClicked != 0) {
+            $('#' + lastClicked).hide();
+        }
         var selected_radio = $('input[name=optionsRadios]:checked');
         var id = $(selected_radio).data('border');
-        $('#' + id).toggle();
+        $('#' + id).show();
+        lastClicked = selected_radio;
     });
 
 
