@@ -180,6 +180,14 @@ $(document).ready(function() {
         calculate_total_price();
     });
 
+    $('.checkbox :input').on('change', function() {
+        $('.tmp').hide();
+        var selected_radio = $('input[name=optionsRadios]:checked');
+        var id = $(selected_radio).data('border');
+        $(id).toggle();
+    });
+
+
 });
 </script>
 <script>
@@ -245,11 +253,11 @@ $(document).ready(function() {
 function addDataToForm() {
     var name = $('h2').text();
     var mat_type = "";
-    if ( $('#main_size').is(':visible') ) {
+    if ($('#main_size').is(':visible')) {
         mat_type = "Холст";
-        var size =  $("#main_size option:selected");
+        var size = $("#main_size option:selected");
     }
-    if ( $('#paper_size').is(':visible') ) {
+    if ($('#paper_size').is(':visible')) {
         mat_type = "Бумага";
         var size = $("#paper_size option:selected");
     }
@@ -268,10 +276,10 @@ function addDataToForm() {
 
     // $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
     $("#info").html("<p class='price'>" + name + "</p>" +
-                    "<p class='price'>Тип материала: " + mat_type + "</p>" +
-                    "<p class='price'>Размер: " + $(size[0]).text() + "</p>" +
-                    "<p class='price'>" + baget + "</p>" +
-                    "<p class='price'>" + opts + "</p>" +
-                    "<p class='price'> Цена: " + price + " руб.</p>");
+        "<p class='price'>Тип материала: " + mat_type + "</p>" +
+        "<p class='price'>Размер: " + $(size[0]).text() + "</p>" +
+        "<p class='price'>" + baget + "</p>" +
+        "<p class='price'>" + opts + "</p>" +
+        "<p class='price'> Цена: " + price + " руб.</p>");
 };
 </script>
