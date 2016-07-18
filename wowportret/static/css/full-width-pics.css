@@ -762,9 +762,12 @@ footer {
     top: 11px;
     left: 12px;
 }
+
 .border-mini-img {
     margin-right: 10px;
+    cursor: pointer;
 }
+
 @media(max-width: 1200px) {
     .baget-bundel {
         left: 15%;
