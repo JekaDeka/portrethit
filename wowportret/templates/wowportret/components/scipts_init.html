@@ -202,7 +202,7 @@ $(document).ready(function() {
         var img_id = $(this).attr('id');
         if (lastClicked_border_img != 0) { //hide last clicked element
             $('#border' + lastClicked_border_img).hide();
-            $('#' + lastClicked_border_img).find('img').attr('class', 'border-mini-img');
+            $('#' + lastClicked_border_img).find('img').attr('class', '');
         }
         $('#border' + img_id).show();
         $(this).find('img').attr('class', 'baget-active');

@@ -778,8 +778,8 @@ footer {
         max-width: 427px;
     }
     .baget-img {
-        top: 6%;
-        left: 3%;
+        top: 10.4%;
+        left: 6.4%;
     }
     .baget-line {
         max-width: 117px;
@@ -841,8 +841,8 @@ footer {
         max-width: 427px;
     }
     .baget-img {
-        top: 6%;
-        left: 3%;
+        top: 10.3%;
+        left: 6.4%;
     }
     .header-classic {
         min-height: 511px;
@@ -918,8 +918,8 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 8%;
-        left: 3%;
+        top: 11.4%;
+        left: 6.4%;
     }
     .header-main {
         min-height: 223px;
@@ -1038,8 +1038,8 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 9%;
-        left: 3%;
+        top: 10.3%;
+        left: 6.3%;
     }
     .baget-title {
         max-height: 31px;
@@ -1124,6 +1124,12 @@ footer {
     }
     .heart {
         display: none;
+    }
+}
+
+@media(max-width:350px) {
+    .baget-img {
+        top: 13.3%;
     }
 }
 
