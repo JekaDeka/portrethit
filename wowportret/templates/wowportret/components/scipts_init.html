@@ -17,6 +17,7 @@ $(document).ready(function() {
     $('input[name=material_type]').change(function() {
         val = $(this).val();
         if (val == 'paper') {
+            $('#total-border').hide();
             $('#canvas-box').hide();
             $('#fst_block').hide();
             $('#paper-box').show();
@@ -25,6 +26,7 @@ $(document).ready(function() {
             $('#paper-box').hide();
             $('#fst_block').show();
             $('#canvas-box').show();
+            $('#total-border').show();
         }
     });
 
