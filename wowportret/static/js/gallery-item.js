@@ -226,23 +226,24 @@ $(document).ready(function() {
 
     $(".checkbox").click(function(event) {
         var hidden_block = $(this).find('.collapse');
-        var target = $(event.target);
-        if (target.nodeName == "U") { //if clicked on MORE
+
+        if (event.target.nodeName == "U") { //if clicked on MORE
             if (hidden_block.css('display') == 'none') {
                 hidden_block.show('500');
             } else {
                 hidden_block.hide('500');
             }
         }
-    });
 
+    });
     $('#fst_block :input[type=checkbox]').click(function(event) {
-        var hidden_block = $(this).find('.collapse');
-        if (hidden_block.css('display') == 'none') {
-            hidden_block.show('500');
-        } else {
-            hidden_block.hide('500');
-        }
+        console.log($(this).find('.collapse'));
+        // var hidden_block = $(this).find('.collapse');
+        // if (hidden_block.css('display') == 'none') {
+        //     hidden_block.show('500');
+        // } else {
+        //     hidden_block.hide('500');
+        // }
     });
 
     // $(window).scroll(function(event) {
