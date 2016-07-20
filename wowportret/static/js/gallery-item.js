@@ -237,13 +237,12 @@ $(document).ready(function() {
 
     });
     $('#fst_block :input[type=checkbox]').click(function(event) {
-        $('#fst_block').find('.collapse').collapse('toggle');
-        // var hidden_block = $(this).find('.collapse');
-        // if (hidden_block.css('display') == 'none') {
-        //     hidden_block.show('500');
-        // } else {
-        //     hidden_block.hide('500');
-        // }
+        var hidden_block = $('#fst_block').find('.collapse');
+        if (hidden_block.css('display') == 'none') {
+            hidden_block.show();
+        } else {
+            hidden_block.hide();
+        }
     });
 
     // $(window).scroll(function(event) {
