@@ -10,7 +10,13 @@
 function addDataToForm() {
     var name = $('h2').text();
     var mat_type = "";
-    var baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+    var baget = "";
+    if ($('#fst_block :input[type=checkbox]').prop('checked')) {
+        baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+    }
+    else {
+        baget = "Не оформлять багет";
+    }
     if ($('#main_size').is(':visible')) {
         mat_type = "Холст";
         var size = $("#main_size option:selected");
