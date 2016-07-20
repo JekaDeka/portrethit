@@ -237,7 +237,7 @@ $(document).ready(function() {
 
     });
     $('#fst_block :input[type=checkbox]').click(function(event) {
-        console.log($(this).find('.collapse'));
+        $('#fst_block').find('.collapse').collapse('toggle');
         // var hidden_block = $(this).find('.collapse');
         // if (hidden_block.css('display') == 'none') {
         //     hidden_block.show('500');
