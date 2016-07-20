@@ -46,47 +46,39 @@
                                                 <div class="row p-y-2">
                                                     <div class="col-xl-7">
                                                         <div class="baget-bundel">
-                                                            <img src="http://placehold.it/450x450" class="baget-border tmp">
+                                                            <!-- <img src="http://placehold.it/450x450" class="baget-border tmp"> -->
                                                             <img src="{% static 'img/borders/A1/big1.jpg' %}" class="baget-border collapse" id="borderA1_1">
                                                             <img src="{% static 'img/borders/A1/big2.jpg' %}" class="baget-border collapse" id="borderA1_2">
                                                             <img src="{% static 'img/borders/A1/big3.jpg' %}" class="baget-border collapse" id="borderA1_3">
                                                             <img src="{% static 'img/borders/A1/big4.jpg' %}" class="baget-border collapse" id="borderA1_4">
-
                                                             <img src="{% static 'img/borders/A2/big1.jpg' %}" class="baget-border collapse" id="borderA2_1">
                                                             <img src="{% static 'img/borders/A2/big2.jpg' %}" class="baget-border collapse" id="borderA2_2">
                                                             <img src="{% static 'img/borders/A2/big3.jpg' %}" class="baget-border collapse" id="borderA2_3">
                                                             <img src="{% static 'img/borders/A2/big4.jpg' %}" class="baget-border collapse" id="borderA2_4">
                                                             <img src="{% static 'img/borders/A2/big5.jpg' %}" class="baget-border collapse" id="borderA2_5">
-
                                                             <img src="{% static 'img/borders/A3/big1.jpg' %}" class="baget-border collapse" id="borderA3_1">
                                                             <img src="{% static 'img/borders/A3/big2.jpg' %}" class="baget-border collapse" id="borderA3_2">
                                                             <img src="{% static 'img/borders/A3/big3.jpg' %}" class="baget-border collapse" id="borderA3_3">
                                                             <img src="{% static 'img/borders/A3/big4.jpg' %}" class="baget-border collapse" id="borderA3_4">
-
                                                             <img src="{% static 'img/borders/A4/big1.jpg' %}" class="baget-border collapse" id="borderA4_1">
                                                             <img src="{% static 'img/borders/A4/big2.jpg' %}" class="baget-border collapse" id="borderA4_2">
                                                             <img src="{% static 'img/borders/A4/big3.jpg' %}" class="baget-border collapse" id="borderA4_3">
                                                             <img src="{% static 'img/borders/A4/big4.jpg' %}" class="baget-border collapse" id="borderA4_4">
-
                                                             <img src="{% static 'img/borders/A5/big1.jpg' %}" class="baget-border collapse" id="borderA5_1">
                                                             <img src="{% static 'img/borders/A5/big2.jpg' %}" class="baget-border collapse" id="borderA5_2">
                                                             <img src="{% static 'img/borders/A5/big3.jpg' %}" class="baget-border collapse" id="borderA5_3">
                                                             <img src="{% static 'img/borders/A5/big4.jpg' %}" class="baget-border collapse" id="borderA5_4">
-
                                                             <img src="{% static 'img/borders/A6/big1.jpg' %}" class="baget-border collapse" id="borderA6_1">
                                                             <img src="{% static 'img/borders/A6/big2.jpg' %}" class="baget-border collapse" id="borderA6_2">
                                                             <img src="{% static 'img/borders/A6/big3.jpg' %}" class="baget-border collapse" id="borderA6_3">
-
                                                             <img src="{% static 'img/borders/A7/big1.jpg' %}" class="baget-border collapse" id="borderA7_1">
                                                             <img src="{% static 'img/borders/A7/big2.jpg' %}" class="baget-border collapse" id="borderA7_2">
                                                             <img src="{% static 'img/borders/A7/big3.jpg' %}" class="baget-border collapse" id="borderA7_3">
                                                             <img src="{% static 'img/borders/A7/big4.jpg' %}" class="baget-border collapse" id="borderA7_4">
-
                                                             <img src="{% static 'img/borders/B1/big1.jpg' %}" class="baget-border collapse" id="borderB1_1">
                                                             <img src="{% static 'img/borders/B1/big2.jpg' %}" class="baget-border collapse" id="borderB1_2">
                                                             <img src="{% static 'img/borders/B1/big3.jpg' %}" class="baget-border collapse" id="borderB1_3">
                                                             <img src="{% static 'img/borders/B1/big4.jpg' %}" class="baget-border collapse" id="borderB1_4">
-
                                                             <img src="{% static 'img/borders/B2/big1.jpg' %}" class="baget-border collapse" id="borderB2_1">
                                                             <img src="{% static 'img/borders/B2/big2.jpg' %}" class="baget-border collapse" id="borderB2_2">
                                                             <img src="{% static 'img/borders/B2/big3.jpg' %}" class="baget-border collapse" id="borderB2_3">
@@ -119,11 +111,9 @@
                                                             <img src="{% static 'img/borders/C6/big2.jpg' %}" class="baget-border collapse" id="borderC6_2">
                                                             <img src="{% static 'img/borders/C6/big3.jpg' %}" class="baget-border collapse" id="borderC6_3">
                                                             <img src="{% static 'img/borders/C7/big1.jpg' %}" class="baget-border collapse" id="borderC7_1">
-                                                            <img src="{% static 'img/borders/C7/big2.jpg' %}" class="baget-border collapse" id="borderC7_2">
-                                                            {% if item.image %}
+                                                            <img src="{% static 'img/borders/C7/big2.jpg' %}" class="baget-border collapse" id="borderC7_2"> {% if item.image %}
                                                             <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
-                                                            <img src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" class="baget-img">
-                                                            {% endif %}
+                                                            <img src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" class="baget-img"> {% endif %}
                                                         </div>
                                                         <!-- </div> -->
                                                     </div>
@@ -131,6 +121,11 @@
                                                         <!-- <form id="calx"> -->
                                                         <div class="col-xs-12">
                                                             <div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        Материал:
+                                                                    </label>
+                                                                </div>
                                                                 <div class="radio-inline">
                                                                     <label>
                                                                         <input type="radio" name="material_type" id="canvas_radio" value="canvas" checked> Холст
@@ -176,6 +171,33 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
+                                                                <div class="checkbox" id="fst_block">
+                                                                    <!-- <strong> 2. Выберите багетную рамку: </strong>
+                                                                    <br>
+                                                                    <label style="padding-left: 0px;">
+                                                                        <input type="radio" baget-type="0" name="optionsRadios" data-border="0" value="0" checked> Не оформлять багет
+                                                                    </label> -->
+                                                                    <label>
+                                                                        <input type="checkbox"> Оформить багетную рамку
+                                                                    </label>
+                                                                    <label class="more"> <u> подробнее </u> </label>
+                                                                    <div class="collapse" id="baget_list">
+                                                                        <div class="row">
+                                                                            <div class=col-xs-12>
+                                                                                {% for baget in baget_items %}
+                                                                                <div class="radio baget-line">
+                                                                                    <label>
+                                                                                        <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка #{{ baget.id }} {% endif %} {% if baget.image %}
+                                                                                        <img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" />
+                                                                                        <!-- <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a> -->
+                                                                                        {% endif %}
+                                                                                    </label>
+                                                                                </div>
+                                                                                {% endfor %}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                             <div id="paper-box" class="card-footer" style="display: none;">
                                                                 <p>
@@ -193,136 +215,113 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-xs-12 p-y-2">
-                                                          <div id="total-border">
-                                                            <div class="p-y-1 collapse" id="40">
-                                                                <a class="border-mini-img" id="A1_1"><img src="{% static 'img/borders/A1/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A1_2"><img src="{% static 'img/borders/A1/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A1_3"><img src="{% static 'img/borders/A1/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A1_4"><img src="{% static 'img/borders/A1/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="41">
-                                                                <a class="border-mini-img" id="A2_1"><img src="{% static 'img/borders/A2/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A2_2"><img src="{% static 'img/borders/A2/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A2_3"><img src="{% static 'img/borders/A2/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A2_4"><img src="{% static 'img/borders/A2/mini4.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A2_5"><img src="{% static 'img/borders/A2/mini5.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="42">
-                                                                <a class="border-mini-img" id="A3_1"><img src="{% static 'img/borders/A3/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A3_2"><img src="{% static 'img/borders/A3/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A3_3"><img src="{% static 'img/borders/A3/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A3_4"><img src="{% static 'img/borders/A3/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="43">
-                                                                <a class="border-mini-img" id="A4_1"><img src="{% static 'img/borders/A4/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A4_2"><img src="{% static 'img/borders/A4/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A4_3"><img src="{% static 'img/borders/A4/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A4_4"><img src="{% static 'img/borders/A4/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="44">
-                                                                <a class="border-mini-img" id="A5_1"><img src="{% static 'img/borders/A5/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A5_2"><img src="{% static 'img/borders/A5/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A5_3"><img src="{% static 'img/borders/A5/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A5_4"><img src="{% static 'img/borders/A5/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="39">
-                                                                <a class="border-mini-img" id="A6_1"><img src="{% static 'img/borders/A6/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A6_2"><img src="{% static 'img/borders/A6/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A6_3"><img src="{% static 'img/borders/A6/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="38">
-                                                                <a class="border-mini-img" id="A7_1"><img src="{% static 'img/borders/A7/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A7_2"><img src="{% static 'img/borders/A7/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A7_3"><img src="{% static 'img/borders/A7/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="A7_4"><img src="{% static 'img/borders/A7/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="124">
-                                                                <a class="border-mini-img" id="B1_1"><img src="{% static 'img/borders/B1/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B1_2"><img src="{% static 'img/borders/B1/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B1_3"><img src="{% static 'img/borders/B1/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B1_4"><img src="{% static 'img/borders/B1/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="123">
-                                                                <a class="border-mini-img" id="B2_1"><img src="{% static 'img/borders/B2/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B2_2"><img src="{% static 'img/borders/B2/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B2_3"><img src="{% static 'img/borders/B2/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="122">
-                                                                <a class="border-mini-img" id="B3_1"><img src="{% static 'img/borders/B3/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B3_2"><img src="{% static 'img/borders/B3/mini2.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="121">
-                                                                <a class="border-mini-img" id="B4_1"><img src="{% static 'img/borders/B4/mini1.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="120">
-                                                                <a class="border-mini-img" id="B5_1"><img src="{% static 'img/borders/B5/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B5_2"><img src="{% static 'img/borders/B5/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B5_3"><img src="{% static 'img/borders/B5/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="126">
-                                                                <a class="border-mini-img" id="B6_1"><img src="{% static 'img/borders/B6/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B6_2"><img src="{% static 'img/borders/B6/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B6_3"><img src="{% static 'img/borders/B6/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="125">
-                                                                <a class="border-mini-img" id="B7_1"><img src="{% static 'img/borders/B7/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B7_2"><img src="{% static 'img/borders/B7/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B7_3"><img src="{% static 'img/borders/B7/mini3.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="B7_4"><img src="{% static 'img/borders/B7/mini4.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="130">
-                                                                <a class="border-mini-img" id="C1_1"><img src="{% static 'img/borders/C1/mini1.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="129">
-                                                                <a class="border-mini-img" id="C2_1"><img src="{% static 'img/borders/C2/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C2_2"><img src="{% static 'img/borders/C2/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C2_3"><img src="{% static 'img/borders/C2/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="128">
-                                                                <a class="border-mini-img" id="C3_1"><img src="{% static 'img/borders/C3/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C3_2"><img src="{% static 'img/borders/C3/mini2.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="119">
-                                                                <a class="border-mini-img" id="C4_1"><img src="{% static 'img/borders/C4/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C4_2"><img src="{% static 'img/borders/C4/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C4_3"><img src="{% static 'img/borders/C4/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="127">
-                                                                <a class="border-mini-img" id="C5_1"><img src="{% static 'img/borders/C5/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C5_2"><img src="{% static 'img/borders/C5/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C5_3"><img src="{% static 'img/borders/C5/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="131">
-                                                                <a class="border-mini-img" id="C6_1"><img src="{% static 'img/borders/C6/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C6_2"><img src="{% static 'img/borders/C6/mini2.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C6_3"><img src="{% static 'img/borders/C6/mini3.jpg' %}"></a>
-                                                            </div>
-                                                            <div class="p-y-1 collapse" id="132">
-                                                                <a class="border-mini-img" id="C7_1"><img src="{% static 'img/borders/C7/mini1.jpg' %}"></a>
-                                                                <a class="border-mini-img" id="C7_2"><img src="{% static 'img/borders/C7/mini2.jpg' %}"></a>
-                                                            </div>
-                                                            </div>
-                                                            <div class="checkbox" id="fst_block">
-                                                                <strong> 2. Выберите багетную рамку: </strong>
-                                                                <br>
-                                                                <label style="padding-left: 0px;">
-                                                                    <input type="radio" baget-type="0" name="optionsRadios" data-border="0" value="0" checked> Не оформлять багет
-                                                                </label>
-                                                                <label class="more"> <u> подробнее </u> </label>
-                                                                <div class="collapse" id="baget_list">
-                                                                    <div class="row">
-                                                                        <div class=col-xs-12>
-                                                                            {% for baget in baget_items %}
-                                                                            <div class="radio baget-line">
-                                                                                <label>
-                                                                                    <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка #{{ baget.id }} {% endif %} {% if baget.image %}
-                                                                                    <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
-                                                                                    {% endif %}
-                                                                                </label>
-                                                                            </div>
-                                                                            {% endfor %}
-                                                                        </div>
-                                                                    </div>
+                                                            <div id="total-border">
+                                                                <div class="p-y-1 collapse" id="40">
+                                                                    <a class="border-mini-img" id="A1_1"><img src="{% static 'img/borders/A1/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A1_2"><img src="{% static 'img/borders/A1/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A1_3"><img src="{% static 'img/borders/A1/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A1_4"><img src="{% static 'img/borders/A1/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="41">
+                                                                    <a class="border-mini-img" id="A2_1"><img src="{% static 'img/borders/A2/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A2_2"><img src="{% static 'img/borders/A2/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A2_3"><img src="{% static 'img/borders/A2/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A2_4"><img src="{% static 'img/borders/A2/mini4.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A2_5"><img src="{% static 'img/borders/A2/mini5.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="42">
+                                                                    <a class="border-mini-img" id="A3_1"><img src="{% static 'img/borders/A3/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A3_2"><img src="{% static 'img/borders/A3/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A3_3"><img src="{% static 'img/borders/A3/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A3_4"><img src="{% static 'img/borders/A3/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="43">
+                                                                    <a class="border-mini-img" id="A4_1"><img src="{% static 'img/borders/A4/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A4_2"><img src="{% static 'img/borders/A4/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A4_3"><img src="{% static 'img/borders/A4/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A4_4"><img src="{% static 'img/borders/A4/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="44">
+                                                                    <a class="border-mini-img" id="A5_1"><img src="{% static 'img/borders/A5/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A5_2"><img src="{% static 'img/borders/A5/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A5_3"><img src="{% static 'img/borders/A5/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A5_4"><img src="{% static 'img/borders/A5/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="39">
+                                                                    <a class="border-mini-img" id="A6_1"><img src="{% static 'img/borders/A6/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A6_2"><img src="{% static 'img/borders/A6/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A6_3"><img src="{% static 'img/borders/A6/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="38">
+                                                                    <a class="border-mini-img" id="A7_1"><img src="{% static 'img/borders/A7/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A7_2"><img src="{% static 'img/borders/A7/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A7_3"><img src="{% static 'img/borders/A7/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="A7_4"><img src="{% static 'img/borders/A7/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="124">
+                                                                    <a class="border-mini-img" id="B1_1"><img src="{% static 'img/borders/B1/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B1_2"><img src="{% static 'img/borders/B1/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B1_3"><img src="{% static 'img/borders/B1/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B1_4"><img src="{% static 'img/borders/B1/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="123">
+                                                                    <a class="border-mini-img" id="B2_1"><img src="{% static 'img/borders/B2/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B2_2"><img src="{% static 'img/borders/B2/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B2_3"><img src="{% static 'img/borders/B2/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="122">
+                                                                    <a class="border-mini-img" id="B3_1"><img src="{% static 'img/borders/B3/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B3_2"><img src="{% static 'img/borders/B3/mini2.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="121">
+                                                                    <a class="border-mini-img" id="B4_1"><img src="{% static 'img/borders/B4/mini1.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="120">
+                                                                    <a class="border-mini-img" id="B5_1"><img src="{% static 'img/borders/B5/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B5_2"><img src="{% static 'img/borders/B5/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B5_3"><img src="{% static 'img/borders/B5/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="126">
+                                                                    <a class="border-mini-img" id="B6_1"><img src="{% static 'img/borders/B6/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B6_2"><img src="{% static 'img/borders/B6/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B6_3"><img src="{% static 'img/borders/B6/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="125">
+                                                                    <a class="border-mini-img" id="B7_1"><img src="{% static 'img/borders/B7/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B7_2"><img src="{% static 'img/borders/B7/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B7_3"><img src="{% static 'img/borders/B7/mini3.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="B7_4"><img src="{% static 'img/borders/B7/mini4.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="130">
+                                                                    <a class="border-mini-img" id="C1_1"><img src="{% static 'img/borders/C1/mini1.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="129">
+                                                                    <a class="border-mini-img" id="C2_1"><img src="{% static 'img/borders/C2/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C2_2"><img src="{% static 'img/borders/C2/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C2_3"><img src="{% static 'img/borders/C2/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="128">
+                                                                    <a class="border-mini-img" id="C3_1"><img src="{% static 'img/borders/C3/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C3_2"><img src="{% static 'img/borders/C3/mini2.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="119">
+                                                                    <a class="border-mini-img" id="C4_1"><img src="{% static 'img/borders/C4/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C4_2"><img src="{% static 'img/borders/C4/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C4_3"><img src="{% static 'img/borders/C4/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="127">
+                                                                    <a class="border-mini-img" id="C5_1"><img src="{% static 'img/borders/C5/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C5_2"><img src="{% static 'img/borders/C5/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C5_3"><img src="{% static 'img/borders/C5/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="131">
+                                                                    <a class="border-mini-img" id="C6_1"><img src="{% static 'img/borders/C6/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C6_2"><img src="{% static 'img/borders/C6/mini2.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C6_3"><img src="{% static 'img/borders/C6/mini3.jpg' %}"></a>
+                                                                </div>
+                                                                <div class="p-y-1 collapse" id="132">
+                                                                    <a class="border-mini-img" id="C7_1"><img src="{% static 'img/borders/C7/mini1.jpg' %}"></a>
+                                                                    <a class="border-mini-img" id="C7_2"><img src="{% static 'img/borders/C7/mini2.jpg' %}"></a>
                                                                 </div>
                                                             </div>
                                                         </div>
