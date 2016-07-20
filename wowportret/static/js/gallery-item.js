@@ -224,40 +224,25 @@ $(document).ready(function() {
         closeEffect: 'elastic'
     });
 
-    // var fst_block_shown = false;
-    // var snd_block_shown = false;
-    // var trd_block_shown = false;
-    // var fth_block_shown = false;
-
     $(".checkbox").click(function(event) {
         var hidden_block = $(this).find('.collapse');
-
-        if (event.target.nodeName == "U") { //if clicked on MORE
+        var target = $(event.target);
+        if (target.nodeName == "U") { //if clicked on MORE
             if (hidden_block.css('display') == 'none') {
                 hidden_block.show('500');
             } else {
                 hidden_block.hide('500');
             }
         }
-        if ($(this).attr('id') == 'fst_block') {
-                hidden_block.collapse('toggle');
-        }
-        // if ($(this).attr('id') == 'snd_block') {
-        //     if (!snd_block_shown)
-        //         hidden_block.show('500').delay(500);
-        //     snd_block_shown = true;
-        // }
-        // if ($(this).attr('id') == 'trd_block') {
-        //     if (!trd_block_shown)
-        //         hidden_block.show('500').delay(500);
-        //     trd_block_shown = true;
-        // }
-        // if ($(this).attr('id') == 'fth_block') {
-        //     if (!fth_block_shown)
-        //         hidden_block.show('500').delay(500);
-        //     fth_block_shown = true;
-        // }
+    });
 
+    $('#fst_block :input[type=checkbox]').click(function(event) {
+        var hidden_block = $(this).find('.collapse');
+        if (hidden_block.css('display') == 'none') {
+            hidden_block.show('500');
+        } else {
+            hidden_block.hide('500');
+        }
     });
 
     // $(window).scroll(function(event) {
