@@ -300,7 +300,14 @@
                                                                                 {% for baget in baget_items %}
                                                                                 <div class="radio baget-line">
                                                                                     <label>
-                                                                                        <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка #{{ baget.id }} {% endif %} {% if baget.image %}
+                                                                                        <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> <small>
+                                                                                        {% if baget.title %}
+                                                                                            {{ baget.title }}
+                                                                                        {% else %}
+                                                                                            Рамка #{{ baget.id }}
+                                                                                        {% endif %}
+                                                                                        </small>
+                                                                                        {% if baget.image %}
                                                                                         <img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" />
                                                                                         <!-- <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a> -->
                                                                                         {% endif %}
