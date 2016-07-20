@@ -738,7 +738,7 @@ footer {
 }
 
 .baget-line {
-    max-width: 70px;
+        max-width: 70px;
     /* padding: 5px 5px; */
     margin-left: 0px;
     display: inline-block;
@@ -1200,4 +1200,8 @@ option {
 
 .nav-tabs li.tab50 {
     width: 49%;
+}
+
+.fixed {
+    position: fixed;
 }

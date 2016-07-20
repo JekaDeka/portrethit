@@ -264,7 +264,7 @@ $(document).ready(function() {
 
     $(window).scroll(function(event) {
         var windowTop = $(this).scrollTop();
-        if (windowTop >= $("#footer").offset().top) {
+        if (windowTop <= $("#canvas-box").height()) {
             $("div#price_line").addClass("fixed");
         } else {
             $("div#price_line").removeClass("fixed");
