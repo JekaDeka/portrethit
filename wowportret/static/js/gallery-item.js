@@ -239,11 +239,9 @@ $(document).ready(function() {
                 hidden_block.hide('500');
             }
         }
-        // if ($(this).attr('id') == 'fst_block') {
-        //     if (!fst_block_shown)
-        //         hidden_block.show('500').delay(500);
-        //     fst_block_shown = true;
-        // }
+        if ($(this).attr('id') == 'fst_block') {
+                hidden_block.collapse('toggle');
+        }
         // if ($(this).attr('id') == 'snd_block') {
         //     if (!snd_block_shown)
         //         hidden_block.show('500').delay(500);
