@@ -286,17 +286,17 @@
                                                                 </div>
                                                                 <div class="checkbox" id="fst_block">
                                                                     <!-- <strong> 2. Выберите багетную рамку: </strong>
-                                                                    <br>
-                                                                    <label style="padding-left: 0px;">
-                                                                        <input type="radio" baget-type="0" name="optionsRadios" data-border="0" value="0" checked> Не оформлять багет
-                                                                    </label> -->
+                                                                    <br> -->
                                                                     <label>
-                                                                        <input type="checkbox"> Оформить багетную рамку
+                                                                        <input type="checkbox" value="0"> Оформить багетную рамку
                                                                     </label>
                                                                     <label class="more"> <u> подробнее </u> </label>
                                                                     <div class="collapse" id="baget_list">
                                                                         <div class="row">
                                                                             <div class=col-xs-12>
+                                                                                <label style="padding-left: 0px; display: none">
+                                                                                    <input type="radio" baget-type="0" name="optionsRadios" data-border="0" value="0" checked> Не оформлять багет
+                                                                                </label>
                                                                                 {% for baget in baget_items %}
                                                                                 <div class="radio baget-line">
                                                                                     <label>
@@ -306,8 +306,7 @@
                                                                                         {% else %}
                                                                                             Рамка #{{ baget.id }}
                                                                                         {% endif %}
-                                                                                        </small>
-                                                                                        {% if baget.image %}
+                                                                                        </small> {% if baget.image %}
                                                                                         <img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" />
                                                                                         <!-- <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a> -->
                                                                                         {% endif %}
