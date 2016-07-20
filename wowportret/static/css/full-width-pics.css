@@ -738,8 +738,8 @@ footer {
 }
 
 .baget-line {
-    max-width: 137px;
-    padding: 5px 5px;
+    max-width: 70px;
+    /* padding: 5px 5px; */
     margin-left: 0px;
     display: inline-block;
 }
