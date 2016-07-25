@@ -6,7 +6,7 @@
 <body>
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
-    <div class="container white add-shdw" style="margin-top: 75px">
+    <div class="container white add-shdw" style="margin-top: 95px">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
@@ -26,7 +26,7 @@
                             </div>
                             <div class="row">
                                 {% for gal in galleries %}
-                                <div class="col-md-6 text-xs-center">
+                                <div class="col-md-4 text-xs-center">
                                     <a href="{% url 'gallery_detail' pk=gal.pk %}">
                                 {% if gal.image %}
                                     <img class="img-fluid img-full-width" src="{{ gal.image.url_415x415 }}" alt="{{ gal.alt }}">
