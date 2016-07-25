@@ -8,6 +8,7 @@ $(document).ready(function() {
             $('#fst_block').hide();
             $('#paper-box').show();
             $("#main-img").css('border-image-source', 'url()');
+            $(".baget-active").removeClass('baget-active');
         }
         if (val == 'canvas') {
             $('#paper-box').hide();
