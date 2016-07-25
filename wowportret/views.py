@@ -137,7 +137,7 @@ def gallery_detail(request, pk):
     gal_list = Gallery.objects.filter(parent=pk)
     items = Item.objects.filter(gallery_id=pk).order_by('title')
 
-    paginator = Paginator(items, 12)
+    paginator = Paginator(items, 18)
     page = request.GET.get('page')
 
     try:
