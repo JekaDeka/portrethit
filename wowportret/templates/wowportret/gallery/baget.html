@@ -96,7 +96,7 @@
                             </div>
                         </div>
                     </div>
-<!--                     <div class="row">
+                    <!--                     <div class="row">
                         <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
                             <nav>
                                 <ul class="pagination">
@@ -209,25 +209,6 @@
     {% include "wowportret/components/scipts_init.html" %}
     <script>
     $(document).ready(function() {
-        $(".fancybox-thumb").fancybox({
-            prevEffect: 'none',
-            nextEffect: 'none',
-            helpers: {
-                title: {
-                    type: 'outside'
-                },
-                thumbs: {
-                    width: 50,
-                    height: 50
-                }
-            }
-        });
-
-        $(".fancybox").fancybox({
-            openEffect: 'elastic',
-            closeEffect: 'elastic'
-        });
-
         $('.mycal').on('input', function() {
             var total = 0
             var form = $(this).closest("form");
@@ -238,12 +219,6 @@
             total = ((2 * width + 2 * height) / 0.8 * item_price).toFixed(2);
             $(values[3]).val(total);
         });
-
-        // $('.modal').on('hide.bs.modal', function(e) {
-        //     $(this).find('form').trigger('reset');
-        // });
-
-
     });
     </script>
 </body>
