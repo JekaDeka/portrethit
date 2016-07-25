@@ -239,10 +239,11 @@ $(document).ready(function() {
         var hidden_block = $('#fst_block').find('.collapse');
         if (hidden_block.css('display') == 'none') {
             hidden_block.show();
+            $("#total-border").show();
         } else {
             hidden_block.hide();
-             $("#main-img").css('border-image-source', '');
-             $("#total-border > .collapse").hide();
+            $("#main-img").css('border-image-source', '');
+            $("#total-border").hide();
         }
     });
 
