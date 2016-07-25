@@ -176,11 +176,7 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+    {% include "wowportret/components/scipts_init.html" %}
     <script>
     $(document).ready(function() {
         $(".fancybox-thumb").fancybox({
