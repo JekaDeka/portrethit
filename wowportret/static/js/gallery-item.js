@@ -30,7 +30,12 @@ $(document).ready(function() {
                 gel_price = parseInt($("#gel_check").val());
             }
             //3. get selected radio
-            var baget_price = parseInt($('input[name=optionsRadios]:checked').val());
+            var baget_price = parseInt(0);
+            if ($('#fst_block :input[type=checkbox]').prop('checked')) {
+                baget_price = parseInt($('input[name=optionsRadios]:checked').val());
+            } else {
+                baget_price = parseInt(0);
+            }
 
             //4. Total_price
             var total_price = parseInt(main_size + lac_price + gel_price + baget_price);
@@ -194,13 +199,17 @@ $(document).ready(function() {
 
     var lastClicked_border_img = 0;
     $(".border-mini-img").click(function(event) {
-        $('.tmp').hide();
+        //$('.tmp').hide();
         var img_id = $(this).attr('id');
         if (lastClicked_border_img != 0) { //hide last clicked element
-            $('#border' + lastClicked_border_img).hide();
+            // $('#border' + lastClicked_border_img).hide();
             $('#' + lastClicked_border_img).find('img').attr('class', '');
         }
-        $('#border' + img_id).show();
+        //$('#border' + img_id).show();
+        //1. Get $('#' + id) src url
+        var src = $('#border' + img_id).attr('src');
+        //2. Add on click css properties:
+        $("#main-img").css('border-image-source', 'url(' + src + ')');
         $(this).find('img').attr('class', 'baget-active');
         lastClicked_border_img = img_id;
     });

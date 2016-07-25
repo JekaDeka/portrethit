@@ -31,6 +31,10 @@ def art_page(request):
     return new_page(request, 'wowportret/art.html')
 
 
+def test_page(request):
+    return new_page(request, 'wowportret/components/test.html')
+
+
 def classic_page(request):
     return new_page(request, 'wowportret/classic.html')
 

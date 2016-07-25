@@ -738,7 +738,7 @@ footer {
 }
 
 .baget-line {
-        max-width: 70px;
+    max-width: 70px;
     /* padding: 5px 5px; */
     margin-left: 0px;
     display: inline-block;
@@ -1204,4 +1204,14 @@ option {
 
 .fixed {
     position: fixed;
+}
+
+.main-img-border {
+    border-style: solid;
+    border-color: white;
+    border-width: 27px 27px 27px 27px;
+    -moz-border-image: 27 27 27 27 repeat;
+    -webkit-border-image: 27 27 27 27 repeat;
+    -o-border-image: 27 27 27 27 repeat;
+    border-image: 27 27 27 27 fill repeat;
 }
