@@ -1298,6 +1298,9 @@ option {
     background-color: #323232;
 }
 
+.accordion li a.active {
+    background-color: #514e4d;
+}
 /*.accordion h4 {
     padding: 5px 35px;
     background-color: #ffc25a;
