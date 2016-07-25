@@ -16,14 +16,16 @@
                         </a>
                     </li>
                     {% if sub_gal.children.all %}
+                    <ul class="inner collapse">
                         {% for sub_sub_gal in sub_gal.children.all %}
-                        {{sub_sub_gal.title}}
+                        <li>{{sub_sub_gal.title}}</li>
                         <!--             <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
                                     active
                                 {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
                                     {{sub_sub_gal.title}}
                             </a> -->
                         {% endfor %}
+                        </ul>
                     {% endif %}
                 {% endfor %}
             </ul>
