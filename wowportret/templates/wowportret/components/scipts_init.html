@@ -13,6 +13,8 @@ function addDataToForm() {
     var baget = "";
     if ($('#fst_block :input[type=checkbox]').prop('checked')) {
         baget = $('input[name=optionsRadios]:checked').parent().text().trim();
+        var baget_type = $('.border-mini-img').find('.baget-active').attr('src').split('/')[4];
+        baget = baget + ", тип: " + baget_type;
     } else {
         baget = "Не оформлять багет";
     }
