@@ -18,24 +18,18 @@
                 {{sub_gal.title}}
                 <!-- </a> -->
             </li>
-                <ul class="inner collapse">
+            <ul class="inner collapse">
                 <li>
-                <a href="#" class="toggle">Open Inner</a>
-                <div class="inner collapse">
-                {% for sub_sub_gal in sub_gal.children.all %}
-
-                            <li>{{sub_sub_gal.title}}</li>
-
-
-                <!--             <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
+                    {% for sub_sub_gal in sub_gal.children.all %}
+                    <li>{{sub_sub_gal.title}}</li>
+                    <!--             <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
                         active
                     {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
                         {{sub_sub_gal.title}}
                 </a> -->
-                {% endfor %}
-                </div>
+                    {% endfor %}
                 </li>
-                </ul>
+            </ul>
             {% endfor %}
         </ul>
     </li>
