@@ -7,6 +7,7 @@ $(document).ready(function() {
             $('#canvas-box').hide();
             $('#fst_block').hide();
             $('#paper-box').show();
+            $("#main-img").css('border-image-source', 'url()');
         }
         if (val == 'canvas') {
             $('#paper-box').hide();
