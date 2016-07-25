@@ -48,19 +48,30 @@ function addDataToForm() {
 };
 </script>
 <script>
-$('.toggle').click(function(e) {
-    e.preventDefault();
+$(document).ready(function() {
+    $('.toggle').click(function(e) {
+        e.preventDefault();
 
-    var $this = $(this);
+        var $this = $(this);
 
-    if ($this.next().hasClass('show')) {
-        $this.next().removeClass('show');
-        $this.next().slideUp(350);
-    } else {
-        $this.parent().parent().find('li .inner').removeClass('show');
-        $this.parent().parent().find('li .inner').slideUp(350);
-        $this.next().toggleClass('show');
-        $this.next().slideToggle(350);
+        if ($this.next().hasClass('show')) {
+            $this.next().removeClass('show');
+            $this.next().slideUp(350);
+        } else {
+            $this.parent().parent().find('li .inner').removeClass('show');
+            $this.parent().parent().find('li .inner').slideUp(350);
+            $this.next().toggleClass('show');
+            $this.next().slideToggle(350);
+        }
+    });
+
+    var level_2 = $('.accordion .active').parent().parent();
+    var level_0 = $(level_2).parent().parent();
+    if ($(level_0).attr('class') == "inner collapse") {
+        $(level_2).toggleClass('show');
+        $(level_2).slideToggle(1);
+        $(level_0).toggleClass('show');
+        $(level_0).slideToggle(1);
     }
 });
 </script>

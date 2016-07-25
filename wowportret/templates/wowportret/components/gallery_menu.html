@@ -15,8 +15,8 @@
                         {% for sub_sub_gal in sub_gal.children.all %}
                         <li>
                                     <a class="level-2 {% if request.path == sub_sub_gal.get_url %}
-                                    active
-                                {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
+                                                        active
+                                                      {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
                                     {{sub_sub_gal.title}}
                             </a>
                         </li>
@@ -26,8 +26,8 @@
                     {% else %}
                         <li>
                         <a class="level-1 {% if request.path == sub_gal.get_url %}
-                            active
-                        {% endif %}" href="/gallery/{{sub_gal.id}}">
+                                            active
+                                            {% endif %}" href="/gallery/{{sub_gal.id}}">
                         {{sub_gal.title}}
                         </a>
                     </li>
@@ -36,8 +36,9 @@
             </ul>
         {% else %}
         <a class="level-0 {% if request.path == gal.get_url %}
-                    active
-                    {% endif %}" href="/gallery/{{gal.id}}"> {{gal.title}} </a>
+                            active
+                            {% endif %}" href="/gallery/{{gal.id}}">
+                            {{gal.title}} </a>
         {% endif %}
     </li>
     {% endfor %}
