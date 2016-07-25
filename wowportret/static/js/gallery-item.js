@@ -183,16 +183,6 @@ $(document).ready(function() {
         var selected_radio = $('input[name=optionsRadios]:checked');
         var id = $(selected_radio).data('border');
         $('#' + id).show();
-        /*
-        1. Get $('#' + id) src url
-        2. Add on click css properties:
-            border-style: solid;
-            border-width: 27px 27px 27px 27px;
-            -moz-border-image: url(big1.jpg) 27 27 27 27 repeat;
-            -webkit-border-image: url(big1.jpg) 27 27 27 27 repeat;
-            -o-border-image: url(big1.jpg) 27 27 27 29 repeat;
-            border-image: url(/static/img/borders/C7/big2.jpg) 27 27 27 27 fill repeat;
-        */
         lastClicked_border = id;
     });
 
@@ -251,6 +241,8 @@ $(document).ready(function() {
             hidden_block.show();
         } else {
             hidden_block.hide();
+             $("#main-img").css('border-image-source', '');
+             $("#total-border > .in").hide();
         }
     });
 
