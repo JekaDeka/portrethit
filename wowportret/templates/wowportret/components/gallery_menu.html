@@ -10,8 +10,7 @@
                 {% for sub_gal in gal.children.all %}
                     {% if sub_gal.children.all %}
                     <li>
-                        <a href="#" class="toggle">{{sub_gal.title}}</a>
-                    </li>
+                        <a class="toggle" href="javascript:void(0);">{{sub_gal.title}}</a>
 
                     <ul class="inner collapse">
                         {% for sub_sub_gal in sub_gal.children.all %}
@@ -23,6 +22,7 @@
                             </a> -->
                         {% endfor %}
                         </ul>
+                        </li>
                     {% else %}
                         <li>
                         <a class="{% if request.path == sub_gal.get_url %}
