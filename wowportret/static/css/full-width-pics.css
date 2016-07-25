@@ -755,7 +755,7 @@ footer {
 }
 
 .baget-img {
-    max-width: 87.4%;
+    max-width: 98%;
     height: auto;
     position: absolute;
     z-index: 99;
@@ -778,8 +778,8 @@ footer {
         max-width: 427px;
     }
     .baget-img {
-        top: 10.4%;
-        left: 6.4%;
+        top: 8%;
+        left: 0%;
     }
     .baget-line {
         max-width: 117px;
@@ -841,8 +841,8 @@ footer {
         max-width: 427px;
     }
     .baget-img {
-        top: 10.3%;
-        left: 6.4%;
+        /*top: 10.3%;*/
+        /*left: 6.4%;*/
     }
     .header-classic {
         min-height: 511px;
@@ -918,8 +918,8 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 11.4%;
-        left: 6.4%;
+/*        top: 11.4%;
+        left: 6.4%;*/
     }
     .header-main {
         min-height: 223px;
@@ -1038,8 +1038,8 @@ footer {
         height: auto;
     }
     .baget-img {
-        top: 10.3%;
-        left: 6.3%;
+/*        top: 10.3%;
+        left: 6.3%;*/
     }
     .baget-title {
         max-height: 31px;
