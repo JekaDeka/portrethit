@@ -1,24 +1,44 @@
-<div class="list-group">
+<!-- <div class="list-group"> -->
+<ul class="accordion">
     {% for gal in all_gals %}
-        <a class="list-group-item
+    <li>
+        <!-- <a class="list-group-item
                 {% if request.path == gal.get_url %}
                     active
-                {% endif %}" href="/gallery/{{gal.id}}">
-                    <strong>{{gal.title}}</strong>
+                {% endif %}" href="/gallery/{{gal.id}}"> -->
+        <a class="toggle" href="javascript:void(0);">
+            <strong>{{gal.title}}</strong>
         </a>
-        {% for sub_gal in gal.children.all %}
-        <a class="list-group-item sub-item {% if request.path == sub_gal.get_url %}
+        <ul class="inner collapse">
+            {% for sub_gal in gal.children.all %}
+            <li>
+                <!-- <a class="list-group-item sub-item {% if request.path == sub_gal.get_url %}
                     active
-                {% endif %}" href="/gallery/{{sub_gal.id}}">
-                    {{sub_gal.title}}
-        </a>
-            {% for sub_sub_gal in sub_gal.children.all %}
-            <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
-                    active
-                {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
-                    {{sub_sub_gal.title}}
-            </a>
+                {% endif %}" href="/gallery/{{sub_gal.id}}"> -->
+                {{sub_gal.title}}
+                <!-- </a> -->
+            </li>
+                <ul class="inner collapse">
+                <li>
+                <a href="#" class="toggle">Open Inner</a>
+                <div class="inner collapse">
+                {% for sub_sub_gal in sub_gal.children.all %}
+
+                            <li>{{sub_sub_gal.title}}</li>
+
+
+                <!--             <a class="list-group-item sub-sub-item {% if request.path == sub_sub_gal.get_url %}
+                        active
+                    {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
+                        {{sub_sub_gal.title}}
+                </a> -->
+                {% endfor %}
+                </div>
+                </li>
+                </ul>
             {% endfor %}
-        {% endfor %}
+        </ul>
+    </li>
     {% endfor %}
-</div>
+</ul>
+<!-- </div> -->
