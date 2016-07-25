@@ -244,6 +244,7 @@ $(document).ready(function() {
             hidden_block.hide();
             $("#main-img").css('border-image-source', '');
             $("#total-border").hide();
+            $(".baget-active").removeClass('baget-active');
         }
     });
 
