@@ -32,9 +32,9 @@
                                     <img class="img-fluid img-full-width" src="{{ gal.image.url_415x415 }}" alt="{{ gal.alt }}">
                                 {% endif %}
                                 </a>
-                                    <p>
+                                    <span>
                                         <a class="a-glr" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
-                                    </p>
+                                    </span>
                                     <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 </div>
                                 {% endfor %}
