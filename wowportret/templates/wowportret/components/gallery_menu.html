@@ -3,14 +3,14 @@
     {% for gal in all_gals %}
     <li>
         {% if gal.children.all %}
-            <a class="level-0 toggle" href="javascript:void(0);">
+            <a class="level-0 toggle expandable" href="javascript:void(0);">
                 <strong>{{gal.title}}</strong>
             </a>
             <ul class="inner collapse">
                 {% for sub_gal in gal.children.all %}
                     {% if sub_gal.children.all %}
                     <li>
-                        <a class="level-1 toggle" href="javascript:void(0);">{{sub_gal.title}}</a>
+                        <a class="level-1 toggle expandable" href="javascript:void(0);">{{sub_gal.title}}</a>
                     <ul class="inner collapse">
                         {% for sub_sub_gal in sub_gal.children.all %}
                         <li>

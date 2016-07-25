@@ -1236,6 +1236,7 @@ option {
 
 .accordion li a {
     display: block;
+    text-decoration: none;
 }
 
 .accordion li a.level-0 {
@@ -1244,6 +1245,11 @@ option {
     font-size: 1.5rem;
     font-weight: normal;
     color: white;
+}
+
+.accordion li a.expandable:after {
+    float: right;
+    content: '\02193'; /* Unicode character for "plus" sign (+) */
 }
 
 .accordion li a.level-0:hover {
@@ -1284,7 +1290,7 @@ option {
 .accordion li a.level-2 {
     padding: 5px 30px;
     background-color: #777777;
-    font-size: .9rem;
+    font-size: 1.0rem;
     color: #eee;
 }
 
@@ -1292,7 +1298,7 @@ option {
     background-color: #323232;
 }
 
-.accordion h4 {
+/*.accordion h4 {
     padding: 5px 35px;
     background-color: #ffc25a;
     font-size: .9rem;
@@ -1313,5 +1319,6 @@ option {
 }
 
 .accordion .opened-for-codepen {
-    /*display: block;*/
+    display: block;
 }
+/*
