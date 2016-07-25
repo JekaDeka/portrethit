@@ -918,7 +918,7 @@ footer {
         height: auto;
     }
     .baget-img {
-/*        top: 11.4%;
+        /*        top: 11.4%;
         left: 6.4%;*/
     }
     .header-main {
@@ -1038,7 +1038,7 @@ footer {
         height: auto;
     }
     .baget-img {
-/*        top: 10.3%;
+        /*        top: 10.3%;
         left: 6.3%;*/
     }
     .baget-title {
@@ -1214,4 +1214,104 @@ option {
     -webkit-border-image: 27 27 27 27 repeat;
     -o-border-image: 27 27 27 27 repeat;
     border-image: 27 27 27 27 fill repeat;
+}
+
+
+/*accordion menu */
+
+.accordion {
+    /*width: 100%;*/
+    margin: 0;
+    padding: 0;
+}
+
+.accordion ul {
+    padding-left: 0;
+}
+
+.accordion li {
+    cursor: pointer;
+    list-style: none;
+}
+
+.accordion li a {
+    display: block;
+}
+
+.accordion li a.level-0 {
+    padding: 15px 20px;
+    background-color: #e44423;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+}
+
+.accordion li a.level-0:hover {
+    color: white;
+    background-color: #323232;
+}
+
+.accordion li a.level-0:first-child {
+    border-radius: 2px 2px 0 0;
+    border-bottom: 1px solid white;
+}
+
+.accordion li a.level-0:last-of-type {
+    border-radius: 0 0 2px 2px;
+}
+
+
+/*.accordion li a.test:not(:last-of-type) {
+    border-bottom: 1px solid white;
+}*/
+
+.accordion div,
+.accordion p {
+    display: none;
+}
+
+.accordion li a.level-1 {
+    padding: 5px 25px;
+    background-color: #5f5f5f;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.accordion li a.level-1:hover {
+    background-color: #323232;
+}
+
+.accordion li a.level-2 {
+    padding: 5px 30px;
+    background-color: #777777;
+    font-size: .9rem;
+    color: #eee;
+}
+
+.accordion li a.level-2:hover {
+    background-color: #323232;
+}
+
+.accordion h4 {
+    padding: 5px 35px;
+    background-color: #ffc25a;
+    font-size: .9rem;
+    color: #af720a;
+}
+
+.accordion h4:hover {
+    background-color: #e0b040;
+}
+
+.accordion p {
+    padding: 15px 35px;
+    background-color: #ddd;
+    font-family: "Georgia";
+    font-size: .8rem;
+    color: #333;
+    line-height: 1.3rem;
+}
+
+.accordion .opened-for-codepen {
+    /*display: block;*/
 }
