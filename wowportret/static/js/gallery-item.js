@@ -242,7 +242,7 @@ $(document).ready(function() {
         } else {
             hidden_block.hide();
              $("#main-img").css('border-image-source', '');
-             $("#total-border > .in").hide();
+             $("#total-border > .collapse").hide();
         }
     });
 
