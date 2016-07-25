@@ -12,11 +12,11 @@
         <ul class="inner collapse">
             {% for sub_gal in gal.children.all %}
             <li>
-                <!-- <a class="list-group-item sub-item {% if request.path == sub_gal.get_url %}
+                <a class="list-group-item sub-item {% if request.path == sub_gal.get_url %}
                     active
-                {% endif %}" href="/gallery/{{sub_gal.id}}"> -->
+                {% endif %}" href="/gallery/{{sub_gal.id}}">
                 {{sub_gal.title}}
-                <!-- </a> -->
+                </a>
             </li>
             <ul class="inner collapse">
                 <li>
