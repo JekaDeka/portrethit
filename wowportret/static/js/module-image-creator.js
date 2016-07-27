@@ -15,12 +15,15 @@ $(document).ready(function() {
         offset = width / 15;
         ctx.lineWidth = offset / 2;
         createImage();
-        ctx.strokeStyle = "#666";
-        ctx.fillStyle = "#666";
-        ctx.shadowColor = 'white';
-        ctx.shadowBlur = 1;
-        ctx.shadowOffsetX = 2;
-        ctx.shadowOffsetY = 1;
+
+        var gradient = ctx.createLinearGradient(0, 0, c.width, c.height);
+        gradient.addColorStop("0", "#333");
+        gradient.addColorStop("1.0", "#666");
+
+
+        ctx.strokeStyle = gradient;
+        ctx.fillStyle = 'white';
+
     }
 
     function createImage() {

@@ -112,9 +112,9 @@
                                                             <img src="{% static 'img/borders/C6/big3.jpg' %}" class="baget-border collapse" id="borderC6_3">
                                                             <img src="{% static 'img/borders/C7/big1.jpg' %}" class="baget-border collapse" id="borderC7_1">
                                                             <img src="{% static 'img/borders/C7/big2.jpg' %}" class="baget-border collapse" id="borderC7_2"> {% if item.image %}
-                                                            <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
+
                                                             <img src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" class="baget-img main-img-border" id="main-img">
-                                                            <!-- <img src="http://placehold.it/800x600" alt="{{ item.alt }}" class="baget-img main-img-border" id="main-img"> --> {% endif %}
+                                                            {% endif %}
                                                             <div class="row">
                                                                 <div class="col-xs-12 p-y-2">
                                                                     <div id="total-border">
@@ -352,6 +352,7 @@
                                             <div class="row">
                                                 <div class="col-md-offset-1 col-md-10 m-y-1 p-x-3">
                                                     <img src="{{ item.image.url}}" alt="{{ item.alt }}" id="img-for-canvas" style="display: none;">
+                                                    <!-- <img src="http://placehold.it/800x1200" alt="{{ item.alt }}" class="baget-img main-img-border" id="img-for-canvas" style="display: none;"> -->
                                                     <canvas id="myCanvas" width="800" height="600" style="max-width: 100%;">
                                                         Your browser does not support the HTML5 canvas tag. Ваш браузер не поддерживает HTML5 canvas tag.
                                                     </canvas>
