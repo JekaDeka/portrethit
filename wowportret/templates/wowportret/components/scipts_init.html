@@ -14,7 +14,11 @@ function addDataToForm() {
     if ($('#fst_block :input[type=checkbox]').prop('checked')) {
         baget = $('input[name=optionsRadios]:checked').parent().text().trim();
         //get type of baget from img src attribute by several splitting
-        var baget_type = $('.border-mini-img').find('.baget-active').attr('src').split('/')[5].split('.')[0].split('mini')[1];
+        var baget_border = $('.border-mini-img').find('.baget-active');
+        var baget_type = 'не выбран.';
+        if (baget_border.length != 0) {
+            baget_type = $(baget_type).attr('src').split('/')[5].split('.')[0].split('mini')[1];
+        }
         baget = baget + ", тип: " + baget_type;
     } else {
         baget = "Не оформлять багет";
