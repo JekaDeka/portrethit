@@ -18,8 +18,8 @@ $(document).ready(function() {
         ctx.strokeStyle = "#444";
         ctx.fillStyle = "#444";
         ctx.shadowColor = 'white';
-        ctx.shadowBlur = 2;
-        ctx.shadowOffsetX = 1;
+        ctx.shadowBlur = 1;
+        ctx.shadowOffsetX = 2;
         ctx.shadowOffsetY = 1;
     }
 
