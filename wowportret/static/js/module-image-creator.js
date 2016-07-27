@@ -15,10 +15,10 @@ $(document).ready(function() {
     }
 
     function createImage() {
-        $(c).width(mini_img.width);
-        $(c).height(mini_img.height);
+        // $(c).width(415);
+        // $(c).height(415);
         ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(mini_img, 4, 4, 415, 415);
+        ctx.drawImage(mini_img, 4, 4);
 
         //Turn transparency on
 
