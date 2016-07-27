@@ -22,7 +22,7 @@ $(document).ready(function() {
 
 
         ctx.strokeStyle = gradient;
-        ctx.fillStyle = 'gray';
+        ctx.fillStyle = 'white';
 
         ctx.shadowBlur = 3;
         ctx.shadowOffsetX = 2;
