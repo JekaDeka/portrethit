@@ -15,10 +15,10 @@ $(document).ready(function() {
         offset = width / 15;
         ctx.lineWidth = offset / 2;
         createImage();
-        ctx.strokeStyle = "#666";
-        ctx.fillStyle = "#666";
+        ctx.strokeStyle = "#555";
+        ctx.fillStyle = "#555";
         ctx.shadowColor = 'white';
-        ctx.shadowBlur = 3;
+        ctx.shadowBlur = 2;
         ctx.shadowOffsetX = 1;
         ctx.shadowOffsetY = 1;
     }
