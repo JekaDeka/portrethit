@@ -1,6 +1,8 @@
 $(document).ready(function() {
     var c = document.getElementById("myCanvas");
-    var mini_img = document.getElementById("main-img");
+    var img = document.getElementById("img-for-canvas");
+    $(c).width(img.width);
+    $(c).height(img.height);
     var ctx = c.getContext("2d");
     var width = c.width;
     var height = c.height;
@@ -15,8 +17,6 @@ $(document).ready(function() {
     }
 
     function createImage() {
-        // $(c).width(415);
-        // $(c).height(415);
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(mini_img, 4, 4);
 
