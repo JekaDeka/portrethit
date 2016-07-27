@@ -5,8 +5,6 @@ $(document).ready(function() {
     var width = 0;
     var height = 0;
     var offset = 0;
-    ctx.strokeStyle = "#666";
-    ctx.fillStyle = "#666";
     //ctx.globalAlpha = 0.8;
 
     window.onload = function() {
@@ -17,6 +15,8 @@ $(document).ready(function() {
         offset = width / 15;
         ctx.lineWidth = offset / 2;
         createImage();
+        ctx.strokeStyle = "#666";
+        ctx.fillStyle = "#666";
         ctx.shadowColor = 'white';
         ctx.shadowBlur = 3;
         ctx.shadowOffsetX = 1;
