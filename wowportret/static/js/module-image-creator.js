@@ -17,6 +17,10 @@ $(document).ready(function() {
         offset = width / 15;
         ctx.lineWidth = offset / 2;
         createImage();
+        ctx.shadowColor = 'white';
+        ctx.shadowBlur = 3;
+        ctx.shadowOffsetX = 1;
+        ctx.shadowOffsetY = 1;
     }
 
     function createImage() {
