@@ -6,9 +6,11 @@ $(document).ready(function() {
     var height = c.height;
     var offset = width / 15;
     ctx.lineWidth = offset / 2;
-    ctx.strokeStyle = "#444";
-    ctx.fillStyle = "#444";
+    ctx.strokeStyle = "#333";
+    ctx.fillStyle = "#333";
     //ctx.globalAlpha = 0.8;
+    c.width = img.width;
+    c.height = img.height;
 
     window.onload = function() {
         createImage();
