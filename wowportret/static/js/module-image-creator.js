@@ -18,7 +18,7 @@ $(document).ready(function() {
         $(c).width(mini_img.width);
         $(c).height(mini_img.height);
         ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(mini_img, 4, 4);
+        ctx.drawImage(mini_img, 4, 4, 415, 415);
 
         //Turn transparency on
 
