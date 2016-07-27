@@ -1,8 +1,6 @@
 $(document).ready(function() {
     var c = document.getElementById("myCanvas");
     var img = document.getElementById("img-for-canvas");
-    $(c).width(img.width);
-    $(c).height(img.height);
     var ctx = c.getContext("2d");
     var width = c.width;
     var height = c.height;
