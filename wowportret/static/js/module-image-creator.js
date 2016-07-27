@@ -18,12 +18,7 @@ $(document).ready(function() {
 
     function createImage() {
         ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(mini_img, 4, 4);
-
-        //Turn transparency on
-
-        // drawRectangle();
-
+        ctx.drawImage(img, 4, 4);
     }
 
 
