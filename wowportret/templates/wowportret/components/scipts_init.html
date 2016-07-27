@@ -17,7 +17,7 @@ function addDataToForm() {
         var baget_border = $('.border-mini-img').find('.baget-active');
         var baget_type = 'не выбран.';
         if (baget_border.length != 0) {
-            baget_type = $(baget_type).attr('src').split('/')[5].split('.')[0].split('mini')[1];
+            baget_type = $(baget_border).attr('src').split('/')[5].split('.')[0].split('mini')[1];
         }
         baget = baget + ", тип: " + baget_type;
     } else {
