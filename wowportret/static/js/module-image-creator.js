@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     function createImage() {
         $(c).width(mini_img.width);
-        $(c).width(mini_img.height);
+        $(c).height(mini_img.height);
         ctx.imageSmoothingEnabled = false;
         ctx.drawImage(mini_img, 4, 4);
 
