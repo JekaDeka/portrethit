@@ -53,6 +53,28 @@ function addDataToForm() {
         "<p class='price'>" + opts + "</p>" +
         "<p class='price'> Цена: " + price + " руб.</p>");
 };
+
+function addMoudleDataToForm() {
+    var name = $('h2').text();
+    var size = $("#mod_size option:selected");
+    var mat_type = "Модульная печать, вариант: " + $(":input[name=module-type]:checked").attr('id').split('-')[1];
+    var price = $("#module_total_price").text();
+    var opts = "";
+
+    if ($("#module_lac_check:visible").prop("checked")) {
+        opts += "Прописать масляной краской. <br>";
+    }
+    if ($("#module_gel_check:visible").prop("checked")) {
+        opts += "Покрыть текстурным гелем. <br>";
+    }
+
+    // $("#id_contact_item").val(name + ",\nРазмеры: \n" + size + ",\n" + baget + " " + opts + "Цена: " + price);
+    $("#info").html("<p class='price'>" + name + "</p>" +
+        "<p class='price'>" + mat_type + "</p>" +
+        "<p class='price'>Размер: " + $(size[0]).text() + "</p>" +
+        "<p class='price'>" + opts + "</p>" +
+        "<p class='price'> Цена: " + price + " руб.</p>");
+};
 </script>
 <script>
 $(document).ready(function() {
@@ -79,8 +101,7 @@ $(document).ready(function() {
         $(level_2).slideToggle(0);
         $(level_0).toggleClass('show');
         $(level_0).slideToggle(0);
-    }
-    else if ($(level_2).attr('class') == "inner collapse") {
+    } else if ($(level_2).attr('class') == "inner collapse") {
         $(level_2).toggleClass('show');
         $(level_2).slideToggle(0);
     }

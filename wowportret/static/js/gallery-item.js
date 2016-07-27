@@ -86,37 +86,34 @@ $(document).ready(function() {
 
     function change_price_by_module_option() {
         var mod_val = $('#mod_size').val();
-        if (mod_val == 0) {
-            change_price_by_main_size();
-        }
 
         if (mod_val == 3800) {
-            $(':input[id="lac_check"]').attr('value', '5820'); //maslo
-            $(':input[id="gel_check"]').attr('value', '12070'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '5820'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '12070'); //propis
         }
         if (mod_val == 5900) {
-            $(':input[id="lac_check"]').attr('value', '8450'); //maslo
-            $(':input[id="gel_check"]').attr('value', '18390'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '8450'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '18390'); //propis
 
         }
         if (mod_val == 8590) {
-            $(':input[id="lac_check"]').attr('value', '14990'); //maslo
-            $(':input[id="gel_check"]').attr('value', '30990'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '14990'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '30990'); //propis
 
         }
         if (mod_val == 11990) {
-            $(':input[id="lac_check"]').attr('value', '19490'); //maslo
-            $(':input[id="gel_check"]').attr('value', '38490'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '19490'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '38490'); //propis
 
         }
         if (mod_val == 12900) {
-            $(':input[id="lac_check"]').attr('value', '22900'); //maslo
-            $(':input[id="gel_check"]').attr('value', '44500'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '22900'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '44500'); //propis
 
         }
         if (mod_val == 13990) {
-            $(':input[id="lac_check"]').attr('value', '25870'); //maslo
-            $(':input[id="gel_check"]').attr('value', '54870'); //propis
+            $(':input[id="module_lac_check"]').attr('value', '25870'); //maslo
+            $(':input[id="module_gel_check"]').attr('value', '54870'); //propis
 
         }
     };
@@ -171,8 +168,24 @@ $(document).ready(function() {
         }
         calculate_total_price();
     });
-    $(':input').on('change', function() {
+    $('#standart_tab :input').on('change', function() {
         calculate_total_price();
+    });
+
+    $('#module_tab :input').on('change', function() {
+        change_price_by_module_option();
+        var mod_price = $('#mod_size').val();
+        var lac_price = parseInt(0);
+        if ($("#module_lac_check").prop("checked")) {
+            lac_price = parseInt($("#lac_check").val());
+        }
+        var gel_price = parseInt(0);
+        if ($("#module_gel_check").prop("checked")) {
+            gel_price = parseInt($("#gel_check").val());
+        }
+        var total_price = parseInt(mod_price) + lac_price + gel_price;
+        $("#module_total_price").text(total_price);
+
     });
 
 
@@ -206,25 +219,6 @@ $(document).ready(function() {
         lastClicked_border_img = img_id;
     });
 
-
-    $(".fancybox-thumb").fancybox({
-        prevEffect: 'none',
-        nextEffect: 'none',
-        helpers: {
-            title: {
-                type: 'outside'
-            },
-            thumbs: {
-                width: 50,
-                height: 50
-            }
-        }
-    });
-    $(".fancybox").fancybox({
-        openEffect: 'elastic',
-        closeEffect: 'elastic'
-    });
-
     $(".checkbox").click(function(event) {
         var hidden_block = $(this).find('.collapse');
 
@@ -248,6 +242,23 @@ $(document).ready(function() {
             $("#total-border").hide();
             $(".baget-active").removeClass('baget-active');
         }
+    });
+    $(".fancybox-thumb").fancybox({
+        prevEffect: 'none',
+        nextEffect: 'none',
+        helpers: {
+            title: {
+                type: 'outside'
+            },
+            thumbs: {
+                width: 50,
+                height: 50
+            }
+        }
+    });
+    $(".fancybox").fancybox({
+        openEffect: 'elastic',
+        closeEffect: 'elastic'
     });
 
     // $(window).scroll(function(event) {
