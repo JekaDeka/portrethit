@@ -15,24 +15,10 @@ $(document).ready(function() {
     }
 
     function createImage() {
-        //Get src of full sized image
-        var src = mini_img.src;
-        var tmp = src.split('.');
-        src = tmp[0] + '.' + tmp[1] + '.jpg';
-        //var src = mini_img.src
-
-        //create full sized image
-        var img = document.createElement('img');
-        img.src = src;
-        img.alt = mini_img.alt;
-        img.title = mini_img.title
-            // $(img).addClass('img-responsive');
-            // c.appendChild(img);
-
-        $(c).width(img.width);
+        $(c).width(mini_img.width);
 
         ctx.imageSmoothingEnabled = false;
-        ctx.drawImage(img, 4, 4);
+        ctx.drawImage(mini_img, 4, 4);
 
         //Turn transparency on
 
