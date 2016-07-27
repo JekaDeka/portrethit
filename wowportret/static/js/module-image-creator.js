@@ -2,9 +2,9 @@ $(document).ready(function() {
     var c = document.getElementById("myCanvas");
     var img = document.getElementById("img-for-canvas");
     var ctx = c.getContext("2d");
-    var width = c.width;
-    var height = c.height;
-    var offset = width / 15;
+    var width = 0;
+    var height = 0;
+    var offset = 0;
     ctx.lineWidth = offset / 2;
     ctx.strokeStyle = "#333";
     ctx.fillStyle = "#333";
@@ -13,6 +13,9 @@ $(document).ready(function() {
     window.onload = function() {
         c.width = img.width;
         c.height = img.height;
+        width = c.width;
+        height = c.height;
+        offset = width / 15;
         createImage();
     }
 
