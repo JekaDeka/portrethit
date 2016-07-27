@@ -5,7 +5,6 @@ $(document).ready(function() {
     var width = 0;
     var height = 0;
     var offset = 0;
-    ctx.lineWidth = offset / 2;
     ctx.strokeStyle = "#333";
     ctx.fillStyle = "#333";
     //ctx.globalAlpha = 0.8;
@@ -16,6 +15,7 @@ $(document).ready(function() {
         width = c.width;
         height = c.height;
         offset = width / 15;
+        ctx.lineWidth = offset / 2;
         createImage();
     }
 
