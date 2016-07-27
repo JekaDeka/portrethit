@@ -173,7 +173,7 @@ def get_form(request):
 
             # template of mail
             content = "name: " + contact_name + "\n"
-            content = "phone " + contact_phone + "\n"
+            content += "phone " + contact_phone + "\n"
             content += "email " + contact_email + "\n"
             content += "text " + form_content + "\n"
 
@@ -209,10 +209,10 @@ def get_item_form(request):
             contact_item = form.cleaned_data['contact_item']
 
             # template of mail
-            content = "name: " + contact_name + "\n"
-            content = "phone: " + contact_phone + "\n"
-            content += "email: " + contact_email + "\n"
-            content += "message: " + form_content + "\n"
+            content = "Имя: " + contact_name + "\n"
+            content += "Телефон: " + contact_phone + "\n"
+            content += "Почта: " + contact_email + "\n"
+            content += "Сообщение: " + form_content + "\n"
             content += "" + contact_item + "\n"
 
             email = EmailMessage(
