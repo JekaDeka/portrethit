@@ -18,7 +18,7 @@ $(document).ready(function() {
         //Get src of full sized image
         var src = mini_img.src;
         var tmp = src.split('.');
-        src = tmp[0] + '.' + tmp[2];
+        src = tmp[0] + '.' + tmp[1] + '.' + tmp[2] + '.jpg';
         //var src = mini_img.src
 
         //create full sized image
