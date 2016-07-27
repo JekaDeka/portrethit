@@ -5,8 +5,8 @@ $(document).ready(function() {
     var width = 0;
     var height = 0;
     var offset = 0;
-    ctx.strokeStyle = "#333";
-    ctx.fillStyle = "#333";
+    ctx.strokeStyle = "#666";
+    ctx.fillStyle = "#666";
     //ctx.globalAlpha = 0.8;
 
     window.onload = function() {
