@@ -16,10 +16,10 @@ $(document).ready(function() {
 
     function createImage() {
         //Get src of full sized image
-        // var src = $(mini_img).attr('src');
-        // var tmp = src.split('.');
-        // src = tmp[0] + '.' + tmp[2];
-        var src = mini_img.src
+        var src = $(mini_img).attr('src');
+        var tmp = src.split('.');
+        src = tmp[0] + '.' + tmp[2];
+        //var src = mini_img.src
 
         //create full sized image
         var img = document.createElement('img');
