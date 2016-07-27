@@ -13,7 +13,7 @@ $(document).ready(function() {
         width = c.width;
         height = c.height;
         offset = width / 15;
-        ctx.lineWidth = offset / 2;
+        ctx.lineWidth = offset / 4;
         createImage();
 
         var gradient = ctx.createLinearGradient(0, 0, c.width, c.height);
@@ -22,7 +22,12 @@ $(document).ready(function() {
 
 
         ctx.strokeStyle = gradient;
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'gray';
+
+        ctx.shadowBlur = 3;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 2;
+        ctx.shadowColor = 'white';
 
         drawFigureByClickedName(1);
 
