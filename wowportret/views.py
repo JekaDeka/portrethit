@@ -219,7 +219,7 @@ def get_item_form(request):
                 "kateart@wowportret.ru",
                 content,
                 "kateart@wowportret.ru" + '',
-                ['kateart222@gmail.com'],
+                ['ZharkovEvgeniy94@gmail.com'],
                 headers={'Reply-To': contact_email}
             )
             if request.FILES:
