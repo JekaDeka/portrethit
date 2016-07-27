@@ -86,4 +86,4 @@ class ContactForm(forms.Form):
 
 class ItemForm(ContactForm):
     contact_item = forms.CharField(
-        label='Ваш заказ', required=True, widget=forms.HiddenInput)
+        label='Ваш заказ', required=False, widget=forms.HiddenInput)

@@ -52,6 +52,15 @@ function addDataToForm() {
         "<p class='price'>" + baget + "</p>" +
         "<p class='price'>" + opts + "</p>" +
         "<p class='price'> Цена: " + price + " руб.</p>");
+
+
+    $('#id_contact_item').val("Название: " + name + "\n" +
+        "Тип материала: " + mat_type + "\n" +
+        "Размер: " + $(size[0]).text() + "\n" +
+        "" + baget + "\n" +
+        "" + opts + "\n" +
+        "Цена: " + price + " руб.\n" +
+        "Ссылка на изображение: http://wowportret.ru/static" + $('#main-img').attr('src'));
 };
 
 function addMoudleDataToForm() {
@@ -74,6 +83,15 @@ function addMoudleDataToForm() {
         "<p class='price'>Размер: " + $(size[0]).text() + "</p>" +
         "<p class='price'>" + opts + "</p>" +
         "<p class='price'> Цена: " + price + " руб.</p>");
+
+    var str = $(':input[name=module-type]:checked').attr('id')
+    $('#id_contact_item').val("Название: " + name + "\n" +
+        "Тип материала: " + mat_type + "\n" +
+        "Размер: " + $(size[0]).text() + "\n" +
+        "" + opts + "\n" +
+        "Цена: " + price + " руб.\n" +
+        "Ссылка на изображение: http://wowportret.ru/static" + $('#main-img').attr('src') + "\n" +
+        "Ссылка на вариант багета: " + $('label[for="' + str + '"]').css('background-image').replace(/.*\s?url\([\'\"]?/, '').replace(/[\'\"]?\).*/, ''));
 };
 </script>
 <script>

@@ -210,10 +210,10 @@ def get_item_form(request):
 
             # template of mail
             content = "name: " + contact_name + "\n"
-            content = "phone " + contact_phone + "\n"
-            content += "email " + contact_email + "\n"
-            content += "text " + form_content + "\n"
-            content += "extra:  " + contact_item + "\n"
+            content = "phone: " + contact_phone + "\n"
+            content += "email: " + contact_email + "\n"
+            content += "message: " + form_content + "\n"
+            content += "" + contact_item + "\n"
 
             email = EmailMessage(
                 "kateart@wowportret.ru",
