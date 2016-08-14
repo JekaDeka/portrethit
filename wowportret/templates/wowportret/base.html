@@ -17,25 +17,7 @@
     <script src="{% static 'js/lazy/jquery.lazy.min.js' %}"></script>
     <script>
     $(function() {
-        $('.lazy').lazy({
-            // called before an elements gets handled
-            beforeLoad: function(element) {
-                var imageSrc = element.data('src');
-                console.log('image "' + imageSrc + '" is about to be loaded');
-            },
-
-            // called after an element was successfully handled
-            afterLoad: function(element) {
-                var imageSrc = element.data('src');
-                console.log('image "' + imageSrc + '" was loaded successfully');
-            },
-
-            // called whenever an element could not be handled
-            onError: function(element) {
-                var imageSrc = element.data('src');
-                console.log('image "' + imageSrc + '" could not be loaded');
-            }
-        });
+        $('.lazy').lazy();
     });
     </script>
 </body>
