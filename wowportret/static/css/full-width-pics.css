@@ -141,8 +141,8 @@ option{font-size:21px;}
 .main-img-border{border-style:solid;border-color:white;border-width:27px 27px 27px 27px;-moz-border-image:27 27 27 27 repeat;-webkit-border-image:27 27 27 27 repeat;-o-border-image:27 27 27 27 repeat;border-image:27 27 27 27 fill repeat;}
 .accordion{margin:0;padding:0;}
 .accordion ul{padding-left:0;}
-.accordion li{cursor:pointer;list-style:none;display: inline-block;width: 100%;}
-.accordion li a{display:block;text-decoration:none;}
+.accordion li{cursor:pointer;list-style:none;}
+.accordion li a{display:block;text-decoration:none;width: 100%; display: inline-block;}
 .accordion li a.level-0{padding:15px 10px;background-color:#3570a3;font-size:1.5rem;font-weight:normal;color:white;}
 .accordion li a.expandable:after{float:right;content:'\02193';}
 .accordion li a.level-0:hover{color:white;background-color:#323232;}
