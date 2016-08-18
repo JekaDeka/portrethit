@@ -8,6 +8,7 @@ from django.shortcuts import redirect, render
 from django.template import loader, Context
 from django.db.models import Q
 from functools import partial
+import re
 
 from wowportret.forms import ContactForm, ItemForm
 from wowportret.models import Document, Post
@@ -171,27 +172,28 @@ def get_form(request):
             contact_email = form.cleaned_data['contact_email']
             form_content = form.cleaned_data['content']
 
-            # template of mail
-            content = "Name: " + contact_name + "\n"
-            content += "Phone " + contact_phone + "\n"
-            content += "Email: " + contact_email + "\n"
-            content += "Message: " + form_content + "\n"
+            if (re.match('^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$', contact_phone)):
+                # template of mail
+                content = "Name: " + contact_name + "\n"
+                content += "Phone " + contact_phone + "\n"
+                content += "Email: " + contact_email + "\n"
+                content += "Message: " + form_content + "\n"
 
-            email = EmailMessage(
-                "kateart@wowportret.ru",
-                content,
-                "kateart@wowportret.ru" + '',
-                ['kateartis22@gmail.com'],
-                headers={'Reply-To': contact_email}
-            )
-            if request.FILES:
-                image = request.FILES['docfile']
-                newdoc = Document(docfile=image)
-                newdoc.save()
-                email.attach_file(newdoc.docfile.path)
+                email = EmailMessage(
+                    "kateart@wowportret.ru",
+                    content,
+                    "kateart@wowportret.ru" + '',
+                    ['kateartis22@gmail.com'],
+                    headers={'Reply-To': contact_email}
+                )
+                if request.FILES:
+                    image = request.FILES['docfile']
+                    newdoc = Document(docfile=image)
+                    newdoc.save()
+                    email.attach_file(newdoc.docfile.path)
 
-            email.send()
-            sended = True
+                email.send()
+                sended = True
     return form, sended
 
 
@@ -207,29 +209,30 @@ def get_item_form(request):
             contact_email = form.cleaned_data['contact_email']
             form_content = form.cleaned_data['content']
             contact_item = form.cleaned_data['contact_item']
+            if (re.match('^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$', contact_phone)):
 
-            # template of mail
-            content = "Name: " + contact_name + "\n"
-            content += "Phone: " + contact_phone + "\n"
-            content += "Email: " + contact_email + "\n"
-            content += "Message: " + form_content + "\n"
-            content += "" + contact_item + "\n"
+                # template of mail
+                content = "Name: " + contact_name + "\n"
+                content += "Phone: " + contact_phone + "\n"
+                content += "Email: " + contact_email + "\n"
+                content += "Message: " + form_content + "\n"
+                content += "" + contact_item + "\n"
 
-            email = EmailMessage(
-                "kateart@wowportret.ru",
-                content,
-                "kateart@wowportret.ru" + '',
-                ['kateartis22@gmail.com'],
-                headers={'Reply-To': contact_email}
-            )
-            if request.FILES:
-                image = request.FILES['docfile']
-                newdoc = Document(docfile=image)
-                newdoc.save()
-                email.attach_file(newdoc.docfile.path)
+                email = EmailMessage(
+                    "kateart@wowportret.ru",
+                    content,
+                    "kateart@wowportret.ru" + '',
+                    ['kateartis22@gmail.com'],
+                    headers={'Reply-To': contact_email}
+                )
+                if request.FILES:
+                    image = request.FILES['docfile']
+                    newdoc = Document(docfile=image)
+                    newdoc.save()
+                    email.attach_file(newdoc.docfile.path)
 
-            email.send()
-            sended = True
+                email.send()
+                sended = True
     return form, sended
 
 
