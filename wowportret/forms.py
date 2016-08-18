@@ -74,7 +74,7 @@ class ContactForm(forms.Form):
         self.fields['contact_name'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'Иван'})
         self.fields['contact_phone'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': '+7 (987) 654-32-11'})
+            {'class': 'form-control', 'placeholder': '8(926)123-45-67'})
         self.fields['contact_email'].widget.attrs.update(
             {'class': 'form-control', 'placeholder': 'ivan@mail.ru'})
         self.fields['content'].widget.attrs.update(
