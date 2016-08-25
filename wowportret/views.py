@@ -251,4 +251,37 @@ def post_detail(request, pk):
     if sended:
         return redirect('thank_page')
     post = get_object_or_404(Post, pk=pk)
+<<<<<<< HEAD
+    return render(request, 'wowportret/blog/post_detail.html', {'post': post, 'form': form_class})
+
+
+
+
+
+
+def price_page(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+    return render(request, 'wowportret/price.html', {'form': form_class})
+
+def delivery_page(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+    return render(request, 'wowportret/delivery.html', {'form': form_class})
+
+def payment_page(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+    return render(request, 'wowportret/payment.html', {'form': form_class})
+
+def contacts_page(request):
+    form_class, sended = get_form(request)
+    if sended:
+        return redirect('thank_page')
+    return render(request, 'wowportret/contacts.html', {'form': form_class})
+=======
     return render(request, 'wowportret/blog/post_detail.html', {'post': post, 'form': form})
+>>>>>>> master
