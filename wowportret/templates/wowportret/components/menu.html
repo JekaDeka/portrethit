@@ -1,7 +1,7 @@
 <nav id="main_nav" class="navbar navbar-fixed-top navbar-light bg-faded-cstm navigation">
-<div class="container>
-    <a class="navbar-toggle ramka mob_tel hidden-md-up" href="tel:12345678">
-        <i class="fa fa-phone fa-2x">Здесь должна быть иконка телефоны</i>
+<div class="container">
+    <a>
+        <span class="phone-icon"></span> +7(495) <span class="phone-blue"> 908-72-74 </span>, +7-915- <span class="phone-blue">463-0964 </span>, <strong>wowportret24@gmail.com</strong>
     </a>
     <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
         &#9776;
@@ -36,6 +36,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/baget/' %} active {% endifequal%}" href="/gallery/65/">Багетные рамы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/">Картины и сюжеты</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {% ifequal request.path '/contacts/' %} active {% endifequal%}" href="/contacts/">Контакты</a>

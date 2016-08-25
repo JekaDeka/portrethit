@@ -251,7 +251,6 @@ def post_detail(request, pk):
     if sended:
         return redirect('thank_page')
     post = get_object_or_404(Post, pk=pk)
-<< << << < HEAD
     return render(request, 'wowportret/blog/post_detail.html', {'post': post, 'form': form_class})
 
 
