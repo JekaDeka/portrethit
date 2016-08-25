@@ -25,12 +25,12 @@
                             </div>
                             <div class="row">
                                 {% for gal in galleries %}
-                                <div class="col-md-12 text-xs-center">
+                                <!-- <div class="col-md-12 text-xs-center"> -->
                                     <p>
                                         <h3>{{ gal.title|upper }}</h3>
                                     </p>
                                     <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
-                                </div>
+                                <!-- </div> -->
                                 {% for item in gal.items.all %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
