@@ -3,6 +3,7 @@ from wowportret import views
 
 urlpatterns = [
     url(r'^$', views.gallery_page, name='gallery_page'),
+    url(r'^test/$', views.test_page, name='test_page'),
     url(r'^art/$', views.art_page, name='art_page'),
     url(r'^classic/$', views.classic_page, name='classic_page'),
     url(r'^holst/$', views.holst_page, name='holst_page'),

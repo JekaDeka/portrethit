@@ -2,15 +2,17 @@ from django.db import models
 from django.core.exceptions import ValidationError
 import PIL
 from PIL import ImageOps
+from ckeditor.fields import RichTextField
 from galleryserve.thumbs import ImageWithThumbsField
+from django.utils.encoding import python_2_unicode_compatible
 
 
 class Gallery(models.Model):
     title = models.CharField(max_length=200, help_text="Title of gallery")
     image = ImageWithThumbsField(
         blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
-    content = models.CharField(
-        blank=True, max_length=200, help_text="Mini description of gallery")
+    content = RichTextField(
+        blank=True, help_text="Mini description of gallery")
     height = models.IntegerField(blank=True, default=600,
                                  help_text="Height images should be resized to in pixels")
     width = models.IntegerField(blank=True, default=800,
@@ -34,8 +36,12 @@ class Gallery(models.Model):
         default=False, help_text="Is it baguette gallery")
 
     class Meta:
-        ordering = ('id',)
+        ordering = ('title',)
         verbose_name_plural = 'galleries'
+
+    def get_url(self):
+        url = '/gallery/' + str(self.id) + '/'
+        return url
 
     # def __unicode__(self):
     #     return u'%s' % (self.title)
@@ -95,6 +101,7 @@ class Gallery(models.Model):
     #     return ('category_index', (), {'category': self.slug})
 
 
+#@python_2_unicode_compatible
 class Item(models.Model):
     image = ImageWithThumbsField(
         blank=True, upload_to='galleryserve/images', sizes=((125, 125), (415, 415)))
@@ -117,7 +124,7 @@ class Item(models.Model):
     price = models.IntegerField(default=0, help_text="Price for item")
 
     class Meta:
-        ordering = ('sort',)
+        ordering = ('sort', '-title')
 
     def __unicode__(self):
         return u'%s' % (self.alt)

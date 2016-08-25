@@ -1,22 +1,46 @@
-<div class="list-group">
+<!-- <div class="list-group"> -->
+<ul class="accordion">
     {% for gal in all_gals %}
-    {% with id=gal.id|stringformat:"s/" %}
-    <a class="list-group-item
-                {% if request.path == '/gallery/'|add:id %}
-                    active
-                {% endif %}
-                {% if gal.parent != None %}
-                    sub-item
-                {% endif %} "
-                 href="/gallery/{{gal.id}}">
-
-                {% if gal.parent == None %}
-                    <strong>{{gal.title}}</strong>
-                {% else %}
-                    {{gal.title}}
-                {% endif %}
-
-    </a>
-    {% endwith %}
+    <li>
+        {% if gal.children.all %}
+            <a class="level-0 toggle expandable" href="javascript:void(0);">
+                <strong>{{gal.title}}</strong>
+            </a>
+            <ul class="inner collapse">
+                {% for sub_gal in gal.children.all %}
+                    {% if sub_gal.children.all %}
+                    <li>
+                        <a class="level-1 toggle expandable" href="javascript:void(0);">{{sub_gal.title}}</a>
+                    <ul class="inner collapse">
+                        {% for sub_sub_gal in sub_gal.children.all %}
+                        <li>
+                                    <a class="level-2 {% if request.path == sub_sub_gal.get_url %}
+                                                        active
+                                                      {% endif %}" href="/gallery/{{sub_sub_gal.id}}">
+                                    {{sub_sub_gal.title}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                        </ul>
+                        </li>
+                    {% else %}
+                        <li>
+                        <a class="level-1 {% if request.path == sub_gal.get_url %}
+                                            active
+                                            {% endif %}" href="/gallery/{{sub_gal.id}}">
+                        {{sub_gal.title}}
+                        </a>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% else %}
+        <a class="level-0 {% if request.path == gal.get_url %}
+                            active
+                            {% endif %}" href="/gallery/{{gal.id}}">
+                            {{gal.title}} </a>
+        {% endif %}
+    </li>
     {% endfor %}
-</div>
+</ul>
+<!-- </div> -->
