@@ -6,7 +6,7 @@
 <body>
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
-    <div class="container white add-shdw" style="margin-top: 95px">
+    <div class="container white add-shdw" style="margin-top: 75px">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
@@ -58,7 +58,7 @@
                                                         <input type="text" class="form-control mycal total" value="0">
                                                     </fieldset>
                                                 </div>
-                                                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addBagetDataToForm()">Заказать</button>
+                                                <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Оформить</button>
                                             </form>
                                         </div>
                                     </div>
@@ -90,7 +90,31 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    {% include "wowportret/components/scipts_init.html" %}
+    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
+    <script>
+    $(document).ready(function() {
+        $(".fancybox-thumb").fancybox({
+            prevEffect: 'none',
+            nextEffect: 'none',
+            helpers: {
+                title: {
+                    type: 'outside'
+                },
+                thumbs: {
+                    width: 50,
+                    height: 50
+                }
+            }
+        });
+        $(".fancybox").fancybox({
+            openEffect: 'elastic',
+            closeEffect: 'elastic'
+        });
+    });
+    </script>
     <script>
     $('.mycal').on('input', function() {
         var total = 0
@@ -104,7 +128,7 @@
     });
     </script>
     <script>
-    function addBagetDataToForm() {
+    function addDataToForm() {
         var name = $('h2').text();
         var values = $('.calx_form').find(':input');
         var height = $(values[0]).val();
@@ -116,6 +140,7 @@
             "<p class='price'>Цена: " + total + " руб.</p>");
     };
     </script>
+    <!-- {% include "wowportret/components/scipts_init.html" %} -->
 </body>
 
 </html>

@@ -1,0 +1,139 @@
+.clearfix:after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+img {
+    width: 100%;
+}
+.right {
+    float: right;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa-3x {
+    font-size: 3em;
+}
+.fa-4x {
+    font-size: 4em;
+}
+.fa-5x {
+    font-size: 5em;
+}
+/* ------------------------------menu style----------------------------- */
+/* --------------------------Стили первой строки------------------------- */
+header .logo-image {
+    margin-right: 20px;
+    float: left;
+    width: 120px;
+}
+.logo-image span, .logo-image small {
+    display: none;
+}
+header .icon_log {
+    float: left;
+}
+header .icon_log div {
+    float: left;
+    margin-right: 20px;
+    margin: 12px 5px;
+}
+header .icon_log span {
+    font-size: 2em;
+}
+header .telephone {
+    display: block;
+    float: right;
+    color: #07beb6;
+}
+header .telephone > div {
+    font-size: 1.5em;
+    display: inline;
+}
+header .telephone b {
+    color: #f05f40;
+}
+header .telephone a {
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #07beb6;
+}
+header .telephone a:hover {
+    text-decoration: none;
+    color: #333;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+/* ----------------------Конец стили первой строки----------------------- */
+/* --------------------------Стили второй строки------------------------- */
+header .nav_top {
+    text-align: center;
+}
+header .nav_top a {
+    width: 20%;
+    display: block;
+    float: left;
+    font-size: 17px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #f05f40;
+}
+/* -----------------------Конец стили второй строки---------------------- */
+/* ---------------------------Стили третей строки------------------------ */
+.podrisovka {
+    border: 4px solid #262626;
+    position: relative;
+    background: rgb(74, 203, 216);
+}
+.podrisovka:after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: -12px;
+    height: 4px;
+    border-radius: 0 0 2px 2px;
+    background-color: rgb(0, 0, 0);
+}
+.nav_bottom {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 17px;
+}
+.nav_bottom a {
+    cursor: pointer;
+    background: rgb(74, 203, 216);
+    color: #fff;
+    letter-spacing: 3px;
+    height: 100%;
+    display: block;
+    margin: 5px 10px;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.nav_bottom a:hover, .nav_bottom a:active {
+    background: #BFEBA0;
+    text-decoration: none;
+}
+.nav_bottom a span {
+    font-size: 0.8em;
+    color: #333;
+    letter-spacing: 0.1em;
+}
+/* -----------------------Конец стили третей строки---------------------- */
+/* -----------------------Начало стили мобильного меню-------------------- */
+#mainNav #exCollapsingNavbar2 li.nav-item {
+
+}
+#mainNav #exCollapsingNavbar2 li.nav-item:first-child {
+    margin-left: 1rem;
+}
+
+/* -----------------------Конец стили мобильного меню---------------------- */
