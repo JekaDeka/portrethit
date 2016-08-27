@@ -6,7 +6,7 @@
 <body>
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
-    <div class="container white add-shdw" style="margin-top: 75px">
+    <div class="container white add-shdw" style="margin-top: 95px">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
@@ -18,7 +18,7 @@
                         <div class="container">
                             <div class="row">
                                 <p style="font-size: 18px;"> Нужен определённый размер или картина?
-                                    <br />
+                                    <br>
                                     <strong>Доверьтесь профессионалам!</strong> Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
                                     <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
                                     <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
@@ -26,109 +26,398 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    {% if item.title %}
-                                    <h2>{{ item.title }}</h2> {% else %}
-                                    <h2>Работа #{{ item.id }}</h2> {% endif %}
-                                    <div class="row">
-                                        <div class="col-xs-12 col-sm-6 col-md-7">
-                                            {% if item.image %}
-                                            <!-- <a class="fancybox-thumb" rel="fancybox-thumb" href="{{ item.image.url }}"><img class="card-img-top" src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" /></a> -->
-                                            <img class="card-img-top" src="{{ item.image.url  }}" alt="{{ item.alt }}" />
-                                            {% endif %}
-                                        </div>
-                                        <div class="col-xs-12 col-sm-6 col-md-5">
-                                            <form id="calx">
-                                                <p>
-                                                    <strong> 1. Выберите размер: </strong>
-                                                    <br />
-                                                    <select class="c-select" id="main_size" data-cell="A1">
-                                                        <option value="1490">30x40</option>
-                                                        <option value="2490">40x60</option>
-                                                        <option value="3490">50x70</option>
-                                                        <option value="4390">60x80</option>
-                                                        <option value="6990">75x105</option>
-                                                        <option value="7990">90x110</option>
-                                                    </select>
-                                                </p>
-                                                <p>
-                                                    <strong> 2. Дополнительные возможности: </strong>
-                                                    <br />
-                                                    <div class="checkbox" id="fst_block">
-                                                        <label style="padding-left: 0px;">
-                                                            <input type="radio" baget-type="0" name="optionsRadios" data-cell="A2" value="0" checked> Не оформлять багет
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="baget_list">
+                                    <ul class="nav nav-tabs text-xs-center" role="tablist">
+                                        <li class="nav-item tab50">
+                                            <a class="nav-link active" data-toggle="tab" href="#standart_tab" role="tab">Стандартная печать</a>
+                                        </li>
+                                        <li class="nav-item tab50">
+                                            <a class="nav-link" data-toggle="tab" href="#module_tab" role="tab">Модульная печать</a>
+                                        </li>
+                                    </ul>
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div role="tabpanel" class="tab-pane fade in active" id="standart_tab">
+                                            <div class="row p-y-2 p-x-2">
+                                                <div class="col-xs-12">
+                                                    {% if item.title %}
+                                                    <h2 class="baget-title">{{ item.title }}</h2> {% else %}
+                                                    <h2 class="baget-title">Работа #{{ item.id }}</h2> {% endif %}
+                                                </div>
+                                                <div class="row p-y-2">
+                                                    <div class="col-xl-7">
+                                                        <div class="baget-bundel">
+                                                            <img src="{% static 'img/borders/white.jpg' %}" class="baget-border tmp">
+                                                            <img src="{% static 'img/borders/A1/big1.jpg' %}" class="baget-border collapse" id="borderA1_1">
+                                                            <img src="{% static 'img/borders/A1/big2.jpg' %}" class="baget-border collapse" id="borderA1_2">
+                                                            <img src="{% static 'img/borders/A1/big3.jpg' %}" class="baget-border collapse" id="borderA1_3">
+                                                            <img src="{% static 'img/borders/A1/big4.jpg' %}" class="baget-border collapse" id="borderA1_4">
+                                                            <img src="{% static 'img/borders/A2/big1.jpg' %}" class="baget-border collapse" id="borderA2_1">
+                                                            <img src="{% static 'img/borders/A2/big2.jpg' %}" class="baget-border collapse" id="borderA2_2">
+                                                            <img src="{% static 'img/borders/A2/big3.jpg' %}" class="baget-border collapse" id="borderA2_3">
+                                                            <img src="{% static 'img/borders/A2/big4.jpg' %}" class="baget-border collapse" id="borderA2_4">
+                                                            <img src="{% static 'img/borders/A2/big5.jpg' %}" class="baget-border collapse" id="borderA2_5">
+                                                            <img src="{% static 'img/borders/A3/big1.jpg' %}" class="baget-border collapse" id="borderA3_1">
+                                                            <img src="{% static 'img/borders/A3/big2.jpg' %}" class="baget-border collapse" id="borderA3_2">
+                                                            <img src="{% static 'img/borders/A3/big3.jpg' %}" class="baget-border collapse" id="borderA3_3">
+                                                            <img src="{% static 'img/borders/A3/big4.jpg' %}" class="baget-border collapse" id="borderA3_4">
+                                                            <img src="{% static 'img/borders/A4/big1.jpg' %}" class="baget-border collapse" id="borderA4_1">
+                                                            <img src="{% static 'img/borders/A4/big2.jpg' %}" class="baget-border collapse" id="borderA4_2">
+                                                            <img src="{% static 'img/borders/A4/big3.jpg' %}" class="baget-border collapse" id="borderA4_3">
+                                                            <img src="{% static 'img/borders/A4/big4.jpg' %}" class="baget-border collapse" id="borderA4_4">
+                                                            <img src="{% static 'img/borders/A5/big1.jpg' %}" class="baget-border collapse" id="borderA5_1">
+                                                            <img src="{% static 'img/borders/A5/big2.jpg' %}" class="baget-border collapse" id="borderA5_2">
+                                                            <img src="{% static 'img/borders/A5/big3.jpg' %}" class="baget-border collapse" id="borderA5_3">
+                                                            <img src="{% static 'img/borders/A5/big4.jpg' %}" class="baget-border collapse" id="borderA5_4">
+                                                            <img src="{% static 'img/borders/A6/big1.jpg' %}" class="baget-border collapse" id="borderA6_1">
+                                                            <img src="{% static 'img/borders/A6/big2.jpg' %}" class="baget-border collapse" id="borderA6_2">
+                                                            <img src="{% static 'img/borders/A6/big3.jpg' %}" class="baget-border collapse" id="borderA6_3">
+                                                            <img src="{% static 'img/borders/A7/big1.jpg' %}" class="baget-border collapse" id="borderA7_1">
+                                                            <img src="{% static 'img/borders/A7/big2.jpg' %}" class="baget-border collapse" id="borderA7_2">
+                                                            <img src="{% static 'img/borders/A7/big3.jpg' %}" class="baget-border collapse" id="borderA7_3">
+                                                            <img src="{% static 'img/borders/A7/big4.jpg' %}" class="baget-border collapse" id="borderA7_4">
+                                                            <img src="{% static 'img/borders/B1/big1.jpg' %}" class="baget-border collapse" id="borderB1_1">
+                                                            <img src="{% static 'img/borders/B1/big2.jpg' %}" class="baget-border collapse" id="borderB1_2">
+                                                            <img src="{% static 'img/borders/B1/big3.jpg' %}" class="baget-border collapse" id="borderB1_3">
+                                                            <img src="{% static 'img/borders/B1/big4.jpg' %}" class="baget-border collapse" id="borderB1_4">
+                                                            <img src="{% static 'img/borders/B2/big1.jpg' %}" class="baget-border collapse" id="borderB2_1">
+                                                            <img src="{% static 'img/borders/B2/big2.jpg' %}" class="baget-border collapse" id="borderB2_2">
+                                                            <img src="{% static 'img/borders/B2/big3.jpg' %}" class="baget-border collapse" id="borderB2_3">
+                                                            <img src="{% static 'img/borders/B3/big1.jpg' %}" class="baget-border collapse" id="borderB3_1">
+                                                            <img src="{% static 'img/borders/B3/big2.jpg' %}" class="baget-border collapse" id="borderB3_2">
+                                                            <img src="{% static 'img/borders/B4/big1.jpg' %}" class="baget-border collapse" id="borderB4_1">
+                                                            <img src="{% static 'img/borders/B5/big1.jpg' %}" class="baget-border collapse" id="borderB5_1">
+                                                            <img src="{% static 'img/borders/B5/big2.jpg' %}" class="baget-border collapse" id="borderB5_2">
+                                                            <img src="{% static 'img/borders/B5/big3.jpg' %}" class="baget-border collapse" id="borderB5_3">
+                                                            <img src="{% static 'img/borders/B6/big1.jpg' %}" class="baget-border collapse" id="borderB6_1">
+                                                            <img src="{% static 'img/borders/B6/big2.jpg' %}" class="baget-border collapse" id="borderB6_2">
+                                                            <img src="{% static 'img/borders/B6/big3.jpg' %}" class="baget-border collapse" id="borderB6_3">
+                                                            <img src="{% static 'img/borders/B7/big1.jpg' %}" class="baget-border collapse" id="borderB7_1">
+                                                            <img src="{% static 'img/borders/B7/big2.jpg' %}" class="baget-border collapse" id="borderB7_2">
+                                                            <img src="{% static 'img/borders/B7/big3.jpg' %}" class="baget-border collapse" id="borderB7_3">
+                                                            <img src="{% static 'img/borders/B7/big4.jpg' %}" class="baget-border collapse" id="borderB7_4">
+                                                            <img src="{% static 'img/borders/C1/big1.jpg' %}" class="baget-border collapse" id="borderC1_1">
+                                                            <img src="{% static 'img/borders/C1/big2.jpg' %}" class="baget-border collapse" id="borderC1_2">
+                                                            <img src="{% static 'img/borders/C1/big3.jpg' %}" class="baget-border collapse" id="borderC1_3">
+                                                            <img src="{% static 'img/borders/C2/big1.jpg' %}" class="baget-border collapse" id="borderC2_1">
+                                                            <img src="{% static 'img/borders/C2/big2.jpg' %}" class="baget-border collapse" id="borderC2_2">
+                                                            <img src="{% static 'img/borders/C2/big3.jpg' %}" class="baget-border collapse" id="borderC2_3">
+                                                            <img src="{% static 'img/borders/C3/big1.jpg' %}" class="baget-border collapse" id="borderC3_1">
+                                                            <img src="{% static 'img/borders/C3/big2.jpg' %}" class="baget-border collapse" id="borderC3_2">
+                                                            <img src="{% static 'img/borders/C4/big1.jpg' %}" class="baget-border collapse" id="borderC4_1">
+                                                            <img src="{% static 'img/borders/C5/big1.jpg' %}" class="baget-border collapse" id="borderC5_1">
+                                                            <img src="{% static 'img/borders/C5/big2.jpg' %}" class="baget-border collapse" id="borderC5_2">
+                                                            <img src="{% static 'img/borders/C5/big3.jpg' %}" class="baget-border collapse" id="borderC5_3">
+                                                            <img src="{% static 'img/borders/C6/big1.jpg' %}" class="baget-border collapse" id="borderC6_1">
+                                                            <img src="{% static 'img/borders/C6/big2.jpg' %}" class="baget-border collapse" id="borderC6_2">
+                                                            <img src="{% static 'img/borders/C6/big3.jpg' %}" class="baget-border collapse" id="borderC6_3">
+                                                            <img src="{% static 'img/borders/C7/big1.jpg' %}" class="baget-border collapse" id="borderC7_1">
+                                                            <img src="{% static 'img/borders/C7/big2.jpg' %}" class="baget-border collapse" id="borderC7_2"> {% if item.image %}
+                                                            <img src="{{ item.image.url_415x415 }}" alt="{{ item.alt }}" class="baget-img main-img-border" id="main-img"> {% endif %}
                                                             <div class="row">
-                                                                <div class=col-xs-12>
-                                                                    {% for baget in baget_items %}
-                                                                    <div class="radio baget-line">
-                                                                        <label>
-                                                                            <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-cell="A{{baget.id}}"> {% if baget.title %} {{ baget.title }} {% else %} Рамка {% if baget.gallery_id == 66 %}A {% elif baget.gallery_id == 67 %}Б {% elif baget.gallery_id == 68 %}C {% endif %} #{{ baget.id }} {% endif %} {% if baget.image %}
-                                                                            <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a>
-                                                                            {% endif %}
-                                                                        </label>
+                                                                <div class="col-xs-12 p-y-2">
+                                                                    <div id="total-border">
+                                                                        <div class="p-y-1 collapse" id="40">
+                                                                            <a class="border-mini-img" id="A1_1"><img src="{% static 'img/borders/A1/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A1_2"><img src="{% static 'img/borders/A1/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A1_3"><img src="{% static 'img/borders/A1/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A1_4"><img src="{% static 'img/borders/A1/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="41">
+                                                                            <a class="border-mini-img" id="A2_1"><img src="{% static 'img/borders/A2/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A2_2"><img src="{% static 'img/borders/A2/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A2_3"><img src="{% static 'img/borders/A2/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A2_4"><img src="{% static 'img/borders/A2/mini4.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A2_5"><img src="{% static 'img/borders/A2/mini5.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="42">
+                                                                            <a class="border-mini-img" id="A3_1"><img src="{% static 'img/borders/A3/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A3_2"><img src="{% static 'img/borders/A3/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A3_3"><img src="{% static 'img/borders/A3/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A3_4"><img src="{% static 'img/borders/A3/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="43">
+                                                                            <a class="border-mini-img" id="A4_1"><img src="{% static 'img/borders/A4/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A4_2"><img src="{% static 'img/borders/A4/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A4_3"><img src="{% static 'img/borders/A4/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A4_4"><img src="{% static 'img/borders/A4/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="44">
+                                                                            <a class="border-mini-img" id="A5_1"><img src="{% static 'img/borders/A5/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A5_2"><img src="{% static 'img/borders/A5/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A5_3"><img src="{% static 'img/borders/A5/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A5_4"><img src="{% static 'img/borders/A5/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="39">
+                                                                            <a class="border-mini-img" id="A6_1"><img src="{% static 'img/borders/A6/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A6_2"><img src="{% static 'img/borders/A6/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A6_3"><img src="{% static 'img/borders/A6/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="38">
+                                                                            <a class="border-mini-img" id="A7_1"><img src="{% static 'img/borders/A7/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A7_2"><img src="{% static 'img/borders/A7/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A7_3"><img src="{% static 'img/borders/A7/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="A7_4"><img src="{% static 'img/borders/A7/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="124">
+                                                                            <a class="border-mini-img" id="B1_1"><img src="{% static 'img/borders/B1/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B1_2"><img src="{% static 'img/borders/B1/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B1_3"><img src="{% static 'img/borders/B1/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B1_4"><img src="{% static 'img/borders/B1/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="123">
+                                                                            <a class="border-mini-img" id="B2_1"><img src="{% static 'img/borders/B2/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B2_2"><img src="{% static 'img/borders/B2/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B2_3"><img src="{% static 'img/borders/B2/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="122">
+                                                                            <a class="border-mini-img" id="B3_1"><img src="{% static 'img/borders/B3/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B3_2"><img src="{% static 'img/borders/B3/mini2.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="121">
+                                                                            <a class="border-mini-img" id="B4_1"><img src="{% static 'img/borders/B4/mini1.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="120">
+                                                                            <a class="border-mini-img" id="B5_1"><img src="{% static 'img/borders/B5/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B5_2"><img src="{% static 'img/borders/B5/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B5_3"><img src="{% static 'img/borders/B5/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="126">
+                                                                            <a class="border-mini-img" id="B6_1"><img src="{% static 'img/borders/B6/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B6_2"><img src="{% static 'img/borders/B6/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B6_3"><img src="{% static 'img/borders/B6/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="125">
+                                                                            <a class="border-mini-img" id="B7_1"><img src="{% static 'img/borders/B7/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B7_2"><img src="{% static 'img/borders/B7/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B7_3"><img src="{% static 'img/borders/B7/mini3.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="B7_4"><img src="{% static 'img/borders/B7/mini4.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="130">
+                                                                            <a class="border-mini-img" id="C1_1"><img src="{% static 'img/borders/C1/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C1_2"><img src="{% static 'img/borders/C1/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C1_3"><img src="{% static 'img/borders/C1/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="129">
+                                                                            <a class="border-mini-img" id="C2_1"><img src="{% static 'img/borders/C2/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C2_2"><img src="{% static 'img/borders/C2/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C2_3"><img src="{% static 'img/borders/C2/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="128">
+                                                                            <a class="border-mini-img" id="C3_1"><img src="{% static 'img/borders/C3/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C3_2"><img src="{% static 'img/borders/C3/mini2.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="119">
+                                                                            <a class="border-mini-img" id="C4_1"><img src="{% static 'img/borders/C4/mini1.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="127">
+                                                                            <a class="border-mini-img" id="C5_1"><img src="{% static 'img/borders/C5/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C5_2"><img src="{% static 'img/borders/C5/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C5_3"><img src="{% static 'img/borders/C5/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="131">
+                                                                            <a class="border-mini-img" id="C6_1"><img src="{% static 'img/borders/C6/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C6_2"><img src="{% static 'img/borders/C6/mini2.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C6_3"><img src="{% static 'img/borders/C6/mini3.jpg' %}"></a>
+                                                                        </div>
+                                                                        <div class="p-y-1 collapse" id="132">
+                                                                            <a class="border-mini-img" id="C7_1"><img src="{% static 'img/borders/C7/mini1.jpg' %}"></a>
+                                                                            <a class="border-mini-img" id="C7_2"><img src="{% static 'img/borders/C7/mini2.jpg' %}"></a>
+                                                                        </div>
                                                                     </div>
-                                                                    {% endfor %}
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- </div> -->
+                                                    </div>
+                                                    <div class="col-xl-5">
+                                                        <!-- <form id="calx"> -->
+                                                        <div class="col-xs-12">
+                                                            <div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        Материал:
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="material_type" id="canvas_radio" value="canvas" checked> Холст
+                                                                    </label>
+                                                                </div>
+                                                                <div class="radio-inline">
+                                                                    <label>
+                                                                        <input type="radio" name="material_type" id="paper_radio" value="paper"> Бумага
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div id="canvas-box" class="card-footer">
+                                                                <p>
+                                                                    <strong> 1. Выберите размер холста: </strong>
+                                                                    <select class="c-select" id="main_size" data-cell="A1">
+                                                                        <option value="1490">30x40</option>
+                                                                        <option value="2490">40x60</option>
+                                                                        <option value="3490">50x70</option>
+                                                                        <option value="4390">60x80</option>
+                                                                        <option value="6990">75x105</option>
+                                                                        <option value="7990">90x110</option>
+                                                                    </select>
+                                                                </p>
+                                                                <div class="checkbox" id="snd_block">
+                                                                    <label>
+                                                                        <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
+                                                                    </label>
+                                                                    <label class="more"> <u> подробнее </u> </label>
+                                                                    <div class="collapse" id="lac_info">
+                                                                        <div class="card-block">
+                                                                            Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="checkbox" id="trd_block">
+                                                                    <label>
+                                                                        <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
+                                                                    </label>
+                                                                    <label class="more"> <u> подробнее </u> </label>
+                                                                    <div class="collapse" id="gel_info">
+                                                                        <div class="card-block">
+                                                                            Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="checkbox" id="fst_block">
+                                                                    <!-- <strong> 2. Выберите багетную рамку: </strong>
+                                                                    <br> -->
+                                                                    <label>
+                                                                        <input type="checkbox" value="0"> Оформить багетную рамку
+                                                                    </label>
+                                                                    <!-- <label class="more"> <u> подробнее </u> </label> -->
+                                                                    <div class="collapse" id="baget_list">
+                                                                        <div class="row">
+                                                                            <div class=col-xs-12>
+                                                                                <label style="padding-left: 0px; display: none">
+                                                                                    <input type="radio" baget-type="0" name="optionsRadios" data-border="0" value="0" checked> Не оформлять багет
+                                                                                </label>
+                                                                                {% for baget in baget_items %}
+                                                                                <div class="radio baget-line">
+                                                                                    <label>
+                                                                                        <input type="radio" baget-type="{{baget.gallery_id}}" name="optionsRadios" data-border="{{baget.id}}"> <small>
+                                                                                        {% if baget.title %}
+                                                                                            {{ baget.title }}
+                                                                                        {% else %}
+                                                                                            Рамка #{{ baget.id }}
+                                                                                        {% endif %}
+                                                                                        </small> {% if baget.image %}
+                                                                                        <img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" />
+                                                                                        <!-- <a class="fancybox" rel="gallery1" href="{{ baget.image.url }}" title="{{baget.title}}"><img class="card-img-top img-full-width" src="{{ baget.image.url_125x125 }}" alt="{{ item.alt }}" /></a> -->
+                                                                                        {% endif %}
+                                                                                    </label>
+                                                                                </div>
+                                                                                {% endfor %}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="paper-box" class="card-footer" style="display: none;">
+                                                                <p>
+                                                                    <strong> 1. Выберите размер бумаги: </strong>
+                                                                    <select class="c-select" id="paper_size" data-cell="A1">
+                                                                        <option value="390">20x30</option>
+                                                                        <option value="500">30x40</option>
+                                                                        <option value="850">40x60</option>
+                                                                        <option value="1070">50x70</option>
+                                                                        <option value="1560">60x80</option>
+                                                                    </select>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row p-y-2" id="price_line">
+                                                        <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                            <div class="price">
+                                                                <strong>Цена: </strong>
+                                                                <label id="total_price" data-format="0,0[.]00">1490</label> руб.
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                            <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Заказать</button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- </form> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div role="tabpanel" class="tab-pane fade" id="module_tab">
+                                            <div class="row p-y-3">
+                                                <div class="col-md-8 col-xs-12">
+                                                    <img src="{{ item.image.url}}" alt="{{ item.alt }}" id="img-for-canvas" style="display: none;">
+                                                    <!-- <img src="http://placehold.it/800x800" alt="{{ item.alt }}" class="baget-img main-img-border" id="img-for-canvas" style="display: none;"> -->
+                                                    <canvas id="myCanvas" width="800" height="600" style="max-width: 100%;">
+                                                        Your browser does not support the HTML5 canvas tag. Ваш браузер не поддерживает HTML5 canvas tag.
+                                                    </canvas>
+                                                </div>
+                                                <div class="col-md-4 col-xs-12">
+                                                    <div id="fth_block">
+                                                        <div id="mod_info" class="col-xs-12 card-footer">
+                                                            <p>
+                                                                <strong> Размер модульной картины: </strong>
+                                                                <br>
+                                                                <select class="c-select" id="mod_size" data-cell="A15">
+                                                                    <option value="3800">85x50</option>
+                                                                    <option value="5900">100x65</option>
+                                                                    <option value="8590">150x90</option>
+                                                                    <option value="11990">160x100</option>
+                                                                    <option value="12900">180x120</option>
+                                                                    <option value="13990">200x140</option>
+                                                                </select>
+                                                            </p>
+<!--                                                             <div>
+                                                                Любое изображение может стать модульной картиной.Для этого,Вам достаточно выбрать подходящее фото из нашей галереи или предложить свое.Наши дизайнеры составят модульную картину и пришлют Вариант Вам на утверждение.
+                                                            </div> -->
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" id="module_lac_check" value="1000"> Прописать масляной краской
+                                                                </label>
+                                                                <label class="more"> <u> подробнее </u> </label>
+                                                                <div class="collapse" id="lac_info">
+                                                                    <div class="card-block">
+                                                                        Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="checkbox">
+                                                                <label>
+                                                                    <input type="checkbox" id="module_gel_check" value="1000"> Покрыть текстурным гелем
+                                                                </label>
+                                                                <label class="more"> <u> подробнее </u> </label>
+                                                                <div class="collapse" id="gel_info">
+                                                                    <div class="card-block">
+                                                                        Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="checkbox" id="snd_block">
-                                                        <label>
-                                                            <input type="checkbox" id="lac_check" data-cell="A11" value="1000"> Прописать масляной краской
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="lac_info">
-                                                            <div class="card-block">
-                                                                Данная техника используется для достижения максимального сходства с картиной музейного качества. Утвержденное изображение, переносится на холст и художник вручную прописывает полотно масляной краской.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="checkbox" id="trd_block">
-                                                        <label>
-                                                            <input type="checkbox" id="gel_check" data-cell="A4" value="1000"> Покрыть текстурным гелем
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="gel_info">
-                                                            <div class="card-block">
-                                                                Текстурный гель наносится на готовое полотно,повторяя мазки кисти художника.Данная техника придает картине дополнительный объем.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="checkbox" id="fth_block">
-                                                        <label>
-                                                            <input type="checkbox" id="mod_check" data-cell="A5" value="0"> Сделать модульную картину
-                                                        </label>
-                                                        <label class="more"> <u> подробнее </u> </label>
-                                                        <div class="collapse" id="mod_info">
-                                                        <p>
-                                                            <strong> Размер модульной картины: </strong>
-                                                            <br>
-                                                            <select class="c-select" id="mod_size" data-cell="A15">
-                                                                <option value="0">Не выбрано</option>
-                                                                <option value="3800">85x50</option>
-                                                                <option value="5900">100x65</option>
-                                                                <option value="8590">150x90</option>
-                                                                <option value="11990">160x100</option>
-                                                                <option value="12900">180x120</option>
-                                                                <option value="13990">200x140</option>
-                                                            </select>
-                                                        </p>
-                                                            <div class="card-block">
-                                                                Любое изображение может стать модульной картиной.Для этого,Вам достаточно выбрать подходящее фото из нашей галереи или предложить свое.Наши дизайнеры составят модульную картину и пришлют Вариант Вам на утверждение.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </p>
-                                                <div class="price">
-                                                    <strong>Цена: </strong>
-                                                    <label id="total_price" data-format="0,0[.]00" data-formula="SUM(A1:A2000)"></label> руб.
                                                 </div>
-                                                <p>
-                                                    <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addDataToForm()">Оформить</button>
-                                                </p>
-                                            </form>
+                                                <div class="col-xs-12 col-md-12 m-y-1">
+                                                    <div class="cc-selector card-footer">
+                                                        {% load custom_filter %} {% for i in 24|times %}
+                                                        <input checked="checked" id="module-{{i}}" type="radio" name="module-type" value="module-{{i}}" />
+                                                        <label class="drinkcard-cc module-{{i}}" for="module-{{i}}">{{i}}</label>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                                <div class="row p-y-2" id="price_line">
+                                                    <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                        <div class="price">
+                                                            <strong>Цена: </strong>
+                                                            <label id="module_total_price" data-format="0,0[.]00">3800</label> руб.
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                        <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addMoudleDataToForm()">Заказать</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -160,6 +449,7 @@
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     {% include "wowportret/components/scipts_init.html" %}
+    <script src="{% static 'js/module-image-creator-min.js' %}"></script>
 </body>
 
 </html>

@@ -8,3 +8,14 @@ settings.py
 instruction.txt
 django
 /static
+/application/*
+/galleryserve/*
+/pagination/*
+/portrethit/*
+/myvenv/*
+/manage.py
+/__init__.py
+/wowportret/*.py
+/wowportret/migrations/*
+/wowportret/templatetags/*
+/db.sqlite3

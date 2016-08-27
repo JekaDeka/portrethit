@@ -14,8 +14,12 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <!-- costum stule js Rasul -->
-    <script src="{% static 'js/costum.ras.js' %}"></script>
+    <script src="{% static 'js/lazy/jquery.lazy.min.js' %}"></script>
+    <script>
+    $(function() {
+        $('.lazy').lazy();
+    });
+    </script>
 </body>
 
 </html>

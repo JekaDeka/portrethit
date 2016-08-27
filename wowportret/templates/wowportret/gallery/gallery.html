@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles %} {% load bootstrap_pagination %}
 <!DOCTYPE html>
 <html lang="ru">
 {% include "wowportret/components/head.html" %}
@@ -6,7 +6,7 @@
 <body>
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
-    <div class="container white add-shdw" style="margin-top: 75px">
+    <div class="container white add-shdw" style="margin-top: 95px">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
@@ -18,7 +18,7 @@
                         <div class="container">
                             <div class="row">
                                 <p style="font-size: 18px;"> Нужен определённый размер или картина?
-                                    <br />
+                                    <br>
                                     <strong>Доверьтесь профессионалам!</strong> Укажите нужный размер, название картины, художника или прикрепите ссылку на изображение в интернете.
                                     <!-- В день обращения мы вышлем Вам варианты картины в интерьере  и расчетаем стоимость -->
                                     <button type="button" style="margin-left: 15px; padding: 3px 25px;" class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7">Заказать</button>
@@ -26,16 +26,16 @@
                             </div>
                             <div class="row">
                                 {% for gal in galleries %}
-                                <div class="col-md-6 text-xs-center">
+                                <div class="col-md-4 text-xs-center">
                                     <a href="{% url 'gallery_detail' pk=gal.pk %}">
                                 {% if gal.image %}
                                     <img class="img-fluid img-full-width" src="{{ gal.image.url_415x415 }}" alt="{{ gal.alt }}">
                                 {% endif %}
                                 </a>
-                                    <p>
+                                    <span>
                                         <a class="a-glr" href="{% url 'gallery_detail' pk=gal.pk %}">{{ gal.title|upper }} </a>
-                                    </p>
-                                    <p class="m-y-1">{{ gal.content | safe }}</p>
+                                    </span>
+                                    <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 </div>
                                 {% endfor %}
                             </div>
@@ -51,11 +51,12 @@
                                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">{{ item.title }}</h4></a> {% else %}
                                             <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="card-link"><h4 class="card-title">Работа # {{item.id}}</h4></a> {% endif %} {% if item.content %}
                                             <p class="card-text">{{ item.content|safe }}</p>
-                                            {% endif %} <!-- {% if item.price %}
+                                            {% endif %}
+                                            <!-- {% if item.price %}
                                             <p class="card-text">Цена: {{ item.price|safe }}</p>
                                             {% endif %} -->
                                             <p class="card-text">
-                                                <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Заказать</a>
+                                                <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Подробнее</a>
                                             </p>
                                         </div>
                                     </div>
@@ -66,7 +67,8 @@
                     </div>
                     <div class="row">
                         <div class="col-xs-12 col-md-offset-2 col-md-8 text-xs-center">
-                            <nav>
+                            {% if items %} {% bootstrap_paginate items range=10 %} {% endif %}
+                            <!--                             <nav>
                                 <ul class="pagination">
                                     <li class="page-item">
                                         {% if items.has_previous %}
@@ -76,19 +78,21 @@
                                         {% endif %}
                                     </li>
                                     {% for pg in items.paginator.page_range %}
-                                    <li class="page-item">
+                                    {% if pg < 11 %}
+                                    <li class="page-item {% ifequal pg items.number %} active {% endifequal %}">
                                         <a class="page-link" href="?page={{ pg }}">{{ pg }}</a>
                                     </li>
+                                    {% endif %}
                                     {% endfor %}
-                                    <li class="page-item">
-                                        {% if items.has_next %}
-                                        <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
-                                            <span class="sr-only">Вперед</span>
-                                        </a>
-                                        {% endif %}
-                                    </li>
+                                        <li class="page-item">
+                                            {% if items.has_next %}
+                                            <a class="page-link" href="?page={{ items.next_page_number }}" aria-label="Next"> <span aria-hidden="true">&raquo;</span>
+                                                <span class="sr-only">Вперед</span>
+                                            </a>
+                                            {% endif %}
+                                        </li>
                                 </ul>
-                            </nav>
+                            </nav> -->
                         </div>
                     </div>
                 </div>
@@ -98,6 +102,21 @@
     </div>
     </div>
     </div>
+    {% if crnt_gal.content %}
+    <div class="container white mt mb add-shdw">
+        <div class="p-y-3 section" draggable="false">
+            <div class="container">
+                <div class="row text-xs-center">
+                    <div class="col-xs-12">
+                        <p>
+                            {{ crnt_gal.content | safe }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
     <div class="container white mt mb add-shdw">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
@@ -140,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+        <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog " role="document">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -157,32 +176,7 @@
     {% include "wowportret/components/footer.html" %}
     <script src="{% static 'js/jquery.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery-calx-2.2.7.min.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox.pack.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-buttons.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-media.js' %}"></script>
-    <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
-    <script>
-    $(document).ready(function() {
-        $(".fancybox-thumb").fancybox({
-            prevEffect: 'none',
-            nextEffect: 'none',
-            helpers: {
-                title: {
-                    type: 'outside'
-                },
-                thumbs: {
-                    width: 50,
-                    height: 50
-                }
-            }
-        });
-        $(".fancybox").fancybox({
-            openEffect: 'elastic',
-            closeEffect: 'elastic'
-        });
-    });
-    </script>
+    {% include "wowportret/components/scipts_init.html" %}
 </body>
 
 </html>

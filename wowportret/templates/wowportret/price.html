@@ -1,20 +1,7 @@
+{% extends 'wowportret/base.html' %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html lang="ru">
-{% include "wowportret/components/head.html" %}
-
-<body>
-    {% include "wowportret/components/header.html" %}
-    {% block content %}
-    {% endblock %}
-    <div class="container white add-shdw mt mb">
-      test test test test
-        {% include "wowportret/components/price_table.html" %}
-        {% include "wowportret/components/form.html" %}
-    </div>
-    {% include "wowportret/components/footer.html" %}
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-</body>
-
-</html>
+{% block content %}
+<div>
+    <p>цены</p>
+</div>
+{% endblock content %}
