@@ -6,28 +6,39 @@
         <a class="navbar-toggler hidden-md-up right" href="tel:12345678">
             <span class="icon-phone"></span>
         </a>
-        <a class="navbar-brand" href="/"><b>Wowportret.ru</b></a>
+        <a class="navbar-brand" href="/"><b>WowPortret.ru</b></a>
         <div class="collapse navbar-toggleable-sm right" id="exCollapsingNavbar2">
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <b>Услуги</b></a>
                     <div class="dropdown-menu shdw">
-						<a class="dropdown-item" href="{% url 'wowportret.views.holst_page' %}"><b>Фото на холсте</b></a>
-						<a class="dropdown-item" href="{% url 'wowportret.views.maslo2_page' %}"><b>Имитация масла</b></a>
-						<a class="dropdown-item" href="{% url 'wowportret.views.maslo_page' %}"><b>Пропись маслом</b></a>
-						<a class="dropdown-item" href="{% url 'wowportret.views.popart_page' %}"><b>Pop Art портрет</b></a>
-						<a class="dropdown-item" href="{% url 'wowportret.views.gallery_page' %}"><b>Галерея картин</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/foto_holst/photo_na_holste.html"><b>Фото на холсте</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/imitathia.html"><b>Имитация масла</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/propis.html"><b>Пропись маслом</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/pop_art/pop_art.html"><b>Pop Art портрет</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/pop_art/pin_up.html"><b>Pin Art портрет</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/obraz.html"><b>Портрет в образе</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/foto_holst/podarki.html"><b>Подарки</b></a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {% ifequal request.path '/price/' %} active {% endifequal%}" href="/price/"><b>Цены</b></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<b>Багет и декор</b></a>
+					<div class="dropdown-menu shdw">
+						<a class="dropdown-item" href="http://wowportret24.ru/baget_decor/zerkala.html"><b>Зеркала</b></a>
+						<a class="dropdown-item" href="{% url 'wowportret.views.baget_page' %}"><b>Багетные рамы</b></a>
+                    </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {% ifequal request.path '/baget/' %} active {% endifequal%}" href="/gallery/65/"><b>Багетные рамы</b></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% ifequal request.path '/gallery/' %} active {% endifequal%}" href="/gallery/"><b>Картины и сюжеты</b></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+						<b>Галерея картин</b></a>
+					<div class="dropdown-menu shdw">
+						<a class="dropdown-item" href="{% url 'wowportret.views.gallery_page' %}"><b>Картины и сюжеты</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/gallery_pictures/reproductia.html"><b>Репродукция картин</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/gallery_pictures/modulnie_kartini.html"><b>Модульные картины</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/gallery_pictures/fotooboi.html"><b>ФотоОбои</b></a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% ifequal request.path '/post/' %} active {% endifequal%}" href="/post/"><b>Новости</b></a>
