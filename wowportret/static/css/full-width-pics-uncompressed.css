@@ -5,19 +5,10 @@
  */
 
 body {
-    /*margin-top: 50px;*/
-    /* Required margin for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    background-color: white;
-    /*font-family: 'BloggerSans';*/
     font-family: 'BloggerSansLight';
-    /*font-family: 'BloggerSansMedium';*/
     margin-top: 50px;
-    /*background: url(../img/bg/smbg.png);*/
     color: #333;
-    background: url("/static/img/background/brizgi_3.jpg") no-repeat 100% 1000px,
-                url("/static/img/background/brizgi_2.jpg") no-repeat 0% 2820px,
-                url("/static/img/background/brizgi_4.jpg") no-repeat 100% 4500px,
-                url("/static/img/background/brizgi_1.jpg") no-repeat 0% 6180px;
+    background: url("/static/img/background/brizgi_3.jpg") no-repeat 100% 1000px, url("/static/img/background/brizgi_2.jpg") no-repeat 0% 2820px, url("/static/img/background/brizgi_4.jpg") no-repeat 100% 4500px, url("/static/img/background/brizgi_1.jpg") no-repeat 0% 6180px;
 }
 
 .bg-faded-cstm {
