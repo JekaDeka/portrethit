@@ -17,6 +17,9 @@ img {
     font-size: 5em;
 }
 /* ------------------------------ menu style ----------------------------- */
+#mainNav {
+	display: none;
+}
 /* -------------------------- start first line style ------------------------- */
 header .logo-image {
     margin-right: 20px;
@@ -361,3 +364,6 @@ header .nav_top a {
     text-decoration: none;
 }
 /* ------------------------ end zakaz popup style ------------------------- */
+/* ------------------------- Start left menu style ------------------------ */
+
+/* ------------------------- End left menu style -------------------------- */
