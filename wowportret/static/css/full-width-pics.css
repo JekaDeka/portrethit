@@ -1,6 +1,5 @@
 body{
     font-family: 'BloggerSansLight';
-    margin-top: 50px;
     color: #333;
     background: url("/static/img/background/brizgi_3.jpg") no-repeat 100% 1000px, url("/static/img/background/brizgi_2.jpg") no-repeat 0% 2820px, url("/static/img/background/brizgi_4.jpg") no-repeat 100% 4500px, url("/static/img/background/brizgi_1.jpg") no-repeat 0% 6180px;
 }
@@ -148,10 +147,10 @@ option{font-size:21px;}
 .accordion ul{padding-left:0;}
 .accordion li{cursor:pointer;list-style:none;}
 .accordion li a{display:block;text-decoration:none;width: 100%; display: inline-block;}
-.accordion li a.level-0{padding:15px 10px;background-color:#3570a3;font-size:1.5rem;font-weight:normal;color:white;}
+.accordion li a.level-0{padding:15px 10px;/*background-color:#3570a3;*/font-size:1.5rem;font-weight:normal;color:white;}
 .accordion li a.expandable:after{float:right;content:'\02193';}
 .accordion li a.level-0:hover{color:white;background-color:#323232;}
-.accordion li a.level-0:first-child{border-radius:2px 2px 0 0;border-bottom:1px solid white;}
+/*.accordion li a.level-0:first-child{border-radius:2px 2px 0 0;border-bottom:1px solid white;}*/
 .accordion li a.level-0:last-of-type{border-radius:0 0 2px 2px;}
 .accordion div,
 .accordion p{display:none;}
