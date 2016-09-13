@@ -1,4 +1,8 @@
-body{background-color:white;font-family:'BloggerSansLight';margin-top:50px;background:url(../img/bg/smbg.png);}
+body{
+    font-family: 'BloggerSansLight';
+    color: #333;
+    background: url("/static/img/background/brizgi_3.jpg") no-repeat 100% 1000px, url("/static/img/background/brizgi_2.jpg") no-repeat 0% 2820px, url("/static/img/background/brizgi_4.jpg") no-repeat 100% 4500px, url("/static/img/background/brizgi_1.jpg") no-repeat 0% 6180px;
+}
 .bg-faded-cstm{background-color:white;-webkit-box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.65);-moz-box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.65);box-shadow:0px 0px 5px 0px rgba(0, 0, 0, 0.65);}
 .add-shdw{box-shadow:0 0 .625em .08em rgba(0, 0, 0, .05);-moz-box-shadow:0 0 .625em .08em rgba(0, 0, 0, .05);-webkit-box-shadow:0 0 .625em .08em rgba(0, 0, 0, .05);}
 h1,
@@ -110,7 +114,7 @@ footer{margin:50px 0;}
 .shdw{-webkit-box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);-moz-box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);}
 .art-girl{position:absolute;top:10px;left:10px;}
 .art-claks{position:absolute;left:0px;top:110px;}
-.dropdown-menu{border-radius:0px;position:absolute;top:125%;}
+.dropdown-menu{border-radius:0px;position:absolute;}
 .dropdown-menu.columns-2{min-width:400px;}
 .dropdown-menu.columns-3{min-width:600px;}
 .dropdown-menu li a{padding:5px 15px;font-weight:300;}
@@ -143,10 +147,10 @@ option{font-size:21px;}
 .accordion ul{padding-left:0;}
 .accordion li{cursor:pointer;list-style:none;}
 .accordion li a{display:block;text-decoration:none;width: 100%; display: inline-block;}
-.accordion li a.level-0{padding:15px 10px;background-color:#3570a3;font-size:1.5rem;font-weight:normal;color:white;}
+.accordion li a.level-0{padding:15px 10px;/*background-color:#3570a3;*/font-size:1.5rem;font-weight:normal;color:white;}
 .accordion li a.expandable:after{float:right;content:'\02193';}
 .accordion li a.level-0:hover{color:white;background-color:#323232;}
-.accordion li a.level-0:first-child{border-radius:2px 2px 0 0;border-bottom:1px solid white;}
+/*.accordion li a.level-0:first-child{border-radius:2px 2px 0 0;border-bottom:1px solid white;}*/
 .accordion li a.level-0:last-of-type{border-radius:0 0 2px 2px;}
 .accordion div,
 .accordion p{display:none;}

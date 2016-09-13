@@ -1,7 +1,7 @@
 <!-- <div class="list-group"> -->
-<ul class="accordion">
+<ul class="accordion podrisovka">
     {% for gal in all_gals %}
-    <li>
+    <li class="acc_bottom">
         {% if gal.children.all %}
             <a class="level-0 toggle expandable" href="javascript:void(0);">
                 <strong>{{gal.title}}</strong>
