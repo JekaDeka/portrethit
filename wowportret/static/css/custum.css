@@ -17,6 +17,9 @@ img {
     font-size: 5em;
 }
 /* ------------------------------ menu style ----------------------------- */
+#mainNav {
+	display: none;
+}
 /* -------------------------- start first line style ------------------------- */
 header .logo-image {
     margin-right: 20px;
@@ -279,11 +282,8 @@ header .nav_top a {
 /* ------------------------ end zakaz popup style ------------------------- */
 .loginization .modal-content {
 	text-align: center;
-    font-size: 2em;
-    padding: 20px;
     background: #4acbd8;
     z-index: 3;
-    position: relative;
     color: #FBD100;
     box-shadow: 10px 10px 0px 0px #93EBD3;
     border-radius: 0;
@@ -296,16 +296,16 @@ header .nav_top a {
 .loginization .modal-header h2 {
     margin-top: 0;
     text-shadow: 2px 2px 0 rgb(251, 209, 0);
-    font-size: 1.6em;
+    font-size: 2.5rem;
     font-weight: bold;
     color: #333;
 }
 .loginization .modal-header p {
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 .loginization .modal-footer p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     padding: 1rem;
     margin: 0;
 }
@@ -322,7 +322,7 @@ header .nav_top a {
 }
 .zauava input {
     display: block;
-    margin: 10px auto;
+    margin: 0.7rem auto;
     line-height: 1.2;
     font-size: 1.5rem;
     color: #555;
@@ -332,9 +332,11 @@ header .nav_top a {
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    padding: 10px 20px;
-    border: 5px solid #ccc;
-    border-radius: 50px;
+    padding: 0.7rem 1.5rem;
+    border: 0.35rem solid #ccc;
+    border-radius: 3rem;
+    width: 100%;
+    max-width: 22rem;
 }
 .zauava input:focus, .zauavka select:focus {
     border-color: #fed136;
@@ -351,6 +353,8 @@ header .nav_top a {
     transition: all 0.2s;
     border-radius: 50px;
     border: 0;
+    width: 100%;
+    max-width: 15rem;
 }
 .zakaz {
     background: #EF9280;
@@ -361,3 +365,6 @@ header .nav_top a {
     text-decoration: none;
 }
 /* ------------------------ end zakaz popup style ------------------------- */
+/* ------------------------- Start left menu style ------------------------ */
+
+/* ------------------------- End left menu style -------------------------- */
