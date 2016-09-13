@@ -27,8 +27,8 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     {% if item.title %}
-                                    <h2>{{ item.title }}</h2> {% else %}
-                                    <h2>Работа #{{ item.id }}</h2> {% endif %}
+                                    <h2 id="item_name">{{ item.title }}</h2> {% else %}
+                                    <h2 id="item_name">Работа #{{ item.id }}</h2> {% endif %}
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-6 col-md-7">
                                             {% if item.image %}
@@ -105,7 +105,7 @@
     </script>
     <script>
     function addBagetDataToForm() {
-        var name = $('h2').text();
+        var name = $('#item_name').text();
         var values = $('.calx_form').find(':input');
         var height = $(values[0]).val();
         var width = $(values[1]).val();
