@@ -56,7 +56,13 @@
                                             <p class="card-text">Цена: {{ item.price|safe }}</p>
                                             {% endif %} -->
                                             <p class="card-text">
-                                                <a href="{% if item.url %}{{ item.url }}{% else %} /item/{{item.id}} {% endif %}" class="btn btn-primary">Подробнее</a>
+                                            Выберите способ исполнения:
+                                            <p>
+                                                <a href="{% if item.url %}{{ item.url }}/#standart_tab{% else %} /item/{{item.id}}/#standart_tab {% endif %}" class="btn btn-info btn-block">Репродуция картины</a>
+                                            </p>
+                                            <p>
+                                                <a href="{% if item.url %}{{ item.url }}/#module_tab{% else %} /item/{{item.id}}/#module_tab {% endif %}" class="btn btn-info btn-block">Модульная картина</a>
+                                            </p>
                                             </p>
                                         </div>
                                     </div>

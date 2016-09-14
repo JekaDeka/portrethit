@@ -8,7 +8,7 @@
 <script src="{% static 'js/gallery-item.js' %}"></script>
 <script>
 function addDataToForm() {
-    var name = $('h2').text();
+    var name = $('#item_name').text();
     var mat_type = "";
     var baget = "";
     if ($('#fst_block :input[type=checkbox]').prop('checked')) {
@@ -97,6 +97,18 @@ function addMoudleDataToForm() {
 </script>
 <script>
 $(document).ready(function() {
+
+    //activate tab by url - link
+    var hash = document.location.hash;
+    if (hash) {
+        $('.nav-tabs a[href="'+ hash +'"]').tab('show');
+    }
+
+    // Change hash for page-reload
+    $('.nav-tabs a').on('shown', function (e) {
+        window.location.hash = e.target.hash;
+    });
+
     $('.toggle').click(function(e) {
         e.preventDefault();
 
