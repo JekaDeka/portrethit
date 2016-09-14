@@ -65,7 +65,7 @@ function addDataToForm() {
 };
 
 function addMoudleDataToForm() {
-    var name = $('h2').text();
+    var name = $('#item_name').text();
     var size = $("#mod_size option:selected");
     var mat_type = "Модульная печать, вариант: " + $(":input[name=module-type]:checked").attr('id').split('-')[1];
     var price = $("#module_total_price").text();
