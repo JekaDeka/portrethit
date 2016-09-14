@@ -26,9 +26,9 @@
                             <div class="row">
                                 {% for gal in galleries %}
                                 <!-- <div class="col-md-12 text-xs-center"> -->
-                                    <p>
-                                        <h3>{{ gal.title|upper }}</h3>
-                                    </p>
+                                    <div class="col-xs-12 text-xs-center p-y-3">
+                                        <h2>{{ gal.title|upper }}</h2>
+                                    </div>
                                     <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 <!-- </div> -->
                                 {% for item in gal.items.all|slice:":10" %}
