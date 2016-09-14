@@ -31,7 +31,7 @@
                                     </div>
                                     <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 <!-- </div> -->
-                                {% for item in gal.items.all|slice:":10" %}
+                                {% for item in gal.items.all %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
                                         {% if item.image %}
@@ -92,7 +92,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                {% endfor %} {% endfor %}
+                                {% endfor %}
+                                <!-- <div class="col-xs-12 text-xs-center">
+                                    <a href="/gallery/{{gal.id}}" class="btn btn-secondary">Все варианты</a>
+                                </div> -->
+                                {% endfor %}
                             </div>
                         </div>
                     </div>
