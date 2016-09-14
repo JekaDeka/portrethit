@@ -31,7 +31,7 @@
                                     </p>
                                     <!-- <p class="m-y-1">{{ gal.content | safe }}</p> -->
                                 <!-- </div> -->
-                                {% for item in gal.items.all |slice:":10" %}
+                                {% for item in gal.items.all|slice:":10" %}
                                 <div class="col-xs-12 col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-4 col-xl text-xs-center">
                                     <div class="card">
                                         {% if item.image %}
