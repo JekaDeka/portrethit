@@ -24,7 +24,8 @@
                                 </p>
                             </div>
                             <div class="row">
-                                {% if request.get_full_path = "/gallery/65/" %}
+                            {{ request.get_full_path }}
+                                {% if request.get_full_path == "/gallery/65/" %}
                                     {% for gal in galleries|slice:":9" %}
                                     <!-- <div class="col-md-12 text-xs-center"> -->
                                     <div class="col-xs-12 text-xs-center p-y-3">
