@@ -1,20 +1,20 @@
-/*img {
-    width: 100%;
-}*/
+.fa-2x {
+    font-size: 2rem;
+}
+.fa-3x {
+    font-size: 3rem;
+}
+.fa-4x {
+    font-size: 4rem;
+}
+.fa-5x {
+    font-size: 5rem;
+}
 .right {
     float: right;
 }
-.fa-2x {
-    font-size: 2em;
-}
-.fa-3x {
-    font-size: 3em;
-}
-.fa-4x {
-    font-size: 4em;
-}
-.fa-5x {
-    font-size: 5em;
+.left {
+    float: left;
 }
 /* ------------------------------ menu style ----------------------------- */
 #mainNav {
@@ -194,7 +194,7 @@ header .nav_top a {
     padding-top: 50px;
     text-align: center;
     font-weight: bold;
-    font-size: 2.1em;
+    font-size: 2.1rem;
     text-shadow: 2px 2px 0 #333;
     color: #fbd100;
 }
@@ -230,6 +230,9 @@ header .nav_top a {
     position: relative;
     -webkit-transition: 300ms;
     transition: 300ms;
+}
+.sp-insta-gallery li img {
+    width: 100%;
 }
 .sp-insta-gallery li span.flickr-gallery-wrap:before {
     background: rgba(74,203,216,0.5);
@@ -273,7 +276,7 @@ header .nav_top a {
     transform: translate(-50%, -50%) scale(1);
 }
 .footer_cont {
-	font-size: 2em;
+	font-size: 2rem;
     color: #333;
     text-align: center;
     text-shadow: 2px 2px 0 #fbd100;
