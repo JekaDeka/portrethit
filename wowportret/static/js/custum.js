@@ -18,3 +18,8 @@ $( "#callback" ).click(function() {
     var email_input = $('#id_contact_email').parent();
     $(email_input).css('display','none')
 });
+
+$( "#callback" ).click(function() {
+    var file_input = $('#id_docfile').parent();
+    $(file_input).css('display','none')
+});
