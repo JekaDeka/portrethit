@@ -52,6 +52,7 @@ class Post(models.Model):
         api = vk.API(session)
         api.wall.post(owner_id=settings.VK_GROUP_ID,
                       from_group=0, message=strip_tags(self.text))
+        #
         # print(strip_tags(self.text))
 
     def publish(self):
