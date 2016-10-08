@@ -249,7 +249,7 @@ def post_list(request):
 def post_detail(request, pk):
     form, sended = get_form(request)
     if sended:
-        return redirect('thank_page')`
+        return redirect('thank_page')
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'wowportret/blog/post_detail.html', {'post': post})
 
