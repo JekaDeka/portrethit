@@ -12,6 +12,7 @@ from galleryserve.thumbs import ImageWithThumbsField
 import re
 import vk
 import PIL
+from django.utils.encoding import python_2_unicode_compatible
 
 
 def content_file_name(instance, filename):
@@ -33,6 +34,7 @@ class Document(models.Model):
         upload_to=content_file_name)
 
 
+@python_2_unicode_compatible
 class Post(models.Model):
     author = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
@@ -57,7 +59,7 @@ class Post(models.Model):
         self.save()
 
     def __str__(self):
-        return self.title
+        return (self.title).decode('cp1251')
 
     def save(self, **kwargs):
         super(Post, self).save()
