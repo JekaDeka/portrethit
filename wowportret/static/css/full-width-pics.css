@@ -113,7 +113,7 @@ footer{margin:50px 0;}
 .cloud{background:url(../img/content/popart/new_cloud.png) no-repeat;background-size:285px 213px;padding:28px 28px;height:341px;}
 .shdw{-webkit-box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);-moz-box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);box-shadow:10px 10px 5px 0px rgba(0, 0, 0, 0.75);}
 .art-girl{position:absolute;top:10px;left:10px;}
-.art-claks{position:absolute;left:0px;top:110px;}
+.art-claks{position:absolute;left:0px;top:330px;}
 .dropdown-menu{border-radius:0px;position:absolute;}
 .dropdown-menu.columns-2{min-width:400px;}
 .dropdown-menu.columns-3{min-width:600px;}

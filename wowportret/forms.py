@@ -72,11 +72,11 @@ class ContactForm(forms.Form):
     def __init__(self, *args, **kwargs):
         super(ContactForm, self).__init__(*args, **kwargs)
         self.fields['contact_name'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'Иван'})
+            {'class': 'form-control', 'placeholder': 'Ваше имя'})
         self.fields['contact_phone'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': '+7 (987) 654-32-11'})
+            {'class': 'form-control', 'placeholder': 'Телефон для уточнения'})
         self.fields['contact_email'].widget.attrs.update(
-            {'class': 'form-control', 'placeholder': 'ivan@mail.ru'})
+            {'class': 'form-control', 'placeholder': 'E-mail для получания эскиза'})
         self.fields['content'].widget.attrs.update(
             {'class': 'form-control', 'rows': '3'})
 

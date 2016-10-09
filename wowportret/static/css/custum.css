@@ -40,6 +40,9 @@ header .icon_log div {
 header .icon_log span {
     font-size: 2em;
 }
+header .icon_log > div:nth-child(4) span {
+    color: #f05f40;
+}
 header .telephone {
     display: block;
     float: right;
@@ -85,12 +88,14 @@ header .nav_top a {
     border: 5px solid #333;
     position: relative;
     background: #4acbd8;
+    margin-bottom: 12px;
 }
 .podrisovka:after {
     content: '';
     position: absolute;
     left: 8px;
     right: 8px;
+    width: calc(100% - 16px);
     bottom: -12px;
     height: 4px;
     border-radius: 0 0 2px 2px;
@@ -371,3 +376,22 @@ header .nav_top a {
 /* ------------------------- Start left menu style ------------------------ */
 
 /* ------------------------- End left menu style -------------------------- */
+/* ------------------------- Start online zakaz left ------------------------ */
+.zakaz_bott {
+	position: fixed;
+    top: 100px;
+    right: -5px;
+}
+.zakaz_bott button {
+    word-wrap: break-word;
+    width: 2rem;
+    background: #4acbd8;
+    text-align: center;
+    color: white;
+    border: none;
+    padding: 0.2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+/* ------------------------- End online zakaz left -------------------------- */
