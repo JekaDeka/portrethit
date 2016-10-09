@@ -383,15 +383,20 @@ header .nav_top a {
     right: -5px;
 }
 .zakaz_bott button {
-    word-wrap: break-word;
+	word-wrap: break-word;
     width: 2rem;
     background: #4acbd8;
     text-align: center;
     color: white;
     border: none;
-    padding: 0.2rem;
-    line-height: 2rem;
+    padding: 0.4em;
+    line-height: 1.6rem;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.6rem;
+}
+@media (max-width: 768px) {
+	.zakaz_bott {
+    display: none;
+	}
 }
 /* ------------------------- End online zakaz left -------------------------- */
