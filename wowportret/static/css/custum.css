@@ -20,6 +20,9 @@
 #mainNav {
 	display: none;
 }
+#mainNav a.navbar-toggler.right {
+	color: #333;
+}
 /* -------------------------- start first line style ------------------------- */
 header .logo-image {
     margin-right: 20px;
