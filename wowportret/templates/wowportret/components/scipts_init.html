@@ -6,10 +6,28 @@
 <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
 <script src="{% static 'js/jquery.fancybox-thumbs.js' %}"></script>
 <script src="{% static 'js/gallery-item.js' %}"></script>
-
 <!-- costom style from Rasul -->
 <script src="{% static 'js/custum.js' %}"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
+<script>
+$(window).load(function() {
+    var phones = [{
+        "mask": "+7 (###) ###-####"
+    }, {
+        "mask": "+7 (###) ###-##############"
+    }];
+    $('#id_contact_phone').inputmask({
+        mask: phones,
+        greedy: false,
+        definitions: {
+            '#': {
+                validator: "[0-9]",
+                cardinality: 1
+            }
+        }
+    });
+});
+</script>
 <script>
 function addDataToForm() {
     var name = $('#item_name').text();
@@ -105,11 +123,11 @@ $(document).ready(function() {
     //activate tab by url - link
     var hash = document.location.hash;
     if (hash) {
-        $('.nav-tabs a[href="'+ hash +'"]').tab('show');
+        $('.nav-tabs a[href="' + hash + '"]').tab('show');
     }
 
     // Change hash for page-reload
-    $('.nav-tabs a').on('shown', function (e) {
+    $('.nav-tabs a').on('shown', function(e) {
         window.location.hash = e.target.hash;
     });
 
