@@ -1,11 +1,10 @@
-{% extends 'wowportret/base.html' %}
-{% load staticfiles %}
-{% block content %}
+{% extends 'wowportret/base.html' %} {% load staticfiles %} {% block content %}
 <div class="container white add-shdw" style="margin-top: 75px">
     <div class="p-y-3 section" draggable="false">
         <div class="container">
+            {% for post in posts %}
             <div class="row">
-                {% for post in posts %} {% if post.image %}
+                {% if post.image %}
                 <div class="col-md-6">
                     <img src="{{ post.image.url_415x415 }}" class="img-fluid img-thumbnail">
                 </div>
@@ -18,8 +17,8 @@
                     </p>
                     <p>Опубликовано: {{post.published_date }}</p>
                 </div>
-                {% endfor %}
             </div>
+            {% endfor %}
         </div>
     </div>
 </div>
