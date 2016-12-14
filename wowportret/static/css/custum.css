@@ -121,7 +121,6 @@ header .nav_top a {
     letter-spacing: 3px;
     height: 100%;
     display: block;
-    margin: 5px 10px;
     font-size: 1.1em;
     text-decoration: none;
     line-height: 1.2;
@@ -167,7 +166,8 @@ header .nav_top a {
 .nav_bottom ul.menu-01,
 .nav_bottom ul.menu-03,
 .nav_bottom ul.menu-04 {
-    width: 430px;
+    min-width: 420px;
+    width: auto;
 }
 .nav_bottom ul.menu-01 {
 	left: -5px;
@@ -178,7 +178,10 @@ header .nav_top a {
 .nav_bottom ul.menu-01 li,
 .nav_bottom ul.menu-03 li,
 .nav_bottom ul.menu-04 li {
-	width: 50%;
+	width: 200px;
+}
+.nav_bottom ul.menu-01 li a > img {
+    width: 160px;
 }
 /* ----------------------- end third line style ---------------------- */
 /* ----------------------- start footer style ------------------------ */
