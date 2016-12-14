@@ -157,35 +157,20 @@ header .nav_top a {
     float: left;
     display: block;
 }
-.nav_bottom ul.menu-02,
+.nav_bottom ul.menu-04,
 .nav_bottom ul.menu-05 {
     width: 640px;
 }
 .nav_bottom ul.menu-02 li,
+.nav_bottom ul.menu-04 li,
 .nav_bottom ul.menu-05 li {
     width: 33%;
-}
-.nav_bottom ul.menu-01,
-.nav_bottom ul.menu-03,
-.nav_bottom ul.menu-04 {
-    min-width: 420px;
-    width: auto;
 }
 .nav_bottom ul.menu-01 {
 	left: -5px;
 }
 .nav_bottom ul.menu-05 {
 	right: -5px;
-}
-/*
-.nav_bottom ul.menu-01 li,
-.nav_bottom ul.menu-03 li,
-.nav_bottom ul.menu-04 li {
-	width: 200px;
-}
-*/
-.nav_bottom ul.menu-01 li a > img {
-    width: 160px;
 }
 /* ----------------------- end third line style ---------------------- */
 /* ----------------------- start footer style ------------------------ */
