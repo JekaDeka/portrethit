@@ -113,6 +113,7 @@ header .nav_top a {
     text-align: center;
     font-size: 1.1em;
     position: relative;
+	padding: 5px 10px;
 }
 .nav_bottom a {
     cursor: pointer;
@@ -128,6 +129,7 @@ header .nav_top a {
     -webkit-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
+    padding: 5px 10px;
 }
 .nav_bottom a:hover, .nav_bottom a:active {
     background: #BFEBA0;
@@ -175,11 +177,13 @@ header .nav_top a {
 .nav_bottom ul.menu-05 {
 	right: -5px;
 }
+/*
 .nav_bottom ul.menu-01 li,
 .nav_bottom ul.menu-03 li,
 .nav_bottom ul.menu-04 li {
 	width: 200px;
 }
+*/
 .nav_bottom ul.menu-01 li a > img {
     width: 160px;
 }
