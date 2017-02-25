@@ -1,30 +1,31 @@
 <nav id="mainNav" class="navbar navbar-fixed-top navbar-light bg-faded-cstm">
     <div class="container">
-        <a class="navbar-toggler hidden-md-up right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
+		<button class="navbar-toggler hidden-md-up right" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
 			<span class="fa icon-uniF0C9"></span>
-        </a>
-        <a class="navbar-toggler hidden-md-up right" href="tel:89154630964">
-            <span class="icon-phone"></span>
-        </a>
-        <a class="navbar-brand" href="/"><b>WowPortret.ru</b></a>
+		</button>
+		<a class="navbar-toggler hidden-md-up right" href="tel:89258030004">
+			<span class="icon-phone"></span>
+		</a>
+		<a class="navbar-brand" href="/"><b>WowPortret.ru</b></a>
         <div class="collapse navbar-toggleable-sm right" id="exCollapsingNavbar2">
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right clearfix">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <b>Услуги</b></a>
                     <div class="dropdown-menu shdw">
-						<a class="dropdown-item" href="http://wowportret24.ru/photo-na-holste.html"><b>Фото на холсте</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/imitathia.html"><b>Имитация масла</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/propis.html"><b>Пропись маслом</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/pop-art.html"><b>Pop Art портрет</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/pin-up.html"><b>Pin Art портрет</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/obraz.html"><b>Портрет в образе</b></a>
-						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/podarki.html"><b>Подарки</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/foto_holst/photo_na_holste.html"><b>Фото на холсте</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/imitathia.html"><b>Имитация масла</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/propis.html"><b>Пропись маслом</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/foto-holst/art-portret.html"><b>Art портрет</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/pop_art/pin_up.html"><b>Pin Art портрет</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/portret/obraz.html"><b>Портрет в образе</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/idealnyy-podarok.html"><b>Лучший подарок</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/fotobox.html"><b>ФотоBox</b></a>
+						<a class="dropdown-item" href="http://wowportret24.ru/foto_holst/podarki.html"><b>Подарки</b></a>
                     </div>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link {% ifequal request.path '/post/' %} active {% endifequal%}" href="http://wowportret.ru/gallery/65/" >
-						<b>Багет и декор</b></a>
+                <li class="nav-item">
+                    <a class="nav-link {% ifequal request.path '/65/' %} active {% endifequal%}" href="/65/"><b>Багет</b></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -39,13 +40,8 @@
                 <li class="nav-item">
                     <a class="nav-link {% ifequal request.path '/post/' %} active {% endifequal%}" href="/post/"><b>Новости</b></a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                    <b>Доставка/Оплата</b></a>
-					<div class="dropdown-menu shdw">
-						<a class="dropdown-item" href="{% url 'wowportret.views.delivery_page' %}"><b>Доставка</b></a>
-						<a class="dropdown-item" href="{% url 'wowportret.views.payment_page' %}"><b>Оплата</b></a>
-					</div>
+                <li class="nav-item">
+                    <a class="nav-link {% ifequal request.path '/payment/' %} active {% endifequal%}" href="http://wowportret24.ru/payment.html"><b>Оплата и Доставка</b></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% ifequal request.path '/contacts/' %} active {% endifequal%}" href="http://wowportret24.ru/contacts.html"><b>Контакты</b></a>

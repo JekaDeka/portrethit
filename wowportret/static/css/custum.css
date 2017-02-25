@@ -111,32 +111,27 @@ header .nav_top a {
     width: 20%;
     float: left;
     text-align: center;
-    font-size: 1.1em;
-    position: relative;
-	padding: 5px 10px;
 }
 .nav_bottom a {
-    cursor: pointer;
     background: rgb(74, 203, 216);
     color: #fff;
-    letter-spacing: 3px;
-    height: 100%;
+    letter-spacing: 0.2rem;
     display: block;
-    font-size: 1.1em;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.3rem;
     text-decoration: none;
-    line-height: 1.2;
-	position: relative;
+    line-height: 1.3rem;
     -webkit-transition: all .25s;
     -o-transition: all .25s;
     transition: all .25s;
-    padding: 5px 10px;
+    margin: 5px;
 }
 .nav_bottom a:hover, .nav_bottom a:active {
     background: #BFEBA0;
     text-decoration: none;
 }
 .nav_bottom a span {
-    font-size: 0.8em;
+    font-size: 1rem;
     color: #333;
     letter-spacing: 0.1em;
     text-align: center;
@@ -150,27 +145,37 @@ header .nav_top a {
     border-top: none;
 }
 .nav_bottom ul.dropdown-menu li {
-    padding: 5px;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s;
     float: left;
-    display: block;
+    display: inline-block;
+    text-align: center;
 }
-.nav_bottom ul.menu-04,
+.nav_bottom ul.menu-02,
 .nav_bottom ul.menu-05 {
-    width: 640px;
+    width: 630px;
 }
 .nav_bottom ul.menu-02 li,
-.nav_bottom ul.menu-04 li,
 .nav_bottom ul.menu-05 li {
     width: 33%;
+}
+.nav_bottom ul.menu-01,
+.nav_bottom ul.menu-03,
+.nav_bottom ul.menu-04 {
+    width: 830px;
+	right: -5px;
 }
 .nav_bottom ul.menu-01 {
 	left: -5px;
 }
 .nav_bottom ul.menu-05 {
 	right: -5px;
+}
+.nav_bottom ul.menu-01 li,
+.nav_bottom ul.menu-03 li,
+.nav_bottom ul.menu-04 li {
+	width: 25%;
 }
 /* ----------------------- end third line style ---------------------- */
 /* ----------------------- start footer style ------------------------ */
@@ -395,3 +400,14 @@ header .nav_top a {
 	}
 }
 /* ------------------------- End online zakaz left -------------------------- */
+/* ------------------------- Start back to top ------------------------ */
+#back-to-top {
+	z-index: 999;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+}
+/* ------------------------- Start back to top ------------------------ */
+/* ------------------------- Start cart sryles ------------------------ */
+
+/* ------------------------- Start cart sryles ------------------------ */
