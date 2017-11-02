@@ -6,7 +6,7 @@
 <body>
     {% include "wowportret/components/header.html" %}
     <!-- Page Content -->
-    <div class="container white add-shdw" style="margin-top: 95px">
+    <div class="container white add-shdw">
         <div class="p-y-3 section" draggable="false">
             <div class="container">
                 <div class="row">
@@ -26,7 +26,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <ul class="nav nav-tabs text-xs-center" role="tablist">
+                                    <ul class="nav nav-tabs text-xs-center" role="tablist" style="display:none;">
                                         <li class="nav-item tab50">
                                             <a class="nav-link active" data-toggle="tab" href="#standart_tab" role="tab">Стандартная печать</a>
                                         </li>
@@ -407,13 +407,13 @@
                                                     </div>
                                                 </div>
                                                 <div class="row p-y-2" id="price_line">
-                                                    <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                    <div class="col-xs-12 col-md-6  text-xs-center">
                                                         <div class="price">
                                                             <strong>Цена: </strong>
                                                             <label id="module_total_price" data-format="0,0[.]00">3800</label> руб.
                                                         </div>
                                                     </div>
-                                                    <div class="col-xs-12 col-md-6 text-sm-center text-md-left">
+                                                    <div class="col-xs-12 col-md-6  text-xs-center">
                                                         <button type="button" class="btn btn-order hvr-bounce-to-right" data-toggle="modal" data-target="#myModal7" onclick="addMoudleDataToForm()">Заказать</button>
                                                     </div>
                                                 </div>
