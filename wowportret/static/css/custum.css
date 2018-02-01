@@ -382,8 +382,8 @@ header .nav_top a {
     top: 100px;
     right: -5px;
 }
-.zakaz_bott button {
-	word-wrap: break-word;
+.zakaz_bott a {
+    word-wrap: break-word;
     width: 2rem;
     background: #4acbd8;
     text-align: center;
@@ -393,6 +393,8 @@ header .nav_top a {
     line-height: 1.6rem;
     font-weight: bold;
     font-size: 1.6rem;
+    display: block;
+    cursor: pointer;
 }
 @media (max-width: 768px) {
 	.zakaz_bott {
